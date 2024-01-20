@@ -1,0 +1,38 @@
+@use "sass:math"
+@use '@/assets/sass/dimensions' as dimensions
+
+@import "./_mixins/borders.sass"
+
+
+// Width
+::-webkit-scrollbar
+  width: dimensions.$scrollbarWidth * 1px
+
+
+// Track
+
+::-webkit-scrollbar-track
+
+  background-clip: padding-box
+
+  background-color: rgba(255, 255, 255, 0.20)
+
+  border-left: (dimensions.$scrollbarWidth - $twice_54_by_phi_power_8) * .5px solid rgba(0, 0, 0, 0)
+
+  border-right: (dimensions.$scrollbarWidth - $twice_54_by_phi_power_8) * .5px solid rgba(0, 0, 0, 0)
+
+  @include o-border-radius(dimensions.$scrollbarWidth * 1px)
+
+
+// Handle
+
+::-webkit-scrollbar-thumb
+
+  background-clip: padding-box
+  background-color: rgba(255, 255, 255, 0.40)
+
+  border-left: (dimensions.$scrollbarWidth - $twice_54_by_phi_power_5) * .5px solid rgba(0, 0, 0, 0)
+
+  border-right: (dimensions.$scrollbarWidth - $twice_54_by_phi_power_5) * .5px solid rgba(0, 0, 0, 0)
+
+  @include o-border-radius(dimensions.$scrollbarWidth * 1px)

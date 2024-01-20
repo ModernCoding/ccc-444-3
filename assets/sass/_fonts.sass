@@ -1,0 +1,53 @@
+$o-font: "o-font"
+$o-font-logo: "o-font-logo"
+
+@font-face
+  font-family: "o-font"
+  src: url("/fonts/montserrat.ttf")
+  // src: url("/fonts/ubuntu.ttf")
+
+@font-face
+  font-family: "o-font-logo"
+  src: url("/fonts/quango.otf")
+
+
+*:not(i.bi)
+
+  font-family: $o-font
+  font-size: $twice_54_by_phi_power_3 * 1px
+  font-weight: $twice_54_by_phi_power_minus_4
+  vertical-align: middle
+
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+a, a:hover
+  color: inherit
+  text-decoration: none
+
+
+label
+  font-size: inherit
+
+
+@each $i in (1, 2, 3, 4, 5, 6)
+
+  h#{ $i }
+    margin: 0
+    padding: 0
+
+
+// overriding bootstrap classes
+
+.fw-bold, strong
+  font-weight: $twice_54_by_phi_power_minus_4 !important
+
+
+// own style
+
+.o-font-smaller
+  font-size: $once_54_by_phi_power_3 * 1px
+
+.o-font-logo
+  font-family: $o-font-logo !important

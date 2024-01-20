@@ -1,0 +1,66 @@
+@use "sizes" as s
+
+$logoHeight: s.$twice_54 * 1px
+$logoHeightLgTwice: s.$twice_54_by_phi * 1px
+$logoHeightXl: s.$twice_54_by_phi_power_minus_1 * 1px
+$logoPaddingBottom: s.$twice_54_by_phi_power_4 * 1px
+$logoMarginBottom: s.$twice_54_by_phi_power_3 * 1px
+
+$headerMenuButtonsHeight: s.$twice_54_by_phi_power_2 * 1px
+$headerMenuButtonsHeightSmTwice: s.$twice_54_by_phi * 1px
+$headerGap: s.$twice_54_by_phi_power_3 * 1px
+
+
+$navbarFontSize: s.$twice_54_by_phi_power_3 * .5px
+$navbarFontSizeXlTwice: s.$once_54_by_phi * .5px
+
+$navbarMarginBottom: s.$twice_54_by_phi_power_2 * 1px
+$navbarPaddingTop: s.$twice_54_by_phi_power_4 * 1px
+$navbarPaddingBottom: s.$twice_54_by_phi_power_5 * 1px
+
+$navbarPaddingTopXlTwice: s.$once_54_by_phi_power_2 * 1px
+$navbarPaddingBottomXlTwice: s.$once_54_by_phi_power_3 * 1px
+
+
+$layoutPaddingTop: s.$twice_54_by_phi_power_4 * 1px
+$layoutPaddingRight: s.$twice_54_by_phi_power_2 * 1px
+$layoutPaddingBottom: s.$twice_54_by_phi_power_3 * 1px
+$layoutPaddingLeft: s.$twice_54_by_phi_power_3 * 1px
+
+$layoutPaddingRightMdTwice: s.$twice_54_by_phi * 1px
+$layoutPaddingLeftMdTwice: s.$twice_54_by_phi_power_2 * 1px
+
+$layoutPaddingRightXlMinus: s.$twice_54 * 1px
+$layoutPaddingLeftXlMinus: s.$twice_54_by_phi * 1px
+
+$layoutPaddingRightXlPlus: s.$twice_54_by_phi_power_minus_1 * 1px
+$layoutPaddingLeftXlPlus: s.$twice_54 * 1px
+
+
+$layoutPagePaddingLeft: s.$twice_54_by_phi * 1px
+
+$layoutPageArticleLandscapeTop: $layoutPaddingTop + $logoHeight + $logoPaddingBottom + $logoMarginBottom
+
+$layoutPageArticlePortraitTop: $layoutPaddingTop + $navbarPaddingTop + 2 * $navbarFontSize + $navbarPaddingBottom + $navbarMarginBottom
+
+
+// DO NOT MULTIPLY BY 1PX!
+$scrollbarWidth: s.$twice_54_by_phi_power_2
+
+
+$calendlyHeight: 600px
+$calendlyWidth: s.$once_54_by_phi_power_minus_3 * 1.5px
+
+$asideLandscapeWidth: $layoutPaddingLeft + $calendlyWidth + $layoutPaddingRight
+
+$asideLandscapeWidthXlMinus: $layoutPaddingLeftXlMinus + $calendlyWidth + $layoutPaddingRightXlMinus
+
+$asideLandscapeWidthXlPlus: $layoutPaddingLeftXlPlus + $calendlyWidth + $layoutPaddingRightXlPlus
+
+$asidePortraitHeight: $layoutPaddingTop + $logoHeightLgTwice + $logoPaddingBottom + $headerMenuButtonsHeight + $headerGap + $layoutPaddingBottom
+
+$asidePortraitHeightSmTwice: $layoutPaddingTop + $logoHeight + $logoPaddingBottom + $headerMenuButtonsHeightSmTwice + $headerGap + $layoutPaddingBottom
+
+$asidePortraitHeightMdPlus: $layoutPaddingTop + $logoHeightLgTwice + $logoPaddingBottom + $layoutPaddingBottom
+
+$asidePortraitHeightLg: $layoutPaddingTop + $logoHeight + $logoPaddingBottom + $layoutPaddingBottom

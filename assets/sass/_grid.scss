@@ -1,0 +1,116 @@
+@use 'constants' as constants;
+@use 'sizes' as sizes;
+
+//  INCLUDE THIS FILE BEFORE BOOTSTRAP
+
+//  Overriding Bootstrap's grid breakpoints
+
+/*
+
+  $grid_breakpoints: (
+    
+    xs: 0,
+    
+    sm-half: 299.434588481236px,
+    sm-minus: 343.121506177483px,
+    sm: 370.121506177483px,
+    sm-plus: 399.246117974981px,
+    sm-twice: 457.495341569977px,
+    
+    md-half: 484.495341569977px,
+    md-minus: 555.182259266225px,
+    md: 598.869176962472px,
+    md-plus: 645.99378875997px,
+    md-twice: 740.243012354966px,
+
+    lg-half: 783.929930051213px,
+    lg-minus: 898.303765443708px,
+    lg: 968.990683139955px,
+    lg-plus: 1045.23990673495px,
+    lg-twice: 1197.73835392494px,
+
+    xl-half: 1268.42527162119px,
+    xl-minus: 1453.48602470993px,
+    xl: 1567.85986010243px,
+    xl-plus: 1691.23369549492px,
+    xl-twice: 1937.98136627991px,
+
+    xxl-half: 2052.35520167246px,
+    xxl-minus: 2351.78979015369px,
+    xxl: 2536.85054324244px,
+    xxl-plus: 2736.47360222994px,
+    xxl-twice: 3135.71972020492px
+
+  )
+
+*/
+
+  
+$xs: 0;
+
+$sm-half: calc(sizes.$once_54_by_phi_power_minus_4 * constants.$phi * 1px / 2);
+$sm-minus: calc(sizes.$once_54_by_phi_power_minus_4 / constants.$phi * 3px / 2);
+$sm: sizes.$once_54_by_phi_power_minus_4 * 1px;
+$sm-plus: calc(sizes.$once_54_by_phi_power_minus_4 * constants.$phi * 2px / 3);
+$sm-twice: sizes.$twice_54_by_phi_power_minus_3 * 1px;
+
+$md-half: calc(sizes.$once_54_by_phi_power_minus_5 * constants.$phi * 1px / 2);
+$md-minus: calc(sizes.$once_54_by_phi_power_minus_5 / constants.$phi * 3px / 2);
+$md: sizes.$once_54_by_phi_power_minus_5 * 1px;
+$md-plus: calc(sizes.$once_54_by_phi_power_minus_5 * constants.$phi * 2px / 3);
+$md-twice: sizes.$twice_54_by_phi_power_minus_4 * 1px;
+
+$lg-half: calc(sizes.$once_54_by_phi_power_minus_6 * constants.$phi * 1px / 2);
+$lg-minus: calc(sizes.$once_54_by_phi_power_minus_6 / constants.$phi * 3px / 2);
+$lg: sizes.$once_54_by_phi_power_minus_6 * 1px;
+$lg-plus: calc(sizes.$once_54_by_phi_power_minus_6 * constants.$phi * 2px / 3);
+$lg-twice: sizes.$twice_54_by_phi_power_minus_5 * 1px;
+
+$xl-half: calc(sizes.$once_54_by_phi_power_minus_7 * constants.$phi * 1px / 2);
+$xl-minus: calc(sizes.$once_54_by_phi_power_minus_7 / constants.$phi * 3px / 2);
+$xl: sizes.$once_54_by_phi_power_minus_7 * 1px;
+$xl-plus: calc(sizes.$once_54_by_phi_power_minus_7 * constants.$phi * 2px / 3);
+$xl-twice: sizes.$twice_54_by_phi_power_minus_6 * 1px;
+
+$xxl-half: calc(sizes.$once_54_by_phi_power_minus_8 * constants.$phi * 1px / 2);
+$xxl-minus: calc(sizes.$once_54_by_phi_power_minus_8 / constants.$phi * 3px / 2);
+$xxl: sizes.$once_54_by_phi_power_minus_8 * 1px;
+$xxl-plus: calc(sizes.$once_54_by_phi_power_minus_8 * constants.$phi * 2px / 3);
+$xxl-twice: sizes.$twice_54_by_phi_power_minus_7 * 1px;
+
+
+$grid_breakpoints: (
+  
+  xs: $xs,
+  
+  sm-half: $sm-half,
+  sm-minus: $sm-minus,
+  sm: $sm,
+  sm-plus: $sm-plus,
+  sm-twice: $sm-twice,
+  
+  md-half: $md-half,
+  md-minus: $md-minus,
+  md: $md,
+  md-plus: $md-plus,
+  md-twice: $md-twice,
+
+  lg-half: $lg-half,
+  lg-minus: $lg-minus,
+  lg: $lg,
+  lg-plus: $lg-plus,
+  lg-twice: $lg-twice,
+
+  xl-half: $xl-half,
+  xl-minus: $xl-minus,
+  xl: $xl,
+  xl-plus: $xl-plus,
+  xl-twice: $xl-twice,
+
+  xxl-half: $xxl-half,
+  xxl-minus: $xxl-minus,
+  xxl: $xxl,
+  xxl-plus: $xxl-plus,
+  xxl-twice: $xxl-twice
+
+)

@@ -1,0 +1,191 @@
+@use "sass:math"
+@use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/grid' as grid
+@use '@/assets/sass/sizes' as sizes
+
+
+aside
+
+  > header
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    gap: sizes.$twice_54_by_phi_power_3 * 1px
+
+    @media screen and (min-width: grid.$md-plus)
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      gap: 0
+
+
+    @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+
+      margin-left: -#{ dimensions.$layoutPaddingLeft }
+      margin-right: -#{ dimensions.$layoutPaddingRight }
+
+      padding-left: math.div(dimensions.$layoutPaddingLeft, constants.$phi)
+      
+      padding-right: math.div(dimensions.$layoutPaddingRight, constants.$phi)
+
+
+      @media screen and (min-width: grid.$xl-minus)
+
+        margin-left: -#{ dimensions.$layoutPaddingLeftXlMinus }
+        margin-right: -#{ dimensions.$layoutPaddingRightXlMinus }
+
+        padding-left: math.div(dimensions.$layoutPaddingLeftXlMinus, constants.$phi)
+      
+        padding-right: math.div(dimensions.$layoutPaddingRightXlMinus, constants.$phi)
+
+
+      @media screen and (min-width: grid.$xl-plus)
+
+        margin-left: -#{ dimensions.$layoutPaddingLeftXlPlus }
+        margin-right: -#{ dimensions.$layoutPaddingRightXlPlus }
+
+        padding-left: math.div(dimensions.$layoutPaddingLeftXlPlus, constants.$phi)
+
+        padding-right: math.div(dimensions.$layoutPaddingRightXlPlus, constants.$phi)
+
+
+    #logo
+
+      display: flex
+      align-items: center
+      gap: sizes.$twice_54_by_phi_power_3 * 1px
+
+      border-bottom: sizes.$twice_54_by_phi_power_8 * 1px solid rgba(255, 255, 255, 0.20)
+      
+
+      padding-right: math.div(dimensions.$layoutPaddingRight, math.pow(constants.$phi, 2))
+
+      padding-bottom: dimensions.$logoPaddingBottom - sizes.$twice_54_by_phi_power_8 * 1px
+
+
+      @media screen and (min-width: grid.$sm-twice)
+        padding-right: math.div(dimensions.$layoutPaddingRight, math.pow(constants.$phi, 3))
+
+
+      @media screen and (min-width: grid.$md-half)
+
+        padding-right: math.div(dimensions.$layoutPaddingRight, constants.$phi)
+
+
+      @media screen and (min-width: grid.$md-plus)
+  
+        padding-right: math.div(dimensions.$layoutPaddingRight, math.pow(constants.$phi, 2))
+
+
+      @media screen and (min-width: grid.$md-twice)
+
+        padding-right: math.div(dimensions.$layoutPaddingRightMdTwice, constants.$phi)
+
+
+      @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+
+        margin-bottom: dimensions.$logoMarginBottom + sizes.$twice_54_by_phi_power_2 * 1px
+
+        padding-right: 0
+        width: 100%
+
+
+        @media screen and (min-width: grid.$xl-minus)
+          margin-bottom: dimensions.$logoMarginBottom
+
+
+      > img
+        height: dimensions.$logoHeightLgTwice
+        width: dimensions.$logoHeightLgTwice
+
+        @media screen and (min-width: grid.$sm-twice)
+          height: dimensions.$logoHeight
+          width: dimensions.$logoHeight
+
+        @media screen and (min-width: grid.$md-plus)
+          height: dimensions.$logoHeightLgTwice
+          width: dimensions.$logoHeightLgTwice
+
+        @media screen and (min-width: grid.$lg)
+          height: dimensions.$logoHeight
+          width: dimensions.$logoHeight
+
+
+        @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+
+          height: dimensions.$logoHeightLgTwice
+          width: dimensions.$logoHeightLgTwice
+
+          @media screen and (min-width: grid.$xl-minus)
+            height: dimensions.$logoHeight
+            width: dimensions.$logoHeight
+
+
+      > figcaption
+        text-align: right
+
+        > div:first-child
+          font-size: sizes.$twice_54_by_phi_power_3 * 1px
+
+          @media screen and (min-width: grid.$sm-twice)
+            font-size: sizes.$once_54_by_phi * 1px
+
+          @media screen and (min-width: grid.$md-plus)
+            font-size: sizes.$twice_54_by_phi_power_3 * 1px
+  
+          @media screen and (min-width: grid.$lg)
+            font-size: sizes.$once_54_by_phi * 1px
+
+          @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+            
+            font-size: sizes.$twice_54_by_phi_power_3 * 1px
+
+            @media screen and (min-width: grid.$xl-minus)
+              font-size: sizes.$once_54_by_phi * 1px
+
+
+        > div:last-child
+          font-size: sizes.$once_54_by_phi_power_3 * 1px
+
+ 
+  #calendly
+    height: 600px
+
+    > .o-loading
+      $_loadingVerticalMargin: math.div(600 - sizes.$twice_54_by_phi, 2) * 1px
+      
+      margin-top: $_loadingVerticalMargin
+      margin-bottom: $_loadingVerticalMargin
+
+
+
+  > footer
+
+    background-color: #ffffff40
+    border-radius: sizes.$twice_54_by_phi_power_4 * 1px
+
+    padding-top: sizes.$twice_54_by_phi_power_3 * 1px
+    padding-right: sizes.$twice_54_by_phi_power_5 * 1px
+    padding-bottom: sizes.$twice_54_by_phi_power_4 * 1px
+    padding-left: sizes.$twice_54_by_phi_power_2 * 1px
+    
+    width: dimensions.$calendlyWidth
+
+    > figure
+      display: flex
+      align-items: center
+      gap: sizes.$twice_54_by_phi_power_4 * 1px
+
+      &:first-of-type
+        padding-bottom: sizes.$twice_54_by_phi_power_4 * 1px
+
+      > img
+        height: sizes.$twice_54_by_phi_power_4 * 1px
+        width: sizes.$twice_54_by_phi_power_4 * 1px
+
+      > figcaption
+        font-size: sizes.$twice_54_by_phi_power_4 * 1px

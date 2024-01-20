@@ -1,0 +1,160 @@
+@use "sass:math"
+@use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/grid' as grid
+@use '@/assets/sass/sizes' as sizes
+
+$_height: calc(var(--vh, 1vh) * 100)
+
+
+figure
+  margin: 0
+
+
+#__nuxt
+  
+  display: flex
+  align-items: stretch
+  flex-direction: column-reverse
+
+  background-image: url("/background.gif")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  height: 100vh
+  height: $_height
+  width: 100%
+  overflow: hidden
+
+
+  > aside
+    // background-color: #0f2530e6
+    background-color: #0000008c
+    color: colors.$light
+    height: dimensions.$asidePortraitHeight
+
+    @media screen and (min-width: grid.$sm-twice)
+      height: dimensions.$asidePortraitHeightSmTwice
+
+    @media screen and (min-width: grid.$md-plus)
+      height: dimensions.$asidePortraitHeightMdPlus
+
+    @media screen and (min-width: grid.$lg)
+      height: dimensions.$asidePortraitHeightLg
+
+
+  > *
+    padding-top: dimensions.$layoutPaddingTop
+    padding-right: dimensions.$layoutPaddingRight
+    padding-bottom: dimensions.$layoutPaddingBottom
+    padding-left: dimensions.$layoutPaddingLeft
+
+    @media screen and (min-width: grid.$md-twice)
+      padding-right: dimensions.$layoutPaddingRightMdTwice
+      padding-left: dimensions.$layoutPaddingLeftMdTwice
+
+
+    @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+
+      padding-right: dimensions.$layoutPaddingRight
+      padding-left: dimensions.$layoutPaddingLeft
+
+
+      @media screen and (min-width: grid.$xl-minus)
+        padding-right: dimensions.$layoutPaddingRightXlMinus
+        padding-left: dimensions.$layoutPaddingLeftXlMinus
+
+      @media screen and (min-width: grid.$xl-plus)
+        padding-right: dimensions.$layoutPaddingRightXlPlus
+        padding-left: dimensions.$layoutPaddingLeftXlPlus
+
+
+  @media screen and (min-width: grid.$lg-twice) and (orientation: landscape)
+    flex-direction: row
+
+    > aside
+      height: 100vh
+      height: $_height
+      width: dimensions.$asideLandscapeWidth
+
+      @media screen and (min-width: grid.$xl-minus)
+        width: dimensions.$asideLandscapeWidthXlMinus
+
+      @media screen and (min-width: grid.$xl-plus)
+        width: dimensions.$asideLandscapeWidthXlPlus
+
+
+#layout-page
+
+  flex-grow: 1
+
+  @media screen and (orientation: landscape) and (min-width: grid.$lg-twice)
+
+    height: 100%
+
+  *
+    color: colors.$light
+
+
+  > main
+
+    position: fixed
+    top: dimensions.$layoutPageArticlePortraitTop
+
+    height: calc($_height - dimensions.$layoutPageArticlePortraitTop - dimensions.$layoutPaddingBottom - dimensions.$asidePortraitHeight)
+
+    overflow-y: auto
+    padding-right: dimensions.$layoutPaddingRight
+
+    &.o-has-scrollbar
+      padding-right: dimensions.$layoutPaddingRight - dimensions.$scrollbarWidth * 1px
+
+
+    @media screen and (min-width: grid.$md-twice)
+      padding-right: dimensions.$layoutPaddingRightMdTwice
+
+      &.o-has-scrollbar
+        padding-right: dimensions.$layoutPaddingRightMdTwice - dimensions.$scrollbarWidth * 1px
+
+
+    @media screen and (min-width: grid.$sm-twice)
+
+      height: calc($_height - dimensions.$layoutPageArticlePortraitTop - dimensions.$layoutPaddingBottom - dimensions.$asidePortraitHeightSmTwice)
+
+
+    @media screen and (min-width: grid.$md-plus)
+
+      height: calc($_height - dimensions.$layoutPageArticlePortraitTop - dimensions.$layoutPaddingBottom - dimensions.$asidePortraitHeightMdPlus)
+
+
+    @media screen and (min-width: grid.$lg)
+
+      height: calc($_height - dimensions.$layoutPageArticlePortraitTop - dimensions.$layoutPaddingBottom - dimensions.$asidePortraitHeightLg)
+    
+    
+    @media screen and (orientation: landscape) and (min-width: grid.$lg-twice)
+
+      top: dimensions.$layoutPageArticleLandscapeTop
+
+      height: calc($_height - dimensions.$layoutPageArticleLandscapeTop - dimensions.$layoutPaddingBottom)
+  
+      padding-right: dimensions.$layoutPaddingRight
+
+      &.o-has-scrollbar
+        padding-right: dimensions.$layoutPaddingRight - dimensions.$scrollbarWidth * 1px
+
+
+      @media screen and (min-width: grid.$xl-minus)
+        padding-right: dimensions.$layoutPaddingRightXlMinus
+
+        &.o-has-scrollbar
+          padding-right: dimensions.$layoutPaddingRightXlMinus - dimensions.$scrollbarWidth * 1px
+
+
+      @media screen and (min-width: grid.$xl-plus)
+        padding-right: dimensions.$layoutPaddingRightXlPlus
+
+        &.o-has-scrollbar
+          padding-right: dimensions.$layoutPaddingRightXlPlus - sizes.$twice_54_by_phi_power_2 * 1px
