@@ -5,11 +5,15 @@
 <template>
 
   <aside>
-    <div>TOTO</div>
+    <div>CCC-444</div>
   </aside>
 
   <menu>
-    <div>TITI</div>
+    <ul>
+      <li>We provide you</li>
+      <li>They trust us</li>
+      <li>You contact us</li>
+    </ul>
   </menu>
 
 
