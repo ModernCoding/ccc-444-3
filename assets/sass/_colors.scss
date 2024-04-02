@@ -2,50 +2,17 @@
 
 //  Overriding Bootstrap's theme colors
 
-
-// primaries
-$primary:       #0F2530 !default;
-$primary-2:     #335363 !default;
-$primary-3:     #6B8896 !default;
-$primary-4:     #B3C2C9 !default;
-$primary-5:     #AEE2FC !default;
-
-
-// secondaries
-$secondary:     #2E1A01 !default;
-$secondary-2:   #613F15 !default;
-$secondary-3:   #946D3E !default;
-$secondary-4:   #C7A57B !default;
-$secondary-5:   #FAE6CD !default;
-
-
-// successes
-$success:       #10422F !default;
-$success-2:     #34755C !default;
-$success-3:     #6CA891 !default;
-$success-4:     #B8DBCE !default;
-$success-5:     #C2FFE8 !default;
-
-
-// gray shades
-$light:         #fff !default;
+$danger:        #f00 !default;
+$dark:          #110d0d !default;
+$light:         #f6eeee !default;
+$light-2:       #f6eeee33 !default;
+$light-3:       #f6eeee66 !default;
 
 
 $theme-colors: (
-  "primary":        $primary,
-  "primary-2":      $primary-2,
-  "primary-3":      $primary-3,
-  "primary-4":      $primary-4,
-  "primary-5":      $primary-5,
-  "secondary":      $secondary,
-  "secondary-2":    $secondary-2,
-  "secondary-3":    $secondary-3,
-  "secondary-4":    $secondary-4,
-  "secondary-5":    $secondary-5,
-  "success":        $success,
-  "success-2":      $success-2,
-  "success-3":      $success-3,
-  "success-4":      $success-4,
-  "success-5":      $success-5,
-  "light":          $light
+  "danger":         $danger,
+  "dark":           $dark,
+  "light":          $light,
+  "light-2":        $light-2,
+  "light-3":        $light-3
 ) !default;

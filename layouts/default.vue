@@ -10,9 +10,9 @@
 
   <menu>
     <ul>
-      <li>We provide you</li>
-      <li>They trust us</li>
-      <li>You contact us</li>
+      <li>Our company</li>
+      <li>Our customers</li>
+      <li>Our contact</li>
     </ul>
   </menu>
 

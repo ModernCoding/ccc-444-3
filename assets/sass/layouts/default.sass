@@ -14,59 +14,54 @@ figure
 
 #__nuxt
 
+  background-color: colors.$dark
   box-sizing: border-box
   
   display: flex
   align-items: stretch
   // flex-direction: column-reverse
 
-  // background-image: url("/background.gif")
-  // background-position: center
-  // background-repeat: no-repeat
-  // background-size: cover
-
   height: 100vh
   height: $_height
   width: 100%
   overflow: hidden
 
+  padding-top: calc($_height / math.pow(constants.$phi, 4))
+  padding-bottom: calc($_height / math.pow(constants.$phi, 3))
+
 
   > *
-    color: white
+    color: colors.$light
     height: 100%
-    padding-top: calc($_height / math.pow(constants.$phi, 4))
-    padding-bottom: calc($_height / math.pow(constants.$phi, 3))
 
 
   > aside
-    background-color: black
+    border-right: 1px solid colors.$light-3
+    text-align: right
     padding-right: calc(100% / math.pow(constants.$phi, 8))
     padding-left: calc(100% / math.pow(constants.$phi, 9))
-    width: calc(100% / math.pow(constants.$phi, 4))
+    width: calc(100% / math.pow(constants.$phi, 4) - 1px)
 
     > div
-      background-color: red
       height: 100%
 
 
   > menu
-    background-color: red
+    border-right: 1px solid colors.$light-3
     padding-right: calc(100% / math.pow(constants.$phi, 6))
     padding-left: calc(100% / math.pow(constants.$phi, 7))
-    width: calc(100% / math.pow(constants.$phi, 3))
+    width: calc(100% / math.pow(constants.$phi, 3) - 1px)
 
     > *
-      background-color: black
       height: 100%
 
 
   > main[role="main"]
-    background-color: black
+    background-color: colors.$dark
     padding-right: calc(100% / math.pow(constants.$phi, 4))
     padding-left: calc(100% / math.pow(constants.$phi, 5))
     width: calc(100% / constants.$phi)
 
     > *
-      background-color: red
       height: 100%
       overflow-y: auto
