@@ -7,6 +7,7 @@ $dark:          #110d0d !default;
 $light:         #f6eeee !default;
 $light-2:       #f6eeee33 !default;
 $light-3:       #f6eeee66 !default;
+$warning:       #d2c549 !default;
 
 
 $theme-colors: (
@@ -14,5 +15,6 @@ $theme-colors: (
   "dark":           $dark,
   "light":          $light,
   "light-2":        $light-2,
-  "light-3":        $light-3
+  "light-3":        $light-3,
+  "warning":        $warning
 ) !default;
