@@ -112,37 +112,37 @@ export const getWindowWidths = width => {
 
   return {
 
-    IsAtLeastXs: gridIndex >= 0,
+    isAtLeastXs: gridIndex >= 0,
 
-    IsAtLeastSmHalf: gridIndex >= 1,
-    IsAtLeastSmMinus: gridIndex >= 2,
-    IsAtLeastSm: gridIndex >= 3,
-    IsAtLeastSmPlus: gridIndex >= 4,
-    IsAtLeastSmTwice: gridIndex >= 5,
+    isAtLeastSmHalf: gridIndex >= 1,
+    isAtLeastSmMinus: gridIndex >= 2,
+    isAtLeastSm: gridIndex >= 3,
+    isAtLeastSmPlus: gridIndex >= 4,
+    isAtLeastSmTwice: gridIndex >= 5,
 
-    IsAtLeastMdHalf: gridIndex >= 6,
-    IsAtLeastMdMinus: gridIndex >= 7,
-    IsAtLeastMd: gridIndex >= 8,
-    IsAtLeastMdPlus: gridIndex >= 9,
-    IsAtLeastMdTwice: gridIndex >= 10,
+    isAtLeastMdHalf: gridIndex >= 6,
+    isAtLeastMdMinus: gridIndex >= 7,
+    isAtLeastMd: gridIndex >= 8,
+    isAtLeastMdPlus: gridIndex >= 9,
+    isAtLeastMdTwice: gridIndex >= 10,
 
-    IsAtLeastLgHalf: gridIndex >= 11,
-    IsAtLeastLgMinus: gridIndex >= 12,
-    IsAtLeastLg: gridIndex >= 13,
-    IsAtLeastLgPlus: gridIndex >= 14,
-    IsAtLeastLgTwice: gridIndex >= 15,
+    isAtLeastLgHalf: gridIndex >= 11,
+    isAtLeastLgMinus: gridIndex >= 12,
+    isAtLeastLg: gridIndex >= 13,
+    isAtLeastLgPlus: gridIndex >= 14,
+    isAtLeastLgTwice: gridIndex >= 15,
 
-    IsAtLeastXlHalf: gridIndex >= 16,
-    IsAtLeastXlMinus: gridIndex >= 17,
-    IsAtLeastXl: gridIndex >= 18,
-    IsAtLeastXlPlus: gridIndex >= 19,
-    IsAtLeastXlTwice: gridIndex >= 20,
+    isAtLeastXlHalf: gridIndex >= 16,
+    isAtLeastXlMinus: gridIndex >= 17,
+    isAtLeastXl: gridIndex >= 18,
+    isAtLeastXlPlus: gridIndex >= 19,
+    isAtLeastXlTwice: gridIndex >= 20,
 
-    IsAtLeastXxlHalf: gridIndex >= 21,
-    IsAtLeastXxlMinus: gridIndex >= 22,
-    IsAtLeastXxl: gridIndex >= 23,
-    IsAtLeastXxlPlus: gridIndex >= 24,
-    IsAtLeastXxlTwice: gridIndex >= 25
+    isAtLeastXxlHalf: gridIndex >= 21,
+    isAtLeastXxlMinus: gridIndex >= 22,
+    isAtLeastXxl: gridIndex >= 23,
+    isAtLeastXxlPlus: gridIndex >= 24,
+    isAtLeastXxlTwice: gridIndex >= 25
 
   }
 

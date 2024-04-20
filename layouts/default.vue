@@ -1,11 +1,14 @@
 <script setup>
 
   const hasScrollbar = ref (false)
+  const windowWidths = ref ({})
 
 
   onMounted (() => {
 
-    const _setVh = () => {
+    const _handleResize = () => {
+
+      windowWidths.value = getWindowWidths (window.innerWidth)
 
       document
         .documentElement
@@ -14,9 +17,9 @@
 
     }
 
-    _setVh ()
 
-    window.addEventListener ('resize', _setVh)
+    _handleResize ()
+    window.addEventListener ('resize', _handleResize)
 
 
     ;(main => {
@@ -39,6 +42,15 @@
 <template>
 
   <header>
+
+    <nav v-if="!windowWidths.isAtLeastXlTwice">
+      <ul class="d-flex align-items-center gap-3">
+        <li>Our company</li>
+        <li>Our customers</li>
+        <li>Our contact</li>
+      </ul>
+    </nav>
+
   </header>
 
 
@@ -48,7 +60,7 @@
       <div>CCC-444</div>
     </aside>
 
-    <menu>
+    <menu v-if="windowWidths.isAtLeastXlTwice">
       <ul>
         <li>Our company</li>
         <li>Our customers</li>
