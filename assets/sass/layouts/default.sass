@@ -1,7 +1,4 @@
-@use "sass:math"
-
 @use '@/assets/sass/colors' as colors
-@use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/grid' as grid
 @use '@/assets/sass/sizes' as sizes
@@ -56,18 +53,18 @@ figure
 
     > menu
       border-right: 1px solid colors.$light-3
-      padding-right: calc(100% / math.pow(constants.$phi, 6))
-      padding-left: calc(100% / math.pow(constants.$phi, 7))
-      width: calc(100% / math.pow(constants.$phi, 3) - 1px)
+      padding-right: dimensions.$menuPaddingRight
+      padding-left: dimensions.$menuPaddingLeft
+      width: dimensions.$menuWidth
 
       > *
         height: 100%
 
 
     > main[role="main"]
-      padding-right: calc(100% / math.pow(constants.$phi, 4))
-      padding-left: calc(100% / math.pow(constants.$phi, 5))
-      width: calc(100% / constants.$phi)
+      padding-right: dimensions.$mainPaddingRight
+      padding-left: dimensions.$mainPaddingLeft
+      width: dimensions.$mainWidth
 
       > *
         height: 100%
