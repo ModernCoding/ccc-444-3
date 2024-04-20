@@ -25,7 +25,41 @@ figure
 
 
   > header
+    display: flex
+    align-items: flex-end
+
     height: dimensions.$heightHeader
+    padding-top: dimensions.$heightHeaderPaddingTop
+    padding-bottom: dimensions.$heightHeaderPaddingBottom
+
+    width: 100%
+
+    // only if not at least xxl-half
+
+    > nav
+      flex-grow: 1
+      
+      display: flex
+      align-items: center
+
+      > div
+        padding-right: dimensions.$asidePaddingRight
+        padding-left: dimensions.$asidePaddingLeft
+        width: dimensions.$asideWidth
+
+      > menu
+        padding-right: dimensions.$mainPaddingRight
+        padding-left: dimensions.$mainPaddingLeft
+        width: dimensions.$mainWidth
+
+        > ul
+          display: flex
+          align-items: center
+          gap: sizes.$twice_54_by_phi_power_3 * 1px
+
+          > li
+            font-size: sizes.$twice_54_by_phi_power_4 * 1px
+            text-transform: uppercase
 
 
   > section
@@ -73,3 +107,5 @@ figure
 
   > footer
     height: dimensions.$heightFooter
+    padding-top: dimensions.$heightFooterPaddingTop
+    padding-bottom: dimensions.$heightFooterPaddingBottom

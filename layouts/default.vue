@@ -44,11 +44,8 @@
   <header>
 
     <nav v-if="!windowWidths.isAtLeastXxlHalf">
-      <ul class="d-flex align-items-center gap-3">
-        <li>Our company</li>
-        <li>Our customers</li>
-        <li>Our contact</li>
-      </ul>
+      <div />
+      <Menu />
     </nav>
 
   </header>
@@ -60,13 +57,7 @@
       <div>CCC-444</div>
     </aside>
 
-    <menu v-if="windowWidths.isAtLeastXxlHalf">
-      <ul>
-        <li>Our company</li>
-        <li>Our customers</li>
-        <li>Our contact</li>
-      </ul>
-    </menu>
+    <Menu v-if="windowWidths.isAtLeastXxlHalf" />
 
     <main role="main">
       <slot />
