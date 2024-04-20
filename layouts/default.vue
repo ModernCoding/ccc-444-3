@@ -1,4 +1,38 @@
 <script setup>
+
+  const hasScrollbar = ref (false)
+
+
+  onMounted (() => {
+
+    const _setVh = () => {
+
+      document
+        .documentElement
+        .style
+        .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
+
+    }
+
+    _setVh ()
+
+    window.addEventListener ('resize', _setVh)
+
+
+    ;(main => {
+
+      if (!main) { return }
+
+      hasScrollbar.value = main.scrollHeight > main.clientHeight
+
+      window.addEventListener ('resize', () => {
+        hasScrollbar.value = main.scrollHeight > main.clientHeight
+      })
+
+    }) (document.querySelector ('main[role="main"]'))
+
+  })
+
 </script>
 
 
