@@ -54,7 +54,7 @@
   <section>
 
     <aside>
-      <div>CCC-444</div>
+      <Logo />
     </aside>
 
     <Menu v-if="windowWidths.isAtLeastXxlHalf" />

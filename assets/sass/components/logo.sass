@@ -1,0 +1,83 @@
+@use "sass:math"
+
+@use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/sizes' as sizes
+
+
+#logo
+
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  border: #{ constants.$phi }px solid colors.$light
+
+
+  > header, > footer
+
+    width: 100%
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    letter-spacing: sizes.$twice_54_by_phi_power_6 * 1px
+    text-transform: uppercase
+
+
+    > div
+      display: flex
+      align-items: center
+
+
+    > div:first-of-type
+
+      justify-content: end
+      color: colors.$danger
+
+      text-shadow: #{ constants.$phi }px #{ calc(1 / constants.$phi) }px colors.$light
+
+      width: calc(100% / math.pow(constants.$phi, 2))
+
+
+    > div:last-of-type
+      text-align: left
+      width: calc(100% / constants.$phi)
+
+
+  > footer
+    align-items: flex-start
+
+
+
+  > section
+
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+    > div:first-of-type
+
+      width: calc(100% / math.pow(constants.$phi, 2))
+
+      display: flex
+      align-items: center
+      justify-content: end
+
+    
+      > div
+        border-top: #{ constants.$phi }px solid colors.$danger
+        border-bottom: #{ constants.$phi }px solid colors.$light
+        width: calc(100% / constants.$phi)
+
+
+    > div:last-of-type
+      width: calc(100% / constants.$phi)
+    
+      > div
+        border-top: #{ constants.$phi }px solid colors.$light
+        width: calc(100% / constants.$phi)
