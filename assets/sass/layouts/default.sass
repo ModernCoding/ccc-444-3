@@ -1,13 +1,10 @@
 @use "sass:math"
+
 @use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/grid' as grid
 @use '@/assets/sass/sizes' as sizes
-
-$_height: calc(var(--vh, 1vh) * 100)
-$_heightHeader: calc($_height / math.pow(constants.$phi, 4))
-$_heightFooter: calc($_height / math.pow(constants.$phi, 3))
 
 
 figure
@@ -20,18 +17,18 @@ figure
   box-sizing: border-box
 
   height: 100vh
-  height: $_height
+  height: dimensions.$height
   width: 100%
   overflow: hidden
 
 
   > *
     color: colors.$light
-    height: calc(100% - $_heightHeader - $_heightFooter)
+    height: calc(100% - dimensions.$heightHeader - dimensions.$heightFooter)
 
 
   > header
-    height: $_heightHeader
+    height: dimensions.$heightHeader
 
 
   > section
@@ -72,4 +69,4 @@ figure
 
 
   > footer
-    height: $_heightFooter
+    height: dimensions.$heightFooter
