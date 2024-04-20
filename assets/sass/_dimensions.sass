@@ -4,9 +4,21 @@
 @use "sizes" as s
 
 
+// heights
 $height: calc(var(--vh, 1vh) * 100)
 $heightHeader: calc($height / math.pow(c.$phi, 4))
 $heightFooter: calc($height / math.pow(c.$phi, 3))
+
+
+// aside
+$asideWidth: calc(100% / math.pow(c.$phi, 2) - 1px)
+$asidePaddingRight: calc(100% / math.pow(c.$phi, 6))
+$asidePaddingLeft: calc(100% / math.pow(c.$phi, 7))
+
+
+$asideWidthXxlHalf: calc(100% / math.pow(c.$phi, 4) - 1px)
+$asidePaddingRightXxlHalf: calc(100% / math.pow(c.$phi, 8))
+$asidePaddingLeftXxlHalf: calc(100% / math.pow(c.$phi, 9))
 
 
 

@@ -43,7 +43,7 @@
 
   <header>
 
-    <nav v-if="!windowWidths.isAtLeastXlTwice">
+    <nav v-if="!windowWidths.isAtLeastXxlHalf">
       <ul class="d-flex align-items-center gap-3">
         <li>Our company</li>
         <li>Our customers</li>
@@ -60,7 +60,7 @@
       <div>CCC-444</div>
     </aside>
 
-    <menu v-if="windowWidths.isAtLeastXlTwice">
+    <menu v-if="windowWidths.isAtLeastXxlHalf">
       <ul>
         <li>Our company</li>
         <li>Our customers</li>

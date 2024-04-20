@@ -40,9 +40,15 @@ figure
     > aside
       border-right: 1px solid colors.$light-3
       text-align: right
-      padding-right: calc(100% / math.pow(constants.$phi, 8))
-      padding-left: calc(100% / math.pow(constants.$phi, 9))
-      width: calc(100% / math.pow(constants.$phi, 4) - 1px)
+      padding-right: dimensions.$asidePaddingRight
+      padding-left: dimensions.$asidePaddingLeft
+      width: dimensions.$asideWidth
+
+      @media screen and (min-width: grid.$xxl-half)
+        padding-right: dimensions.$asidePaddingRightXxlHalf
+        padding-left: dimensions.$asidePaddingLeftXxlHalf
+        width: dimensions.$asideWidthXxlHalf
+
 
       > div
         height: 100%
