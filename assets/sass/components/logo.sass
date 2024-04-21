@@ -17,24 +17,15 @@
 
   > header, > footer
 
-    width: 100%
-
     display: flex
     align-items: center
-    justify-content: center
+    align-items: flex-start
 
-    letter-spacing: sizes.$twice_54_by_phi_power_6 * 1px
     text-transform: uppercase
-
-
-    > div
-      display: flex
-      align-items: center
+    width: 100%
 
 
     > div:first-of-type
-
-      justify-content: end
       color: colors.$danger
 
       text-shadow: #{ constants.$phi }px #{ calc(1 / constants.$phi) }px colors.$light
@@ -45,11 +36,6 @@
     > div:last-of-type
       text-align: left
       width: calc(100% / constants.$phi)
-
-
-  > footer
-    align-items: flex-start
-
 
 
   > section

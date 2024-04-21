@@ -4,25 +4,9 @@
   const windowWidths = ref ({})
 
 
-  onMounted (() => {
+  const setDimensions = () => {
 
-    const _handleResize = () => {
-
-      windowWidths.value = getWindowWidths (window.innerWidth)
-
-      document
-        .documentElement
-        .style
-        .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
-
-    }
-
-
-    _handleResize ()
-    window.addEventListener ('resize', _handleResize)
-
-
-    ;(main => {
+    (main => {
 
       if (!main) { return }
 
@@ -34,6 +18,20 @@
 
     }) (document.querySelector ('main[role="main"]'))
 
+
+    windowWidths.value = getWindowWidths (window.innerWidth)
+
+    document
+      .documentElement
+      .style
+      .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
+
+  } 
+
+
+  onMounted (() => {
+    setDimensions ()
+    window.addEventListener ('resize', setDimensions)
   })
 
 </script>
