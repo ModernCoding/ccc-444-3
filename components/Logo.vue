@@ -5,9 +5,14 @@
     const logo = document.querySelector ('#logo')
     if (!logo) { return }
 
-    const header = logo.querySelector ('#logo > header')
-    const section = logo.querySelector ('#logo > section')
-    const footer = logo.querySelector ('#logo > footer')
+    logo
+      .querySelectorAll ('*')
+      .forEach (e => e.removeAttribute ('style'))
+
+
+    const header = document.querySelector ('#logo > header')
+    const section = document.querySelector ('#logo > section')
+    const footer = document.querySelector ('#logo > footer')
 
     const { width: logoWidth } = logo.getBoundingClientRect ()
     const { height: sectionHeight } = section.getBoundingClientRect ()
@@ -46,12 +51,14 @@
     footer.style.paddingTop = `${ footerPaddingTop }px`
     footer.style.paddingBottom = `${ footerPaddingBottom }px`
 
+
     const headerFontSize = headerContentHeight / (PHI * 3)
     const headerLetterSpacing = headerFontSize / PHI
+    const headerDivMargin = headerLetterSpacing / (PHI ** 2)
 
     const footerFontSize = footerContentHeight / (PHI * 2)
     const footerLetterSpacing = footerFontSize / PHI
-
+    const footerDivMargin = footerLetterSpacing / (PHI ** 2)
 
     document.querySelectorAll ('#logo > header p').forEach (p => {
       p.style.fontSize = `${ headerFontSize }px`
@@ -62,6 +69,40 @@
       p.style.fontSize = `${ footerFontSize }px`
       p.style.letterSpacing = `${ footerLetterSpacing }px`
     })
+
+
+    document
+      .querySelectorAll ('#logo > header > div')
+      .forEach ((div, i) => {
+
+        div.style.width = `${
+            div.getBoundingClientRect ().width
+              + headerDivMargin * (i > 0 ? -1 : 1)
+          }px`
+
+
+        i > 0
+          ? div.style.marginLeft = `${ headerDivMargin }px`
+          : div.style.marginRight = `${ -headerDivMargin }px` 
+
+      })
+
+
+    document
+      .querySelectorAll ('#logo > footer > div')
+      .forEach ((div, i) => {
+
+        div.style.width = `${
+            div.getBoundingClientRect ().width
+              + footerDivMargin * (i > 0 ? -1 : 1)
+          }px`
+
+
+        i > 0
+          ? div.style.marginLeft = `${ footerDivMargin }px`
+          : div.style.marginRight = `${ -footerDivMargin }px` 
+
+      })
 
   }
 
@@ -118,7 +159,7 @@
         <p>ซอฟต์แวร์</p>
         <p>โซลูชั่น</p>
       </div>
-      
+
     </footer>
   
   </article>

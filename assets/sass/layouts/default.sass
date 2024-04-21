@@ -1,4 +1,7 @@
+@use 'sass:math'
+
 @use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/grid' as grid
 @use '@/assets/sass/sizes' as sizes
@@ -55,11 +58,11 @@ figure
         > ul
           display: flex
           align-items: center
-          gap: sizes.$twice_54_by_phi_power_3 * 1px
+          gap: sizes.$twice_54_by_phi_power_2 * 1px
 
           > li
             font-size: sizes.$twice_54_by_phi_power_4 * 1px
-            letter-spacing: sizes.$twice_54_by_phi_power_7 * 1px
+            letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
             text-transform: uppercase
 
 
