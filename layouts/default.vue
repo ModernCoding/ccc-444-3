@@ -1,6 +1,5 @@
 <script setup>
 
-  const hasScrollbar = ref (false)
   const windowWidths = ref ({})
 
 
@@ -10,11 +9,42 @@
 
       if (!main) { return }
 
-      hasScrollbar.value = main.scrollHeight > main.clientHeight
 
-      window.addEventListener ('resize', () => {
-        hasScrollbar.value = main.scrollHeight > main.clientHeight
-      })
+      (mainContent => {
+        
+        if (!mainContent) { return }
+
+        mainContent.removeAttribute ('style')
+
+        if (mainContent.scrollHeight <= mainContent.clientHeight) {
+          return
+        }
+
+
+        const mainPaddingLeft = parseInt (
+
+            window
+              .getComputedStyle (main)
+              .getPropertyValue ('padding-left')
+              .split ('px')
+              .join ('')
+
+          )
+
+
+        ;(mainContentWidth => {
+
+          mainContent.style.paddingRight = `${
+            mainPaddingLeft / PHI
+              - (mainContentWidth - mainContent.clientWidth)
+                /*
+                  compensating scrollbar width
+                */
+          }px`
+
+        }) (mainContent.getBoundingClientRect ().width)
+
+      }) (main.querySelector ('*'))
 
     }) (document.querySelector ('main[role="main"]'))
 
