@@ -11,15 +11,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.3.0",
-    "nuxt": "^3.11.2",
-    "vue": "^3.4.23",
-    "vue-router": "^4.3.2"
+    "@nuxtjs/i18n": "^8.3.1",
+    "nuxt": "^3.12.2",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "sass": "^1.75.0",
-    "uikit": "^3.19.4"
+    "sass": "^1.77.6",
+    "uikit": "^3.21.5"
   }
 }
