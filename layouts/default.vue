@@ -1,11 +1,18 @@
 <script setup>
 
+  const isPortrait = ref (false)
   const windowWidths = ref ({})
 
 
   const setDimensions = () => {
 
-    (main => {
+    isPortrait.value = (body => body && (({ width, height }) =>
+        width < height
+      ) (body.getBoundingClientRect ())
+    ) (document.querySelector ('body'))
+
+
+    ;(main => {
 
       if (!main) { return }
 
@@ -71,7 +78,7 @@
 
   <header>
 
-    <nav v-if="!windowWidths.isAtLeastXxlHalf">
+    <nav v-if="!windowWidths.isAtLeastXxlHalf && !isPortrait">
       <div />
       <Menu />
     </nav>
@@ -85,7 +92,7 @@
       <Logo />
     </aside>
 
-    <Menu v-if="windowWidths.isAtLeastXxlHalf" />
+    <Menu v-if="windowWidths.isAtLeastXxlHalf && !isPortrait" />
 
     <main role="main">
       <slot />
