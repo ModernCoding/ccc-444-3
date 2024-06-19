@@ -4,6 +4,11 @@
 @use "sizes" as s
 
 
+// layout
+$layoutPaddingRightPortrait: calc(100% / math.pow(c.$phi, 4))
+$layoutPaddingLeftPortrait: calc(100% / math.pow(c.$phi, 5))
+
+
 // heights
 
 $height: calc(var(--vh, 1vh) * 100)
@@ -11,6 +16,10 @@ $height: calc(var(--vh, 1vh) * 100)
 $heightHeader: calc($height / math.pow(c.$phi, 4))
 $heightHeaderPaddingTop: calc($height / math.pow(c.$phi, 8))
 $heightHeaderPaddingBottom: calc($height / math.pow(c.$phi, 7))
+
+$heightSectionLandscape: calc($height / c.$phi)
+$heightAsidePortrait: calc($height / math.pow(c.$phi, 3))
+$heightMainPortrait: calc($height / math.pow(c.$phi, 2))
 
 $heightFooter: calc($height / math.pow(c.$phi, 3))
 $heightFooterPaddingTop: calc($height / math.pow(c.$phi, 6))
