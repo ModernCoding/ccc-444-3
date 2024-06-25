@@ -87,13 +87,20 @@ figure
         border-bottom: 1px solid colors.$light-3
         text-align: right
         height: dimensions.$heightAsidePortrait
+        padding-top: dimensions.$heightAsidePaddingTopPortrait
+        padding-bottom: dimensions.$heightAsidePaddingBottomPortrait
         width: 100%
 
 
       > main[role="main"]
         height: dimensions.$heightMainPortrait
+        padding-top: dimensions.$heightMainPaddingTopPortrait
+        padding-bottom: dimensions.$heightMainPaddingBottomPortrait
         width: 100%
-        overflow-y: auto
+
+        > *
+          height: 100%
+          overflow-y: auto
 
 
     @media screen and (orientation: landscape)

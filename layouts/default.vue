@@ -23,21 +23,8 @@
 
         mainContent.removeAttribute ('style')
 
-
-        switch (true) {
-
-          case  !isPortrait.value
-                && mainContent.scrollHeight <= mainContent.clientHeight:
-
-          case  isPortrait.value
-                && main.scrollHeight <= main.clientHeight:
-
-            return
-
-
-          default:
-            break
-
+        if (mainContent.scrollHeight <= mainContent.clientHeight) {
+          return
         }
 
 
