@@ -23,15 +23,33 @@
 
         mainContent.removeAttribute ('style')
 
-        if (mainContent.scrollHeight <= mainContent.clientHeight) {
-          return
+
+        switch (true) {
+
+          case  !isPortrait.value
+                && mainContent.scrollHeight <= mainContent.clientHeight:
+
+          case  isPortrait.value
+                && main.scrollHeight <= main.clientHeight:
+
+            return
+
+
+          default:
+            break
+
         }
 
 
         const mainPaddingLeft = parseInt (
 
             window
-              .getComputedStyle (main)
+              .getComputedStyle (
+                  isPortrait.value
+                    ? document.querySelector ('#__nuxt')
+                    : main
+                )
+
               .getPropertyValue ('padding-left')
               .split ('px')
               .join ('')
