@@ -5,17 +5,22 @@
 
 
 // layout
-$layoutPaddingRightPortrait: calc(100% / math.pow(c.$phi, 4))
-$layoutPaddingLeftPortrait: calc(100% / math.pow(c.$phi, 5))
+$layoutPaddingRightPortrait: calc(100% / math.pow(c.$phi, 5))
+$layoutPaddingLeftPortrait: calc(100% / math.pow(c.$phi, 6))
 
 
 // heights
 
 $height: calc(var(--vh, 1vh) * 100)
 
-$heightHeader: calc($height / math.pow(c.$phi, 4))
-$heightHeaderPaddingTop: calc($height / math.pow(c.$phi, 8))
-$heightHeaderPaddingBottom: calc($height / math.pow(c.$phi, 7))
+$heightHeaderLandscape: calc($height / math.pow(c.$phi, 4))
+$heightHeaderPaddingTopLandscape: calc($height / math.pow(c.$phi, 8))
+$heightHeaderPaddingBottomLandscape: calc($height / math.pow(c.$phi, 7))
+
+$heightHeaderPortrait: calc($height / math.pow(c.$phi, 4))
+$heightHeaderPaddingTopPortrait: calc($height / math.pow(c.$phi, 8))
+$heightHeaderPaddingBottomPortrait: calc($height / math.pow(c.$phi, 7))
+
 
 $heightSectionLandscape: calc($height / c.$phi)
 
@@ -27,9 +32,14 @@ $heightMainPortrait: calc($height / math.pow(c.$phi, 2))
 $heightMainPaddingTopPortrait: calc($height / math.pow(c.$phi, 6))
 $heightMainPaddingBottomPortrait: calc($height / math.pow(c.$phi, 5))
 
-$heightFooter: calc($height / math.pow(c.$phi, 3))
-$heightFooterPaddingTop: calc($height / math.pow(c.$phi, 6))
-$heightFooterPaddingBottom: calc($height / math.pow(c.$phi, 7))
+
+$heightFooterLandscape: calc($height / math.pow(c.$phi, 3))
+$heightFooterPaddingTopLandscape: calc($height / math.pow(c.$phi, 6))
+$heightFooterPaddingBottomLandscape: calc($height / math.pow(c.$phi, 7))
+
+$heightFooterPortrait: calc($height / math.pow(c.$phi, 3))
+$heightFooterPaddingTopPortrait: calc($height / math.pow(c.$phi, 6))
+$heightFooterPaddingBottomPortrait: calc($height / math.pow(c.$phi, 7))
 
 
 // aside

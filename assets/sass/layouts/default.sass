@@ -36,12 +36,18 @@ figure
   > header
     display: flex
     align-items: flex-end
-
-    height: dimensions.$heightHeader
-    padding-top: dimensions.$heightHeaderPaddingTop
-    padding-bottom: dimensions.$heightHeaderPaddingBottom
-
     width: 100%
+
+    @media screen and (orientation: landscape)
+      height: dimensions.$heightHeaderLandscape
+      padding-top: dimensions.$heightHeaderPaddingTopLandscape
+      padding-bottom: dimensions.$heightHeaderPaddingBottomLandscape
+
+    @media screen and (orientation: portrait)
+      height: dimensions.$heightHeaderPortrait
+      padding-top: dimensions.$heightHeaderPaddingTopPortrait
+      padding-bottom: dimensions.$heightHeaderPaddingBottomPortrait
+
 
     // only if not at least xxl-half
 
@@ -149,6 +155,13 @@ figure
 
 
   > footer
-    height: dimensions.$heightFooter
-    padding-top: dimensions.$heightFooterPaddingTop
-    padding-bottom: dimensions.$heightFooterPaddingBottom
+
+    @media screen and (orientation: landscape)
+      height: dimensions.$heightFooterLandscape
+      padding-top: dimensions.$heightFooterPaddingTopLandscape
+      padding-bottom: dimensions.$heightFooterPaddingBottomLandscape
+
+    @media screen and (orientation: portrait)
+      height: dimensions.$heightFooterPortrait
+      padding-top: dimensions.$heightFooterPaddingTopPortrait
+      padding-bottom: dimensions.$heightFooterPaddingBottomPortrait
