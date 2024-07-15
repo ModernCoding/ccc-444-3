@@ -25,31 +25,23 @@ $heightFooterPaddingBottomLandscape: calc($height / math.pow(c.$phi, 7))
 
 
 $heightHeaderPortrait: calc($height / math.pow(c.$phi, 7))
-// $heightHeaderPaddingTopPortrait: calc($height / math.pow(c.$phi, 8))
-$heightHeaderPaddingTopPortrait: 0
-// $heightHeaderPaddingBottomPortrait: calc($height / math.pow(c.$phi, 7))
-$heightHeaderPaddingBottomPortrait: 0
+$heightHeaderPaddingTopPortrait: calc($heightHeaderPortrait / math.pow(c.$phi, 4))
+$heightHeaderPaddingBottomPortrait: calc($heightHeaderPortrait / math.pow(c.$phi, 3))
 
 $heightFooterPortrait: calc($height / math.pow(c.$phi, 6))
-// $heightFooterPaddingTopPortrait: calc($height / math.pow(c.$phi, 6))
-$heightFooterPaddingTopPortrait: 10px
-// $heightFooterPaddingBottomPortrait: calc($height / math.pow(c.$phi, 7))
-$heightFooterPaddingBottomPortrait: 10px
+$heightFooterPaddingTopPortrait: calc($heightFooterPortrait / math.pow(c.$phi, 4))
+$heightFooterPaddingBottomPortrait: calc($heightFooterPortrait / math.pow(c.$phi, 3))
 
 
 
 $heightAsidePortrait: calc(($height - $heightHeaderPortrait - $heightFooterPortrait) / math.pow(c.$phi, 2))
 
-// $heightAsidePaddingTopPortrait: calc($height / math.pow(c.$phi, 7))
-$heightAsidePaddingTopPortrait: 0
-// $heightAsidePaddingBottomPortrait: calc($height / math.pow(c.$phi, 6))
-$heightAsidePaddingBottomPortrait: 0
+$heightAsidePaddingTopPortrait: calc($heightHeaderPortrait / c.$phi)
+$heightAsidePaddingBottomPortrait: calc($heightHeaderPortrait / math.pow(c.$phi, 2))
 
 $heightMainPortrait: calc(($height - $heightHeaderPortrait - $heightFooterPortrait) / c.$phi)
-// $heightMainPaddingTopPortrait: calc($height / math.pow(c.$phi, 6))
-$heightMainPaddingTopPortrait: 0
-// $heightMainPaddingBottomPortrait: calc($height / math.pow(c.$phi, 5))
-$heightMainPaddingBottomPortrait: 0
+$heightMainPaddingTopPortrait: calc($heightFooterPortrait / math.pow(c.$phi, 2))
+$heightMainPaddingBottomPortrait: calc($heightFooterPortrait / c.$phi)
 
 
 // aside
