@@ -46,12 +46,13 @@
 
         ;(mainContentWidth => {
 
+          // compensating scrollbar width
+          const compensation = mainPaddingLeft / PHI
+
           mainContent.style.paddingRight = `${
-            mainPaddingLeft / PHI
-              - (mainContentWidth - mainContent.clientWidth)
-                /*
-                  compensating scrollbar width
-                */
+            [ TWICE_54_BY_PHI_POWER_4, compensation ] [
+              +(compensation > TWICE_54_BY_PHI_POWER_4)
+            ]
           }px`
 
         }) (mainContent.getBoundingClientRect ().width)
