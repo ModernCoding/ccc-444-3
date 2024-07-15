@@ -34,7 +34,7 @@ $heightFooterPaddingBottomPortrait: calc($heightFooterPortrait / math.pow(c.$phi
 
 
 
-$heightAsidePortrait: calc(($height - $heightHeaderPortrait - $heightFooterPortrait) / math.pow(c.$phi, 2))
+$heightAsidePortrait: calc(($height - $heightHeaderPortrait - $heightFooterPortrait) / math.pow(c.$phi, 2) - 1px)
 
 $heightAsidePaddingTopPortrait: calc($heightHeaderPortrait / c.$phi)
 $heightAsidePaddingBottomPortrait: calc($heightHeaderPortrait / math.pow(c.$phi, 2))
