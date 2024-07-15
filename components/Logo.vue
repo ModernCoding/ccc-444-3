@@ -62,47 +62,17 @@
 
     document.querySelectorAll ('#logo > header p').forEach (p => {
       p.style.fontSize = `${ headerFontSize }px`
-      p.style.letterSpacing = `${ headerLetterSpacing }px`
+      p.style.width = `${ headerFontSize }px`
     })
+
 
     document.querySelectorAll ('#logo > footer p').forEach (p => {
       p.style.fontSize = `${ footerFontSize }px`
-      p.style.letterSpacing = `${ footerLetterSpacing }px`
+      p.style.width = `${ headerFontSize }px`
+        /*
+          stick to header font size, not to footer font size
+        */
     })
-
-
-    document
-      .querySelectorAll ('#logo > header > div')
-      .forEach ((div, i) => {
-
-        div.style.width = `${
-            div.getBoundingClientRect ().width
-              + headerDivMargin * (i > 0 ? -1 : 1)
-          }px`
-
-
-        i > 0
-          ? div.style.marginLeft = `${ headerDivMargin }px`
-          : div.style.marginRight = `${ -headerDivMargin }px` 
-
-      })
-
-
-    document
-      .querySelectorAll ('#logo > footer > div')
-      .forEach ((div, i) => {
-
-        div.style.width = `${
-            div.getBoundingClientRect ().width
-              + footerDivMargin * (i > 0 ? -1 : 1)
-          }px`
-
-
-        i > 0
-          ? div.style.marginLeft = `${ footerDivMargin }px`
-          : div.style.marginRight = `${ -footerDivMargin }px` 
-
-      })
 
   }
 
@@ -122,15 +92,49 @@
     <header>
 
       <div>
-        <p>c</p>
-        <p>c</p>
-        <p>c</p>
+
+        <div
+          v-for="i in 3" :key="i"
+          class="d-flex align-items-center justify-content-end"
+        >
+          <p>c</p>
+        </div>
+        
       </div>
 
+
       <div>
-        <p>oding</p>
-        <p>rafting</p>
-        <p>onsulting</p>
+
+        <div class="d-flex align-items-center">
+          <p>o</p>
+          <p>d</p>
+          <p>i</p>
+          <p>n</p>
+          <p>g</p>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <p>r</p>
+          <p>a</p>
+          <p>f</p>
+          <p>t</p>
+          <p>i</p>
+          <p>n</p>
+          <p>g</p>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <p>o</p>
+          <p>n</p>
+          <p>s</p>
+          <p>u</p>
+          <p>l</p>
+          <p>t</p>
+          <p>i</p>
+          <p>n</p>
+          <p>g</p>
+        </div>
+
       </div>
 
     </header>
@@ -152,12 +156,34 @@
     <footer class="o-font-th">
 
       <div>
-        <p>๔๔๔</p>
+
+        <div class="d-flex align-items-center justify-content-end">
+          <p v-for="i in 3" :key="i">๔</p>
+        </div>
+    
       </div>
     
+
       <div>
-        <p>ซอฟต์แวร์</p>
-        <p>โซลูชั่น</p>
+
+        <div class="d-flex align-items-center">
+          <p>ซ</p>
+          <p>อ</p>
+          <p>ฟ</p>
+          <p>ต์</p>
+          <p>แ</p>
+          <p>ว</p>
+          <p>ร์</p>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <p>โ</p>
+          <p>ซ</p>
+          <p>ลู</p>
+          <p>ชั่</p>
+          <p>น</p>
+        </div>
+
       </div>
 
     </footer>

@@ -17,18 +17,20 @@
   @media screen and (orientation: portrait)
     width: calc(100% / constants.$phi)
 
+  p
+    text-align: center
+
 
   > header, > footer
 
     display: flex
-    align-items: center
     align-items: flex-start
 
     text-transform: uppercase
     width: 100%
 
 
-    > div:first-of-type
+    > div:first-child
       color: colors.$danger
 
       text-shadow: #{ constants.$phi }px #{ calc(1 / constants.$phi) }px colors.$light
@@ -36,7 +38,7 @@
       width: calc(100% / math.pow(constants.$phi, 2))
 
 
-    > div:last-of-type
+    > div:last-child
       text-align: left
       width: calc(100% / constants.$phi)
 
