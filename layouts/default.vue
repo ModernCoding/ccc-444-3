@@ -92,8 +92,15 @@
   <section>
 
     <aside>
+
       <Logo />
+
+      <nav v-if="isPortrait">
+        <Menu />
+      </nav>
+
     </aside>
+
 
     <Menu v-if="windowWidths.isAtLeastXxlHalf && !isPortrait" />
 
