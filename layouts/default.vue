@@ -6,7 +6,7 @@
 
   const setDimensions = () => {
 
-    isPortrait.value = setIsProtrait ()
+    isPortrait.value = setIsPortrait ()
 
 
     ;(main => {

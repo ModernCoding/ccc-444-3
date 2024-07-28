@@ -10,69 +10,100 @@
       .forEach (e => e.removeAttribute ('style'))
 
 
+    const aside = document.querySelector ('#__nuxt > section > aside')
     const header = document.querySelector ('#logo > header')
     const section = document.querySelector ('#logo > section')
     const footer = document.querySelector ('#logo > footer')
 
-    const { width: logoWidth } = logo.getBoundingClientRect ()
-    const { height: sectionHeight } = section.getBoundingClientRect ()
+    const { height: asideHeight } = aside.getBoundingClientRect ()
 
-    logo.style.height = `${ logoWidth / PHI }px`
-    const { height: logoHeight } = logo.getBoundingClientRect ()
+    const asidePaddingTop = window
+        .getComputedStyle (aside)
+        .getPropertyValue ('padding-top')
+        .split ('px')
+        .join ('')
 
-    header.style.height
-      = `${ logoHeight / PHI - sectionHeight / 2 }px`
-
-    footer.style.height
-      = `${ logoHeight / (PHI ** 2) - sectionHeight / 2 }px`
-
-
-    const { height: headerHeight } = header.getBoundingClientRect ()
-
-    const headerPaddingTop = headerHeight / (PHI ** 4)
-    const headerPaddingBottom = headerHeight / (PHI ** 3)
-
-    const headerContentHeight
-      = headerHeight - headerPaddingTop - headerPaddingBottom
+    const asidePaddingBottom = window
+        .getComputedStyle (aside)
+        .getPropertyValue ('padding-bottom')
+        .split ('px')
+        .join ('')
 
 
-    const { height: footerHeight } = footer.getBoundingClientRect ()
+    ;(function _format (i = 0) {
 
-    const footerPaddingTop = footerHeight / (PHI ** 4)
-    const footerPaddingBottom = footerHeight / (PHI ** 3)
+      logo.style.width = `${ 100 / PHI ** i }%`
 
-    const footerContentHeight
-      = footerHeight - footerPaddingTop - footerPaddingBottom
+      const { width: logoWidth } = logo.getBoundingClientRect ()
+      const { height: sectionHeight } = section.getBoundingClientRect ()
 
+      logo.style.height = `${ logoWidth / PHI }px`
+      const { height: logoHeight } = logo.getBoundingClientRect ()
 
-    header.style.paddingTop = `${ headerPaddingTop }px`
-    header.style.paddingBottom = `${ headerPaddingBottom }px`
-
-    footer.style.paddingTop = `${ footerPaddingTop }px`
-    footer.style.paddingBottom = `${ footerPaddingBottom }px`
-
-
-    const headerFontSize = headerContentHeight / (PHI * 3)
-    const headerLetterSpacing = headerFontSize / PHI
-    const headerDivMargin = headerLetterSpacing / (PHI ** 2)
-
-    const footerFontSize = footerContentHeight / (PHI * 2)
-    const footerLetterSpacing = footerFontSize / PHI
-    const footerDivMargin = footerLetterSpacing / (PHI ** 2)
-
-    document.querySelectorAll ('#logo > header p').forEach (p => {
-      p.style.fontSize = `${ headerFontSize }px`
-      p.style.width = `${ headerFontSize }px`
-    })
+      if (
+        logoHeight
+          > (asideHeight - asidePaddingTop - asidePaddingBottom) / PHI
+      ) { return _format (++i) }
 
 
-    document.querySelectorAll ('#logo > footer p').forEach (p => {
-      p.style.fontSize = `${ footerFontSize }px`
-      p.style.width = `${ headerFontSize }px`
-        /*
-          stick to header font size, not to footer font size
-        */
-    })
+      header.style.height
+        = `${ logoHeight / PHI - sectionHeight / 2 }px`
+
+      footer.style.height
+        = `${ logoHeight / (PHI ** 2) - sectionHeight / 2 }px`
+
+
+      const { height: headerHeight } = header.getBoundingClientRect ()
+
+      const headerPaddingTop = headerHeight / (PHI ** 4)
+      const headerPaddingBottom = headerHeight / (PHI ** 3)
+
+      const headerContentHeight
+        = headerHeight - headerPaddingTop - headerPaddingBottom
+
+
+      const { height: footerHeight } = footer.getBoundingClientRect ()
+
+      const footerPaddingTop = footerHeight / (PHI ** 4)
+      const footerPaddingBottom = footerHeight / (PHI ** 3)
+
+      const footerContentHeight
+        = footerHeight - footerPaddingTop - footerPaddingBottom
+
+
+      header.style.paddingTop = `${ headerPaddingTop }px`
+      header.style.paddingBottom = `${ headerPaddingBottom }px`
+
+      footer.style.paddingTop = `${ footerPaddingTop }px`
+      footer.style.paddingBottom = `${ footerPaddingBottom }px`
+
+
+      const headerFontSize = headerContentHeight / (PHI * 3)
+      const headerLetterSpacing = headerFontSize / PHI
+      const headerDivMargin = headerLetterSpacing / (PHI ** 2)
+
+      const footerFontSize = footerContentHeight / (PHI * 2)
+      const footerLetterSpacing = footerFontSize / PHI
+      const footerDivMargin = footerLetterSpacing / (PHI ** 2)
+
+      document.querySelectorAll ('#logo > header p').forEach (p => {
+        p.style.fontSize = `${ headerFontSize }px`
+        p.style.width = `${ headerFontSize }px`
+      })
+
+
+      document.querySelectorAll ('#logo > footer p').forEach (p => {
+        p.style.fontSize = `${ footerFontSize }px`
+        p.style.width = `${ headerFontSize }px`
+          /*
+            stick to header font size, not to footer font size
+          */
+      })
+
+
+      return
+
+    }) ()
 
   }
 
