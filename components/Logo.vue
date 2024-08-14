@@ -86,14 +86,9 @@
     footer.style.paddingTop = `${ footerPaddingTop }px`
     footer.style.paddingBottom = `${ footerPaddingBottom }px`
 
-
     const headerFontSize = headerContentHeight / (PHI * 3)
-    const headerLetterSpacing = headerFontSize / PHI
-    const headerDivMargin = headerLetterSpacing / (PHI ** 2)
-
     const footerFontSize = footerContentHeight / (PHI * 2)
-    const footerLetterSpacing = footerFontSize / PHI
-    const footerDivMargin = footerLetterSpacing / (PHI ** 2)
+    
 
     document.querySelectorAll ('#logo > header p').forEach (p => {
       p.style.fontSize = `${ headerFontSize }px`
