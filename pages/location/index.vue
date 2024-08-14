@@ -2,11 +2,13 @@
 
   const setFontSize = () => {
 
-    const indexFigcaption = document.querySelector ('#index-figcaption')
+    const indexFigcaption
+      = document.querySelector ('#location-figcaption')
+
     if (!indexFigcaption) { return }
 
     const indexFigcaptionDivs
-      = document.querySelectorAll ('#index-figcaption > div')
+      = document.querySelectorAll ('#location-figcaption > div')
 
 
     ;(function _set (i = 2) {
@@ -85,7 +87,7 @@
             w-100
           "
 
-        id="index-figcaption"
+        id="location-figcaption"
       >
         <!-- <div>Nous manufacturons</div>
         <div>votre application !</div> -->

@@ -1,0 +1,39 @@
+@use "sass:math"
+
+@use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/grid' as grid
+@use '@/assets/sass/sizes' as sizes
+
+
+article
+  gap: sizes.$twice_54_by_phi * 1px
+
+  > section
+
+    > figure
+      width: calc(100% / math.pow(constants.$phi, 2))
+
+      > figcaption
+        font-size: sizes.$twice_54_by_phi_power_5 * 1px
+        text-align: center
+        text-transform: uppercase
+
+        @media screen and (min-width: grid.$md-plus)
+          font-size: sizes.$twice_54_by_phi_power_4 * 1px
+
+        @media screen and (min-width: grid.$xxl-minus)
+          font-size: sizes.$twice_54_by_phi_power_3 * 1px
+
+
+    > h1
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+      padding-left: sizes.$twice_54_by_phi_power_2 * 1px
+      text-align: justify
+      width: calc(100% / constants.$phi)
+
+      @media screen and (min-width: grid.$md-plus)
+        font-size: sizes.$twice_54_by_phi_power_3 * 1px
+
+      @media screen and (min-width: grid.$xxl-minus)
+        font-size: sizes.$twice_54_by_phi_power_2 * 1px
