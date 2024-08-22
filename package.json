@@ -12,15 +12,15 @@
   },
   "devDependencies": {
     "@nuxt/image": "^1.7.0",
-    "@nuxtjs/i18n": "^8.3.2",
+    "@nuxtjs/i18n": "^8.5.0",
     "nuxt": "^3.12.4",
-    "vue": "^3.4.34",
-    "vue-router": "^4.4.0"
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "sass": "1.77.6",
-    "uikit": "^3.21.8"
+    "uikit": "^3.21.9"
   }
 }
