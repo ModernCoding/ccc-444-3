@@ -35,7 +35,7 @@
         <picture>
         
           <NuxtImg
-            src="/images/ada.png"
+            src="/images/grace.png"
             alt="Grace Hopper"
             loading="lazy"
             class="w-100"
@@ -63,7 +63,7 @@
         <picture>
         
           <NuxtImg
-            src="/images/ada.png"
+            src="/images/margaret.png"
             alt="Margaret Hamilton"
             loading="lazy"
             class="w-100"
