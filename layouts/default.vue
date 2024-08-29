@@ -95,9 +95,9 @@
 
       <Logo />
 
-      <nav v-if="isPortrait">
+<!--       <nav v-if="isPortrait">
         <Menu />
-      </nav>
+      </nav> -->
 
     </aside>
 

@@ -39,7 +39,8 @@
         [ height, maxHeight ] [ +(height > maxHeight) ]
       ) (
         logoWidth / PHI,
-        (asideHeight - asidePaddingTop - asidePaddingBottom) / PHI
+        // (asideHeight - asidePaddingTop - asidePaddingBottom) / PHI
+        (asideHeight - asidePaddingTop - asidePaddingBottom)
       )
 
 
