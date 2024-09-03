@@ -73,7 +73,7 @@
       
       </picture>
 
-      
+      <!-- 
       <figcaption
         class="
             d-flex
@@ -86,17 +86,22 @@
           "
 
         id="index-figcaption"
-      >
+      > -->
         <!-- <div>Nous manufacturons</div>
         <div>votre application !</div> -->
-        <div>We craft your app!</div>
+        <!-- <div>We craft your app!</div> -->
 <!--         <div>Wir schneiden</div>
         <div>Ihre App!</div> -->
-      </figcaption>
+      <!-- </figcaption> -->
 
     </figure>
 
   </article>
+
+
+  <Teleport to="#__nuxt > footer">
+    <div>We craft your app!</div>
+  </Teleport>
 
 </template>
 

@@ -40,50 +40,46 @@ figure
 
 
   > header
-    display: flex
-    align-items: flex-end
-    width: 100%
+    // header is in landscape mode only
 
     @media screen and (orientation: landscape)
+
+      display: flex
+      align-items: flex-end
+      width: 100%
+
       height: dimensions.$heightHeaderLandscape
       padding-top: dimensions.$heightHeaderPaddingTopLandscape
       padding-bottom: dimensions.$heightHeaderPaddingBottomLandscape
 
-    @media screen and (orientation: portrait)
-      height: dimensions.$heightHeaderPortrait
-      padding-top: dimensions.$heightHeaderPaddingTopPortrait
-      // margin-top: dimensions.$heightHeaderPaddingTopPortrait
-      padding-bottom: dimensions.$heightHeaderPaddingBottomPortrait
-      // margin-bottom: dimensions.$heightHeaderPaddingBottomPortrait
 
+      // only if not at least xxl-half
 
-    // only if not at least xxl-half
+      > nav
+        flex-grow: 1
+        
+        display: flex
+        align-items: center
 
-    > nav
-      flex-grow: 1
-      
-      display: flex
-      align-items: center
+        > div
+          padding-right: dimensions.$asidePaddingRight
+          padding-left: dimensions.$asidePaddingLeft
+          width: dimensions.$asideWidth
 
-      > div
-        padding-right: dimensions.$asidePaddingRight
-        padding-left: dimensions.$asidePaddingLeft
-        width: dimensions.$asideWidth
+        > menu
+          padding-right: dimensions.$mainPaddingRight
+          padding-left: dimensions.$mainPaddingLeft
+          width: dimensions.$mainWidth
 
-      > menu
-        padding-right: dimensions.$mainPaddingRight
-        padding-left: dimensions.$mainPaddingLeft
-        width: dimensions.$mainWidth
+          > ul
+            display: flex
+            align-items: center
+            gap: sizes.$twice_54_by_phi_power_2 * 1px
 
-        > ul
-          display: flex
-          align-items: center
-          gap: sizes.$twice_54_by_phi_power_2 * 1px
-
-          > li
-            font-size: sizes.$twice_54_by_phi_power_4 * 1px
-            letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
-            text-transform: uppercase
+            > li
+              font-size: sizes.$twice_54_by_phi_power_4 * 1px
+              letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
+              text-transform: uppercase
 
 
   > section
@@ -98,12 +94,14 @@ figure
 
 
       > aside
-        // border-bottom: 1px solid colors.$light-3
+      
+        display: flex
+        align-items: center
+        justify-content: center
+
         height: dimensions.$heightAsidePortrait
-        // padding-top: dimensions.$heightAsidePaddingTopPortrait
-        margin-top: dimensions.$heightAsidePaddingTopPortrait
-        // padding-bottom: dimensions.$heightAsidePaddingBottomPortrait
-        margin-bottom: dimensions.$heightAsidePaddingBottomPortrait
+        padding-top: dimensions.$heightAsidePaddingTopPortrait
+        padding-bottom: dimensions.$heightAsidePaddingBottomPortrait
         width: 100%
 
         > nav
@@ -190,6 +188,4 @@ figure
     @media screen and (orientation: portrait)
       height: dimensions.$heightFooterPortrait
       padding-top: dimensions.$heightFooterPaddingTopPortrait
-      // margin-top: dimensions.$heightFooterPaddingTopPortrait
       padding-bottom: dimensions.$heightFooterPaddingBottomPortrait
-      // margin-bottom: dimensions.$heightFooterPaddingBottomPortrait
