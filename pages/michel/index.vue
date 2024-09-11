@@ -68,7 +68,7 @@
       >
       
         <NuxtImg
-          src="/images/saint-michel.png"
+          src="/images/saint-michel.svg"
           alt="Saint-Michel"
           loading="lazy"
         />
@@ -105,6 +105,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/location/index.sass"
+  src="@/assets/sass/pages/michel/index.sass"
   lang="sass"
 ></style>
