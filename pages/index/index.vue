@@ -1,6 +1,6 @@
 <script setup>
 
-  import Footer from './.partials/footer'
+  import Slogan from './.partials/slogan'
 
   const setFontSize = () => {
 
@@ -61,93 +61,74 @@
 
   <article class="d-flex align-items-center">
 
-    <figure class="d-flex flex-column align-items-center">
+    <figure>
 
       <picture
         class="d-flex align-items-center justify-content-center"
       >
       
-        <NuxtImg
+        <img
           src="/images/tharrawaddy-min-bell.png"
           alt="Tharrawaddy Min Bell"
           loading="lazy"
-        />
+        >
       
       </picture>
 
 
-      <figcaption>EMAIL US</figcaption>
+      <figcaption class="fw-bold">Email us</figcaption>
 
     </figure>
 
 
-    <figure class="d-flex flex-column align-items-center">
+    <figure>
 
       <picture
         class="d-flex align-items-center justify-content-center"
       >
       
-        <NuxtImg
+        <img
           src="/images/bus.png"
           alt="Charles Babbage's analytical engine"
           loading="lazy"
-        />
+        >
       
       </picture>
 
 
-      <figcaption>REQUEST CALL</figcaption>
+      <figcaption class="fw-bold">Request call</figcaption>
 
     </figure>
 
 
-    <figure class="d-flex flex-column align-items-center">
+    <figure>
 
       <picture
         class="d-flex align-items-center justify-content-center"
       >
       
-        <NuxtImg
+        <img
           src="/images/compass.png"
           alt="Charles Babbage's analytical engine"
           loading="lazy"
-        />
+        >
       
       </picture>
 
 
-      <figcaption>FIND US</figcaption>
+      <figcaption class="fw-bold">Find us</figcaption>
 
     </figure>
 
   </article>
 
 
-      <!-- 
-      <figcaption
-        class="
-            d-flex
-            flex-column
-            align-items-center
-            justify-content-center
-            text-center
-            text-uppercase
-            w-100
-          "
-
-        id="index-figcaption"
-      > -->
-        <!-- <div>Nous manufacturons</div>
-        <div>votre application !</div> -->
-        <!-- <div>We craft your app!</div> -->
-<!--         <div>Wir schneiden</div>
-        <div>Ihre App!</div> -->
-      <!-- </figcaption> -->
-
   <ClientOnly>
+
     <Teleport to="#__nuxt > footer">
-      <Footer />
+      <Slogan />
     </Teleport>
+
   </ClientOnly>
 
 </template>

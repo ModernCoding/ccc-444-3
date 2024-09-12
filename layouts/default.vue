@@ -81,11 +81,11 @@
 
   <header v-if="!isPortrait">
 
-    <nav v-if="!windowWidths.isAtLeastXxlHalf && !isPortrait">
+<!--     <nav v-if="!windowWidths.isAtLeastXxlHalf && !isPortrait">
       <div />
       <Menu />
     </nav>
-
+ -->
   </header>
 
 
@@ -102,7 +102,7 @@
     </aside>
 
 
-    <Menu v-if="windowWidths.isAtLeastXxlHalf && !isPortrait" />
+    <!-- <Menu v-if="windowWidths.isAtLeastXxlHalf && !isPortrait" /> -->
 
     <main role="main">
       <slot />
