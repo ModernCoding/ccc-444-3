@@ -68,7 +68,7 @@
       >
       
         <NuxtImg
-          src="/images/saint-michel.svg"
+          src="/images/saint-michel.png"
           alt="Saint-Michel"
           loading="lazy"
         />

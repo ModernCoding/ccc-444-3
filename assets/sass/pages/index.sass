@@ -7,8 +7,12 @@
 
 article
 
+  $_gap: sizes.$twice_54_by_phi_power_3 * 1px
+  gap: $_gap
+
+
   figure
-    height: 100%
+    width: calc(100% / 3 - $_gap / 3 * 2)
 
     picture
       max-height: 100%
@@ -17,5 +21,9 @@ article
         max-height: 100%
 
 
-    // figcaption
+    figcaption
+
+      *
+        font-size: sizes.$twice_54_by_phi_power_4 * 1px
+        text-align: center
     //   height: calc(100% / math.pow(constants.$phi, 2))
