@@ -76,10 +76,7 @@
       </picture>
 
 
-      <figcaption>
-        <div>EMAIL</div>
-        <div>US</div>
-      </figcaption>
+      <figcaption>EMAIL US</figcaption>
 
     </figure>
 
@@ -99,10 +96,7 @@
       </picture>
 
 
-      <figcaption>
-        <div>REQUEST</div>
-        <div>CALL</div>
-      </figcaption>
+      <figcaption>REQUEST CALL</figcaption>
 
     </figure>
 
@@ -122,10 +116,7 @@
       </picture>
 
 
-      <figcaption>
-        <div>FIND</div>
-        <div>US</div>
-      </figcaption>
+      <figcaption>FIND US</figcaption>
 
     </figure>
 
@@ -153,10 +144,11 @@
         <div>Ihre App!</div> -->
       <!-- </figcaption> -->
 
-
-  <Teleport to="#__nuxt > footer">
-    <Footer />
-  </Teleport>
+  <ClientOnly>
+    <Teleport to="#__nuxt > footer">
+      <Footer />
+    </Teleport>
+  </ClientOnly>
 
 </template>
 

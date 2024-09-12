@@ -2,12 +2,13 @@
 
 @use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/sizes' as sizes
 
 
 article
 
-  $_gap: sizes.$twice_54_by_phi_power_3 * 1px
+  $_gap: dimensions.$layoutPaddingRightPortrait * constants.$phi
   gap: $_gap
 
 
@@ -22,8 +23,6 @@ article
 
 
     figcaption
-
-      *
-        font-size: sizes.$twice_54_by_phi_power_4 * 1px
-        text-align: center
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+      text-align: center
     //   height: calc(100% / math.pow(constants.$phi, 2))

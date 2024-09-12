@@ -111,7 +111,7 @@
   </section>
 
 
-  <footer>
+  <footer class="d-flex align-items-center justify-content-center">
   </footer>
   
 </template>
