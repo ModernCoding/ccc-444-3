@@ -79,7 +79,8 @@
 
 <template>
 
-  <header v-if="!isPortrait">
+  <header>
+    <nav>EN</nav>
 
 <!--     <nav v-if="!windowWidths.isAtLeastXxlHalf && !isPortrait">
       <div />

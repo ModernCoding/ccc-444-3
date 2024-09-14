@@ -28,7 +28,9 @@ figure
   overflow: hidden
 
   @media screen and (orientation: portrait)
+    padding-top: dimensions.$layoutPaddingTopPortrait
     padding-right: dimensions.$layoutPaddingRightPortrait
+    padding-bottom: dimensions.$layoutPaddingBottomPortrait
     padding-left: dimensions.$layoutPaddingLeftPortrait
 
 
@@ -40,7 +42,13 @@ figure
 
 
   > header
-    // header is in landscape mode only
+
+    @media screen and (orientation: portrait)
+
+      height: dimensions.$heightHeaderPortrait
+      padding-top: dimensions.$heightHeaderPaddingTopPortrait
+      padding-bottom: dimensions.$heightHeaderPaddingBottomPortrait
+
 
     @media screen and (orientation: landscape)
 
