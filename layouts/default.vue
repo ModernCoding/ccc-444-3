@@ -3,6 +3,10 @@
   const isPortrait = ref (false)
   const windowWidths = ref ({})
 
+  const screenStore = defineScreenStoreFromComposable () ()
+  const { screen } = storeToRefs (screenStore)
+  console.log (screen.value)
+
 
   const setDimensions = () => {
 
