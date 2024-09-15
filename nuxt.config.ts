@@ -5,6 +5,17 @@ export default defineNuxtConfig ({
   css: [ '~/assets/sass/app.sass' ],
 
   devtools: { enabled: false },
-  compatibilityDate: '2024-08-14',
-  modules: ["@nuxt/image"]
+
+  modules: [
+    "@nuxt/image",
+    '@pinia/nuxt',
+  ],
+
+  pinia: {
+    // import { defineStore, storeToRefs } from 'pinia'
+    autoImports: [ 'defineStore', 'storeToRefs',  ],
+
+  },
+
+  compatibilityDate: '2024-09-15',
 })
