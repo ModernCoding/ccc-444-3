@@ -10,7 +10,7 @@
   const setDimensions = () => {
 
     isPortrait.value = setIsPortrait ()
-    screenStore.$patch (state => state.screen.heights = setHeights ())
+    screenStore.$patch (state => state.screen.heights = patchHeights ())
     console.log (screen.value)
 
 

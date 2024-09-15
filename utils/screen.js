@@ -1,4 +1,4 @@
-export const setHeights = () =>
+export const patchHeights = () =>
   (body => body && (({ height }) => {
 
       const ratioPart
