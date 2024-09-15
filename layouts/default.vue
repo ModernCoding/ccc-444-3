@@ -5,12 +5,13 @@
 
   const screenStore = defineScreenStoreFromComposable () ()
   const { screen } = storeToRefs (screenStore)
-  console.log (screen.value)
 
 
   const setDimensions = () => {
 
     isPortrait.value = setIsPortrait ()
+    screenStore.$patch (state => state.screen.heights = setHeights ())
+    console.log (screen.value)
 
 
     ;(main => {
