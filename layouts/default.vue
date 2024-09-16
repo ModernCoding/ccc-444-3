@@ -1,6 +1,5 @@
 <script setup>
 
-  const isPortrait = ref (false)
   const windowWidths = ref ({})
 
   const screenStore = defineScreenStoreFromComposable () ()
@@ -9,8 +8,9 @@
 
   const setDimensions = () => {
 
-    isPortrait.value = setIsPortrait ()
-    screenStore.$patch (state => state.screen.heights = patchHeights ())
+    patchIsPortrait (screenStore)
+    patchPortraitHeights (screenStore)
+    patchPortraitPaddingTops (screenStore)
     console.log (screen.value)
 
 
