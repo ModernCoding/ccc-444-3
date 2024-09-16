@@ -8,15 +8,27 @@ export default () => defineStore ('screen', {
           header: 0,
           aside: 0,
           main: 0,
-          footer: 0,
+          footer: 0
         },
+
 
       isPortrait: false,
       
+
       paddingTops: {
-          aside: 0,
-          main: 0,
-          footer: 0,
+
+          calculated: {
+              aside: 0,
+              main: 0,
+              footer: 0
+            },
+        
+          corrected: {
+              aside: 0,
+              main: 0,
+              footer: 0
+            }
+        
         }
       
     }
@@ -62,13 +74,74 @@ export default () => defineStore ('screen', {
 
       (i =>
 
-        this.screen.paddingTops = {
-            aside: [ 0, this.screen.heights.aside / PHI ** 4 ] [ i ],
-            main: [ 0, this.screen.heights.main / PHI ** 4 ] [ i ],
-            footer: [ 0, this.screen.heights.footer / PHI ** 4 ] [ i ]
-          }
+          this.screen.paddingTops.calculated = {
+              aside: [ 0, this.screen.heights.aside / PHI ** 4 ] [ i ],
+              main: [ 0, this.screen.heights.main / PHI ** 4 ] [ i ],
+              footer: [ 0, this.screen.heights.footer / PHI ** 4 ] [ i ]
+            }
 
-      ) (+this.screen.isPortrait)
+        ) (+this.screen.isPortrait)
+
+
+      this.screen.isPortrait && (() => {
+
+          (headerNav =>
+
+              headerNav && (({ height }) => {
+
+                this.screen.paddingTops.corrected.aside = (value =>
+                  value < 0 ? 0 : value
+                ) (
+
+                  this.screen.paddingTops.calculated.aside
+                    - this.screen.heights.header
+                    + height
+                
+                )
+
+              }) (headerNav.getBoundingClientRect ())
+
+            ) (document.querySelector ('#__nuxt > header > nav'))
+
+
+          ;(logo =>
+
+              logo && (({ height }) => {
+
+                this.screen.paddingTops.corrected.main = (value =>
+                  value < 0 ? 0 : value
+                ) (
+
+                  this.screen.paddingTops.calculated.main
+                    - this.screen.heights.aside
+                    + height
+                
+                )
+
+              }) (logo.getBoundingClientRect ())
+
+            ) (document.querySelector ('#logo'))
+
+
+          ;(article =>
+
+              article && (({ height }) => {
+
+                this.screen.paddingTops.corrected.footer = (value =>
+                  value < 0 ? 0 : value
+                ) (
+
+                  this.screen.paddingTops.calculated.footer
+                    - this.screen.heights.main
+                    + height
+                
+                )
+
+              }) (article.getBoundingClientRect ())
+
+            ) (document.querySelector ('main[role="main"] > article'))
+
+        }) ()
 
     }
 

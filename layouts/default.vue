@@ -8,13 +8,7 @@
 
   const setDimensions = () => {
 
-    screenStore.patchIsPortrait ()
-    screenStore.patchPortraitHeights ()
-    screenStore.patchPaddingTops ()
-    console.log (screen.value)
-
-
-    ;(main => {
+    (main => {
 
       if (!main) { return }
 
@@ -70,6 +64,12 @@
       .documentElement
       .style
       .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
+
+
+    screenStore.patchIsPortrait ()
+    screenStore.patchPortraitHeights ()
+    screenStore.patchPaddingTops ()
+    console.log (screen.value)
 
   } 
 
