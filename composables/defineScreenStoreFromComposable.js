@@ -141,6 +141,36 @@ export default () => defineStore ('screen', {
 
             ) (document.querySelector ('main[role="main"] > article'))
 
+
+          ;(aside => 
+
+              aside && (
+                aside.style.paddingTop
+                  = `${ this.screen.paddingTops.corrected.aside }px`
+              )
+            
+            ) (document.querySelector ('#__nuxt > section > aside'))
+
+
+          ;(main => 
+
+              main && (
+                main.style.paddingTop
+                  = `${ this.screen.paddingTops.corrected.main }px`
+              )
+            
+            ) (document.querySelector ('main[role="main"]'))
+
+
+          ;(footer => 
+
+              footer && (
+                footer.style.paddingTop
+                  = `${ this.screen.paddingTops.corrected.footer }px`
+              )
+            
+            ) (document.querySelector ('#__nuxt > footer'))
+
         }) ()
 
     }

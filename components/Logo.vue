@@ -1,5 +1,8 @@
 <script setup>
 
+  const screenStore = defineScreenStoreFromComposable () ()
+
+
   const setDimensions = () => {
 
     const logo = document.querySelector ('#logo')
@@ -104,6 +107,11 @@
           stick to header font size, not to footer font size
         */
     })
+
+
+    screenStore.patchIsPortrait ()
+    screenStore.patchPortraitHeights ()
+    screenStore.patchPaddingTops ()
 
   }
 

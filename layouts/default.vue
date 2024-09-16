@@ -3,7 +3,6 @@
   const windowWidths = ref ({})
 
   const screenStore = defineScreenStoreFromComposable () ()
-  const { screen } = storeToRefs (screenStore)
 
 
   const setDimensions = () => {
@@ -69,7 +68,6 @@
     screenStore.patchIsPortrait ()
     screenStore.patchPortraitHeights ()
     screenStore.patchPaddingTops ()
-    console.log (screen.value)
 
   } 
 
