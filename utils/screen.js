@@ -34,12 +34,18 @@ export const patchPortraitHeights = screenStore =>
   ) (document.querySelector ('body'))
 
 
-export const patchPortraitPaddingTops = screenStore => (({ screen }) =>
-  
-  screenStore.$patch (state => state.screen.paddingTops = {
-      aside: screen.value.heights.aside / PHI ** 4,
-      main: screen.value.heights.main / PHI ** 4,
-      footer: screen.value.heights.footer / PHI ** 4
-    })
+export const patchPaddingTops = screenStore =>
 
-) (storeToRefs (screenStore))
+  (({ screen }) =>
+
+    (i =>
+
+      screenStore.$patch (state => state.screen.paddingTops = {
+          aside: [ 0, screen.value.heights.aside / PHI ** 4 ] [ i ],
+          main: [ 0, screen.value.heights.main / PHI ** 4 ] [ i ],
+          footer: [ 0, screen.value.heights.footer / PHI ** 4 ] [ i ]
+        })
+
+    ) (+screen.value.isPortrait)
+
+  ) (storeToRefs (screenStore))

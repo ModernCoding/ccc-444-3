@@ -10,7 +10,7 @@
 
     patchIsPortrait (screenStore)
     patchPortraitHeights (screenStore)
-    patchPortraitPaddingTops (screenStore)
+    patchPaddingTops (screenStore)
     console.log (screen.value)
 
 
