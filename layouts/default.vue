@@ -8,9 +8,9 @@
 
   const setDimensions = () => {
 
-    patchIsPortrait (screenStore)
-    patchPortraitHeights (screenStore)
-    patchPaddingTops (screenStore)
+    screenStore.patchIsPortrait ()
+    screenStore.patchPortraitHeights ()
+    screenStore.patchPaddingTops ()
     console.log (screen.value)
 
 
