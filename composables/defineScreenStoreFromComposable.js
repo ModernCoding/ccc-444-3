@@ -2,7 +2,7 @@ export default () => defineStore ('screen', {
 
   state: () => ({
 
-    screen : {
+    screen: {
 
       heights: {
           header: 0,
