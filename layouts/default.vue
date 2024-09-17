@@ -3,6 +3,7 @@
   const windowWidths = ref ({})
 
   const screenStore = defineScreenStoreFromComposable () ()
+  const { screen } = storeToRefs (screenStore)
 
 
   const setDimensions = () => {
@@ -26,8 +27,9 @@
         const mainPaddingLeft = parseInt (
 
             window
+
               .getComputedStyle (
-                  isPortrait.value
+                  screen.value.isPortrait
                     ? document.querySelector ('#__nuxt')
                     : main
                 )

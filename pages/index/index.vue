@@ -2,6 +2,36 @@
 
   import Slogan from './.partials/slogan'
 
+  const equalizeCtas = (
+    heighest = 0,
+    pictures = document.querySelectorAll ('#index > section picture'),
+    i = 0
+  ) => {
+
+    if (i >= pictures.length) {
+
+      pictures
+        .forEach (picture => picture.style.height = `${ heighest }px`)
+
+      return
+
+    }
+
+
+    pictures [ i ].removeAttribute ('style')
+
+    const height = pictures [ i ].getBoundingClientRect ().height
+
+
+    return equalizeCtas (
+      [ heighest, height ] [ +( height > heighest ) ],
+      pictures,
+      ++i
+    )
+
+  }
+
+
   const setFontSize = () => {
 
     const indexFigcaption = document.querySelector ('#index-figcaption')
@@ -47,77 +77,96 @@
 
 
   onMounted (() => {
+    
+    equalizeCtas ()
     setFontSize ()
-    window.addEventListener ('resize', setFontSize)
+    
+    window.addEventListener ('resize', () => {
+      equalizeCtas ()
+      setFontSize ()
+    })
+  
   })
 
 
-  onUpdated (setFontSize)
+  onUpdated (() => {
+    equalizeCtas ()
+    setFontSize ()
+  })
 
 </script>
 
 
 <template>
 
-  <article class="d-flex align-items-center">
+  <article id="index">
+
+    <section>
+
+      <figure>
+
+        <picture>
+        
+          <img
+            src="/images/tharrawaddy-min-bell.png"
+            alt="Tharrawaddy Min Bell"
+            loading="lazy"
+          >
+        
+        </picture>
+
+
+        <figcaption class="fw-bold">Email us</figcaption>
+
+      </figure>
+
+
+      <figure>
+
+        <picture>
+        
+          <img
+            src="/images/bus.png"
+            alt="Request next call"
+            loading="lazy"
+          >
+        
+        </picture>
+
+
+        <figcaption class="fw-bold">Request call</figcaption>
+
+      </figure>
+
+
+      <figure>
+
+        <picture>
+        
+          <img
+            src="/images/compass.png"
+            alt="Bangsaen, Thailand"
+            loading="lazy"
+          >
+        
+        </picture>
+
+
+        <figcaption class="fw-bold">Find us</figcaption>
+
+      </figure>
+      
+    </section>
+
 
     <figure>
-
-      <picture
-        class="d-flex align-items-center justify-content-center"
+    
+      <img
+        src="/images/machine.png"
+        alt="Charles Babbage's analytical engine"
+        loading="lazy"
       >
-      
-        <img
-          src="/images/tharrawaddy-min-bell.png"
-          alt="Tharrawaddy Min Bell"
-          loading="lazy"
-        >
-      
-      </picture>
-
-
-      <figcaption class="fw-bold">Email us</figcaption>
-
-    </figure>
-
-
-    <figure>
-
-      <picture
-        class="d-flex align-items-center justify-content-center"
-      >
-      
-        <img
-          src="/images/bus.png"
-          alt="Charles Babbage's analytical engine"
-          loading="lazy"
-        >
-      
-      </picture>
-
-
-      <figcaption class="fw-bold">Request call</figcaption>
-
-    </figure>
-
-
-    <figure>
-
-      <picture
-        class="d-flex align-items-center justify-content-center"
-      >
-      
-        <img
-          src="/images/compass.png"
-          alt="Charles Babbage's analytical engine"
-          loading="lazy"
-        >
-      
-      </picture>
-
-
-      <figcaption class="fw-bold">Find us</figcaption>
-
+    
     </figure>
 
   </article>
