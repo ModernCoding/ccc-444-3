@@ -115,6 +115,7 @@ export default () => defineStore ('screen', {
                   this.screen.paddingTops.calculated.main
                     - this.screen.heights.aside
                     + height
+                    + this.screen.paddingTops.corrected.aside
                 
                 )
 
@@ -134,6 +135,7 @@ export default () => defineStore ('screen', {
                   this.screen.paddingTops.calculated.footer
                     - this.screen.heights.main
                     + height
+                    + this.screen.paddingTops.corrected.main
                 
                 )
 

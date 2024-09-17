@@ -2,6 +2,10 @@
 
   import Slogan from './.partials/slogan'
 
+  const screenStore = defineScreenStoreFromComposable () ()
+  const { screen } = storeToRefs (screenStore)
+
+
   const equalizeCtas = (
     heighest = 0,
     pictures = document.querySelectorAll ('#index > section picture'),
@@ -12,6 +16,59 @@
 
       pictures
         .forEach (picture => picture.style.height = `${ heighest }px`)
+
+
+      const sectionHeight = (section =>
+          section ? section.getBoundingClientRect ().height : 0
+        ) (document.querySelector ('#index > section'))
+
+
+      ;(figure => {
+
+          if (!figure) { return }
+          figure.removeAttribute ('style')
+
+          const paddingTop
+            = screen.value.paddingTops.calculated.main / PHI
+
+          const height = screen.value.heights.main
+              - screen.value.paddingTops.corrected.main
+              - sectionHeight
+
+
+          figure.style.paddingTop = `${ paddingTop }px`
+          figure.style.height = `${ height }px`
+
+          const img = figure.querySelector ('img')
+
+          if (!img) { return displayMachine.value = false }
+          img.removeAttribute ('style')
+
+
+          switch (true) {
+
+            case  img.getBoundingClientRect ().width <= 0:
+
+            case  figure
+              .getBoundingClientRect ()
+              .width / img.getBoundingClientRect ().width > PHI ** 2:
+
+              figure.style.display = 'none'
+              break
+
+
+            default:
+              break
+
+          }
+
+
+          screenStore.patchIsPortrait ()
+          screenStore.patchPortraitHeights ()
+          screenStore.patchPaddingTops ()
+
+        }) (document.querySelector ('#index > figure'))
+
 
       return
 
@@ -159,7 +216,7 @@
     </section>
 
 
-    <figure>
+    <figure id="charles-babbage">
     
       <img
         src="/images/machine.png"
