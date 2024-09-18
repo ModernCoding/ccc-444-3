@@ -61,12 +61,7 @@ $menuPaddingLeft: calc(100% / math.pow(c.$phi, 7))
 
 // main
 
-$mainWidth: calc(100% / c.$phi)
-$mainPaddingRight: calc(100% / math.pow(c.$phi, 5))
-$mainPaddingLeft: calc(100% / math.pow(c.$phi, 6))
-
-$mainPaddingRightXxlHalf: calc(100% / math.pow(c.$phi, 4))
-$mainPaddingLeftXxlHalf: calc(100% / math.pow(c.$phi, 5))
+$mainWidth: calc($width / $landscapeWidthRatioPart * math.pow(c.$phi, 4))
 
 
 // DO NOT MULTIPLY BY 1PX!

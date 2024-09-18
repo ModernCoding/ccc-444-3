@@ -112,7 +112,7 @@
         <picture>
         
           <img
-            src="/images/tharrawaddy-min-bell.png"
+            src="/images/tharrawaddy-min-bell-2.png"
             alt="Tharrawaddy Min Bell"
             loading="lazy"
           >
