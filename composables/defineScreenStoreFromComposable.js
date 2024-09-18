@@ -143,37 +143,46 @@ export default () => defineStore ('screen', {
 
             ) (document.querySelector ('main[role="main"] > article'))
 
-
-          ;(aside => 
-
-              aside && (
-                aside.style.paddingTop
-                  = `${ this.screen.paddingTops.corrected.aside }px`
-              )
-            
-            ) (document.querySelector ('#__nuxt > section > aside'))
-
-
-          ;(main => 
-
-              main && (
-                main.style.paddingTop
-                  = `${ this.screen.paddingTops.corrected.main }px`
-              )
-            
-            ) (document.querySelector ('main[role="main"]'))
-
-
-          ;(footer => 
-
-              footer && (
-                footer.style.paddingTop
-                  = `${ this.screen.paddingTops.corrected.footer }px`
-              )
-            
-            ) (document.querySelector ('#__nuxt > footer'))
-
         }) ()
+
+
+      ;(aside => {
+
+          if (!aside) { return }
+          aside.removeAttribute ('style')
+
+          this.screen.isPortrait && (
+            aside.style.paddingTop
+              = `${ this.screen.paddingTops.corrected.aside }px`
+          )
+
+        }) (document.querySelector ('#__nuxt > section > aside'))
+
+
+      ;(main => {
+
+          if (!main) { return }
+          main.removeAttribute ('style')
+
+          this.screen.isPortrait && (
+            main.style.paddingTop
+              = `${ this.screen.paddingTops.corrected.main }px`
+          )
+        
+        }) (document.querySelector ('main[role="main"]'))
+
+
+      ;(footer => {
+
+          if (!footer) { return }
+          footer.removeAttribute ('style')
+
+          this.screen.isPortrait && (
+            footer.style.paddingTop
+              = `${ this.screen.paddingTops.corrected.footer }px`
+          )
+        
+        }) (document.querySelector ('#__nuxt > footer'))
 
     }
 
