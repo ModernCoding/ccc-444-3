@@ -47,6 +47,7 @@
 
           switch (true) {
 
+            case  height <= 0:
             case  img.getBoundingClientRect ().width <= 0:
 
             case  figure
