@@ -5,6 +5,7 @@
 
 
 $height: calc(var(--vh, 1vh) * 100)
+$width: calc(var(--vw, 1vw) * 100)
 
 $landscapeWidthRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4)
 
@@ -14,7 +15,9 @@ $portraitHeightRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3)
 // layout
 
 $layoutPaddingTopLandscape: 0
+$layoutPaddingRightLandscape: calc($width / $landscapeWidthRatioPart * c.$phi)
 $layoutPaddingBottomLandscape: 0
+$layoutPaddingLeftLandscape: calc($width / $landscapeWidthRatioPart)
 
 $layoutPaddingTopPortrait: calc($height / $portraitHeightRatioPart)
 $layoutPaddingRightPortrait: calc(100% / math.pow(c.$phi, 5))
@@ -41,9 +44,8 @@ $heightFooterPortrait: calc($height / $portraitHeightRatioPart * math.pow(c.$phi
 
 // aside
 
-$asideWidth: calc(100% / math.pow(c.$phi, 2) - 1px)
-$asidePaddingRight: calc(100% / math.pow(c.$phi, 7))
-$asidePaddingLeft: calc(100% / math.pow(c.$phi, 8))
+$asideWidth: calc($width / $landscapeWidthRatioPart * math.pow(c.$phi, 3))
+$asidePaddingRight: calc($width / $landscapeWidthRatioPart * math.pow(c.$phi, 2))
 
 $asideWidthXxlHalf: calc(100% / math.pow(c.$phi, 4) - 1px)
 $asidePaddingRightXxlHalf: calc(100% / math.pow(c.$phi, 8))

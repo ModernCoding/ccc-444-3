@@ -30,9 +30,9 @@ figure
 
   @media screen and (orientation: landscape)
     padding-top: dimensions.$layoutPaddingTopLandscape
-    // padding-right: dimensions.$layoutPaddingRightPortrait
+    padding-right: dimensions.$layoutPaddingRightLandscape
     padding-bottom: dimensions.$layoutPaddingBottomLandscape
-    // padding-left: dimensions.$layoutPaddingLeftPortrait
+    padding-left: dimensions.$layoutPaddingLeftLandscape
 
   @media screen and (orientation: portrait)
     padding-top: dimensions.$layoutPaddingTopPortrait
@@ -101,6 +101,46 @@ figure
     align-items: stretch
 
 
+    @media screen and (orientation: landscape)
+
+      > aside
+        margin-right: dimensions.$asidePaddingRight
+        width: dimensions.$asideWidth
+
+        @media screen and (min-width: grid.$xxl-half)
+          padding-right: dimensions.$asidePaddingRightXxlHalf
+          padding-left: dimensions.$asidePaddingLeftXxlHalf
+          width: dimensions.$asideWidthXxlHalf
+
+
+        > div
+          height: 100%
+
+
+      // menu; only for at least xxl-half width
+      
+      > menu
+        border-right: 1px solid colors.$light-3
+        padding-right: dimensions.$menuPaddingRight
+        padding-left: dimensions.$menuPaddingLeft
+        width: dimensions.$menuWidth
+
+        > *
+          height: 100%
+
+
+      > main[role="main"]
+        width: dimensions.$mainWidth
+
+        @media screen and (min-width: grid.$xxl-half)
+          padding-right: dimensions.$mainPaddingRightXxlHalf
+          padding-left: dimensions.$mainPaddingLeftXxlHalf
+
+        > *
+          height: 100%
+          overflow-y: auto
+
+
     @media screen and (orientation: portrait)
 
       flex-direction: column
@@ -139,51 +179,6 @@ figure
 
         > *
           // height: 100%
-          overflow-y: auto
-
-
-    @media screen and (orientation: landscape)
-
-      > aside
-        border-right: 1px solid colors.$light-3
-        text-align: right
-        padding-right: dimensions.$asidePaddingRight
-        padding-left: dimensions.$asidePaddingLeft
-        width: dimensions.$asideWidth
-
-        @media screen and (min-width: grid.$xxl-half)
-          padding-right: dimensions.$asidePaddingRightXxlHalf
-          padding-left: dimensions.$asidePaddingLeftXxlHalf
-          width: dimensions.$asideWidthXxlHalf
-
-
-        > div
-          height: 100%
-
-
-      // menu; only for at least xxl-half width
-      
-      > menu
-        border-right: 1px solid colors.$light-3
-        padding-right: dimensions.$menuPaddingRight
-        padding-left: dimensions.$menuPaddingLeft
-        width: dimensions.$menuWidth
-
-        > *
-          height: 100%
-
-
-      > main[role="main"]
-        padding-right: dimensions.$mainPaddingRight
-        padding-left: dimensions.$mainPaddingLeft
-        width: dimensions.$mainWidth
-
-        @media screen and (min-width: grid.$xxl-half)
-          padding-right: dimensions.$mainPaddingRightXxlHalf
-          padding-left: dimensions.$mainPaddingLeftXxlHalf
-
-        > *
-          height: 100%
           overflow-y: auto
 
 
