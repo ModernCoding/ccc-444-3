@@ -27,6 +27,13 @@ figure
   width: 100%
   overflow: hidden
 
+
+  @media screen and (orientation: landscape)
+    padding-top: dimensions.$layoutPaddingTopLandscape
+    // padding-right: dimensions.$layoutPaddingRightPortrait
+    padding-bottom: dimensions.$layoutPaddingBottomLandscape
+    // padding-left: dimensions.$layoutPaddingLeftPortrait
+
   @media screen and (orientation: portrait)
     padding-top: dimensions.$layoutPaddingTopPortrait
     padding-right: dimensions.$layoutPaddingRightPortrait
@@ -43,20 +50,17 @@ figure
 
   > header
 
+    *
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+
     @media screen and (orientation: portrait)
-
       height: dimensions.$heightHeaderPortrait
-      padding-top: dimensions.$heightHeaderPaddingTopPortrait
-      padding-bottom: dimensions.$heightHeaderPaddingBottomPortrait
-
-      *
-        font-size: sizes.$twice_54_by_phi_power_4 * 1px
 
 
     @media screen and (orientation: landscape)
 
       display: flex
-      align-items: center
+      // align-items: center
       width: 100%
 
       height: dimensions.$heightHeaderLandscape
@@ -67,30 +71,30 @@ figure
       // only if not at least xxl-half
 
       > nav
-        flex-grow: 1
+        // flex-grow: 1
         
-        display: flex
-        align-items: center
+        // display: flex
+        // align-items: center
 
-        > div
-          padding-right: dimensions.$asidePaddingRight
-          padding-left: dimensions.$asidePaddingLeft
-          width: dimensions.$asideWidth
+        // > div
+        //   padding-right: dimensions.$asidePaddingRight
+        //   padding-left: dimensions.$asidePaddingLeft
+        //   width: dimensions.$asideWidth
 
-        > menu
-          padding-right: dimensions.$mainPaddingRight
-          padding-left: dimensions.$mainPaddingLeft
-          width: dimensions.$mainWidth
+        // > menu
+        //   padding-right: dimensions.$mainPaddingRight
+        //   padding-left: dimensions.$mainPaddingLeft
+        //   width: dimensions.$mainWidth
 
-          > ul
-            display: flex
-            align-items: center
-            gap: sizes.$twice_54_by_phi_power_2 * 1px
+        //   > ul
+        //     display: flex
+        //     align-items: center
+        //     gap: sizes.$twice_54_by_phi_power_2 * 1px
 
-            > li
-              font-size: sizes.$twice_54_by_phi_power_4 * 1px
-              letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
-              text-transform: uppercase
+        //     > li
+        //       font-size: sizes.$twice_54_by_phi_power_4 * 1px
+        //       letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
+        //       text-transform: uppercase
 
 
   > section
@@ -110,8 +114,6 @@ figure
         justify-content: center
 
         height: dimensions.$heightAsidePortrait
-        padding-top: dimensions.$heightAsidePaddingTopPortrait
-        padding-bottom: dimensions.$heightAsidePaddingBottomPortrait
         width: 100%
 
         > nav
@@ -133,9 +135,8 @@ figure
 
 
       > main[role="main"]
+
         height: dimensions.$heightMainPortrait
-        padding-top: dimensions.$heightMainPaddingTopPortrait
-        padding-bottom: dimensions.$heightMainPaddingBottomPortrait
         width: 100%
 
         > *
@@ -197,5 +198,3 @@ figure
 
     @media screen and (orientation: portrait)
       height: dimensions.$heightFooterPortrait
-      padding-top: dimensions.$heightFooterPaddingTopPortrait
-      padding-bottom: dimensions.$heightFooterPaddingBottomPortrait
