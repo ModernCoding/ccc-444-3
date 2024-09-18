@@ -56,7 +56,7 @@
 
 
 <template>
-  <h1>We craft your app!</h1>
+  <h1 class="text-center">We craft your app!</h1>
 </template>
 
 
