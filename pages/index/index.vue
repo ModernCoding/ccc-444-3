@@ -14,6 +14,10 @@
 
     if (i >= pictures.length) {
 
+      (index =>
+        index && index.classList.remove ('no-machine')
+      ) (document.querySelector ('#index'))
+
       pictures
         .forEach (picture => picture.style.height = `${ heighest }px`)
 
@@ -45,28 +49,40 @@
           img.removeAttribute ('style')
 
 
-          switch (true) {
+          const noMachine = (() => {
 
-            case  height <= 0:
-            case  img.getBoundingClientRect ().width <= 0:
+            switch (true) {
 
-            case  figure
-              .getBoundingClientRect ()
-              .width / img.getBoundingClientRect ().width > PHI ** 2:
+              case  height <= 0:
+              case  img.getBoundingClientRect ().width <= 0:
 
-              figure.style.display = 'none'
-              break
+              case  figure
+                .getBoundingClientRect ()
+                .width / img.getBoundingClientRect ().width > PHI ** 2:
+
+                return true
 
 
-            default:
-              break
+              default:
+                return false
 
-          }
+            }
 
+          }) ()
+
+
+          noMachine && (figure.style.display = 'none')
 
           screenStore.patchIsPortrait ()
           screenStore.patchPortraitHeights ()
           screenStore.patchPaddingTops ()
+
+          console.log (screen.value)
+
+
+          noMachine && (index =>
+            index && index.classList.add ('no-machine')
+          ) (document.querySelector ('#index'))
 
         }) (document.querySelector ('#index > figure'))
 

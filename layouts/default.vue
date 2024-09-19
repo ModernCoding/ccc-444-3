@@ -85,30 +85,21 @@
 <template>
 
   <header>
-    <nav>EN</nav>
 
-<!--     <nav v-if="!windowWidths.isAtLeastXxlHalf && !isPortrait">
-      <div />
-      <Menu />
+    <nav>
+      <nav></nav>
+      <nav class="text-end">EN</nav>
     </nav>
- -->
+
   </header>
 
 
   <section>
 
     <aside>
-
       <Logo />
-
-<!--       <nav v-if="isPortrait">
-        <Menu />
-      </nav> -->
-
     </aside>
 
-
-    <!-- <Menu v-if="windowWidths.isAtLeastXxlHalf && !isPortrait" /> -->
 
     <main role="main">
       <slot />
@@ -118,6 +109,7 @@
 
 
   <footer class="d-flex align-items-center justify-content-center">
+    <nav></nav>
   </footer>
   
 </template>

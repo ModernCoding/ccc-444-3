@@ -50,11 +50,34 @@ figure
 
   > header
 
+    > nav
+      
+      display: flex
+      align-items: center
+
+
+      @media screen and (orientation: landscape)
+
+        > nav:first-child
+          margin-right: dimensions.$asidePaddingRight
+          width: dimensions.$asideWidth
+
+        > nav:last-child
+          width: dimensions.$mainWidth
+
+
+      @media screen and (orientation: portrait)
+
+        > nav:first-child
+          margin-right: 0
+          width: 0
+
+        > nav:last-child
+          width: 100%
+
+
     *
       font-size: sizes.$twice_54_by_phi_power_4 * 1px
-
-    @media screen and (orientation: portrait)
-      height: dimensions.$heightHeaderPortrait
 
 
     @media screen and (orientation: landscape)
@@ -66,33 +89,8 @@ figure
       height: dimensions.$heightHeaderLandscape
 
 
-      // only if not at least xxl-half
-
-      > nav
-        // flex-grow: 1
-        
-        // display: flex
-        // align-items: center
-
-        // > div
-        //   padding-right: dimensions.$asidePaddingRight
-        //   padding-left: dimensions.$asidePaddingLeft
-        //   width: dimensions.$asideWidth
-
-        // > menu
-        //   padding-right: dimensions.$mainPaddingRight
-        //   padding-left: dimensions.$mainPaddingLeft
-        //   width: dimensions.$mainWidth
-
-        //   > ul
-        //     display: flex
-        //     align-items: center
-        //     gap: sizes.$twice_54_by_phi_power_2 * 1px
-
-        //     > li
-        //       font-size: sizes.$twice_54_by_phi_power_4 * 1px
-        //       letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
-        //       text-transform: uppercase
+    @media screen and (orientation: portrait)
+      height: dimensions.$heightHeaderPortrait
 
 
   > section
@@ -179,9 +177,28 @@ figure
 
 
   > footer
+      
+    display: flex
+    align-items: center
+
 
     @media screen and (orientation: landscape)
       height: dimensions.$heightFooterLandscape
 
+      > nav
+        margin-right: dimensions.$asidePaddingRight
+        width: dimensions.$asideWidth
+
+      > h1
+        width: dimensions.$mainWidth
+
+
     @media screen and (orientation: portrait)
       height: dimensions.$heightFooterPortrait
+
+      > nav
+        margin-right: 0
+        width: 0
+
+      > h1
+        width: 100%
