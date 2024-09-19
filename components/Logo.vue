@@ -9,7 +9,7 @@
     if (!logo) { return }
 
     logo.removeAttribute ('style')
-  
+
     logo
       .querySelectorAll ('*')
       .forEach (e => e.removeAttribute ('style'))
@@ -22,11 +22,16 @@
 
     const { height: asideHeight } = aside.getBoundingClientRect ()
 
-    const asidePaddingTop = window
-        .getComputedStyle (aside)
-        .getPropertyValue ('padding-top')
-        .split ('px')
-        .join ('')
+
+    const asidePaddingTop = parseFloat (
+
+        window
+          .getComputedStyle (aside)
+          .getPropertyValue ('padding-top')
+          .split ('px')
+          .join ('')
+
+      )
 
 
     logo.style.width = '100%'
@@ -47,7 +52,6 @@
 
     logo.style.height = `${ logoHeight }px`
     logo.style.width = `${ logoWidth }px`
-
 
 
     ;(nav => {

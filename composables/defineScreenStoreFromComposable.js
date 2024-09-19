@@ -83,6 +83,17 @@ export default () => defineStore ('screen', {
         ) (+this.screen.isPortrait)
 
 
+      !this.screen.isPortrait && (
+
+          this.screen.paddingTops.corrected = {
+              aside: 0,
+              main: 0,
+              footer: 0
+            }
+        
+        )
+
+
       this.screen.isPortrait && (() => {
 
           (headerNav =>

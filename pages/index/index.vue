@@ -7,9 +7,16 @@
 
 
   const equalizeCtas = (
-    heighest = 0,
+
+    heighestPicture = 0,
+    heighestFigcaption = 0,
     pictures = document.querySelectorAll ('#index > section picture'),
+
+    figcaptions
+      = document.querySelectorAll ('#index > section figcaption'),
+
     i = 0
+
   ) => {
 
     if (i >= pictures.length) {
@@ -18,13 +25,39 @@
         index && index.classList.remove ('no-machine')
       ) (document.querySelector ('#index'))
 
-      pictures
-        .forEach (picture => picture.style.height = `${ heighest }px`)
+      pictures.forEach (
+          picture => picture.style.height = `${ heighestPicture }px`
+        )
+
+
+      const mainHeight = (index =>
+          index ? index.getBoundingClientRect ().height : 0
+        ) (document.querySelector ('main[role="main"]'))
 
 
       const sectionHeight = (section =>
           section ? section.getBoundingClientRect ().height : 0
         ) (document.querySelector ('#index > section'))
+
+
+      const figcaptionPaddingTop = parseFloat (
+
+          window
+            .getComputedStyle (figcaptions [ 0 ])
+            .getPropertyValue ('padding-top')
+            .split ('px')
+            .join ('')
+
+        )
+
+
+      ;(delta =>
+
+        (heighestPicture > delta) && pictures.forEach (
+            picture => picture.style.height = `${ delta }px`
+          )
+      
+      ) (mainHeight - heighestFigcaption - figcaptionPaddingTop - screen.value.paddingTops.corrected.main)
 
 
       ;(figure => {
@@ -92,13 +125,26 @@
 
     pictures [ i ].removeAttribute ('style')
 
-    const height = pictures [ i ].getBoundingClientRect ().height
+    const pictureHeight = pictures [ i ].getBoundingClientRect ().height
+
+    const figcaptionHeight
+      = figcaptions [ i ].getBoundingClientRect ().height
 
 
     return equalizeCtas (
-      [ heighest, height ] [ +( height > heighest ) ],
+
+      [ heighestPicture, pictureHeight ] [
+          +( pictureHeight > heighestPicture )
+        ],
+
+      [ heighestFigcaption, figcaptionHeight ] [
+          +( figcaptionHeight > heighestFigcaption )
+        ],
+
       pictures,
+      figcaptions,
       ++i
+
     )
 
   }
