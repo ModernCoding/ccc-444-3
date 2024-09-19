@@ -8,6 +8,8 @@
     const logo = document.querySelector ('#logo')
     if (!logo) { return }
 
+    logo.removeAttribute ('style')
+  
     logo
       .querySelectorAll ('*')
       .forEach (e => e.removeAttribute ('style'))
@@ -26,15 +28,6 @@
         .split ('px')
         .join ('')
 
-    const asidePaddingBottom = window
-        .getComputedStyle (aside)
-        .getPropertyValue ('padding-bottom')
-        .split ('px')
-        .join ('')
-
-    console.log (asidePaddingTop)
-    console.log (asidePaddingBottom)
-
 
     logo.style.width = '100%'
 
@@ -45,8 +38,8 @@
         [ height, maxHeight ] [ +(height > maxHeight) ]
       ) (
         logoWidth / PHI,
-        // (asideHeight - asidePaddingTop - asidePaddingBottom) / PHI
-        (asideHeight - asidePaddingTop - asidePaddingBottom)
+        // (asideHeight - asidePaddingTop) / PHI
+        (asideHeight - asidePaddingTop)
       )
 
 
@@ -54,6 +47,7 @@
 
     logo.style.height = `${ logoHeight }px`
     logo.style.width = `${ logoWidth }px`
+
 
 
     ;(nav => {
