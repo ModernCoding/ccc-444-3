@@ -112,8 +112,19 @@
 
 
           screen.value.isPortrait && noMachine && (index =>
-            index && index.classList.add ('no-machine')
-          ) (document.querySelector ('#index'))
+              index && index.classList.add ('no-machine')
+            ) (document.querySelector ('#index'))
+
+
+          ;(slogan =>
+
+              slogan && (
+                  screen.value.isPortrait && noMachine
+                    ? slogan.classList.remove ('text-uppercase')
+                    : slogan.classList.add ('text-uppercase')
+                )
+
+            ) (document.querySelector ('#slogan'))
 
         }) (document.querySelector ('#index > figure'))
 

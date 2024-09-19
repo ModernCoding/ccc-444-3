@@ -5,7 +5,7 @@
 
 
 $height: calc(var(--vh, 1vh) * 100)
-$width: calc(var(--vw, 1vw) * 100)
+$width: 100vw
 
 $landscapeWidthRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4)
 
@@ -20,9 +20,9 @@ $layoutPaddingBottomLandscape: 0
 $layoutPaddingLeftLandscape: calc($width / $landscapeWidthRatioPart)
 
 $layoutPaddingTopPortrait: calc($height / $portraitHeightRatioPart)
-$layoutPaddingRightPortrait: calc(100% / math.pow(c.$phi, 5))
+$layoutPaddingRightPortrait: calc($width / math.pow(c.$phi, 5))
 $layoutPaddingBottomPortrait: calc($height / $portraitHeightRatioPart * c.$phi)
-$layoutPaddingLeftPortrait: calc(100% / math.pow(c.$phi, 6))
+$layoutPaddingLeftPortrait: calc($width / math.pow(c.$phi, 6))
 
 
 // heights
@@ -50,13 +50,6 @@ $asidePaddingRight: calc($width / $landscapeWidthRatioPart * math.pow(c.$phi, 2)
 $asideWidthXxlHalf: calc(100% / math.pow(c.$phi, 4) - 1px)
 $asidePaddingRightXxlHalf: calc(100% / math.pow(c.$phi, 8))
 $asidePaddingLeftXxlHalf: calc(100% / math.pow(c.$phi, 9))
-
-
-// menu; only for at least xxl-half width
-
-$menuWidth: calc(100% / math.pow(c.$phi, 3) - 1px)
-$menuPaddingRight: calc(100% / math.pow(c.$phi, 6))
-$menuPaddingLeft: calc(100% / math.pow(c.$phi, 7))
 
 
 // main

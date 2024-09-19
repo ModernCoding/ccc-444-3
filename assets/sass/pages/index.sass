@@ -17,10 +17,19 @@
 
   section
 
-    $_gap: dimensions.$layoutPaddingRightPortrait * constants.$phi
+    $_gapLandscape: math.div(dimensions.$layoutPaddingRightLandscape, constants.$phi)
+
+    $_gapPortrait: dimensions.$layoutPaddingRightPortrait * constants.$phi
+
 
     display: flex
-    gap: $_gap
+
+
+    @media screen and (orientation: landscape)
+      gap: $_gapLandscape
+
+    @media screen and (orientation: portrait)
+      gap: $_gapPortrait
 
 
     figure
@@ -29,7 +38,12 @@
       flex-direction: column
       align-items: center
 
-      width: calc(100% / 3 - $_gap / 3 * 2)
+
+      @media screen and (orientation: landscape)
+        width: calc(100% / 3 - $_gapLandscape / 3 * 2)
+
+      @media screen and (orientation: portrait)
+        width: calc(100% / 3 - $_gapPortrait / 3 * 2)
 
 
       picture
