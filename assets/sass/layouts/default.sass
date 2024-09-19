@@ -102,6 +102,7 @@ figure
     @media screen and (orientation: landscape)
 
       > aside
+        margin: auto
         margin-right: dimensions.$asidePaddingRight
         width: dimensions.$asideWidth
 
@@ -115,23 +116,15 @@ figure
           height: 100%
 
 
-      // menu; only for at least xxl-half width
-      
-      > menu
-        border-right: 1px solid colors.$light-3
-        padding-right: dimensions.$menuPaddingRight
-        padding-left: dimensions.$menuPaddingLeft
-        width: dimensions.$menuWidth
-
-        > *
-          height: 100%
-
-
       > main[role="main"]
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+      
         width: dimensions.$mainWidth
 
         > *
-          height: 100%
           overflow-y: auto
 
 

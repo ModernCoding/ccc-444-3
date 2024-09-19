@@ -77,10 +77,8 @@
           screenStore.patchPortraitHeights ()
           screenStore.patchPaddingTops ()
 
-          console.log (screen.value)
 
-
-          noMachine && (index =>
+          screen.value.isPortrait && noMachine && (index =>
             index && index.classList.add ('no-machine')
           ) (document.querySelector ('#index'))
 

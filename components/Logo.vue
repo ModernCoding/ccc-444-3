@@ -32,6 +32,9 @@
         .split ('px')
         .join ('')
 
+    console.log (asidePaddingTop)
+    console.log (asidePaddingBottom)
+
 
     logo.style.width = '100%'
 
