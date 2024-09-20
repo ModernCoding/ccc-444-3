@@ -24,30 +24,16 @@
     const { height: asideHeight } = aside.getBoundingClientRect ()
 
 
-    const asidePaddingTop = parseFloat (
-
-        window
-          .getComputedStyle (aside)
-          .getPropertyValue ('padding-top')
-          .split ('px')
-          .join ('')
-
-      )
-
-
     logo.style.width = '100%'
 
     const { height: sectionHeight } = section.getBoundingClientRect ()
     let { width: logoWidth } = logo.getBoundingClientRect ()
-    console.log (screen.value)
-    console.log (asidePaddingTop)
 
     const logoHeight = ((height, maxHeight) =>
         [ height, maxHeight ] [ +(height > maxHeight) ]
       ) (
         logoWidth / PHI,
-        // (asideHeight - asidePaddingTop) / PHI
-        (asideHeight - asidePaddingTop)
+        (screen.value.heights.aside - screen.value.paddingTops.corrected.aside)
       )
 
 
@@ -121,7 +107,7 @@
 
 
   onMounted (() => {
-    setDimensions ()
+    setTimeout (setDimensions, 180)
     window.addEventListener ('resize', setDimensions)
   })
 
