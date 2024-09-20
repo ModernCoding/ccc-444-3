@@ -68,7 +68,7 @@
 
 
     screenStore.patchIsPortrait ()
-    screenStore.patchPortraitHeights ()
+    screenStore.patchHeights ()
     screenStore.patchPaddingTops ()
 
   } 

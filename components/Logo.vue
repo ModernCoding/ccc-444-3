@@ -1,6 +1,7 @@
 <script setup>
 
   const screenStore = defineScreenStoreFromComposable () ()
+  const { screen } = storeToRefs (screenStore)
 
 
   const setDimensions = () => {
@@ -38,6 +39,8 @@
 
     const { height: sectionHeight } = section.getBoundingClientRect ()
     let { width: logoWidth } = logo.getBoundingClientRect ()
+    console.log (screen.value)
+    console.log (asidePaddingTop)
 
     const logoHeight = ((height, maxHeight) =>
         [ height, maxHeight ] [ +(height > maxHeight) ]
@@ -111,7 +114,7 @@
 
 
     screenStore.patchIsPortrait ()
-    screenStore.patchPortraitHeights ()
+    screenStore.patchHeights ()
     screenStore.patchPaddingTops ()
 
   }

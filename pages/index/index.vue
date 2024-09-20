@@ -108,7 +108,7 @@
           noMachine && (figure.style.display = 'none')
 
           screenStore.patchIsPortrait ()
-          screenStore.patchPortraitHeights ()
+          screenStore.patchHeights ()
           screenStore.patchPaddingTops ()
 
 

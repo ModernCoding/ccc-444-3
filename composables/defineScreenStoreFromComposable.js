@@ -49,7 +49,7 @@ export default () => defineStore ('screen', {
     },
 
 
-    patchPortraitHeights () {
+    patchHeights () {
 
       const body = document.querySelector ('body')
       if (!body) { return }
@@ -61,10 +61,27 @@ export default () => defineStore ('screen', {
 
 
       this.screen.heights = {
-          header: height / ratioPart * PHI ** 2,
-          aside: height / ratioPart * PHI ** 4,
-          main: height / ratioPart * PHI ** 5,
-          footer: height / ratioPart * PHI ** 3
+
+          header: [
+              height / PHI ** 4,
+              height / ratioPart * PHI ** 2
+            ] [ +this.screen.isPortrait ],
+
+          aside: [
+              height / PHI,
+              height / ratioPart * PHI ** 4
+            ] [ +this.screen.isPortrait ],
+
+          main: [
+              height / PHI,
+              height / ratioPart * PHI ** 5
+            ] [ +this.screen.isPortrait ],
+
+          footer: [
+              height / PHI ** 3,
+              height / ratioPart * PHI ** 3
+            ] [ +this.screen.isPortrait ]
+
         }
 
     },
