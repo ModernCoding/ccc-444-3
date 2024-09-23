@@ -194,11 +194,11 @@
               slogan.removeAttribute ('style')
 
               !noMachine.value && (
-                  slogan.style.marginTop = `${ marginTop }px`
+                  slogan.style.marginTop = `${ marginTop / PHI }px`
                 )
             
             }) (document.querySelector ('#slogan'))
-          
+
 
           screenStore.patchIsPortrait ()
           screenStore.patchHeights ()
