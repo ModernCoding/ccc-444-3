@@ -6,6 +6,8 @@
   const screenStore = defineScreenStoreFromComposable () ()
   const { screen } = storeToRefs (screenStore)
 
+  const noMachine = ref (false)
+
 
   const equalizeCtas = (
 
@@ -63,7 +65,7 @@
 
       ;(figure => {
 
-          if (!figure) { return }
+          if (!figure) { return noMachine.value = true }
           figure.removeAttribute ('style')
 
           const paddingTop
@@ -79,11 +81,11 @@
 
           const img = figure.querySelector ('img')
 
-          if (!img) { return displayMachine.value = false }
+          if (!img) { return noMachine.value = true }
           img.removeAttribute ('style')
 
 
-          const noMachine = (() => {
+          noMachine.value = (() => {
 
             switch (true) {
 
@@ -105,7 +107,7 @@
           }) ()
 
 
-          noMachine && (figure.style.display = 'none')
+          noMachine.value && (figure.style.display = 'none')
 
           screenStore.patchIsPortrait ()
           screenStore.patchHeights ()
@@ -120,14 +122,91 @@
           ;(slogan =>
 
               slogan && (
-                  screen.value.isPortrait && noMachine
+                  
+                  slogan.removeAttribute ('style'),
+                  
+                  screen.value.isPortrait && noMachine.value
                     ? slogan.classList.remove ('text-uppercase')
                     : slogan.classList.add ('text-uppercase')
+                
                 )
 
             ) (document.querySelector ('#slogan'))
 
-        }) (document.querySelector ('#index > figure'))
+        }) (document.querySelector ('#index > #charles-babbage'))
+
+
+      ;(figure => {
+
+          if (!figure) { return noMachine.value = true }
+          figure.removeAttribute ('style')
+
+          const logo = document.querySelector ('#logo')
+          if (!logo) { return noMachine.value = true }
+
+
+          const marginTop
+            = screen.value.heights.header / PHI
+
+          const height = screen.value.heights.aside
+              - logo.getBoundingClientRect ().height
+              - marginTop
+
+
+          figure.style.marginTop = `${ marginTop }px`
+          figure.style.height = `${ height }px`
+
+          const img = figure.querySelector ('img')
+
+          if (!img) { return noMachine.value = true }
+          img.removeAttribute ('style')
+
+
+          noMachine.value = (() => {
+
+            switch (true) {
+
+              case  height <= 0:
+              case  img.getBoundingClientRect ().width <= 0:
+
+              case  figure
+                .getBoundingClientRect ()
+                .width / img.getBoundingClientRect ().width > PHI ** 2:
+
+                return true
+
+
+              default:
+                return false
+
+            }
+
+          }) ()
+
+
+          noMachine.value && (figure.style.display = 'none')
+
+
+          ;(slogan => {
+
+              if (!slogan) { return }
+              slogan.classList.remove ('text-uppercase')
+              slogan.removeAttribute ('style')
+
+              !noMachine.value && (
+                  slogan.style.marginTop = `${ marginTop }px`
+                )
+            
+            }) (document.querySelector ('#slogan'))
+          
+
+          screenStore.patchIsPortrait ()
+          screenStore.patchHeights ()
+          screenStore.patchPaddingTops ()
+
+        }) (
+          document.querySelector ('#aside-content > #charles-babbage')
+        )
 
 
       return
@@ -163,7 +242,7 @@
 
 
   onMounted (() => {
-    equalizeCtas ()
+    setTimeout (equalizeCtas, 180)
     window.addEventListener ('resize', () => equalizeCtas ())
   })
 
@@ -177,13 +256,25 @@
 
   <article id="index">
     <CallToActions />
-    <Machine />
   </article>
 
 
   <ClientOnly>
 
-    <Teleport to="#__nuxt > footer">
+    <Teleport
+      :to="[ '#aside-content', '#index' ] [ +screen.isPortrait ]"
+    >
+      <Machine />
+    </Teleport>
+
+
+    <Teleport
+      :to="
+          [ '#index', '#__nuxt > footer' ] [
+            +(screen.isPortrait || noMachine)
+          ]
+        "
+    >
       <Slogan />
     </Teleport>
 

@@ -16,43 +16,27 @@
       (mainContent => {
         
         if (!mainContent) { return }
-
         mainContent.removeAttribute ('style')
+        
+        if (main.scrollHeight <= main.clientHeight) { return }
 
-        if (mainContent.scrollHeight <= mainContent.clientHeight) {
-          return
-        }
+        // if (mainContent.scrollHeight <= mainContent.clientHeight) {
+        //   return
+        // }
 
 
         const mainPaddingLeft = parseInt (
 
             window
-
-              .getComputedStyle (
-                  screen.value.isPortrait
-                    ? document.querySelector ('#__nuxt')
-                    : main
-                )
-
-              .getPropertyValue ('padding-left')
+              .getComputedStyle (document.querySelector ('#__nuxt'))
+              .getPropertyValue ('padding-right')
               .split ('px')
               .join ('')
 
           )
 
 
-        ;(mainContentWidth => {
-
-          // compensating scrollbar width
-          const compensation = mainPaddingLeft / PHI
-
-          mainContent.style.paddingRight = `${
-            [ TWICE_54_BY_PHI_POWER_4, compensation ] [
-              +(compensation > TWICE_54_BY_PHI_POWER_4)
-            ]
-          }px`
-
-        }) (mainContent.getBoundingClientRect ().width)
+        mainContent.style.paddingRight = `${ mainPaddingLeft / PHI }px`
 
       }) (main.querySelector ('*'))
 
@@ -98,6 +82,7 @@
 
     <aside>
       <Logo />
+      <div id="aside-content" />
     </aside>
 
 
