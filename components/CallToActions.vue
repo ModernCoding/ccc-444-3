@@ -25,7 +25,7 @@
       <picture>
       
         <img
-          src="/images/bus.png"
+          src="/images/call.png"
           alt="Request next call"
           loading="lazy"
         >
