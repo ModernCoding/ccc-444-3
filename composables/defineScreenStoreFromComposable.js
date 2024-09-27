@@ -54,7 +54,7 @@ export default () => defineStore ('screen', {
 
     patchRatioIndex (window) {
       if (!window) { return }
-      getRatioIndex (window)
+      this.screen.ratioIndex = getRatioIndex (window)
     },
 
 

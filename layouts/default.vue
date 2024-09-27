@@ -62,7 +62,7 @@
 
       nuxt && nuxt.setAttribute (
         'data-number-of-parts',
-        getRatioIndex (window)
+        screen.value.ratioIndex
       )
 
     ) (document.querySelector ('#__nuxt'))
