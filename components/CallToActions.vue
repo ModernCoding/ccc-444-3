@@ -7,7 +7,7 @@
       <picture>
       
         <img
-          src="/images/tharrawaddy-min-bell-2.png"
+          src="/images/tharrawaddy-min-bell.png"
           alt="Tharrawaddy Min Bell"
           loading="lazy"
         >
