@@ -29,7 +29,10 @@ export default () => defineStore ('screen', {
               footer: 0
             }
         
-        }
+        },
+
+
+      ratioIndex: 1,
       
     }
 
@@ -46,6 +49,12 @@ export default () => defineStore ('screen', {
       const { width, height } = body.getBoundingClientRect ()
       this.screen.isPortrait = width < height
 
+    },
+
+
+    patchRatioIndex (window) {
+      if (!window) { return }
+      getRatioIndex (window)
     },
 
 

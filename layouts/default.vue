@@ -46,6 +46,18 @@
     windowWidths.value = getWindowWidths (window.innerWidth)
 
 
+    document
+      .documentElement
+      .style
+      .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
+
+
+    screenStore.patchRatioIndex (window)
+    screenStore.patchIsPortrait ()
+    screenStore.patchHeights ()
+    screenStore.patchPaddingTops ()
+
+
     ;(nuxt =>
 
       nuxt && nuxt.setAttribute (
@@ -54,17 +66,6 @@
       )
 
     ) (document.querySelector ('#__nuxt'))
-
-
-    document
-      .documentElement
-      .style
-      .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
-
-
-    screenStore.patchIsPortrait ()
-    screenStore.patchHeights ()
-    screenStore.patchPaddingTops ()
 
   } 
 
