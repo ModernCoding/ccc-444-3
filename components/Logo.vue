@@ -99,7 +99,7 @@
     })
 
 
-    screenStore.patchIsPortrait ()
+    screenStore.patchRatioIndex (window)
     screenStore.patchHeights ()
     screenStore.patchPaddingTops ()
 

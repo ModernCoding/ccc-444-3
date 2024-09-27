@@ -114,7 +114,7 @@
           screenStore.patchPaddingTops ()
 
 
-          screen.value.isPortrait && noMachine && (index =>
+          screen.value.ratioIndex < 2 && noMachine && (index =>
               index && index.classList.add ('no-machine')
             ) (document.querySelector ('#index'))
 
@@ -125,7 +125,7 @@
                   
                   slogan.removeAttribute ('style'),
                   
-                  screen.value.isPortrait && noMachine.value
+                  screen.value.ratioIndex < 2 && noMachine.value
                     ? slogan.classList.remove ('text-uppercase')
                     : slogan.classList.add ('text-uppercase')
                 
@@ -262,7 +262,7 @@
   <ClientOnly>
 
     <Teleport
-      :to="[ '#aside-content', '#index' ] [ +screen.isPortrait ]"
+      :to="[ '#aside-content', '#index' ] [ +(screen.ratioIndex < 2) ]"
     >
       <Machine />
     </Teleport>
@@ -271,7 +271,7 @@
     <Teleport
       :to="
           [ '#index', '#__nuxt > footer' ] [
-            +(screen.isPortrait || noMachine)
+            +(screen.ratioIndex < 2 || noMachine)
           ]
         "
     >

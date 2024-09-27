@@ -12,9 +12,6 @@ export default () => defineStore ('screen', {
         },
 
 
-      isPortrait: false,
-      
-
       paddingTops: {
 
           calculated: {
@@ -40,17 +37,6 @@ export default () => defineStore ('screen', {
 
 
   actions: {
-
-    patchIsPortrait () {
-
-      const body = document.querySelector ('body')
-      if (!body) { return }
-
-      const { width, height } = body.getBoundingClientRect ()
-      this.screen.isPortrait = width < height
-
-    },
-
 
     patchRatioIndex (window) {
       if (!window) { return }
