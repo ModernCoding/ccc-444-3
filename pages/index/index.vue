@@ -109,7 +109,7 @@
 
           noMachine.value && (figure.style.display = 'none')
 
-          screenStore.patchIsPortrait ()
+          screenStore.patchRatioIndex (window)
           screenStore.patchHeights ()
           screenStore.patchPaddingTops ()
 
@@ -200,7 +200,7 @@
             }) (document.querySelector ('#slogan'))
 
 
-          screenStore.patchIsPortrait ()
+          screenStore.patchRatioIndex (window)
           screenStore.patchHeights ()
           screenStore.patchPaddingTops ()
 
