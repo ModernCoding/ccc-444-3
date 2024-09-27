@@ -53,14 +53,14 @@ figure
 
   &[data-number-of-parts="1"]
 
-    padding-top: dimensions.$layoutPaddingTopPortrait
-    padding-right: dimensions.$layoutPaddingRightPortrait
-    padding-bottom: dimensions.$layoutPaddingBottomPortrait
-    padding-left: dimensions.$layoutPaddingLeftPortrait
+    padding-top: dimensions.$layoutPaddingTopOnePart
+    padding-right: dimensions.$layoutPaddingRightOnePart
+    padding-bottom: dimensions.$layoutPaddingBottomOnePart
+    padding-left: dimensions.$layoutPaddingLeftOnePart
 
 
     > header
-      height: dimensions.$heightHeaderPortrait
+      height: dimensions.$heightHeaderOnePart
 
       > nav
 
@@ -82,7 +82,7 @@ figure
         display: flex
         justify-content: center
 
-        height: dimensions.$heightAsidePortrait
+        height: dimensions.$heightAsideOnePart
         width: 100%
 
         > nav
@@ -105,7 +105,7 @@ figure
 
       > main[role="main"]
 
-        height: dimensions.$heightMainPortrait
+        height: dimensions.$heightMainOnePart
         width: 100%
         // overflow-y: auto
 
@@ -115,7 +115,7 @@ figure
 
 
     > footer
-      height: dimensions.$heightFooterPortrait
+      height: dimensions.$heightFooterOnePart
 
       > nav
         margin-right: 0
@@ -128,10 +128,10 @@ figure
   &[data-number-of-parts="2"],
   &[data-number-of-parts="3"]
 
-    padding-top: dimensions.$layoutPaddingTopLandscape
-    padding-right: dimensions.$layoutPaddingRightLandscape
-    padding-bottom: dimensions.$layoutPaddingBottomLandscape
-    padding-left: dimensions.$layoutPaddingLeftLandscape
+    padding-top: dimensions.$layoutPaddingTopTwoParts
+    padding-right: dimensions.$layoutPaddingRightTwoParts
+    padding-bottom: dimensions.$layoutPaddingBottomTwoParts
+    padding-left: dimensions.$layoutPaddingLeftTwoParts
 
 
     > header
@@ -140,7 +140,7 @@ figure
       align-items: center
       width: 100%
 
-      height: dimensions.$heightHeaderLandscape
+      height: dimensions.$heightHeaderTwoParts
 
 
       > nav
@@ -154,7 +154,7 @@ figure
 
 
     > section
-      height: dimensions.$heightSectionLandscape
+      height: dimensions.$heightSectionTwoParts
 
 
       > aside
@@ -186,7 +186,7 @@ figure
 
 
     > footer
-      height: dimensions.$heightFooterLandscape
+      height: dimensions.$heightFooterTwoParts
 
       > nav
         margin-right: dimensions.$asidePaddingRight

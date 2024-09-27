@@ -17,19 +17,19 @@
 
   section
 
-    $_gapLandscape: math.div(dimensions.$layoutPaddingRightLandscape, constants.$phi)
+    $_gapTwoParts: math.div(dimensions.$layoutPaddingRightTwoParts, constants.$phi)
 
-    $_gapPortrait: dimensions.$layoutPaddingRightPortrait * constants.$phi
+    $_gapOnePart: dimensions.$layoutPaddingRightOnePart * constants.$phi
 
 
     display: flex
 
 
     @media screen and (orientation: landscape)
-      gap: $_gapLandscape
+      gap: $_gapTwoParts
 
     @media screen and (orientation: portrait)
-      gap: $_gapPortrait
+      gap: $_gapOnePart
 
 
     figure
@@ -40,10 +40,10 @@
 
 
       @media screen and (orientation: landscape)
-        width: calc(100% / 3 - $_gapLandscape / 3 * 2)
+        width: calc(100% / 3 - $_gapTwoParts / 3 * 2)
 
       @media screen and (orientation: portrait)
-        width: calc(100% / 3 - $_gapPortrait / 3 * 2)
+        width: calc(100% / 3 - $_gapOnePart / 3 * 2)
 
 
       picture
