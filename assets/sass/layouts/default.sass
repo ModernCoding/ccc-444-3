@@ -26,47 +26,43 @@ figure
   height: dimensions.$height
   width: 100%
   overflow: hidden
+      
+
+  > *
+    color: colors.$light
 
 
-  @media screen and (orientation: landscape)
-    padding-top: dimensions.$layoutPaddingTopLandscape
-    padding-right: dimensions.$layoutPaddingRightLandscape
-    padding-bottom: dimensions.$layoutPaddingBottomLandscape
-    padding-left: dimensions.$layoutPaddingLeftLandscape
+  > header
 
-  @media screen and (orientation: portrait)
+    > nav
+      display: flex
+      align-items: center
+
+    *
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+
+
+  > section
+    display: flex
+    align-items: stretch
+
+  > footer
+    display: flex
+    align-items: center
+
+
+  &[data-number-of-parts="1"]
+
     padding-top: dimensions.$layoutPaddingTopPortrait
     padding-right: dimensions.$layoutPaddingRightPortrait
     padding-bottom: dimensions.$layoutPaddingBottomPortrait
     padding-left: dimensions.$layoutPaddingLeftPortrait
 
 
-  > *
-    color: colors.$light
+    > header
+      height: dimensions.$heightHeaderPortrait
 
-    @media screen and (orientation: landscape)
-      height: dimensions.$heightSectionLandscape
-
-
-  > header
-
-    > nav
-      
-      display: flex
-      align-items: center
-
-
-      @media screen and (orientation: landscape)
-
-        > nav:first-child
-          margin-right: dimensions.$asidePaddingRight
-          width: dimensions.$asideWidth
-
-        > nav:last-child
-          width: dimensions.$mainWidth
-
-
-      @media screen and (orientation: portrait)
+      > nav
 
         > nav:first-child
           margin-right: 0
@@ -75,64 +71,11 @@ figure
         > nav:last-child
           width: 100%
 
-
-    *
-      font-size: sizes.$twice_54_by_phi_power_4 * 1px
-
-
-    @media screen and (orientation: landscape)
-
-      display: flex
-      align-items: center
-      width: 100%
-
-      height: dimensions.$heightHeaderLandscape
-
-
-    @media screen and (orientation: portrait)
-      height: dimensions.$heightHeaderPortrait
-
-
-  > section
-
-    display: flex
-    align-items: stretch
-
-
-    @media screen and (orientation: landscape)
-
-      > aside
-        margin: auto
-        margin-right: dimensions.$asidePaddingRight
-        width: dimensions.$asideWidth
-
-        @media screen and (min-width: grid.$xxl-half)
-          padding-right: dimensions.$asidePaddingRightXxlHalf
-          padding-left: dimensions.$asidePaddingLeftXxlHalf
-          width: dimensions.$asideWidthXxlHalf
-
-
-        > div
-          height: 100%
-
-
-      > main[role="main"]
-
-        display: flex
-        flex-direction: column
-        justify-content: center
-      
-        width: dimensions.$mainWidth
-        overflow-y: auto
-
-        // > *
-          // overflow-y: auto
-
-
-    @media screen and (orientation: portrait)
-
       flex-direction: column
 
+
+    > section
+      flex-direction: column
 
       > aside
       
@@ -171,24 +114,7 @@ figure
           // overflow-y: auto
 
 
-  > footer
-      
-    display: flex
-    align-items: center
-
-
-    @media screen and (orientation: landscape)
-      height: dimensions.$heightFooterLandscape
-
-      > nav
-        margin-right: dimensions.$asidePaddingRight
-        width: dimensions.$asideWidth
-
-      > h1
-        width: dimensions.$mainWidth
-
-
-    @media screen and (orientation: portrait)
+    > footer
       height: dimensions.$heightFooterPortrait
 
       > nav
@@ -197,3 +123,74 @@ figure
 
       > h1
         width: 100%
+
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+
+    padding-top: dimensions.$layoutPaddingTopLandscape
+    padding-right: dimensions.$layoutPaddingRightLandscape
+    padding-bottom: dimensions.$layoutPaddingBottomLandscape
+    padding-left: dimensions.$layoutPaddingLeftLandscape
+
+
+    > header
+
+      display: flex
+      align-items: center
+      width: 100%
+
+      height: dimensions.$heightHeaderLandscape
+
+
+      > nav
+
+        > nav:first-child
+          margin-right: dimensions.$asidePaddingRight
+          width: dimensions.$asideWidth
+
+        > nav:last-child
+          width: dimensions.$mainWidth
+
+
+    > section
+      height: dimensions.$heightSectionLandscape
+
+
+      > aside
+        margin: auto
+        margin-right: dimensions.$asidePaddingRight
+        width: dimensions.$asideWidth
+
+        @media screen and (min-width: grid.$xxl-half)
+          padding-right: dimensions.$asidePaddingRightXxlHalf
+          padding-left: dimensions.$asidePaddingLeftXxlHalf
+          width: dimensions.$asideWidthXxlHalf
+
+
+        > div
+          height: 100%
+
+
+      > main[role="main"]
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+      
+        width: dimensions.$mainWidth
+        overflow-y: auto
+
+        // > *
+          // overflow-y: auto
+
+
+    > footer
+      height: dimensions.$heightFooterLandscape
+
+      > nav
+        margin-right: dimensions.$asidePaddingRight
+        width: dimensions.$asideWidth
+
+      > h1
+        width: dimensions.$mainWidth
