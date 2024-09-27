@@ -74,22 +74,22 @@ export default () => defineStore ('screen', {
           header: [
               height / PHI ** 4,
               height / ratioPart * PHI ** 2
-            ] [ +this.screen.isPortrait ],
+            ] [ +(this.screen.ratioIndex < 2) ],
 
           aside: [
               height / PHI,
               height / ratioPart * PHI ** 4
-            ] [ +this.screen.isPortrait ],
+            ] [ +(this.screen.ratioIndex < 2) ],
 
           main: [
               height / PHI,
               height / ratioPart * PHI ** 5
-            ] [ +this.screen.isPortrait ],
+            ] [ +(this.screen.ratioIndex < 2) ],
 
           footer: [
               height / PHI ** 3,
               height / ratioPart * PHI ** 3
-            ] [ +this.screen.isPortrait ]
+            ] [ +(this.screen.ratioIndex < 2) ]
 
         }
 
@@ -106,10 +106,10 @@ export default () => defineStore ('screen', {
               footer: [ 0, this.screen.heights.footer / PHI ** 4 ] [ i ]
             }
 
-        ) (+this.screen.isPortrait)
+        ) (+(this.screen.ratioIndex < 2))
 
 
-      !this.screen.isPortrait && (
+      !this.screen.ratioIndex < 2 && (
 
           this.screen.paddingTops.corrected = {
               aside: 0,
@@ -120,7 +120,7 @@ export default () => defineStore ('screen', {
         )
 
 
-      this.screen.isPortrait && (() => {
+      this.screen.ratioIndex < 2 && (() => {
 
           (headerNav =>
 
@@ -188,7 +188,7 @@ export default () => defineStore ('screen', {
           if (!aside) { return }
           aside.removeAttribute ('style')
 
-          this.screen.isPortrait && (
+          this.screen.ratioIndex < 2 && (
             aside.style.paddingTop
               = `${ this.screen.paddingTops.corrected.aside }px`
           )
@@ -201,7 +201,7 @@ export default () => defineStore ('screen', {
           if (!main) { return }
           main.removeAttribute ('style')
 
-          this.screen.isPortrait && (
+          this.screen.ratioIndex < 2 && (
             main.style.paddingTop
               = `${ this.screen.paddingTops.corrected.main }px`
           )
@@ -214,7 +214,7 @@ export default () => defineStore ('screen', {
           if (!footer) { return }
           footer.removeAttribute ('style')
 
-          this.screen.isPortrait && (
+          this.screen.ratioIndex < 2 && (
             footer.style.paddingTop
               = `${ this.screen.paddingTops.corrected.footer }px`
           )

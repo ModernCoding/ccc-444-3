@@ -53,7 +53,6 @@
 
 
     screenStore.patchRatioIndex (window)
-    screenStore.patchIsPortrait ()
     screenStore.patchHeights ()
     screenStore.patchPaddingTops ()
 
