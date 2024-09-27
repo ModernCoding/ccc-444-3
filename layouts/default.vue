@@ -45,6 +45,17 @@
 
     windowWidths.value = getWindowWidths (window.innerWidth)
 
+
+    ;(nuxt =>
+
+      nuxt && nuxt.setAttribute (
+        'data-number-of-parts',
+        getRatioIndex (window)
+      )
+
+    ) (document.querySelector ('#__nuxt'))
+
+
     document
       .documentElement
       .style
