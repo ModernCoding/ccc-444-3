@@ -1,6 +1,14 @@
+<script setup>
+
+  const screenStore = defineScreenStoreFromComposable () ()
+  const { screen } = storeToRefs (screenStore)
+
+</script>
+
+
 <template>
 
-  <section>
+  <section :data-number-of-parts="screen.ratioIndex">
 
     <figure>
 
@@ -62,6 +70,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/index.sass"
+  src="@/assets/sass/components/call-to-actions.sass"
   lang="sass"
 ></style>
