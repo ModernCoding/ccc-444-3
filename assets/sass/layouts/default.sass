@@ -83,7 +83,7 @@ figure
         justify-content: center
 
         height: dimensions.$heightAsideOnePart
-        width: 100%
+        width: dimensions.$asideWidthOnePart
 
         > nav
           display: flex
@@ -106,7 +106,7 @@ figure
       > main[role="main"]
 
         height: dimensions.$heightMainOnePart
-        width: 100%
+        width: dimensions.$mainWidthOnePart
         // overflow-y: auto
 
         // > *
@@ -146,11 +146,11 @@ figure
       > nav
 
         > nav:first-child
-          margin-right: dimensions.$asidePaddingRight
-          width: dimensions.$asideWidth
+          margin-right: dimensions.$asidePaddingRightTwoParts
+          width: dimensions.$asideWidthTwoParts
 
         > nav:last-child
-          width: dimensions.$mainWidth
+          width: dimensions.$mainWidthTwoParts
 
 
     > section
@@ -158,15 +158,9 @@ figure
 
 
       > aside
-        margin: auto
-        margin-right: dimensions.$asidePaddingRight
-        width: dimensions.$asideWidth
-
-        @media screen and (min-width: grid.$xxl-half)
-          padding-right: dimensions.$asidePaddingRightXxlHalf
-          padding-left: dimensions.$asidePaddingLeftXxlHalf
-          width: dimensions.$asideWidthXxlHalf
-
+        // margin: auto
+        margin-right: dimensions.$asidePaddingRightTwoParts
+        width: dimensions.$asideWidthTwoParts
 
         > div
           height: 100%
@@ -178,7 +172,7 @@ figure
         flex-direction: column
         justify-content: center
       
-        width: dimensions.$mainWidth
+        width: dimensions.$mainWidthTwoParts
         overflow-y: auto
 
         // > *
@@ -189,8 +183,8 @@ figure
       height: dimensions.$heightFooterTwoParts
 
       > nav
-        margin-right: dimensions.$asidePaddingRight
-        width: dimensions.$asideWidth
+        margin-right: dimensions.$asidePaddingRightTwoParts
+        width: dimensions.$asideWidthTwoParts
 
       > h1
-        width: dimensions.$mainWidth
+        width: dimensions.$mainWidthTwoParts
