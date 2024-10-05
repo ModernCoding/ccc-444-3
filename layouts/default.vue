@@ -97,6 +97,9 @@
     </aside>
 
 
+    <section v-if="screen.ratioIndex > 2" id="central"></section>
+
+
     <main role="main">
       <slot />
     </main>

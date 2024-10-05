@@ -7,16 +7,18 @@
 $height: calc(var(--vh, 1vh) * 100)
 $width: 100vw
 
-$OnePartWidthRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4) + math.pow(c.$phi, 5)
+$OnePartHeightRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4) + math.pow(c.$phi, 5)
 
 $TwoPartsWidthRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4)
+
+$ThreePartsWidthRatioPart: 1 + c.$phi + math.pow(c.$phi, 2) + math.pow(c.$phi, 3) + math.pow(c.$phi, 4) + math.pow(c.$phi, 5) + math.pow(c.$phi, 6)
 
 
 // layout
 
-$layoutPaddingTopOnePart: calc($height / $OnePartWidthRatioPart)
+$layoutPaddingTopOnePart: calc($height / $OnePartHeightRatioPart)
 $layoutPaddingRightOnePart: calc($width / math.pow(c.$phi, 5))
-$layoutPaddingBottomOnePart: calc($height / $OnePartWidthRatioPart * c.$phi)
+$layoutPaddingBottomOnePart: calc($height / $OnePartHeightRatioPart * c.$phi)
 $layoutPaddingLeftOnePart: calc($width / math.pow(c.$phi, 6))
 
 $layoutPaddingTopTwoParts: 0
@@ -24,35 +26,55 @@ $layoutPaddingRightTwoParts: calc($width / $TwoPartsWidthRatioPart * c.$phi)
 $layoutPaddingBottomTwoParts: 0
 $layoutPaddingLeftTwoParts: calc($width / $TwoPartsWidthRatioPart)
 
+$layoutPaddingRightThreeParts: calc($width / $ThreePartsWidthRatioPart * c.$phi)
+$layoutPaddingLeftThreeParts: calc($width / $ThreePartsWidthRatioPart)
+
 
 // heights
 
 $heightHeaderTwoParts: calc($height / math.pow(c.$phi, 4))
 
-$heightHeaderOnePart: calc($height / $OnePartWidthRatioPart * math.pow(c.$phi, 2))
+$heightHeaderOnePart: calc($height / $OnePartHeightRatioPart * math.pow(c.$phi, 2))
 
 $heightSectionTwoParts: calc($height / c.$phi)
 
-$heightAsideOnePart: calc($height / $OnePartWidthRatioPart * math.pow(c.$phi, 4))
+$heightAsideOnePart: calc($height / $OnePartHeightRatioPart * math.pow(c.$phi, 4))
 
-$heightMainOnePart: calc($height / $OnePartWidthRatioPart * math.pow(c.$phi, 5))
+$heightMainOnePart: calc($height / $OnePartHeightRatioPart * math.pow(c.$phi, 5))
+
+$heightFooterOnePart: calc($height / $OnePartHeightRatioPart * math.pow(c.$phi, 3))
 
 $heightFooterTwoParts: calc($height / math.pow(c.$phi, 3))
-
-$heightFooterOnePart: calc($height / $OnePartWidthRatioPart * math.pow(c.$phi, 3))
 
 
 // aside
 
 $asideWidthOnePart: 100%
+
 $asideWidthTwoParts: calc($width / $TwoPartsWidthRatioPart * math.pow(c.$phi, 3))
-$asidePaddingRightTwoParts: calc($width / $TwoPartsWidthRatioPart * math.pow(c.$phi, 2))
+
+$asideMarginRightTwoParts: calc($width / $TwoPartsWidthRatioPart * math.pow(c.$phi, 2))
+
+
+$asideWidthThreeParts: calc($width / $ThreePartsWidthRatioPart * math.pow(c.$phi, 4))
+
+$asideMarginRightThreeParts: calc($width / $ThreePartsWidthRatioPart * math.pow(c.$phi, 2))
+
+
+// central
+
+$centralWidthThreeParts: calc($width / $ThreePartsWidthRatioPart * math.pow(c.$phi, 5))
+
+$centralMarginRightThreeParts: calc($width / $ThreePartsWidthRatioPart * math.pow(c.$phi, 3))
 
 
 // main
 
 $mainWidthOnePart: 100%
+
 $mainWidthTwoParts: calc($width / $TwoPartsWidthRatioPart * math.pow(c.$phi, 4))
+
+$mainWidthThreeParts: calc($width / $ThreePartsWidthRatioPart * math.pow(c.$phi, 6))
 
 
 // DO NOT MULTIPLY BY 1PX!
