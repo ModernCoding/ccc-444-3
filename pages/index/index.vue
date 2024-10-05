@@ -11,12 +11,13 @@
 
   const equalizeCtas = (
 
-    heighestPicture = 0,
-    heighestFigcaption = 0,
     pictures = document.querySelectorAll ('#index > section picture'),
 
     figcaptions
       = document.querySelectorAll ('#index > section figcaption'),
+
+    heighestPicture = 0,
+    heighestFigcaption = 0,
 
     i = 0
 
@@ -224,6 +225,9 @@
 
     return equalizeCtas (
 
+      pictures,
+      figcaptions,
+
       [ heighestPicture, pictureHeight ] [
           +( pictureHeight > heighestPicture )
         ],
@@ -231,9 +235,7 @@
       [ heighestFigcaption, figcaptionHeight ] [
           +( figcaptionHeight > heighestFigcaption )
         ],
-
-      pictures,
-      figcaptions,
+        
       ++i
 
     )

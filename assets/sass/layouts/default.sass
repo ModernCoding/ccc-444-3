@@ -129,9 +129,7 @@ figure
   &[data-number-of-parts="3"]
 
     padding-top: dimensions.$layoutPaddingTopTwoParts
-    padding-right: dimensions.$layoutPaddingRightTwoParts
     padding-bottom: dimensions.$layoutPaddingBottomTwoParts
-    padding-left: dimensions.$layoutPaddingLeftTwoParts
 
 
     > header
@@ -142,6 +140,34 @@ figure
 
       height: dimensions.$heightHeaderTwoParts
 
+
+    > section
+      height: dimensions.$heightSectionTwoParts
+
+      > aside
+        margin: auto
+
+        > div
+          height: 100%
+
+
+      > main[role="main"]
+        display: flex
+        flex-direction: column
+        justify-content: center
+        overflow-y: auto
+
+
+    > footer
+      height: dimensions.$heightFooterTwoParts
+
+
+  &[data-number-of-parts="2"]
+    padding-right: dimensions.$layoutPaddingRightTwoParts
+    padding-left: dimensions.$layoutPaddingLeftTwoParts
+
+
+    > header
 
       > nav
 
@@ -154,33 +180,17 @@ figure
 
 
     > section
-      height: dimensions.$heightSectionTwoParts
-
 
       > aside
-        margin: auto
         margin-right: dimensions.$asideMarginRightTwoParts
         width: dimensions.$asideWidthTwoParts
 
-        > div
-          height: 100%
-
 
       > main[role="main"]
-
-        display: flex
-        flex-direction: column
-        justify-content: center
-      
         width: dimensions.$mainWidthTwoParts
-        overflow-y: auto
-
-        // > *
-          // overflow-y: auto
 
 
     > footer
-      height: dimensions.$heightFooterTwoParts
 
       > nav
         margin-right: dimensions.$asideMarginRightTwoParts
@@ -188,3 +198,57 @@ figure
 
       > h1
         width: dimensions.$mainWidthTwoParts
+
+
+  &[data-number-of-parts="3"]
+    padding-right: dimensions.$layoutPaddingRightThreeParts
+    padding-left: dimensions.$layoutPaddingLeftThreeParts
+
+
+    > header
+
+      > nav
+
+        > nav:first-child
+          margin-right: dimensions.$asideMarginRightThreeParts
+          width: dimensions.$asideWidthThreeParts
+
+        > nav:nth-child(2)
+          margin-right: dimensions.$centralMarginRightThreeParts
+          width: dimensions.$centralWidthThreeParts
+
+        > nav:last-child
+          width: dimensions.$mainWidthThreeParts
+
+
+    > section
+
+      > aside
+        margin-right: dimensions.$asideMarginRightThreeParts
+        width: dimensions.$asideWidthThreeParts
+
+
+      #central
+        margin-right: dimensions.$centralMarginRightThreeParts
+        width: dimensions.$centralWidthThreeParts
+
+        > div
+          height: 100%
+
+
+      > main[role="main"]
+        width: dimensions.$mainWidthThreeParts
+
+
+    > footer
+
+      > nav:first-child
+        margin-right: dimensions.$asideMarginRightThreeParts
+        width: dimensions.$asideWidthThreeParts
+
+      > nav:nth-child(2)
+        margin-right: dimensions.$centralMarginRightThreeParts
+        width: dimensions.$centralWidthThreeParts
+
+      > h1
+        width: dimensions.$mainWidthThreeParts

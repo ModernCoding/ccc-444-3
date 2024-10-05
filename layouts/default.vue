@@ -83,6 +83,7 @@
 
     <nav>
       <nav></nav>
+      <nav v-if="screen.ratioIndex > 2"></nav>
       <nav class="text-end">EN</nav>
     </nav>
 
@@ -97,7 +98,9 @@
     </aside>
 
 
-    <section v-if="screen.ratioIndex > 2" id="central"></section>
+    <section v-if="screen.ratioIndex > 2" id="central">
+      <CallToActions />
+    </section>
 
 
     <main role="main">
@@ -109,6 +112,7 @@
 
   <footer class="d-flex align-items-center justify-content-center">
     <nav></nav>
+    <nav v-if="screen.ratioIndex > 2"></nav>
   </footer>
   
 </template>

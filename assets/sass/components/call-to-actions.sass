@@ -8,9 +8,11 @@
 
 section
 
+  $_gapOnePart: dimensions.$layoutPaddingRightOnePart * constants.$phi
+
   $_gapTwoParts: math.div(dimensions.$layoutPaddingRightTwoParts, constants.$phi)
 
-  $_gapOnePart: dimensions.$layoutPaddingRightOnePart * constants.$phi
+  $_gapThreeParts: math.div(dimensions.$layoutPaddingRightThreeParts, constants.$phi)
 
 
   display: flex
@@ -49,10 +51,17 @@ section
       width: calc(100% / 3 - $_gapOnePart / 3 * 2)
 
 
-  &[data-number-of-parts="2"],
-  &[data-number-of-parts="3"]
+  &[data-number-of-parts="2"]
 
     gap: $_gapTwoParts
 
     figure
       width: calc(100% / 3 - $_gapTwoParts / 3 * 2)
+
+
+  &[data-number-of-parts="3"]
+
+    gap: $_gapThreeParts
+
+    figure
+      width: calc(100% / 3 - $_gapThreeParts / 3 * 2)
