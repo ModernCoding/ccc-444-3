@@ -4,8 +4,11 @@
   import Slogan from './.partials/slogan'
 
   const ctaScripts = collectCtaScriptsFromComposable ()
-  const screenStore = defineScreenStoreFromComposable () ()
-  const { screen } = storeToRefs (screenStore)
+
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+  
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const noMachine = ref (false)
 
@@ -14,14 +17,16 @@
 
     if (!window) { return }
 
-    ctaScripts.equalize (
-      screen,
-      `${ '#index' } .o-call-to-actions`
-    )
 
-    if (screen.value.ratioIndex > 2) {
-      ctaScripts.equalize (screen, '#central .o-call-to-actions')
-    }
+    ctaScripts.equalize (
+
+      screenProperties,
+
+      `${
+        [ '#index', '#central' ] [ +(screenProperties.value.ratioIndex > 2) ]
+      } .o-call-to-actions`
+
+    )
 
 
     ;(index =>
@@ -37,13 +42,34 @@
     ;(figure => {
 
         if (!figure) { return noMachine.value = true }
+        noMachine.value = false
+        
         figure.removeAttribute ('style')
 
-        const paddingTop
-          = screen.value.paddingTops.calculated.main / PHI
+        figure.style.height
+          = `${ screenProperties.value.heights.main - PHI }px`
 
-        const height = screen.value.heights.main
-            - screen.value.paddingTops.corrected.main
+
+        ;(slogan =>
+            slogan && slogan.classList.add ('text-uppercase')
+          ) (document.querySelector ('#slogan'))
+
+      }) (
+        document.querySelector ('#index-machine > .o-charles-babbage')
+      )
+
+
+    ;(figure => {
+
+        if (!figure) { return noMachine.value = true }
+        figure.removeAttribute ('style')
+
+
+        const paddingTop
+          = screenProperties.value.paddingTops.calculated.main / PHI
+
+        const height = screenProperties.value.heights.main
+            - screenProperties.value.paddingTops.corrected.main
             - sectionHeight
 
 
@@ -80,12 +106,12 @@
 
         noMachine.value && (figure.style.display = 'none')
 
-        screenStore.patchRatioIndex (window)
-        screenStore.patchHeights ()
-        screenStore.patchPaddingTops ()
+        screenPropertiesStore.patchRatioIndex (window)
+        screenPropertiesStore.patchHeights ()
+        screenPropertiesStore.patchPaddingTops ()
 
 
-        screen.value.ratioIndex < 2 && noMachine && (index =>
+        screenProperties.value.ratioIndex < 2 && noMachine && (index =>
             index && index.classList.add ('no-machine')
           ) (document.querySelector ('#index'))
 
@@ -96,15 +122,15 @@
                 
                 slogan.removeAttribute ('style'),
                 
-                screen.value.ratioIndex < 2 && noMachine.value
-                  ? slogan.classList.remove ('text-uppercase')
-                  : slogan.classList.add ('text-uppercase')
+                screenProperties.value.ratioIndex < 2 && noMachine.value
+                    ? slogan.classList.remove ('text-uppercase')
+                    : slogan.classList.add ('text-uppercase')
               
               )
 
           ) (document.querySelector ('#slogan'))
 
-      }) (document.querySelector ('#index > #charles-babbage'))
+      }) (document.querySelector ('#index > .o-charles-babbage'))
 
 
     ;(figure => {
@@ -117,9 +143,9 @@
 
 
         const marginTop
-          = screen.value.heights.header / PHI
+          = screenProperties.value.heights.header / PHI
 
-        const height = screen.value.heights.aside
+        const height = screenProperties.value.heights.aside
             - logo.getBoundingClientRect ().height
             - marginTop
 
@@ -171,20 +197,26 @@
           }) (document.querySelector ('#slogan'))
 
 
-        screenStore.patchRatioIndex (window)
-        screenStore.patchHeights ()
-        screenStore.patchPaddingTops ()
+        screenPropertiesStore.patchRatioIndex (window)
+        screenPropertiesStore.patchHeights ()
+        screenPropertiesStore.patchPaddingTops ()
 
       }) (
-        document.querySelector ('#aside-content > #charles-babbage')
+        document.querySelector ('#aside-content > .o-charles-babbage')
       )
 
   }
 
 
   onMounted (() => {
+    
     setTimeout (equalizeCtas, 180)
-    window.addEventListener ('resize', () => equalizeCtas ())
+    window.addEventListener ('resize', equalizeCtas)
+
+    screen
+      .orientation
+      .addEventListener ('change', () => equalizeCtas ())
+  
   })
 
 
@@ -196,25 +228,50 @@
 <template>
 
   <article id="index">
-    <CallToActions />
+
+    <CallToActions v-if="screenProperties.ratioIndex < 3" />
+    <Machine v-if="screenProperties.ratioIndex < 2" />
+
+    <div
+      id="index-machine"
+      class="d-flex align-items-center justify-content-center"
+    >
+      <Machine v-if="screenProperties.ratioIndex > 2" />
+    </div>
+
   </article>
 
 
   <ClientOnly>
 
     <Teleport
-      :to="[ '#aside-content', '#index' ] [ +(screen.ratioIndex < 2) ]"
+      v-if="screenProperties.ratioIndex === 2"
+      to="#aside-content"
     >
       <Machine />
     </Teleport>
 
 
     <Teleport
+
+      v-if="screenProperties.ratioIndex < 3"
+
       :to="
           [ '#index', '#__nuxt > footer' ] [
-            +(screen.ratioIndex < 2 || noMachine)
+            +(screenProperties.ratioIndex < 2 || noMachine)
           ]
         "
+
+    >
+
+      <Slogan />
+
+    </Teleport>
+
+
+    <Teleport
+      v-else
+      to="#index-machine"
     >
       <Slogan />
     </Teleport>

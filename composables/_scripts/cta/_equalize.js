@@ -1,4 +1,4 @@
-export default (screen, selector) => (function _equalize (
+export default (screenProperties, selector) => (function _equalize (
   pictures = document.querySelectorAll (`${ selector } picture`),
   figcaptions = document.querySelectorAll (`${ selector } figcaption`),
   heighestPicture = 0,
@@ -31,16 +31,20 @@ export default (screen, selector) => (function _equalize (
 
     ;(delta =>
 
-      (heighestPicture > delta) && pictures.forEach (
-          picture => picture.style.height = `${ delta }px`
-        )
+      pictures.forEach (
+
+        picture => picture.style.height = `${
+            [ heighestPicture, delta ] [ +(heighestPicture > delta) ]
+          }px`
+      
+      )
     
     ) (
 
       mainHeight
         - heighestFigcaption
         - figcaptionPaddingTop
-        - screen.value.paddingTops.corrected.main
+        - screenProperties.value.paddingTops.corrected.main
     
     )
 

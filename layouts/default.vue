@@ -2,8 +2,10 @@
 
   const windowWidths = ref ({})
 
-  const screenStore = defineScreenStoreFromComposable () ()
-  const { screen } = storeToRefs (screenStore)
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+  
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
   const setDimensions = () => {
@@ -52,16 +54,16 @@
       .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
 
 
-    screenStore.patchRatioIndex (window)
-    screenStore.patchHeights ()
-    screenStore.patchPaddingTops ()
+    screenPropertiesStore.patchRatioIndex (window)
+    screenPropertiesStore.patchHeights ()
+    screenPropertiesStore.patchPaddingTops ()
 
 
     ;(nuxt =>
 
       nuxt && nuxt.setAttribute (
         'data-number-of-parts',
-        screen.value.ratioIndex
+        screenProperties.value.ratioIndex
       )
 
     ) (document.querySelector ('#__nuxt'))
@@ -81,7 +83,7 @@
 
   <header>
     <nav></nav>
-    <nav v-if="screen.ratioIndex > 2"></nav>
+    <nav v-if="screenProperties.ratioIndex > 2"></nav>
     <nav class="text-end">EN</nav>
   </header>
 
@@ -94,7 +96,7 @@
     </aside>
 
 
-    <section v-if="screen.ratioIndex > 2" id="central">
+    <section v-if="screenProperties.ratioIndex > 2" id="central">
       <CallToActions />
     </section>
 
@@ -108,7 +110,7 @@
 
   <footer class="d-flex align-items-center justify-content-center">
     <nav></nav>
-    <nav v-if="screen.ratioIndex > 2"></nav>
+    <nav v-if="screenProperties.ratioIndex > 2"></nav>
   </footer>
   
 </template>

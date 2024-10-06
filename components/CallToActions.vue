@@ -1,7 +1,9 @@
 <script setup>
 
-  const screenStore = defineScreenStoreFromComposable () ()
-  const { screen } = storeToRefs (screenStore)
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+  
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 </script>
 
@@ -10,7 +12,7 @@
 
   <section
     class="o-call-to-actions"
-    :data-number-of-parts="screen.ratioIndex"
+    :data-number-of-parts="screenProperties.ratioIndex"
   >
 
     <figure>

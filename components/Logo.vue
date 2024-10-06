@@ -1,7 +1,9 @@
 <script setup>
 
-  const screenStore = defineScreenStoreFromComposable () ()
-  const { screen } = storeToRefs (screenStore)
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+  
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
   const setDimensions = () => {
@@ -33,7 +35,7 @@
         [ height, maxHeight ] [ +(height > maxHeight) ]
       ) (
         logoWidth / PHI,
-        (screen.value.heights.aside - screen.value.paddingTops.corrected.aside)
+        (screenProperties.value.heights.aside - screenProperties.value.paddingTops.corrected.aside)
       )
 
 
@@ -99,16 +101,23 @@
     })
 
 
-    screenStore.patchRatioIndex (window)
-    screenStore.patchHeights ()
-    screenStore.patchPaddingTops ()
+    screenPropertiesStore.patchRatioIndex (window)
+    screenPropertiesStore.patchHeights ()
+    screenPropertiesStore.patchPaddingTops ()
 
   }
 
 
   onMounted (() => {
+
     setTimeout (setDimensions, 180)
+    
     window.addEventListener ('resize', setDimensions)
+    
+    screen
+      .orientation
+      .addEventListener ('change', () => setDimensions ())
+
   })
 
 </script>

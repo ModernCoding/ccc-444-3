@@ -1,8 +1,8 @@
-export default () => defineStore ('screen', {
+export default () => defineStore ('screenProperties', {
 
   state: () => ({
 
-    screen: {
+    screenProperties: {
 
       heights: {
           header: 0,
@@ -40,7 +40,7 @@ export default () => defineStore ('screen', {
 
     patchRatioIndex (window) {
       if (!window) { return }
-      this.screen.ratioIndex = getRatioIndex (window)
+      this.screenProperties.ratioIndex = getRatioIndex (window)
     },
 
 
@@ -55,27 +55,27 @@ export default () => defineStore ('screen', {
         = 1 + PHI + PHI ** 2 + PHI ** 3 + PHI ** 4 + PHI ** 5
 
 
-      this.screen.heights = {
+      this.screenProperties.heights = {
 
           header: [
               height / PHI ** 4,
               height / ratioPart * PHI ** 2
-            ] [ +(this.screen.ratioIndex < 2) ],
+            ] [ +(this.screenProperties.ratioIndex < 2) ],
 
           aside: [
               height / PHI,
               height / ratioPart * PHI ** 4
-            ] [ +(this.screen.ratioIndex < 2) ],
+            ] [ +(this.screenProperties.ratioIndex < 2) ],
 
           main: [
               height / PHI,
               height / ratioPart * PHI ** 5
-            ] [ +(this.screen.ratioIndex < 2) ],
+            ] [ +(this.screenProperties.ratioIndex < 2) ],
 
           footer: [
               height / PHI ** 3,
               height / ratioPart * PHI ** 3
-            ] [ +(this.screen.ratioIndex < 2) ]
+            ] [ +(this.screenProperties.ratioIndex < 2) ]
 
         }
 
@@ -86,18 +86,18 @@ export default () => defineStore ('screen', {
 
       (i =>
 
-          this.screen.paddingTops.calculated = {
-              aside: [ 0, this.screen.heights.aside / PHI ** 4 ] [ i ],
-              main: [ 0, this.screen.heights.main / PHI ** 4 ] [ i ],
-              footer: [ 0, this.screen.heights.footer / PHI ** 4 ] [ i ]
+          this.screenProperties.paddingTops.calculated = {
+              aside: [ 0, this.screenProperties.heights.aside / PHI ** 4 ] [ i ],
+              main: [ 0, this.screenProperties.heights.main / PHI ** 4 ] [ i ],
+              footer: [ 0, this.screenProperties.heights.footer / PHI ** 4 ] [ i ]
             }
 
-        ) (+(this.screen.ratioIndex < 2))
+        ) (+(this.screenProperties.ratioIndex < 2))
 
 
-      !this.screen.ratioIndex < 2 && (
+      !this.screenProperties.ratioIndex < 2 && (
 
-          this.screen.paddingTops.corrected = {
+          this.screenProperties.paddingTops.corrected = {
               aside: 0,
               main: 0,
               footer: 0
@@ -106,18 +106,18 @@ export default () => defineStore ('screen', {
         )
 
 
-      this.screen.ratioIndex < 2 && (() => {
+      this.screenProperties.ratioIndex < 2 && (() => {
 
           (headerNav =>
 
               headerNav && (({ height }) => {
 
-                this.screen.paddingTops.corrected.aside = (value =>
+                this.screenProperties.paddingTops.corrected.aside = (value =>
                   value < 0 ? 0 : value
                 ) (
 
-                  this.screen.paddingTops.calculated.aside
-                    - this.screen.heights.header
+                  this.screenProperties.paddingTops.calculated.aside
+                    - this.screenProperties.heights.header
                     + height
                 
                 )
@@ -131,14 +131,14 @@ export default () => defineStore ('screen', {
 
               logo && (({ height }) => {
 
-                this.screen.paddingTops.corrected.main = (value =>
+                this.screenProperties.paddingTops.corrected.main = (value =>
                   value < 0 ? 0 : value
                 ) (
 
-                  this.screen.paddingTops.calculated.main
-                    - this.screen.heights.aside
+                  this.screenProperties.paddingTops.calculated.main
+                    - this.screenProperties.heights.aside
                     + height
-                    + this.screen.paddingTops.corrected.aside
+                    + this.screenProperties.paddingTops.corrected.aside
                 
                 )
 
@@ -151,14 +151,14 @@ export default () => defineStore ('screen', {
 
               article && (({ height }) => {
 
-                this.screen.paddingTops.corrected.footer = (value =>
+                this.screenProperties.paddingTops.corrected.footer = (value =>
                   value < 0 ? 0 : value
                 ) (
 
-                  this.screen.paddingTops.calculated.footer
-                    - this.screen.heights.main
+                  this.screenProperties.paddingTops.calculated.footer
+                    - this.screenProperties.heights.main
                     + height
-                    + this.screen.paddingTops.corrected.main
+                    + this.screenProperties.paddingTops.corrected.main
                 
                 )
 
@@ -174,9 +174,9 @@ export default () => defineStore ('screen', {
           if (!aside) { return }
           aside.removeAttribute ('style')
 
-          this.screen.ratioIndex < 2 && (
+          this.screenProperties.ratioIndex < 2 && (
             aside.style.paddingTop
-              = `${ this.screen.paddingTops.corrected.aside }px`
+              = `${ this.screenProperties.paddingTops.corrected.aside }px`
           )
 
         }) (document.querySelector ('#__nuxt > section > aside'))
@@ -187,9 +187,9 @@ export default () => defineStore ('screen', {
           if (!main) { return }
           main.removeAttribute ('style')
 
-          this.screen.ratioIndex < 2 && (
+          this.screenProperties.ratioIndex < 2 && (
             main.style.paddingTop
-              = `${ this.screen.paddingTops.corrected.main }px`
+              = `${ this.screenProperties.paddingTops.corrected.main }px`
           )
         
         }) (document.querySelector ('main[role="main"]'))
@@ -200,9 +200,9 @@ export default () => defineStore ('screen', {
           if (!footer) { return }
           footer.removeAttribute ('style')
 
-          this.screen.ratioIndex < 2 && (
+          this.screenProperties.ratioIndex < 2 && (
             footer.style.paddingTop
-              = `${ this.screen.paddingTops.corrected.footer }px`
+              = `${ this.screenProperties.paddingTops.corrected.footer }px`
           )
         
         }) (document.querySelector ('#__nuxt > footer'))

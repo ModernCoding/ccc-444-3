@@ -1,6 +1,6 @@
 <template>
 
-  <figure id="charles-babbage">
+  <figure class="o-charles-babbage">
   
     <img
       src="/images/machine.png"
