@@ -6,13 +6,13 @@
 @use '@/assets/sass/sizes' as sizes
 
 
-section
+.o-call-to-actions
 
   $_gapOnePart: dimensions.$layoutPaddingRightOnePart * constants.$phi
 
   $_gapTwoParts: math.div(dimensions.$layoutPaddingRightTwoParts, constants.$phi)
 
-  $_gapThreeParts: math.div(dimensions.$layoutPaddingRightThreeParts, constants.$phi)
+  $_gapThreeParts: math.div(dimensions.$asideMarginRightThreeParts, constants.$phi)
 
 
   display: flex

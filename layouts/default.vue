@@ -80,13 +80,9 @@
 <template>
 
   <header>
-
-    <nav>
-      <nav></nav>
-      <nav v-if="screen.ratioIndex > 2"></nav>
-      <nav class="text-end">EN</nav>
-    </nav>
-
+    <nav></nav>
+    <nav v-if="screen.ratioIndex > 2"></nav>
+    <nav class="text-end">EN</nav>
   </header>
 
 

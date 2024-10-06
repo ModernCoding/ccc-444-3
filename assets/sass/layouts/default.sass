@@ -33,10 +33,8 @@ figure
 
 
   > header
-
-    > nav
-      display: flex
-      align-items: center
+    display: flex
+    align-items: center
 
     *
       font-size: sizes.$twice_54_by_phi_power_4 * 1px
@@ -62,14 +60,12 @@ figure
     > header
       height: dimensions.$heightHeaderOnePart
 
-      > nav
+      > nav:first-child
+        margin-right: 0
+        width: 0
 
-        > nav:first-child
-          margin-right: 0
-          width: 0
-
-        > nav:last-child
-          width: 100%
+      > nav:last-child
+        width: 100%
 
       flex-direction: column
 
@@ -169,14 +165,12 @@ figure
 
     > header
 
-      > nav
+      > nav:first-child
+        margin-right: dimensions.$asideMarginRightTwoParts
+        width: dimensions.$asideWidthTwoParts
 
-        > nav:first-child
-          margin-right: dimensions.$asideMarginRightTwoParts
-          width: dimensions.$asideWidthTwoParts
-
-        > nav:last-child
-          width: dimensions.$mainWidthTwoParts
+      > nav:last-child
+        width: dimensions.$mainWidthTwoParts
 
 
     > section
@@ -207,18 +201,16 @@ figure
 
     > header
 
-      > nav
+      > nav:first-child
+        margin-right: dimensions.$asideMarginRightThreeParts
+        width: dimensions.$asideWidthThreeParts
 
-        > nav:first-child
-          margin-right: dimensions.$asideMarginRightThreeParts
-          width: dimensions.$asideWidthThreeParts
+      > nav:nth-child(2)
+        margin-right: dimensions.$centralMarginRightThreeParts
+        width: dimensions.$centralWidthThreeParts
 
-        > nav:nth-child(2)
-          margin-right: dimensions.$centralMarginRightThreeParts
-          width: dimensions.$centralWidthThreeParts
-
-        > nav:last-child
-          width: dimensions.$mainWidthThreeParts
+      > nav:last-child
+        width: dimensions.$mainWidthThreeParts
 
 
     > section
@@ -229,8 +221,14 @@ figure
 
 
       #central
+        
+        display: flex
+        flex-direction: column
+        justify-content: center
+
         margin-right: dimensions.$centralMarginRightThreeParts
         width: dimensions.$centralWidthThreeParts
+
 
         > div
           height: 100%

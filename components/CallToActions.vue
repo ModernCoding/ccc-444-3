@@ -8,7 +8,10 @@
 
 <template>
 
-  <section :data-number-of-parts="screen.ratioIndex">
+  <section
+    class="o-call-to-actions"
+    :data-number-of-parts="screen.ratioIndex"
+  >
 
     <figure>
 
