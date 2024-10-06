@@ -110,13 +110,13 @@
 
   onMounted (() => {
 
-    setTimeout (setDimensions, 180)
+    setTimeout (() => setDimensions (), 180)
+    window.addEventListener ('resize', () => setDimensions ())
     
-    window.addEventListener ('resize', setDimensions)
-    
-    screen
-      .orientation
-      .addEventListener ('change', () => setDimensions ())
+    screen.orientation.addEventListener (
+        'change',
+        () => setTimeout (() => setDimensions (), 180)
+      )
 
   })
 

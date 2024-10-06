@@ -47,7 +47,7 @@
         figure.removeAttribute ('style')
 
         figure.style.height
-          = `${ screenProperties.value.heights.main - PHI }px`
+          = `${ screenProperties.value.heights.main }px`
 
 
         ;(slogan =>
@@ -210,13 +210,14 @@
 
   onMounted (() => {
     
-    setTimeout (equalizeCtas, 180)
-    window.addEventListener ('resize', equalizeCtas)
+    setTimeout (() => equalizeCtas (), 180)
+    window.addEventListener ('resize', () => equalizeCtas ())
+    
+    screen.orientation.addEventListener (
+        'change',
+        () => setTimeout (() => equalizeCtas (), 180)
+      )
 
-    screen
-      .orientation
-      .addEventListener ('change', () => equalizeCtas ())
-  
   })
 
 
