@@ -16,6 +16,12 @@
     } [ parent ]
 
 
+  const time = {
+      aside: 180,
+      loader: 0
+    } [ parent ]
+
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -39,7 +45,7 @@
         loader: '#loader'
       } [ parent ])
     
-    
+
     const header = document.querySelector (`#${ id } > header`)
     const section = document.querySelector (`#${ id } > section`)
     const footer = document.querySelector (`#${ id } > footer`)
@@ -132,12 +138,12 @@
 
   onMounted (() => {
 
-    setTimeout (() => setDimensions (), 180)
+    setTimeout (() => setDimensions (), time)
     window.addEventListener ('resize', () => setDimensions ())
     
     screen.orientation.addEventListener (
         'change',
-        () => setTimeout (() => setDimensions (), 180)
+        () => setTimeout (() => setDimensions (), time)
       )
 
   })

@@ -122,8 +122,8 @@
   </footer>
 
 
-  <div v-if="false" id="loader">
-    <!-- <Logo /> -->
+  <div v-if="true" id="loader">
+    <Logo parent="loader" />
     <div></div>
   </div>
   
