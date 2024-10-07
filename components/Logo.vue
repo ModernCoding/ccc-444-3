@@ -1,5 +1,21 @@
 <script setup>
 
+  const { parent } = defineProps ({
+
+      parent: {
+          type: String,
+          default: "aside"
+        }
+
+    })
+
+
+  const id = {
+      aside: 'logo',
+      loader: 'loader-logo'
+    } [ parent ]
+
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -8,7 +24,7 @@
 
   const setDimensions = () => {
 
-    const logo = document.querySelector ('#logo')
+    const logo = document.querySelector (`#${ id }`)
     if (!logo) { return }
 
     logo.removeAttribute ('style')
@@ -18,12 +34,18 @@
       .forEach (e => e.removeAttribute ('style'))
 
 
-    const aside = document.querySelector ('#__nuxt > section > aside')
-    const header = document.querySelector ('#logo > header')
-    const section = document.querySelector ('#logo > section')
-    const footer = document.querySelector ('#logo > footer')
+    const container = document.querySelector ({
+        aside: '#__nuxt > section > aside',
+        loader: '#loader'
+      } [ parent ])
+    
+    
+    const header = document.querySelector (`#${ id } > header`)
+    const section = document.querySelector (`#${ id } > section`)
+    const footer = document.querySelector (`#${ id } > footer`)
 
-    const { height: asideHeight } = aside.getBoundingClientRect ()
+    const { height: containerHeight }
+      = container.getBoundingClientRect ()
 
 
     logo.style.width = '100%'
@@ -48,7 +70,7 @@
     ;(nav => {
       if (!nav) { return }
       nav.style.height = `${ logoHeight / PHI }px`
-    }) (aside.querySelector ('nav'))
+    }) (container.querySelector ('nav'))
 
 
     header.style.height
@@ -86,13 +108,13 @@
     const footerFontSize = footerContentHeight / (PHI * 2)
     
 
-    document.querySelectorAll ('#logo > header p').forEach (p => {
+    document.querySelectorAll (`#${ id } > header p`).forEach (p => {
       p.style.fontSize = `${ headerFontSize }px`
       p.style.width = `${ headerFontSize }px`
     })
 
 
-    document.querySelectorAll ('#logo > footer p').forEach (p => {
+    document.querySelectorAll (`#${ id } > footer p`).forEach (p => {
       p.style.fontSize = `${ footerFontSize }px`
       p.style.width = `${ headerFontSize }px`
         /*
@@ -125,7 +147,10 @@
 
 <template>
 
-  <article id="logo">
+  <article
+    class="o-logo"
+    :id="id"
+  >
 
     <header>
 
@@ -225,7 +250,7 @@
       </div>
 
     </footer>
-  
+
   </article>
 
 </template>
