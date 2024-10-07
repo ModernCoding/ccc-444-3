@@ -4,6 +4,7 @@
   import Slogan from './.partials/slogan'
 
   const ctaScripts = collectCtaScriptsFromComposable ()
+  const layoutScripts = collectLayoutScriptsFromComposable ()
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -204,6 +205,9 @@
       }) (
         document.querySelector ('#aside-content > .o-charles-babbage')
       )
+
+      
+    layoutScripts.setFontSize ()
 
   }
 
