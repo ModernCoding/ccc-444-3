@@ -120,6 +120,12 @@
     <nav></nav>
     <nav v-if="screenProperties.ratioIndex > 2"></nav>
   </footer>
+
+
+  <div v-if="true" id="loader">
+    <!-- <Logo /> -->
+    <div></div>
+  </div>
   
 </template>
 
