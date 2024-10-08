@@ -1,16 +1,16 @@
 <script setup>
 
-  const layoutPropertiesStore
-    = defineLayoutPropertiesStoreFromComposable () ()
+  const loaderPropertiesStore
+    = defineLoaderPropertiesStoreFromComposable () ()
   
-  const { layoutProperties } = storeToRefs (layoutPropertiesStore)
+  const { loaderProperties } = storeToRefs (loaderPropertiesStore)
 
 
   const setDimensions = () => {
 
-    layoutPropertiesStore.patchIsPortrait ()
-    layoutPropertiesStore.patchHeights ()
-    layoutPropertiesStore.patchWidths ()
+    loaderPropertiesStore.patchIsPortrait ()
+    loaderPropertiesStore.patchHeights ()
+    loaderPropertiesStore.patchWidths ()
 
 
     ;(spinner => {
@@ -18,17 +18,17 @@
       if (!spinner) { return }
 
 
-      if (layoutProperties.value.isPortrait) {
+      if (loaderProperties.value.isPortrait) {
 
         spinner.style.setProperty (
             "--spinnerDiameter",
-            `${ layoutProperties.value.widths.spinner / PHI ** 2 }px`
+            `${ loaderProperties.value.widths.spinner / PHI ** 2 }px`
           )
 
 
         spinner.style.setProperty (
             "--spinnerMaxDiameter",
-            `${ layoutProperties.value.heights.spinner / PHI }px`
+            `${ loaderProperties.value.heights.spinner / PHI }px`
           )
 
       }
@@ -38,13 +38,13 @@
 
         spinner.style.setProperty (
             "--spinnerDiameter",
-            `${ layoutProperties.value.heights.spinner / PHI ** 2 }px`
+            `${ loaderProperties.value.heights.spinner / PHI ** 2 }px`
           )
 
 
         spinner.style.setProperty (
             "--spinnerMaxDiameter",
-            `${ layoutProperties.value.widths.spinner / PHI }px`
+            `${ loaderProperties.value.widths.spinner / PHI }px`
           )
 
       }

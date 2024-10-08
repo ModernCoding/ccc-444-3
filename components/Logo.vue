@@ -22,13 +22,13 @@
     } [ parent ]
 
 
-  const layoutPropertiesStore
-    = defineLayoutPropertiesStoreFromComposable () ()
+  const loaderPropertiesStore
+    = defineLoaderPropertiesStoreFromComposable () ()
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
-  const { layoutProperties } = storeToRefs (layoutPropertiesStore)
+  const { loaderProperties } = storeToRefs (loaderPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
@@ -39,8 +39,8 @@
 
 
     if (parent === 'loader') {
-      layoutPropertiesStore.patchIsPortrait ()
-      layoutPropertiesStore.patchHeights ()
+      loaderPropertiesStore.patchIsPortrait ()
+      loaderPropertiesStore.patchHeights ()
     }
 
 
@@ -76,7 +76,7 @@
         aside: screenProperties.value.heights.aside
             - screenProperties.value.paddingTops.corrected.aside,
 
-        loader: layoutProperties.value.heights.logo
+        loader: loaderProperties.value.heights.logo
 
       } [ parent ]
 

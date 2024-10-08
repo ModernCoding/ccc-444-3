@@ -1,8 +1,8 @@
-export default () => defineStore ('layoutProperties', {
+export default () => defineStore ('loaderProperties', {
 
   state: () => ({
 
-    layoutProperties: {
+    loaderProperties: {
 
       isPortrait: true,
 
@@ -30,7 +30,7 @@ export default () => defineStore ('layoutProperties', {
 
       const { height, width } = body.getBoundingClientRect ()
 
-      this.layoutProperties.isPortrait = width < height
+      this.loaderProperties.isPortrait = width < height
 
     },
 
@@ -44,17 +44,17 @@ export default () => defineStore ('layoutProperties', {
       const ratioPart = 1 + PHI + PHI ** 2 + PHI ** 3
 
 
-      this.layoutProperties.heights = {
+      this.loaderProperties.heights = {
 
           logo: [
               height / PHI,
               height / ratioPart * PHI ** 3
-            ] [ +(this.layoutProperties.isPortrait) ],
+            ] [ +(this.loaderProperties.isPortrait) ],
 
           spinner: [
               height / PHI,
               height / ratioPart * PHI ** 2
-            ] [ +(this.layoutProperties.isPortrait) ]
+            ] [ +(this.loaderProperties.isPortrait) ]
 
         }
 
@@ -70,17 +70,17 @@ export default () => defineStore ('layoutProperties', {
       const ratioPart = 1 + PHI + PHI ** 2 + PHI ** 3
 
 
-      this.layoutProperties.widths = {
+      this.loaderProperties.widths = {
 
           logo: [
               width / ratioPart * PHI ** 3,
               width
-            ] [ +(this.layoutProperties.isPortrait) ],
+            ] [ +(this.loaderProperties.isPortrait) ],
 
           spinner: [
               width / ratioPart * PHI ** 2,
               width
-            ] [ +(this.layoutProperties.isPortrait) ]
+            ] [ +(this.loaderProperties.isPortrait) ]
 
         }
 
