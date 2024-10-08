@@ -2,8 +2,11 @@
 
   const loaderPropertiesStore
     = defineLoaderPropertiesStoreFromComposable () ()
+
+  const loadingStore = defineLoadingStoreFromComposable () ()
   
   const { loaderProperties } = storeToRefs (loaderPropertiesStore)
+  const { loading } = storeToRefs (loadingStore)
 
 
   const setDimensions = () => {
@@ -51,7 +54,6 @@
 
     }) (document.querySelector ('#loader .o-spinner > div'))
 
-
   }
 
 
@@ -75,12 +77,15 @@
   <div id="loader">
 
     <div>
-      <Logo parent="loader" />
+      <Logo
+        v-show="loading.showLogo"
+        parent="loader"
+      />
     </div>
     
 
     <div class="o-spinner">
-      <div></div>
+      <div v-show="loading.showLogo" />
     </div>
 
   </div>

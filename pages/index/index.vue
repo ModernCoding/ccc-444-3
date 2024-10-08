@@ -5,10 +5,12 @@
 
   const ctaScripts = collectCtaScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
+  const loadingStore = defineLoadingStoreFromComposable () ()
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
+  const { loading } = storeToRefs (loadingStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const noMachine = ref (false)
@@ -16,7 +18,7 @@
 
   const equalizeCtas = () => {
 
-    if (!window) { return }
+    if (!window) { return loadingStore.patchIs (false) }
 
 
     ctaScripts.equalize (
@@ -208,24 +210,30 @@
 
       
     layoutScripts.setFontSize ()
+    loadingStore.patchIs (false)
 
   }
 
 
-  onMounted (() => {
-    
-    setTimeout (() => equalizeCtas (), 180)
-    window.addEventListener ('resize', () => equalizeCtas ())
-    
-    screen.orientation.addEventListener (
-        'change',
-        () => setTimeout (() => equalizeCtas (), 180)
-      )
+  watch (loadingStore, ({ $state: { loading } }) => {
+
+    if (loading.showLogo) {
+      setTimeout (() => { equalizeCtas () }, 1000)
+    }
 
   })
 
 
-  onUpdated (equalizeCtas)
+  onMounted (() => {
+
+    loadingStore.patchIs ()
+    window.addEventListener ('resize', () => equalizeCtas ())
+    
+    screen.orientation.addEventListener ('change', () => {
+        setTimeout (() => { equalizeCtas () }, 100)
+      })
+
+  })
 
 </script>
 

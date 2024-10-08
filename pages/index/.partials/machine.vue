@@ -2,11 +2,12 @@
 
   <figure class="o-charles-babbage">
   
-    <img
+    <NuxtImg
       src="/images/machine.png"
       alt="Charles Babbage's analytical engine"
       loading="lazy"
-    >
+      preload
+    />
   
   </figure>
   

@@ -3,10 +3,12 @@
   const windowWidths = ref ({})
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
-
+  const loadingStore = defineLoadingStoreFromComposable () ()
+  
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
+  const { loading } = storeToRefs (loadingStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
@@ -73,16 +75,13 @@
 
     layoutScripts.setFontSize ()
 
-  } 
+  }
 
 
   onMounted (() => {
     setDimensions ()
     window.addEventListener ('resize', setDimensions)
   })
-
-
-  onUpdated (setDimensions)
 
 </script>
 
@@ -122,7 +121,7 @@
   </footer>
 
 
-  <Loader v-if="true" />
+  <Loader v-if="loading.is" />
   
 </template>
 

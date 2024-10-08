@@ -25,6 +25,8 @@
   const loaderPropertiesStore
     = defineLoaderPropertiesStoreFromComposable () ()
 
+  const loadingStore = defineLoadingStoreFromComposable () ()
+  
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -151,6 +153,10 @@
     screenPropertiesStore.patchRatioIndex (window)
     screenPropertiesStore.patchHeights ()
     screenPropertiesStore.patchPaddingTops ()
+
+    if (parent === "loader") {
+      loadingStore.patchShowLogo ()
+    }
 
   }
 

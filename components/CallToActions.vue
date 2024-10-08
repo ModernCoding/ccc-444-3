@@ -19,11 +19,12 @@
 
       <picture>
       
-        <img
+        <NuxtImg
           src="/images/tharrawaddy-min-bell.png"
           alt="Tharrawaddy Min Bell"
           loading="lazy"
-        >
+          preload
+        />
       
       </picture>
 
@@ -37,11 +38,12 @@
 
       <picture>
       
-        <img
+        <NuxtImg
           src="/images/call.png"
           alt="Request next call"
           loading="lazy"
-        >
+          preload
+        />
       
       </picture>
 
@@ -55,11 +57,12 @@
 
       <picture>
       
-        <img
+        <NuxtImg
           src="/images/compass.png"
           alt="Bangsaen, Thailand"
           loading="lazy"
-        >
+          preload
+        />
       
       </picture>
 
