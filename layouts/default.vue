@@ -122,10 +122,7 @@
   </footer>
 
 
-  <div v-if="true" id="loader">
-    <Logo parent="loader" />
-    <div></div>
-  </div>
+  <Loader v-if="true" />
   
 </template>
 
