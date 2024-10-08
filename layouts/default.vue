@@ -122,7 +122,7 @@
   </footer>
 
 
-  <Loader v-if="true" />
+  <!-- <Loader v-if="true" /> -->
   
 </template>
 

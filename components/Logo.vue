@@ -39,6 +39,7 @@
 
 
     if (parent === 'loader') {
+      layoutPropertiesStore.patchIsPortrait ()
       layoutPropertiesStore.patchHeights ()
     }
 

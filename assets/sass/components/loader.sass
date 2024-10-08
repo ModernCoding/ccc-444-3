@@ -4,7 +4,7 @@
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 
-$ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constants.$phi, 3) + math.pow(constants.$phi, 4)
+$ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constants.$phi, 3)
 
 
 #loader
@@ -28,8 +28,6 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
 
     flex-direction: column
 
-    gap: calc(dimensions.$height / $ratioPart * math.pow(constants.$phi, 2))
-
     padding-top: calc(dimensions.$height / $ratioPart)
     padding-right: dimensions.$layoutPaddingRightOnePart
     padding-bottom: calc(dimensions.$height / $ratioPart * constants.$phi)
@@ -39,8 +37,6 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
   @media screen and (orientation: landscape)
 
     flex-direction: row
-
-    gap: calc(dimensions.$width / $ratioPart * math.pow(constants.$phi, 2))
 
     padding-top: dimensions.$heightHeaderTwoParts
     padding-right: calc(dimensions.$width / $ratioPart * constants.$phi)
@@ -61,18 +57,6 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
 
     @media screen and (orientation: landscape)
 
-      width: calc(dimensions.$width / $ratioPart * math.pow(constants.$phi, 4))
-
-
-    @media screen and (orientation: portrait)
-
-      height: calc(dimensions.$height / $ratioPart * math.pow(constants.$phi, 4))
-
-
-  > .o-spinner
-
-    @media screen and (orientation: landscape)
-
       width: calc(dimensions.$width / $ratioPart * math.pow(constants.$phi, 3))
 
 
@@ -81,9 +65,23 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
       height: calc(dimensions.$height / $ratioPart * math.pow(constants.$phi, 3))
 
 
+  > .o-spinner
+
+    @media screen and (orientation: landscape)
+
+      width: calc(dimensions.$width / $ratioPart * math.pow(constants.$phi, 2))
+
+
+    @media screen and (orientation: portrait)
+
+      height: calc(dimensions.$height / $ratioPart * math.pow(constants.$phi, 2))
+
+
     > div
-      width: 148px
-      height: 148px
+      max-width: var(--spinnerMaxDiameter, 48px)
+      max-height: var(--spinnerMaxDiameter, 48px)
+      width: var(--spinnerDiameter, 48px)
+      height: var(--spinnerDiameter, 48px)
       border-radius: 50%
       display: inline-block
       border-top: 4px solid colors.$light
@@ -97,8 +95,10 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
         position: absolute
         left: 0
         top: 0
-        width: 148px
-        height: 148px
+        max-width: var(--spinnerMaxDiameter, 48px)
+        max-height: var(--spinnerMaxDiameter, 48px)
+        width: var(--spinnerDiameter, 48px)
+        height: var(--spinnerDiameter, 48px)
         border-radius: 50%
         border-bottom: 4px solid colors.$danger
         border-left: 4px solid transparent
