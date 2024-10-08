@@ -14,22 +14,31 @@
   display: flex
   align-items: center
   justify-content: center
-  gap: 40px
 
   background-color: colors.$dark
 
   width: 100%
   height: dimensions.$height
 
-  padding-top: dimensions.$layoutPaddingTopOnePart
-  padding-right: dimensions.$layoutPaddingRightOnePart
-  padding-bottom: dimensions.$layoutPaddingBottomOnePart
-  padding-left: dimensions.$layoutPaddingLeftOnePart
+
+  @media screen and (orientation: portrait)
+    flex-direction: column
+    padding-top: 0
+    padding-right: dimensions.$layoutPaddingRightOnePart
+    padding-bottom: 0
+    padding-left: dimensions.$layoutPaddingLeftOnePart
+
+  @media screen and (orientation: landscape)
+    flex-direction: row
+    padding-top: dimensions.$heightHeaderTwoParts
+    padding-right: 0
+    padding-bottom: dimensions.$heightFooterTwoParts
+    padding-left: 0
 
 
   > div
-    width: 48px
-    height: 48px
+    width: 148px
+    height: 148px
     border-radius: 50%
     display: inline-block
     border-top: 4px solid colors.$light
@@ -43,8 +52,8 @@
       position: absolute
       left: 0
       top: 0
-      width: 48px
-      height: 48px
+      width: 148px
+      height: 148px
       border-radius: 50%
       border-bottom: 4px solid colors.$danger
       border-left: 4px solid transparent
@@ -56,4 +65,4 @@
     transform: rotate(0deg)
 
   100%
-    transform: rotate(360deg)
+    transform: rotate(-360deg)

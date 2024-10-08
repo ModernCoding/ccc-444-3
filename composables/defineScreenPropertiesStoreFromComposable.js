@@ -87,9 +87,22 @@ export default () => defineStore ('screenProperties', {
       (i =>
 
           this.screenProperties.paddingTops.calculated = {
-              aside: [ 0, this.screenProperties.heights.aside / PHI ** 4 ] [ i ],
-              main: [ 0, this.screenProperties.heights.main / PHI ** 4 ] [ i ],
-              footer: [ 0, this.screenProperties.heights.footer / PHI ** 4 ] [ i ]
+
+              aside: [
+                  0,
+                  this.screenProperties.heights.aside / PHI ** 4
+                ] [ i ],
+
+              main: [
+                  0,
+                  this.screenProperties.heights.main / PHI ** 4
+                ] [ i ],
+
+              footer: [
+                  0,
+                  this.screenProperties.heights.footer / PHI ** 4
+                ] [ i ]
+
             }
 
         ) (+(this.screenProperties.ratioIndex < 2))
@@ -112,15 +125,14 @@ export default () => defineStore ('screenProperties', {
 
               headerNav && (({ height }) => {
 
-                this.screenProperties.paddingTops.corrected.aside = (value =>
-                  value < 0 ? 0 : value
-                ) (
+                this.screenProperties.paddingTops.corrected.aside
+                  = (value => value < 0 ? 0 : value) (
 
-                  this.screenProperties.paddingTops.calculated.aside
-                    - this.screenProperties.heights.header
-                    + height
-                
-                )
+                      this.screenProperties.paddingTops.calculated.aside
+                        - this.screenProperties.heights.header
+                        + height
+                    
+                    )
 
               }) (headerNav.getBoundingClientRect ())
 
@@ -131,16 +143,19 @@ export default () => defineStore ('screenProperties', {
 
               logo && (({ height }) => {
 
-                this.screenProperties.paddingTops.corrected.main = (value =>
-                  value < 0 ? 0 : value
-                ) (
+                this.screenProperties.paddingTops.corrected.main
+                  = (value => value < 0 ? 0 : value) (
 
-                  this.screenProperties.paddingTops.calculated.main
-                    - this.screenProperties.heights.aside
-                    + height
-                    + this.screenProperties.paddingTops.corrected.aside
-                
-                )
+                      this.screenProperties.paddingTops.calculated.main
+                        - this.screenProperties.heights.aside
+                        + height
+                        + this
+                            .screenProperties
+                            .paddingTops
+                            .corrected
+                            .aside
+                    
+                    )
 
               }) (logo.getBoundingClientRect ())
 
@@ -151,16 +166,24 @@ export default () => defineStore ('screenProperties', {
 
               article && (({ height }) => {
 
-                this.screenProperties.paddingTops.corrected.footer = (value =>
-                  value < 0 ? 0 : value
-                ) (
+                this.screenProperties.paddingTops.corrected.footer
+                  = (value => value < 0 ? 0 : value) (
 
-                  this.screenProperties.paddingTops.calculated.footer
-                    - this.screenProperties.heights.main
-                    + height
-                    + this.screenProperties.paddingTops.corrected.main
-                
-                )
+                      this
+                        .screenProperties
+                        .paddingTops
+                        .calculated
+                        .footer
+                        
+                        - this.screenProperties.heights.main
+                        + height
+                        + this
+                            .screenProperties
+                            .paddingTops
+                            .corrected
+                            .main
+                    
+                    )
 
               }) (article.getBoundingClientRect ())
 
@@ -175,8 +198,9 @@ export default () => defineStore ('screenProperties', {
           aside.removeAttribute ('style')
 
           this.screenProperties.ratioIndex < 2 && (
-            aside.style.paddingTop
-              = `${ this.screenProperties.paddingTops.corrected.aside }px`
+            aside.style.paddingTop = `${
+              this.screenProperties.paddingTops.corrected.aside
+            }px`
           )
 
         }) (document.querySelector ('#__nuxt > section > aside'))
@@ -188,8 +212,9 @@ export default () => defineStore ('screenProperties', {
           main.removeAttribute ('style')
 
           this.screenProperties.ratioIndex < 2 && (
-            main.style.paddingTop
-              = `${ this.screenProperties.paddingTops.corrected.main }px`
+            main.style.paddingTop = `${
+              this.screenProperties.paddingTops.corrected.main
+            }px`
           )
         
         }) (document.querySelector ('main[role="main"]'))
@@ -201,8 +226,9 @@ export default () => defineStore ('screenProperties', {
           footer.removeAttribute ('style')
 
           this.screenProperties.ratioIndex < 2 && (
-            footer.style.paddingTop
-              = `${ this.screenProperties.paddingTops.corrected.footer }px`
+            footer.style.paddingTop = `${
+              this.screenProperties.paddingTops.corrected.footer
+            }px`
           )
         
         }) (document.querySelector ('#__nuxt > footer'))
