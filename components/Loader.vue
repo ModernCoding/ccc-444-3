@@ -1,8 +1,16 @@
 <template>
 
   <div id="loader">
-    <Logo parent="loader" />
-    <div></div>
+
+    <div>
+      <Logo parent="loader" />
+    </div>
+    
+
+    <div class="o-spinner">
+      <div></div>
+    </div>
+
   </div>
 
 </template>

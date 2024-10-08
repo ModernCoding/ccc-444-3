@@ -22,9 +22,13 @@
     } [ parent ]
 
 
+  const layoutPropertiesStore
+    = defineLayoutPropertiesStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
+  const { layoutProperties } = storeToRefs (layoutPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
@@ -32,6 +36,12 @@
 
     const logo = document.querySelector (`#${ id }`)
     if (!logo) { return }
+
+
+    if (parent === 'loader') {
+      layoutPropertiesStore.patchHeights ()
+    }
+
 
     logo.removeAttribute ('style')
 
@@ -59,12 +69,20 @@
     const { height: sectionHeight } = section.getBoundingClientRect ()
     let { width: logoWidth } = logo.getBoundingClientRect ()
 
-    const logoHeight = ((height, maxHeight) =>
+
+    const maxHeight = {
+
+        aside: screenProperties.value.heights.aside
+            - screenProperties.value.paddingTops.corrected.aside,
+
+        loader: layoutProperties.value.heights.logo
+
+      } [ parent ]
+
+
+    const logoHeight = (height =>
         [ height, maxHeight ] [ +(height > maxHeight) ]
-      ) (
-        logoWidth / PHI,
-        (screenProperties.value.heights.aside - screenProperties.value.paddingTops.corrected.aside)
-      )
+      ) (logoWidth / PHI)
 
 
     logoWidth = logoHeight * PHI

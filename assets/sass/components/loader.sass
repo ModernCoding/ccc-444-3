@@ -1,7 +1,10 @@
 @use "sass:math"
 
 @use '@/assets/sass/colors' as colors
+@use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
+
+$portraitRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constants.$phi, 3) + math.pow(constants.$phi, 4)
 
 
 #loader
@@ -22,14 +25,20 @@
 
 
   @media screen and (orientation: portrait)
+
     flex-direction: column
-    padding-top: 0
+    gap: calc(dimensions.$height / $portraitRatioPart * math.pow(constants.$phi, 2))
+
+    padding-top: calc(dimensions.$height / $portraitRatioPart)
     padding-right: dimensions.$layoutPaddingRightOnePart
-    padding-bottom: 0
+    padding-bottom: calc(dimensions.$height / $portraitRatioPart * constants.$phi)
     padding-left: dimensions.$layoutPaddingLeftOnePart
 
+
   @media screen and (orientation: landscape)
+
     flex-direction: row
+
     padding-top: dimensions.$heightHeaderTwoParts
     padding-right: 0
     padding-bottom: dimensions.$heightFooterTwoParts
@@ -37,26 +46,49 @@
 
 
   > div
-    width: 148px
-    height: 148px
-    border-radius: 50%
-    display: inline-block
-    border-top: 4px solid colors.$light
-    border-right: 4px solid transparent
-    box-sizing: border-box
-    animation: rotation 1s linear infinite
 
-    &::after
-      content: ''  
-      box-sizing: border-box
-      position: absolute
-      left: 0
-      top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 100%
+
+
+  > :not(.o-spinner)
+
+    @media screen and (orientation: portrait)
+
+      height: calc(dimensions.$height / $portraitRatioPart * math.pow(constants.$phi, 4))
+
+
+  > .o-spinner
+
+    @media screen and (orientation: portrait)
+
+      height: calc(dimensions.$height / $portraitRatioPart * math.pow(constants.$phi, 3))
+
+
+    > div
       width: 148px
       height: 148px
       border-radius: 50%
-      border-bottom: 4px solid colors.$danger
-      border-left: 4px solid transparent
+      display: inline-block
+      border-top: 4px solid colors.$light
+      border-right: 4px solid transparent
+      box-sizing: border-box
+      animation: rotation 1s linear infinite
+
+      &::after
+        content: ''  
+        box-sizing: border-box
+        position: absolute
+        left: 0
+        top: 0
+        width: 148px
+        height: 148px
+        border-radius: 50%
+        border-bottom: 4px solid colors.$danger
+        border-left: 4px solid transparent
 
 
 @keyframes rotation
