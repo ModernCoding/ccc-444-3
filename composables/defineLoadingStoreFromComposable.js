@@ -4,6 +4,7 @@ export default () => defineStore ('loading', {
 
     loading: {
       is: true,
+      isResizingMode: false,
       showLogo: false
     }
 
@@ -14,6 +15,10 @@ export default () => defineStore ('loading', {
 
     patchIs (is = true) {
       this.loading.is = is
+    },
+
+    patchIsResizingMode (is = true) {
+      this.loading.isResizingMode = is
     },
 
     patchShowLogo (is = true) {

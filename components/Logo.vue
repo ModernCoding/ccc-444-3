@@ -34,7 +34,7 @@
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
-  const setDimensions = () => {
+  const _setDimensions = () => {
 
     const logo = document.querySelector (`#${ id }`)
     if (!logo) { return }
@@ -163,12 +163,12 @@
 
   onMounted (() => {
 
-    setTimeout (() => setDimensions (), time)
-    window.addEventListener ('resize', () => setDimensions ())
+    setTimeout (() => _setDimensions (), time)
+    window.addEventListener ('resize', () => _setDimensions ())
     
     screen.orientation.addEventListener (
         'change',
-        () => setTimeout (() => setDimensions (), time)
+        () => setTimeout (() => _setDimensions (), time)
       )
 
   })

@@ -16,7 +16,7 @@
   const noMachine = ref (false)
 
 
-  const equalizeCtas = () => {
+  const _equalizeCtas = () => {
 
     if (!window) { return loadingStore.patchIs (false) }
 
@@ -26,7 +26,9 @@
       screenProperties,
 
       `${
-        [ '#index', '#central' ] [ +(screenProperties.value.ratioIndex > 2) ]
+        [ '#index', '#central' ] [
+          +(screenProperties.value.ratioIndex > 2)
+        ]
       } .o-call-to-actions`
 
     )
@@ -211,14 +213,26 @@
       
     layoutScripts.setFontSize ()
     loadingStore.patchIs (false)
+    loadingStore.patchIsResizingMode (false)
 
   }
 
 
   watch (loadingStore, ({ $state: { loading } }) => {
 
-    if (loading.showLogo) {
-      setTimeout (() => { equalizeCtas () }, 1000)
+    switch (true) {
+
+      case loading.is && loading.showLogo:
+        setTimeout (() => _equalizeCtas (), 1000)
+        break
+
+      case loading.isResizingMode:
+        _equalizeCtas ()
+        break
+
+      default:
+        break
+
     }
 
   })
@@ -227,11 +241,15 @@
   onMounted (() => {
 
     loadingStore.patchIs ()
-    window.addEventListener ('resize', () => equalizeCtas ())
     
-    screen.orientation.addEventListener ('change', () => {
-        setTimeout (() => { equalizeCtas () }, 100)
-      })
+    window.addEventListener (
+        'resize',
+        () => loadingStore.patchIsResizingMode ()
+      )
+    
+    screen
+      .orientation
+      .addEventListener ('change', () => loadingStore.patchIs ())
 
   })
 

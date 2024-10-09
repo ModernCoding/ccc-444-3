@@ -9,7 +9,7 @@
   const { loading } = storeToRefs (loadingStore)
 
 
-  const setDimensions = () => {
+  const _setDimensions = () => {
 
     loaderPropertiesStore.patchIsPortrait ()
     loaderPropertiesStore.patchHeights ()
@@ -58,15 +58,8 @@
 
 
   onMounted (() => {
-
-    setDimensions ()
-    window.addEventListener ('resize', () => setDimensions ())
-    
-    screen.orientation.addEventListener (
-        'change',
-        () => setDimensions ()
-      )
-
+    _setDimensions ()
+    window.addEventListener ('resize', () => _setDimensions ())
   })
 
 </script>
