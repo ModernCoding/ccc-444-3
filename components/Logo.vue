@@ -10,17 +10,7 @@
     })
 
 
-  const id = {
-      aside: 'logo',
-      loader: 'loader-logo'
-    } [ parent ]
-
-
-  const time = {
-      aside: 180,
-      loader: 0
-    } [ parent ]
-
+  const logoScripts = collectLogoScriptsFromComposable ()
 
   const loaderPropertiesStore
     = defineLoaderPropertiesStoreFromComposable () ()
@@ -29,147 +19,46 @@
   
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
-  
-  const { loaderProperties } = storeToRefs (loaderPropertiesStore)
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-
-  const _setDimensions = () => {
-
-    const logo = document.querySelector (`#${ id }`)
-    if (!logo) { return }
-
-
-    if (parent === 'loader') {
-      loaderPropertiesStore.patchIsPortrait ()
-      loaderPropertiesStore.patchHeights ()
-    }
-
-
-    logo.removeAttribute ('style')
-
-    logo
-      .querySelectorAll ('*')
-      .forEach (e => e.removeAttribute ('style'))
-
-
-    const container = document.querySelector ({
-        aside: '#__nuxt > section > aside',
-        loader: '#loader'
-      } [ parent ])
-    
-
-    const header = document.querySelector (`#${ id } > header`)
-    const section = document.querySelector (`#${ id } > section`)
-    const footer = document.querySelector (`#${ id } > footer`)
-
-    const { height: containerHeight }
-      = container.getBoundingClientRect ()
-
-
-    logo.style.width = '100%'
-
-    const { height: sectionHeight } = section.getBoundingClientRect ()
-    let { width: logoWidth } = logo.getBoundingClientRect ()
-
-
-    const maxHeight = {
-
-        aside: screenProperties.value.heights.aside
-            - screenProperties.value.paddingTops.corrected.aside,
-
-        loader: loaderProperties.value.heights.logo
-
-      } [ parent ]
-
-
-    const logoHeight = (height =>
-        [ height, maxHeight ] [ +(height > maxHeight) ]
-      ) (logoWidth / PHI)
-
-
-    logoWidth = logoHeight * PHI
-
-    logo.style.height = `${ logoHeight }px`
-    logo.style.width = `${ logoWidth }px`
-
-
-    ;(nav => {
-      if (!nav) { return }
-      nav.style.height = `${ logoHeight / PHI }px`
-    }) (container.querySelector ('nav'))
-
-
-    header.style.height
-      = `${ logoHeight / PHI - sectionHeight / 2 }px`
-
-    footer.style.height
-      = `${ logoHeight / (PHI ** 2) - sectionHeight / 2 }px`
-
-
-    const { height: headerHeight } = header.getBoundingClientRect ()
-
-    const headerPaddingTop = headerHeight / (PHI ** 4)
-    const headerPaddingBottom = headerHeight / (PHI ** 3)
-
-    const headerContentHeight
-      = headerHeight - headerPaddingTop - headerPaddingBottom
-
-
-    const { height: footerHeight } = footer.getBoundingClientRect ()
-
-    const footerPaddingTop = footerHeight / (PHI ** 4)
-    const footerPaddingBottom = footerHeight / (PHI ** 3)
-
-    const footerContentHeight
-      = footerHeight - footerPaddingTop - footerPaddingBottom
-
-
-    header.style.paddingTop = `${ headerPaddingTop }px`
-    header.style.paddingBottom = `${ headerPaddingBottom }px`
-
-    footer.style.paddingTop = `${ footerPaddingTop }px`
-    footer.style.paddingBottom = `${ footerPaddingBottom }px`
-
-    const headerFontSize = headerContentHeight / (PHI * 3)
-    const footerFontSize = footerContentHeight / (PHI * 2)
-    
-
-    document.querySelectorAll (`#${ id } > header p`).forEach (p => {
-      p.style.fontSize = `${ headerFontSize }px`
-      p.style.width = `${ headerFontSize }px`
-    })
-
-
-    document.querySelectorAll (`#${ id } > footer p`).forEach (p => {
-      p.style.fontSize = `${ footerFontSize }px`
-      p.style.width = `${ headerFontSize }px`
-        /*
-          stick to header font size, not to footer font size
-        */
-    })
-
-
-    screenPropertiesStore.patchRatioIndex (window)
-    screenPropertiesStore.patchHeights ()
-    screenPropertiesStore.patchPaddingTops ()
-
-    if (parent === "loader") {
-      loadingStore.patchShowLogo ()
-    }
-
-  }
+  const { id, time } = logoScripts.getId (parent)
 
 
   onMounted (() => {
 
-    setTimeout (() => _setDimensions (), time)
-    window.addEventListener ('resize', () => _setDimensions ())
-    
-    screen.orientation.addEventListener (
-        'change',
-        () => setTimeout (() => _setDimensions (), time)
+    setTimeout (
+        
+        () => logoScripts.setDimensions (
+            loaderPropertiesStore,
+            loadingStore,
+            screenPropertiesStore,
+            parent
+          ),
+
+        time
+
       )
+
+
+    window.addEventListener ('resize', () => logoScripts.setDimensions (
+        loaderPropertiesStore,
+        loadingStore,
+        screenPropertiesStore,
+        parent
+      ))
+    
+
+    screen.orientation.addEventListener ('change', () => setTimeout (
+        
+        () => logoScripts.setDimensions (
+            loaderPropertiesStore,
+            loadingStore,
+            screenPropertiesStore,
+            parent
+          ),
+
+        time
+
+      ))
 
   })
 
