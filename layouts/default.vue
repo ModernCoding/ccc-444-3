@@ -73,7 +73,8 @@
     ) (document.querySelector ('#__nuxt'))
 
 
-    layoutScripts.setFontSize ()
+    layoutScripts.setFontSizeHeader ()
+    layoutScripts.setFontSizeFooter ()
 
   }
 

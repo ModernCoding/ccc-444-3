@@ -211,7 +211,9 @@
       )
 
       
-    layoutScripts.setFontSize ()
+    layoutScripts.setFontSizeHeader ()
+    layoutScripts.setFontSizeFooter ()
+    
     loadingStore.patchIs (false)
     loadingStore.patchIsResizingMode (false)
 

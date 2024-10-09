@@ -1,5 +1,7 @@
-import setFontSize from './_setFontSize'
+import setFontSizeFooter from './_setFontSizeFooter'
+import setFontSizeHeader from './_setFontSizeHeader'
 
 export default {
-  setFontSize
+  setFontSizeFooter,
+  setFontSizeHeader
 }
