@@ -13,68 +13,14 @@
 
 
   const setDimensions = () => {
+  
+    if (!window) { return }
 
-    (main => {
-
-      if (!main) { return }
-
-
-      (mainContent => {
-        
-        if (!mainContent) { return }
-        mainContent.removeAttribute ('style')
-        
-        if (main.scrollHeight <= main.clientHeight) { return }
-
-        // if (mainContent.scrollHeight <= mainContent.clientHeight) {
-        //   return
-        // }
-
-
-        const mainPaddingLeft = parseInt (
-
-            window
-              .getComputedStyle (document.querySelector ('#__nuxt'))
-              .getPropertyValue ('padding-right')
-              .split ('px')
-              .join ('')
-
-          )
-
-
-        mainContent.style.paddingRight = `${ mainPaddingLeft / PHI }px`
-
-      }) (main.querySelector ('*'))
-
-    }) (document.querySelector ('main[role="main"]'))
-
-
-    windowWidths.value = getWindowWidths (window.innerWidth)
-
-
-    document
-      .documentElement
-      .style
-      .setProperty ('--vh', `${ window.innerHeight * 0.01 }px`)
-
-
-    screenPropertiesStore.patchRatioIndex (window)
-    screenPropertiesStore.patchHeights ()
-    screenPropertiesStore.patchPaddingTops ()
-
-
-    ;(nuxt =>
-
-      nuxt && nuxt.setAttribute (
-        'data-number-of-parts',
-        screenProperties.value.ratioIndex
-      )
-
-    ) (document.querySelector ('#__nuxt'))
-
-
+    layoutScripts.setMainDimensions (screenPropertiesStore)
     layoutScripts.setFontSizeHeader ()
     layoutScripts.setFontSizeFooter ()
+
+    windowWidths.value = getWindowWidths (window.innerWidth)
 
   }
 
