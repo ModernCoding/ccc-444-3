@@ -92,10 +92,7 @@
     <CallToActions v-if="screenProperties.ratioIndex < 3" />
     <Machine v-if="screenProperties.ratioIndex < 2" />
 
-    <div
-      id="index-machine"
-      class="d-flex align-items-center justify-content-center"
-    >
+    <div id="index-machine">
       <Machine v-if="screenProperties.ratioIndex > 2" />
     </div>
 

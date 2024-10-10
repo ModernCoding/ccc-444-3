@@ -22,7 +22,7 @@ export default (screenPropertiesStore, noMachine) => {
   if (!figure) { return noMachine.value = true }
   figure.removeAttribute ('style')
 
-  const slogan = document.querySelector ('#slogan')
+  const slogan = document.querySelector ('.o-slogan')
 
 
   ;[
@@ -151,6 +151,7 @@ export default (screenPropertiesStore, noMachine) => {
               )
 
           }) ()
+
 
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()

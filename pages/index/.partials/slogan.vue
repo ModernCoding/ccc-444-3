@@ -56,7 +56,7 @@
 
 
 <template>
-  <h1 class="text-center" id="slogan">We craft your app!</h1>
+  <h1 class="o-slogan">We craft your app!</h1>
 </template>
 
 

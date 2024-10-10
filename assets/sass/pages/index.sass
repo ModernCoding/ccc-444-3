@@ -1,9 +1,9 @@
 @use "sass:math"
 
-@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
-@use '@/assets/sass/sizes' as sizes
+
+$threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
 #index
@@ -24,3 +24,21 @@
   img
     max-width: 100%
     max-height: 100%
+
+
+.o-slogan
+  text-align: center
+
+
+#index-machine
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .o-charles-babbage
+    flex-grow: 1
+
+  .o-slogan
+    text-align: right
+    padding-left: calc(dimensions.$layoutPaddingRightThreeParts * constants.$phi)
+    width: calc(100% / constants.$phi)
