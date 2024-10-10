@@ -47,9 +47,15 @@
 <template>
 
   <header>
+
     <nav></nav>
+
     <nav v-if="screenProperties.ratioIndex > 2"></nav>
-    <nav class="text-end">EN</nav>
+
+    <nav>
+      <div class="o-lang">EN</div>
+    </nav>
+
   </header>
 
 
