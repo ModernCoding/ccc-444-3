@@ -39,7 +39,7 @@
       <picture>
       
         <NuxtImg
-          src="/images/call.png"
+          src="/images/bus_stop_02.jpg"
           alt="Request next call"
           loading="lazy"
           preload

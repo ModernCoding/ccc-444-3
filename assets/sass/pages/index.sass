@@ -10,6 +10,7 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 #index
 
   &.no-machine
+
     display: flex
     flex-direction: column
     justify-content: center
@@ -17,8 +18,8 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
 .o-charles-babbage
+
   display: flex
-  flex-direction: column
   align-items: center
   justify-content: center
 
@@ -32,6 +33,8 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
 #index-machine
+
+  flex-grow: 1
 
   display: flex
   align-items: center
@@ -50,8 +53,11 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
     padding-right: calc(dimensions.$layoutPaddingRightThreeParts - 1px)
 
-    width: calc(dimensions.$mainWidthThreeParts / constants.$phi - dimensions.$layoutPaddingRightThreeParts * constants.$phi)
-
 
   .o-charles-babbage
-    width: calc(dimensions.$mainWidthThreeParts / math.pow(constants.$phi, 2))
+
+    flex-grow: 1
+
+    display: flex
+    align-items: center
+    justify-content: end
