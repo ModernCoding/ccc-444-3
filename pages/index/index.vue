@@ -15,7 +15,7 @@
   const { loading } = storeToRefs (loadingStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  const noMachine = ref (false)
+  const isSloganInFooter = ref (false)
 
 
   const _equalizeCtas = () => {
@@ -36,7 +36,8 @@
     )
 
 
-    startPageScripts.handleMachine (screenPropertiesStore, noMachine)
+    startPageScripts
+      .handleMachine (screenPropertiesStore, isSloganInFooter)
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
     layoutScripts.setFontSizeHeader ()
@@ -117,7 +118,7 @@
 
       :to="
           [ '#index', '#__nuxt > footer' ] [
-            +(screenProperties.ratioIndex < 2 || noMachine)
+            +(screenProperties.ratioIndex < 2 || isSloganInFooter)
           ]
         "
 
