@@ -44,6 +44,7 @@ export default screenPropertiesStore => {
   screenPropertiesStore.patchRatioIndex (window)
   screenPropertiesStore.patchHeights ()
   screenPropertiesStore.patchPaddingTops ()
+  screenPropertiesStore.patchWidths ()
 
 
   ;(nuxt =>

@@ -12,6 +12,13 @@ export default () => defineStore ('screenProperties', {
         },
 
 
+      widths: {
+          aside: 0,
+          central: 0,
+          main: 0
+        },
+
+
       paddingTops: {
 
           calculated: {
@@ -233,7 +240,49 @@ export default () => defineStore ('screenProperties', {
         
         }) (document.querySelector ('#__nuxt > footer'))
 
-    }
+    },
+
+
+    patchWidths () {
+
+      const body = document.querySelector ('body')
+      if (!body) { return }
+
+      const { width } = body.getBoundingClientRect ()
+      const maxWidth = width * (1 - 1 / PHI ** 6 - 1 / PHI ** 5)
+
+      const ratioPart
+        = 1 + PHI + PHI ** 2 + PHI ** 3 + PHI ** 4 + PHI ** 5 + PHI ** 6
+
+
+      this.screenProperties.widths = {
+
+          aside: [
+              maxWidth,
+              width / ratioPart * PHI ** 3,
+              width / ratioPart * PHI ** 4
+            ] [
+              +(this.screenProperties.ratioIndex > 1)
+              + +(this.screenProperties.ratioIndex > 2)
+            ],
+
+          central: [
+              0,
+              width / ratioPart * PHI ** 5
+            ] [ +(this.screenProperties.ratioIndex > 2) ],
+
+          main: [
+              maxWidth,
+              width / ratioPart * PHI ** 4,
+              width / ratioPart * PHI ** 6
+            ] [
+              +(this.screenProperties.ratioIndex > 1)
+              + +(this.screenProperties.ratioIndex > 2)
+            ]
+
+        }
+
+    },
 
   }
 

@@ -73,6 +73,7 @@ export default (screenPropertiesStore, noMachine) => {
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()
         screenPropertiesStore.patchPaddingTops ()
+        screenPropertiesStore.patchWidths ()
 
 
         screenProperties.ratioIndex < 2 && noMachine.value && (index =>
@@ -154,14 +155,22 @@ export default (screenPropertiesStore, noMachine) => {
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()
         screenPropertiesStore.patchPaddingTops ()
+        screenPropertiesStore.patchWidths ()
 
       },
 
 
     () => {
 
+        screenPropertiesStore.patchRatioIndex (window)
+        screenPropertiesStore.patchHeights ()
+        screenPropertiesStore.patchPaddingTops ()
+        screenPropertiesStore.patchWidths ()
+
         noMachine.value = false
         figure.style.height = `${ screenProperties.heights.main }px`
+        console.log (figure.getBoundingClientRect ())
+        console.log (screenProperties)
         slogan && slogan.classList.add ('text-uppercase')
 
       }

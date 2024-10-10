@@ -134,6 +134,7 @@ export default (
   screenPropertiesStore.patchRatioIndex (window)
   screenPropertiesStore.patchHeights ()
   screenPropertiesStore.patchPaddingTops ()
+  screenPropertiesStore.patchWidths ()
 
 
   if (parent === "loader") {
