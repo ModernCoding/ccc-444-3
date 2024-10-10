@@ -40,11 +40,22 @@
       .handleMachine (screenPropertiesStore, isSloganInFooter)
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
-    layoutScripts.setFontSizeHeader ()
-    layoutScripts.setFontSizeFooter ()
 
-    loadingStore.patchIs (false)
-    loadingStore.patchIsResizingMode (false)
+
+    const _runLayoutScripts = () => {
+
+          layoutScripts.setFontSizeHeader ()
+          layoutScripts.setFontSizeFooter ()
+
+          loadingStore.patchIs (false)
+          loadingStore.patchIsResizingMode (false)
+
+      }
+
+
+    loading.value.is
+      ? setTimeout (_runLayoutScripts, 180)
+      : _runLayoutScripts ()
 
   }
 
@@ -115,6 +126,7 @@
 
     <Teleport
       v-if="screenProperties.ratioIndex === 2"
+      defer
       to="#aside-content"
     >
       <Machine />
@@ -140,6 +152,7 @@
 
     <Teleport
       v-else-if="isSloganInFooter"
+      defer
       to="#__nuxt > footer"
     >
       <Slogan />

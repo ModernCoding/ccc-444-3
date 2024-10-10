@@ -12,7 +12,7 @@
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
-  const setDimensions = () => {
+  const _setDimensions = () => {
   
     if (!window) { return }
 
@@ -25,9 +25,20 @@
   }
 
 
+  watch (loadingStore, ({ $state: { loading } }) => {
+    loading.isResizingMode && _setDimensions ()
+  })
+
+
   onMounted (() => {
-    setDimensions ()
-    window.addEventListener ('resize', setDimensions)
+
+    _setDimensions ()
+    
+    window.addEventListener (
+        'resize',
+        () => loadingStore.patchIsResizingMode ()
+      )
+  
   })
 
 </script>

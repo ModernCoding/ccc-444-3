@@ -57,7 +57,7 @@ export default (
 
 
   const maxHeight = ((sP, lP) => ({
-        aside: sP.aside - sP.paddingTops.corrected.aside,
+        aside: sP.heights.aside - sP.paddingTops.corrected.aside,
         loader: lP.heights.logo
       } [ parent ])
     ) (
