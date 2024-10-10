@@ -1,7 +1,7 @@
 export default (screenPropertiesStore, isSloganInFooter) => {
 
   (index =>
-    index && index.classList.remove ('no-machine')
+    index && index.classList.remove ('o-no-machine')
   ) (document.querySelector ('#index'))
 
 
@@ -80,7 +80,7 @@ export default (screenPropertiesStore, isSloganInFooter) => {
         screenProperties.ratioIndex < 2
           && isSloganInFooter.value
           && (index =>
-              index && index.classList.add ('no-machine')
+              index && index.classList.add ('o-no-machine')
             ) (document.querySelector ('#index'))
 
 
@@ -168,12 +168,18 @@ export default (screenPropertiesStore, isSloganInFooter) => {
         screenPropertiesStore.patchPaddingTops ()
         screenPropertiesStore.patchWidths ()
 
-        isSloganInFooter.value = false
-        figure.style.height = `${ screenProperties.heights.main }px`
-        console.log (figure.getBoundingClientRect ())
-        console.log (screenProperties)
+        figure.style.height = `${ screenProperties.heights.main - PHI }px`
+        slogan && slogan.classList.remove ('text-uppercase')
 
-        slogan && slogan.classList.add ('text-uppercase')
+        const img = figure.querySelector ('img')
+        if (!img) { return isSloganInFooter.value = true }
+
+        isSloganInFooter.value = img.getBoundingClientRect ().width
+            > screenProperties.widths.main / PHI ** 2
+
+        slogan
+          && !isSloganInFooter.value
+          && slogan.classList.add ('text-uppercase')
 
       }
 

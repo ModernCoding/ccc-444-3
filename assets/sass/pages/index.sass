@@ -9,7 +9,7 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 #index
 
-  &.no-machine
+  &.o-no-machine
 
     display: flex
     flex-direction: column
@@ -42,6 +42,7 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
   .o-slogan
+    flex-grow: 1
 
     display: flex
     align-items: center
@@ -55,9 +56,13 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
   .o-charles-babbage
-
-    flex-grow: 1
-
     display: flex
     align-items: center
     justify-content: end
+
+
+#index-machine.o-no-slogan
+
+  .o-charles-babbage
+    flex-grow: 1
+    justify-content: center

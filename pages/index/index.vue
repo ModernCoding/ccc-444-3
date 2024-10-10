@@ -94,9 +94,18 @@
     <CallToActions v-if="screenProperties.ratioIndex < 3" />
     <Machine v-if="screenProperties.ratioIndex < 2" />
 
-    <div id="index-machine">
-      <Slogan v-if="screenProperties.ratioIndex > 2" />
+
+    <div
+      :class="isSloganInFooter ? 'o-no-slogan' : ''"
+      id="index-machine"
+    >
+      
+      <Slogan
+        v-if="screenProperties.ratioIndex > 2 && !isSloganInFooter"
+      />
+      
       <Machine v-if="screenProperties.ratioIndex > 2" />
+   
     </div>
 
   </article>
@@ -129,12 +138,12 @@
     </Teleport>
 
 
-<!--     <Teleport
-      v-else
-      to="#index-machine"
+    <Teleport
+      v-else-if="isSloganInFooter"
+      to="#__nuxt > footer"
     >
       <Slogan />
-    </Teleport> -->
+    </Teleport>
 
   </ClientOnly>
 

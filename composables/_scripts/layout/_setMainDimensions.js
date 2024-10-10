@@ -10,7 +10,7 @@ export default screenPropertiesStore => {
       if (!mainContent) { return }
       mainContent.removeAttribute ('style')
       
-      if (main.scrollHeight <= main.clientHeight) { return }
+      if (main.scrollHeight <= main.clientHeight + PHI) { return }
 
       // if (mainContent.scrollHeight <= mainContent.clientHeight) {
       //   return
