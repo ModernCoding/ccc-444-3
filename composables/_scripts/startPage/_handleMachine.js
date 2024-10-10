@@ -23,6 +23,7 @@ export default (screenPropertiesStore, noMachine) => {
   figure.removeAttribute ('style')
 
   const slogan = document.querySelector ('.o-slogan')
+  slogan && slogan.removeAttribute ('style')
 
 
   ;[
@@ -83,8 +84,6 @@ export default (screenPropertiesStore, noMachine) => {
 
         slogan && (() => {
 
-            slogan.removeAttribute ('style')
-            
             screenProperties.ratioIndex < 2 && noMachine.value
                 ? slogan.classList.remove ('text-uppercase')
                 : slogan.classList.add ('text-uppercase')
@@ -144,7 +143,6 @@ export default (screenPropertiesStore, noMachine) => {
         slogan && (() => {
 
             slogan.classList.remove ('text-uppercase')
-            slogan.removeAttribute ('style')
 
             !noMachine.value && (
                 slogan.style.marginTop = `${ marginTop / PHI }px`
@@ -172,6 +170,7 @@ export default (screenPropertiesStore, noMachine) => {
         figure.style.height = `${ screenProperties.heights.main }px`
         console.log (figure.getBoundingClientRect ())
         console.log (screenProperties)
+
         slogan && slogan.classList.add ('text-uppercase')
 
       }

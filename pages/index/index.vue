@@ -38,6 +38,7 @@
 
     startPageScripts.handleMachine (screenPropertiesStore, noMachine)
 
+    layoutScripts.setMainDimensions (screenPropertiesStore)
     layoutScripts.setFontSizeHeader ()
     layoutScripts.setFontSizeFooter ()
 
@@ -93,6 +94,7 @@
     <Machine v-if="screenProperties.ratioIndex < 2" />
 
     <div id="index-machine">
+      <Slogan v-if="screenProperties.ratioIndex > 2" />
       <Machine v-if="screenProperties.ratioIndex > 2" />
     </div>
 
@@ -126,12 +128,12 @@
     </Teleport>
 
 
-    <Teleport
+<!--     <Teleport
       v-else
       to="#index-machine"
     >
       <Slogan />
-    </Teleport>
+    </Teleport> -->
 
   </ClientOnly>
 

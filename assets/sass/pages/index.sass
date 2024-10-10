@@ -1,5 +1,6 @@
 @use "sass:math"
 
+@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 
@@ -31,14 +32,26 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
 
 
 #index-machine
+
   display: flex
   align-items: center
   justify-content: space-between
 
-  .o-charles-babbage
-    flex-grow: 1
 
   .o-slogan
-    text-align: right
-    padding-left: calc(dimensions.$layoutPaddingRightThreeParts * constants.$phi)
-    width: calc(100% / constants.$phi)
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    border-right: 1px solid colors.$light
+
+    margin-right: calc(dimensions.$layoutPaddingRightThreeParts * constants.$phi)
+
+    padding-right: calc(dimensions.$layoutPaddingRightThreeParts - 1px)
+
+    width: calc(dimensions.$mainWidthThreeParts / constants.$phi - dimensions.$layoutPaddingRightThreeParts * constants.$phi)
+
+
+  .o-charles-babbage
+    width: calc(dimensions.$mainWidthThreeParts / math.pow(constants.$phi, 2))
