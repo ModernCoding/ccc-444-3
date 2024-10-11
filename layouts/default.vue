@@ -66,9 +66,7 @@
     </aside>
 
 
-    <section v-if="screenProperties.ratioIndex > 2" id="central">
-      <CallToActions />
-    </section>
+    <section v-if="screenProperties.ratioIndex > 2" id="central" />
 
 
     <main role="main">

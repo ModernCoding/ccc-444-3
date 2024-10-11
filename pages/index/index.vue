@@ -135,6 +135,15 @@
   <ClientOnly>
 
     <Teleport
+      v-if="screenProperties.ratioIndex > 2"
+      defer
+      to="#central"
+    >
+      <CallToActions />
+    </Teleport>
+
+
+    <Teleport
       v-if="screenProperties.ratioIndex === 2"
       defer
       to="#aside-content"
