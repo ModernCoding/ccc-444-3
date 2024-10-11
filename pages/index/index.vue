@@ -29,8 +29,11 @@
 
     ctaScripts.equalize (screenProperties, logoProperties)
 
-    startPageScripts
-      .handleMachine (screenPropertiesStore, isSloganInFooter)
+    startPageScripts.handleMachine (
+        screenPropertiesStore,
+        logoProperties,
+        isSloganInFooter
+      )
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
 

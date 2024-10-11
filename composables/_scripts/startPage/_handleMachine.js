@@ -1,4 +1,8 @@
-export default (screenPropertiesStore, isSloganInFooter) => {
+export default (
+  screenPropertiesStore,
+  logoProperties,
+  isSloganInFooter
+) => {
 
   (index =>
     index && index.classList.remove ('o-no-machine')
@@ -97,14 +101,10 @@ export default (screenPropertiesStore, isSloganInFooter) => {
 
     () => {
 
-        const logo = document.querySelector ('#logo')
-        if (!logo) { return isSloganInFooter.value = true }
-
-
         const marginTop = screenProperties.heights.header / PHI
 
         const height = screenProperties.heights.aside
-            - logo.getBoundingClientRect ().height
+            - logoProperties.value.height
             - marginTop
 
 
@@ -146,9 +146,10 @@ export default (screenPropertiesStore, isSloganInFooter) => {
 
             slogan.classList.remove ('text-uppercase')
 
-            !isSloganInFooter.value && (
-                slogan.style.marginTop = `${ marginTop / PHI }px`
-              )
+            !isSloganInFooter.value && (() => {
+                slogan.style.height = `${ height }px`
+                slogan.style.marginTop = `${ marginTop }px`
+              }) ()
 
           }) ()
 
@@ -168,7 +169,9 @@ export default (screenPropertiesStore, isSloganInFooter) => {
         screenPropertiesStore.patchPaddingTops ()
         screenPropertiesStore.patchWidths ()
 
-        figure.style.height = `${ screenProperties.heights.main - PHI }px`
+        figure.style.height
+          = `${ screenProperties.heights.main - PHI }px`
+
         slogan && slogan.classList.remove ('text-uppercase')
 
         const img = figure.querySelector ('img')

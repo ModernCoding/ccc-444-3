@@ -66,7 +66,7 @@
     </aside>
 
 
-    <section v-if="screenProperties.ratioIndex > 2" id="central" />
+    <section id="central" />
 
 
     <main role="main">
