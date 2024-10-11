@@ -47,7 +47,7 @@
 
 
     loading.value.is
-      ? setTimeout (_runLayoutScripts, 180)
+      ? setTimeout (_runLayoutScripts, DELAY_TIMES.ELEMENT)
       : _runLayoutScripts ()
 
   }
@@ -58,7 +58,7 @@
     switch (true) {
 
       case loading.is && loading.showLogo:
-        setTimeout (() => _equalizeCtas (), 1000)
+        setTimeout (() => _equalizeCtas (), DELAY_TIMES.LOADING)
         break
 
       case !loading.is && loading.isResizingMode:
