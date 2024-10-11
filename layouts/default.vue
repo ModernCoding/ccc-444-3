@@ -48,9 +48,8 @@
 
   <header>
 
-    <nav></nav>
-
-    <nav v-if="screenProperties.ratioIndex > 2"></nav>
+    <nav />
+    <nav v-if="screenProperties.ratioIndex > 2" />
 
     <nav>
       <div class="o-lang">EN</div>
@@ -79,9 +78,10 @@
   </section>
 
 
-  <footer class="d-flex align-items-center justify-content-center">
-    <nav></nav>
-    <nav v-if="screenProperties.ratioIndex > 2"></nav>
+  <footer>
+    <nav />
+    <nav v-if="screenProperties.ratioIndex > 2" />
+    <nav id="footer-content" />
   </footer>
 
 

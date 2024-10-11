@@ -119,15 +119,13 @@
 
 
     <div
+      v-if="screenProperties.ratioIndex > 2"
       :class="isSloganInFooter ? 'o-no-slogan' : ''"
       id="index-machine"
     >
       
-      <Slogan
-        v-if="screenProperties.ratioIndex > 2 && !isSloganInFooter"
-      />
-      
-      <Machine v-if="screenProperties.ratioIndex > 2" />
+      <Slogan v-if="!isSloganInFooter" />
+      <Machine />
    
     </div>
 
@@ -148,7 +146,7 @@
     <Teleport
       v-if="screenProperties.ratioIndex < 2 || isSloganInFooter"
       defer
-      to="#__nuxt > footer"
+      to="#footer-content"
     >
       <Slogan />
     </Teleport>

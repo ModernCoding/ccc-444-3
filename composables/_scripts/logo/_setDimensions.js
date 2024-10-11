@@ -138,12 +138,21 @@ export default (
   screenPropertiesStore.patchPaddingTops ()
   screenPropertiesStore.patchWidths ()
 
-  logoPropertiesStore.patchHeight (logoHeight)
-  logoPropertiesStore.patchWidth (logoWidth)
 
+  switch (parent) {
 
-  if (parent === "loader") {
-    loadingStore.patchShowLogo ()
+    case "aside":
+      logoPropertiesStore.patchHeight (logoHeight)
+      logoPropertiesStore.patchWidth (logoWidth)
+      break
+
+    case "loader":
+      loadingStore.patchShowLogo ()
+      break
+
+    default:
+      break
+
   }
 
 }
