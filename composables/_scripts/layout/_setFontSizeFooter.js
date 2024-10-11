@@ -3,21 +3,55 @@ export default () => (footer => {
   if (!footer) { return }
 
 
+  const footerHeight = footer.getBoundingClientRect ().height
+
+
   const fontSize = (fontSize =>
 
-      [ TWICE_54_BY_PHI_POWER_4, fontSize, TWICE_54_BY_PHI_POWER_2 ] [
+      [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
         +(fontSize > TWICE_54_BY_PHI_POWER_4)
-          + +(fontSize > TWICE_54_BY_PHI_POWER_2)
       ]
 
-    ) (footer.getBoundingClientRect ().height / PHI ** 2)
+    ) (footerHeight / PHI ** 2)
 
 
-  ;(function _set (navs = footer.querySelectorAll ('*'), i = 0) {
+  ;(function _set (navs = footer.querySelectorAll ('nav'), i = 0) {
 
     if (i >= navs.length) { return }
 
-    navs [ i ].style.fontSize = `${ fontSize }px`
+    const subNavs = navs [ i ].querySelectorAll ('*')
+    if (subNavs.length < 1) { return _set (navs, ++i) }
+
+
+    subNavs
+      .forEach (subNav => subNav.style.fontSize = `${ fontSize }px`)
+
+
+    ;(function _set (size = fontSize) {
+
+        switch (true) {
+          
+          case  size <= TWICE_54_BY_PHI_POWER_4:
+
+          case  navs [ i ].getBoundingClientRect ().height
+                  < footerHeight:
+
+            return
+
+
+          default:
+
+            subNavs.forEach (subNav =>
+                subNav.style.fontSize = `${ size / PHI }px`
+              )
+
+            return _set (size / PHI)
+
+        }
+
+      }) ()
+
+
     return _set (navs, ++i)
 
   }) ()
