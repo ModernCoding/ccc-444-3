@@ -25,6 +25,11 @@ export default screenProperties => (ratioIndex => {
 
 
   ratioIndex < 1 && (slogan.style.height = 'auto')
+    /*
+      in 2-part mode,
+      need to temporarilly unset previously computed height
+    */
+
   slogan.style.fontSize = `${ fontSize }px`
 
 
@@ -46,6 +51,9 @@ export default screenProperties => (ratioIndex => {
 
 
   ratioIndex < 1 && (slogan.style.height = `${ maxHeight }px`)
+    /*
+      in 2-part mode, setting back previously computed height
+    */
 
 
 }) (screenProperties.ratioIndex - 2)
