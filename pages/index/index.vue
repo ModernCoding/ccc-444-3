@@ -9,6 +9,9 @@
   
   const loadingStore = defineLoadingStoreFromComposable () ()
 
+  const logoPropertiesStore
+    = defineLogoPropertiesStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -44,11 +47,11 @@
 
     const _runLayoutScripts = () => {
 
-          layoutScripts.setFontSizeHeader ()
-          layoutScripts.setFontSizeFooter ()
+        layoutScripts.setFontSizeHeader ()
+        layoutScripts.setFontSizeFooter ()
 
-          loadingStore.patchIs (false)
-          loadingStore.patchIsResizingMode (false)
+        loadingStore.patchIs (false)
+        loadingStore.patchIsResizingMode (false)
 
       }
 
@@ -77,6 +80,11 @@
 
     }
 
+  })
+
+
+  watch (logoPropertiesStore, ({ $state: { logoProperties } }) => {
+    console.log (logoProperties)
   })
 
 

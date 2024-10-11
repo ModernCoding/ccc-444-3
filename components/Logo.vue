@@ -16,6 +16,9 @@
     = defineLoaderPropertiesStoreFromComposable () ()
 
   const loadingStore = defineLoadingStoreFromComposable () ()
+
+  const logoPropertiesStore
+    = defineLogoPropertiesStoreFromComposable () ()
   
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -30,6 +33,7 @@
         () => logoScripts.setDimensions (
             loaderPropertiesStore,
             loadingStore,
+            logoPropertiesStore,
             screenPropertiesStore,
             parent
           ),
@@ -42,6 +46,7 @@
     window.addEventListener ('resize', () => logoScripts.setDimensions (
         loaderPropertiesStore,
         loadingStore,
+        logoPropertiesStore,
         screenPropertiesStore,
         parent
       ))
@@ -52,6 +57,7 @@
         () => logoScripts.setDimensions (
             loaderPropertiesStore,
             loadingStore,
+            logoPropertiesStore,
             screenPropertiesStore,
             parent
           ),

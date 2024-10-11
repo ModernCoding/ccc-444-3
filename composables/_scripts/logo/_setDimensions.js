@@ -4,6 +4,7 @@ import getId from './_getId'
 export default (
   loaderPropertiesStore,
   loadingStore,
+  logoPropertiesStore,
   screenPropertiesStore,
   parent
 ) => {
@@ -136,6 +137,9 @@ export default (
   screenPropertiesStore.patchHeights ()
   screenPropertiesStore.patchPaddingTops ()
   screenPropertiesStore.patchWidths ()
+
+  logoPropertiesStore.patchHeight (logoHeight)
+  logoPropertiesStore.patchWidth (logoWidth)
 
 
   if (parent === "loader") {
