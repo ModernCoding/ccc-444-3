@@ -55,5 +55,4 @@ export default screenProperties => (ratioIndex => {
       in 2-part mode, setting back previously computed height
     */
 
-
 }) (screenProperties.ratioIndex - 2)
