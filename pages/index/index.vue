@@ -112,6 +112,10 @@
 
     <CallToActions v-if="screenProperties.ratioIndex < 3" />
     <Machine v-if="screenProperties.ratioIndex < 2" />
+    
+    <Slogan
+      v-if="screenProperties.ratioIndex === 2 && !isSloganInFooter"
+    />
 
 
     <div
@@ -142,24 +146,7 @@
 
 
     <Teleport
-
-      v-if="screenProperties.ratioIndex < 3"
-
-      :to="
-          [ '#index', '#__nuxt > footer' ] [
-            +(screenProperties.ratioIndex < 2 || isSloganInFooter)
-          ]
-        "
-
-    >
-
-      <Slogan />
-
-    </Teleport>
-
-
-    <Teleport
-      v-else-if="isSloganInFooter"
+      v-if="screenProperties.ratioIndex < 2 || isSloganInFooter"
       defer
       to="#__nuxt > footer"
     >
