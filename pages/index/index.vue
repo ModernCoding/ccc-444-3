@@ -16,6 +16,7 @@
     = defineScreenPropertiesStoreFromComposable () ()
   
   const { loading } = storeToRefs (loadingStore)
+  const { logoProperties } = storeToRefs (logoPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const isSloganInFooter = ref (false)
@@ -26,18 +27,7 @@
     if (!window) { return loadingStore.patchIs (false) }
 
 
-    ctaScripts.equalize (
-
-      screenProperties,
-
-      `${
-        [ '#index', '#central' ] [
-          +(screenProperties.value.ratioIndex > 2)
-        ]
-      } .o-call-to-actions`
-
-    )
-
+    ctaScripts.equalize (screenProperties, logoProperties)
 
     startPageScripts
       .handleMachine (screenPropertiesStore, isSloganInFooter)
@@ -71,7 +61,7 @@
         setTimeout (() => _equalizeCtas (), 1000)
         break
 
-      case loading.isResizingMode:
+      case !loading.is && loading.isResizingMode:
         _equalizeCtas ()
         break
 
@@ -84,7 +74,13 @@
 
 
   watch (logoPropertiesStore, ({ $state: { logoProperties } }) => {
-    console.log (logoProperties)
+
+    !loading.value.is && _equalizeCtas ()
+      /*
+        if page is loading, do not equalize since equalizing process is
+        already running
+      */
+
   })
 
 
@@ -123,10 +119,8 @@
       :class="isSloganInFooter ? 'o-no-slogan' : ''"
       id="index-machine"
     >
-      
       <Slogan v-if="!isSloganInFooter" />
       <Machine />
-   
     </div>
 
   </article>
@@ -135,20 +129,20 @@
   <ClientOnly>
 
     <Teleport
-      v-if="screenProperties.ratioIndex > 2"
-      defer
-      to="#central"
-    >
-      <CallToActions />
-    </Teleport>
-
-
-    <Teleport
       v-if="screenProperties.ratioIndex === 2"
       defer
       to="#aside-content"
     >
       <Machine />
+    </Teleport>
+
+
+    <Teleport
+      v-if="screenProperties.ratioIndex > 2"
+      defer
+      to="#central"
+    >
+      <CallToActions />
     </Teleport>
 
 

@@ -1,82 +1,96 @@
-export default (screenProperties, selector) => (function _equalize (
-  pictures = document.querySelectorAll (`${ selector } picture`),
-  figcaptions = document.querySelectorAll (`${ selector } figcaption`),
-  heighestPicture = 0,
-  heighestFigcaption = 0,
-  i = 0
-) {
+export default (screenProperties, logoProperties) => {
 
-  if (i >= pictures.length) {
+  document.querySelectorAll ('.o-call-to-actions').forEach (cta => {
 
-    pictures.forEach (
-        picture => picture.style.height = `${ heighestPicture }px`
-      )
+      screenProperties.value.ratioIndex > 1
+        ? cta.style.height = `${ logoProperties.value.height }px`
+        : cta.removeAttribute ('style')
+
+    })
 
 
-    const mainHeight = (index =>
-        index ? index.getBoundingClientRect ().height : 0
-      ) (document.querySelector ('main[role="main"]'))
+  ;(function _equalize (
+
+    pictures = document.querySelectorAll ('.o-call-to-actions picture'),
+
+    figcaptions
+      = document.querySelectorAll ('.o-call-to-actions figcaption'),
+
+    heighestPicture = 0,
+    heighestFigcaption = 0,
+    i = 0
+
+  ) {
+
+    if (i >= pictures.length) {
+
+      const mainHeight = (index =>
+          index ? index.getBoundingClientRect ().height : 0
+        ) (document.querySelector ('main[role="main"]'))
 
 
-    const figcaptionPaddingTop = parseFloat (
+      const figcaptionPaddingTop = parseFloat (
 
-        window
-          .getComputedStyle (figcaptions [ 0 ])
-          .getPropertyValue ('padding-top')
-          .split ('px')
-          .join ('')
+          window
+            .getComputedStyle (figcaptions [ 0 ])
+            .getPropertyValue ('padding-top')
+            .split ('px')
+            .join ('')
 
-      )
+        )
 
 
-    ;(delta =>
+      ;(delta =>
 
-      pictures.forEach (
+        pictures.forEach (
 
-        picture => picture.style.height = `${
-            [ heighestPicture, delta ] [ +(heighestPicture > delta) ]
-          }px`
+          picture => picture.style.height = `${
+              [ heighestPicture, delta ] [ +(heighestPicture > delta) ]
+            }px`
+        
+        )
+      
+      ) (
+
+        [ mainHeight, logoProperties.value.height ] [
+          +(screenProperties.value.ratioIndex > 1)
+        ]
+          - heighestFigcaption
+          - screenProperties.value.paddingTops.corrected.main
       
       )
-    
-    ) (
 
-      mainHeight
-        - heighestFigcaption
-        - figcaptionPaddingTop
-        - screenProperties.value.paddingTops.corrected.main
-    
+
+      return
+
+    }
+
+
+    pictures [ i ].removeAttribute ('style')
+
+    const pictureHeight = pictures [ i ].getBoundingClientRect ().height
+
+    const figcaptionHeight
+      = figcaptions [ i ].getBoundingClientRect ().height
+
+
+    return _equalize (
+
+      pictures,
+      figcaptions,
+
+      [ heighestPicture, pictureHeight ] [
+          +( pictureHeight > heighestPicture )
+        ],
+
+      [ heighestFigcaption, figcaptionHeight ] [
+          +( figcaptionHeight > heighestFigcaption )
+        ],
+        
+      ++i
+
     )
 
+  }) ()
 
-    return
-
-  }
-
-
-  pictures [ i ].removeAttribute ('style')
-
-  const pictureHeight = pictures [ i ].getBoundingClientRect ().height
-
-  const figcaptionHeight
-    = figcaptions [ i ].getBoundingClientRect ().height
-
-
-  return _equalize (
-
-    pictures,
-    figcaptions,
-
-    [ heighestPicture, pictureHeight ] [
-        +( pictureHeight > heighestPicture )
-      ],
-
-    [ heighestFigcaption, figcaptionHeight ] [
-        +( figcaptionHeight > heighestFigcaption )
-      ],
-      
-    ++i
-
-  )
-
-}) ()
+}
