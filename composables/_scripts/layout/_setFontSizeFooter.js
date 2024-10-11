@@ -27,7 +27,7 @@ export default () => (footer => {
       .forEach (subNav => subNav.style.fontSize = `${ fontSize }px`)
 
 
-    ;(function _set (size = fontSize) {
+    ;(function _subSet (size = fontSize) {
 
         switch (true) {
           
@@ -45,7 +45,7 @@ export default () => (footer => {
                 subNav.style.fontSize = `${ size / PHI }px`
               )
 
-            return _set (size / PHI)
+            return _subSet (size / PHI)
 
         }
 

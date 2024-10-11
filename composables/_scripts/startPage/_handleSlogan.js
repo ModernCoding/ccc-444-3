@@ -5,24 +5,47 @@ export default screenProperties => (ratioIndex => {
       '#index-machine > .o-slogan'
     ] [ ratioIndex ])
 
+
   if (!slogan) { return }
 
 
   const maxHeight = [
+      slogan.getBoundingClientRect ().height,
+      screenProperties.heights.main
     ] [ ratioIndex ]
 
 
-  ;[
-    
-    () => {
+  const fontSize = (fontSize =>
 
-      },
+      [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
+        +(fontSize > TWICE_54_BY_PHI_POWER_4)
+      ]
+
+    ) (maxHeight / PHI ** 2)
 
 
-    () => {
+  ratioIndex < 1 && (slogan.style.height = 'auto')
+  slogan.style.fontSize = `${ fontSize }px`
+
+
+  ;(function _set (size = fontSize) {
+
+      switch (true) {
+        
+        case size <= TWICE_54_BY_PHI_POWER_4:
+        case slogan.getBoundingClientRect ().height < maxHeight:
+          return
+
+        default:
+          slogan.style.fontSize = `${ size / PHI }px`
+          return _set (size / PHI)
 
       }
 
-  ] [ ratioIndex ] ()
+    }) ()
+
+
+  ratioIndex < 1 && (slogan.style.height = `${ maxHeight }px`)
+
 
 }) (screenProperties.ratioIndex - 2)
