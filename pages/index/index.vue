@@ -35,6 +35,9 @@
         isSloganInFooter
       )
 
+    !isSloganInFooter.value
+      && startPageScripts.handleSlogan (screenProperties.value)
+
     layoutScripts.setMainDimensions (screenPropertiesStore)
 
 
