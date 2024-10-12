@@ -20,6 +20,7 @@
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const isSloganInFooter = ref (false)
+  const { locale, messages } = useI18n ()
 
 
   const _equalizeCtas = () => {
@@ -77,6 +78,9 @@
     }
 
   })
+
+
+  watch (locale, () => loadingStore.patchIs ())
 
 
   watch (logoPropertiesStore, ({ $state: { logoProperties } }) => {

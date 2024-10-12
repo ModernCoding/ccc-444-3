@@ -1,5 +1,5 @@
 export const callToActions = {
-    emailUs: "Schreiben Sie uns!",
+    contactUs: "Bei uns melden",
     requestCall: "Anruf vereinbaren",
-    findUs: "Finden Sie uns!"
+    findUs: "Uns finden"
   }

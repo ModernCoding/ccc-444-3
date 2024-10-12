@@ -30,7 +30,7 @@
 
 
       <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.emailUs') }}
+        {{ $t ('components.callToActions.contactUs') }}
       </figcaption>
 
     </figure>

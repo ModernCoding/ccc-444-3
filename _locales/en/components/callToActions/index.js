@@ -1,5 +1,5 @@
 export const callToActions = {
-    emailUs: "Email us",
+    contactUs: "Contact us",
     requestCall: "Request call",
     findUs: "Find us"
   }

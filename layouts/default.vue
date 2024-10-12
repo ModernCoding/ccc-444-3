@@ -61,7 +61,10 @@
     <nav v-if="screenProperties.ratioIndex > 2" />
 
     <nav>
-      <button class="o-lang">{{ locale }}</button>
+      <button
+        class="o-lang"
+        @click="locale = 'de'"
+      >{{ locale }}</button>
     </nav>
 
   </header>
