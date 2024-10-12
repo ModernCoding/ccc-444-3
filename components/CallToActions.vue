@@ -29,7 +29,9 @@
       </picture>
 
 
-      <figcaption class="fw-bold">Email us</figcaption>
+      <figcaption class="fw-bold">
+        {{ $t ('components.callToActions.emailUs') }}
+      </figcaption>
 
     </figure>
 
@@ -48,7 +50,9 @@
       </picture>
 
 
-      <figcaption class="fw-bold">Request call</figcaption>
+      <figcaption class="fw-bold">
+        {{ $t ('components.callToActions.requestCall') }}
+      </figcaption>
 
     </figure>
 
@@ -67,7 +71,9 @@
       </picture>
 
 
-      <figcaption class="fw-bold">Find us</figcaption>
+      <figcaption class="fw-bold">
+        {{ $t ('components.callToActions.findUs') }}
+      </figcaption>
 
     </figure>
     

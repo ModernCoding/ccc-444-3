@@ -8,8 +8,13 @@ export default defineNuxtConfig ({
 
   modules: [
     "@nuxt/image",
+    '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
+
+  i18n: {
+    vueI18n: './i18n.config.js'
+  },
 
   pinia: {
     // import { defineStore, storeToRefs } from 'pinia'

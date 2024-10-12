@@ -56,7 +56,9 @@
 
 
 <template>
-  <h1 class="o-slogan">We craft your app!</h1>
+  <h1 class="o-slogan">
+    {{ $t ('pages.index.slogan') }}
+  </h1>
 </template>
 
 
