@@ -11,6 +11,9 @@
   const { loading } = storeToRefs (loadingStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
+  const { locale, messages } = useI18n ()
+  const languageOptions = ref (Object.keys (messages.value))
+
 
   const _setDimensions = () => {
   
@@ -32,6 +35,12 @@
 
   onMounted (() => {
 
+    const ccc444Locale
+      = localStorage.getItem (import.meta.env.VITE_LOCALE_KEY)
+
+    locale.value = ccc444Locale ?? 'en'
+
+
     _setDimensions ()
     
     window.addEventListener (
@@ -52,7 +61,7 @@
     <nav v-if="screenProperties.ratioIndex > 2" />
 
     <nav>
-      <div class="o-lang">EN</div>
+      <button class="o-lang">{{ locale }}</button>
     </nav>
 
   </header>
