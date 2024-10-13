@@ -16,6 +16,24 @@
   const { locale, messages } = useI18n ()
   const languageOptions = ref (Object.keys (messages.value))
 
+  const modalComponents = {
+      cta: resolveComponent('CallToActions'),
+      logo: resolveComponent('Logo'),
+    }
+
+
+  const _getComponent = key => modalComponents [ key ]
+
+
+  const _handleModal = () => {
+
+    if (modal.value.main.show) { return modalStore.resetMain () }
+
+    modalStore.patchMainShow ()
+    setTimeout (() => modalStore.patchMainContent ('logo'), 1000)
+
+  }
+
 
   const _setDimensions = () => {
   
@@ -65,7 +83,7 @@
     <nav>
       <button
         class="o-lang"
-        @click="modalStore.patchMainShow (!modal.main.show)"
+        @click="_handleModal"
       >
         {{ locale }}
       </button>
@@ -95,7 +113,7 @@
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
       >
-        {{ modal.main.content }}
+        <component :is="_getComponent (modal.main.content)" />
       </div>
 
     </main>
