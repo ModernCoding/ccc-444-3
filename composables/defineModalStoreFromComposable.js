@@ -3,9 +3,22 @@ export default () => defineStore ('modal', {
   state: () => ({
 
     modal: {
-      showAside: false,
-      showCentral: false,
-      showMain: false
+
+      aside: {
+        content: null,
+        show: false
+      },
+
+      central: {
+        content: null,
+        show: false
+      },
+
+      main: {
+        content: null,
+        show: false
+      }
+
     }
 
   }),
@@ -13,16 +26,16 @@ export default () => defineStore ('modal', {
 
   actions: {
 
-    patchShowAside (is = true) {
-      this.modal.showAside = is
+    patchAsideShow (is = true) {
+      this.modal.aside.show = is
     },
 
-    patchShowCentral (is = true) {
-      this.modal.showCentral = is
+    patchCentralShow (is = true) {
+      this.modal.central.show = is
     },
 
-    patchShowMain (is = true) {
-      this.modal.showMain = is
+    patchMainShow (is = true) {
+      this.modal.main.show = is
     }
 
   }
