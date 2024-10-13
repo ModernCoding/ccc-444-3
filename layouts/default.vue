@@ -63,7 +63,6 @@
     <nav>
       <button
         class="o-lang"
-        @click="locale = 'de'"
       >{{ locale }}</button>
     </nav>
 
