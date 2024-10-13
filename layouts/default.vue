@@ -4,11 +4,13 @@
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const loadingStore = defineLoadingStoreFromComposable () ()
+  const modalStore = defineModalStoreFromComposable () ()
   
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
   const { loading } = storeToRefs (loadingStore)
+  const { modal } = storeToRefs (modalStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const { locale, messages } = useI18n ()
@@ -63,7 +65,10 @@
     <nav>
       <button
         class="o-lang"
-      >{{ locale }}</button>
+        @click="modalStore.patchMainShow (!modal.main.show)"
+      >
+        {{ locale }}
+      </button>
     </nav>
 
   </header>
@@ -81,7 +86,18 @@
 
 
     <main role="main">
+
       <slot />
+
+
+      <div
+        id="main-modal"
+        :data-number-of-parts="screenProperties.ratioIndex"
+        :data-is-shown="+modal.main.show"
+      >
+        {{ modal.main.content }}
+      </div>
+
     </main>
     
   </section>

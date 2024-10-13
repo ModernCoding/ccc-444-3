@@ -26,7 +26,7 @@ export default () => defineStore ('modal', {
 
   actions: {
 
-    patchAsideShow (content) {
+    patchAsideContent (content) {
         this.modal.aside.content = content
       },
 
@@ -35,7 +35,7 @@ export default () => defineStore ('modal', {
       },
 
 
-    patchCentralShow (content) {
+    patchCentralContent (content) {
         this.modal.central.content = content
       },
 
@@ -44,7 +44,7 @@ export default () => defineStore ('modal', {
       },
 
 
-    patchMainShow (content) {
+    patchMainContent (content) {
         this.modal.main.content = content
       },
 

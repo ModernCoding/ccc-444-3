@@ -1,0 +1,42 @@
+@use 'colors' as colors
+@use 'dimensions' as dimensions
+
+
+#main-modal
+  
+  position: absolute
+  z-index: 8
+
+  background-color: colors.$dark
+  transition: height 1s
+
+
+  &[data-is-shown="0"]
+    height: 0
+
+
+  &[data-number-of-parts="1"]
+    
+    top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart + dimensions.$heightAsideOnePart)
+    
+    width: calc(100% - dimensions.$layoutPaddingRightOnePart - dimensions.$layoutPaddingLeftOnePart)
+
+
+    &[data-is-shown="1"]
+      height: calc(dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
+
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+
+    top: dimensions.$heightHeaderTwoParts
+  
+    &[data-is-shown="1"]
+      height: calc(dimensions.$height - dimensions.$heightHeaderTwoParts)
+
+
+  &[data-number-of-parts="2"]
+    width: dimensions.$mainWidthTwoParts
+
+  &[data-number-of-parts="3"]
+    width: dimensions.$mainWidthThreeParts
