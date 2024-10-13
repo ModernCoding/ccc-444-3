@@ -18,7 +18,7 @@
 
   const modalComponents = {
       cta: resolveComponent('CallToActions'),
-      logo: resolveComponent('Logo'),
+      logo: resolveComponent('Logo')
     }
 
 
