@@ -8,7 +8,7 @@
   z-index: 8
 
   background-color: colors.$dark
-  transition: height 1s linear, opacity 1s linear
+  transition: height .5s linear, opacity .5s linear
 
 
   &[data-is-shown="0"]
@@ -21,13 +21,13 @@
 
   &[data-number-of-parts="1"]
     
-    top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart + dimensions.$heightAsideOnePart)
+    top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart)
     
     width: calc(100% - dimensions.$layoutPaddingRightOnePart - dimensions.$layoutPaddingLeftOnePart)
 
 
     &[data-is-shown="1"]
-      height: calc(dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
+      height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
 
 
   &[data-number-of-parts="2"],
