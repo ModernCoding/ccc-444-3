@@ -34,6 +34,8 @@ export default (
 
     () => {
 
+        isSloganInFooter.value = true
+
         const paddingTop
           = screenProperties.paddingTops.calculated.main / PHI
 
@@ -47,11 +49,11 @@ export default (
 
         const img = figure.querySelector ('img')
 
-        if (!img) { return isSloganInFooter.value = true }
+        if (!img) { return }
         img.removeAttribute ('style')
 
 
-        isSloganInFooter.value = (() => {
+        const noMachine = (() => {
 
           switch (true) {
 
@@ -73,7 +75,7 @@ export default (
           }) ()
 
 
-        isSloganInFooter.value && (figure.style.display = 'none')
+        noMachine && (figure.style.display = 'none')
 
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()
@@ -81,11 +83,9 @@ export default (
         screenPropertiesStore.patchWidths ()
 
 
-        screenProperties.ratioIndex < 2
-          && isSloganInFooter.value
-          && (index =>
-              index && index.classList.add ('o-no-machine')
-            ) (document.querySelector ('#index'))
+        screenProperties.ratioIndex < 2 && noMachine && (index =>
+            index && index.classList.add ('o-no-machine')
+          ) (document.querySelector ('#index'))
 
 
         slogan && (() => {
@@ -93,7 +93,7 @@ export default (
             const h1 = slogan.querySelector ('h1')
             if (!h1) { return }
 
-            screenProperties.ratioIndex < 2 && isSloganInFooter.value
+            screenProperties.ratioIndex < 2 && noMachine
                 ? h1.classList.remove ('text-uppercase')
                 : h1.classList.add ('text-uppercase')
 
@@ -185,7 +185,7 @@ export default (
         if (!img) { return isSloganInFooter.value = true }
 
         isSloganInFooter.value = img.getBoundingClientRect ().width
-            > screenProperties.widths.main / PHI ** 2
+            > screenProperties.widths.main / PHI
 
         h1
           && !isSloganInFooter.value

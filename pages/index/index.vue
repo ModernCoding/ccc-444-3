@@ -37,8 +37,8 @@
         isSloganInFooter
       )
 
-    !isSloganInFooter.value
-      && startPageScripts.handleSlogan (screenProperties.value)
+    startPageScripts
+      .handleSlogan (screenProperties.value, isSloganInFooter.value)
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
 
@@ -46,8 +46,6 @@
     const _runLayoutScripts = () => {
 
         layoutScripts.setFontSizeHeader ()
-        layoutScripts.setFontSizeFooter ()
-
         loadingStore.patchIs (false)
         loadingStore.patchIsResizingMode (false)
 
@@ -110,6 +108,7 @@
 
   })
 
+
 </script>
 
 
@@ -157,11 +156,7 @@
     </Teleport>
 
 
-    <Teleport
-      v-if="screenProperties.ratioIndex < 2 || isSloganInFooter"
-      defer
-      to="#footer-content"
-    >
+    <Teleport v-if="isSloganInFooter" defer to="#footer-content">
       <Slogan />
     </Teleport>
 

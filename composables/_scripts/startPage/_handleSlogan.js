@@ -1,9 +1,10 @@
-export default screenProperties => (ratioIndex => {
+export default (screenProperties, isSloganInFooter) => (ratioIndex => {
 
   const slogan = document.querySelector ([
       '#index > .o-slogan',
-      '#index-machine > .o-slogan'
-    ] [ ratioIndex ])
+      '#index-machine > .o-slogan',
+      '#__nuxt > footer .o-slogan',
+    ] [ ratioIndex * +!isSloganInFooter + 2 * +isSloganInFooter ])
 
 
   if (!slogan) { return }
@@ -11,8 +12,9 @@ export default screenProperties => (ratioIndex => {
 
   const maxHeight = [
       slogan.getBoundingClientRect ().height,
-      screenProperties.heights.main
-    ] [ ratioIndex ]
+      screenProperties.heights.main,
+      screenProperties.heights.footer
+    ] [ ratioIndex * +!isSloganInFooter + 2 * +isSloganInFooter ]
 
 
   const fontSize = (fontSize =>
@@ -24,7 +26,7 @@ export default screenProperties => (ratioIndex => {
     ) (maxHeight / PHI ** 2)
 
 
-  ratioIndex < 1 && (slogan.style.height = 'auto')
+  ratioIndex === 0 && (slogan.style.height = 'auto')
     /*
       in 2-part mode,
       need to temporarilly unset previously computed height
@@ -46,7 +48,8 @@ export default screenProperties => (ratioIndex => {
 
   button.querySelectorAll ('p').forEach ((p, i) => {
       
-      p.style.fontSize = `${ fontSize / PHI }px`
+      p.style.fontSize
+        = `${ fontSize / PHI ** (1 + 1 ** !isSloganInFooter) }px`
 
       i > 0 && (() => {
           p.style.paddingRight = `${ fontSize / PHI ** 4 }px`
@@ -71,7 +74,9 @@ export default screenProperties => (ratioIndex => {
           h1.style.fontSize = `${ size / PHI }px`
 
           button.style.gap = `${ size / PHI ** 4 }px`
-          slogan.style.gap = `${ size / PHI ** 2 }px`
+
+          slogan.style.gap
+            = `${ size / PHI ** (2 + 1 ** !isSloganInFooter) }px`
 
 
           button.querySelectorAll ('p').forEach ((p, i) => {
@@ -93,7 +98,7 @@ export default screenProperties => (ratioIndex => {
     }) ()
 
 
-  ratioIndex < 1 && (slogan.style.height = `${ maxHeight }px`)
+  ratioIndex === 0 && (slogan.style.height = `${ maxHeight }px`)
     /*
       in 2-part mode, setting back previously computed height
     */

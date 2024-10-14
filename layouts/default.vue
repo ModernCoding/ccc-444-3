@@ -5,6 +5,8 @@
   const windowWidths = ref ({})
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
+  const startPageScripts = collectStartPageScriptsFromComposable ()
+  
   const loadingStore = defineLoadingStoreFromComposable () ()
   const modalStore = defineModalStoreFromComposable () ()
   
@@ -39,7 +41,6 @@
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
     layoutScripts.setFontSizeHeader ()
-    layoutScripts.setFontSizeFooter ()
 
     windowWidths.value = getWindowWidths (window.innerWidth)
 
@@ -66,6 +67,14 @@
         () => loadingStore.patchIsResizingMode ()
       )
   
+  })
+
+
+  onUpdated (() => {
+
+    document.querySelector ('#footer-content .o-slogan')
+      && startPageScripts.handleSlogan (screenProperties.value, true)
+
   })
 
 </script>
