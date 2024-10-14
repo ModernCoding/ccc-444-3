@@ -23,7 +23,18 @@
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
+  const { locale } = useI18n ()
+
   const { id, time } = logoScripts.getId (parent)
+
+
+  watch (locale, () => logoScripts.setDimensions (
+    loaderPropertiesStore,
+    loadingStore,
+    logoPropertiesStore,
+    screenPropertiesStore,
+    parent
+  ))
 
 
   onMounted (() => {

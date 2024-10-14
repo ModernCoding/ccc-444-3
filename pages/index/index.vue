@@ -20,7 +20,7 @@
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const isSloganInFooter = ref (false)
-  const { locale, messages } = useI18n ()
+  const { locale } = useI18n ()
 
 
   const _equalizeCtas = () => {
@@ -28,6 +28,7 @@
     if (!window) { return loadingStore.patchIs (false) }
 
 
+    ctaScripts.setFontSize ()
     ctaScripts.equalize (screenProperties, logoProperties)
 
     startPageScripts.handleMachine (

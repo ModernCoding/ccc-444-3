@@ -1,9 +1,21 @@
 <script setup>
 
+  const ctaScripts = collectCtaScriptsFromComposable ()
+
+  const logoPropertiesStore
+    = defineLogoPropertiesStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
+  const { logoProperties } = storeToRefs (logoPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+
+  onMounted (() => {
+    ctaScripts.setFontSize ()
+    ctaScripts.equalize (screenProperties, logoProperties)
+  })
 
 </script>
 
