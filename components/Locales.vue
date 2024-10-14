@@ -44,9 +44,13 @@
       <button @click="_handleSelect (key)">
         
         <div
-          :class="
-              [ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''
-            "
+          :class="`
+              o-locale-label
+
+              ${
+                [ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''
+              }
+            `"
         >
           {{ languageOptions [ key ] }}
         </div>

@@ -23,22 +23,36 @@ export default () => (header => {
     }) ()
 
 
+  const localeHeight = (lH =>
+
+      [ TWICE_54_BY_PHI_POWER_4, lH, TWICE_54_BY_PHI_POWER_2 ] [
+        +(lH > TWICE_54_BY_PHI_POWER_4)
+          + +(lH > TWICE_54_BY_PHI_POWER_2)
+      ]
+
+    ) (header.getBoundingClientRect ().height / PHI)
+
+
   document.querySelectorAll ('.o-locale').forEach (locale => {
-
-      const localeHeight = (lH =>
-
-          [ TWICE_54_BY_PHI_POWER_4, lH, TWICE_54_BY_PHI_POWER_2 ] [
-            +(lH > TWICE_54_BY_PHI_POWER_4)
-              + +(lH > TWICE_54_BY_PHI_POWER_2)
-          ]
-
-        ) (header.getBoundingClientRect ().height / PHI)
-
-
       locale.style.fontSize = `${ fontSize }px`
       locale.style.height = `${ localeHeight }px`
       locale.style.width = `${ localeHeight * PHI }px`
-
     })
+
+  document.querySelectorAll ('.o-locale-label').forEach (label => {
+      label.style.fontSize = `${ fontSize }px`
+    })
+
+
+  ;(locales => {
+
+    if (!locales) { return }
+    locales.style.gap = `${ localeHeight / PHI ** 2 }px`
+
+    locales.querySelectorAll ('button').forEach (button => {
+        button.style.gap = `${ localeHeight / PHI }px`
+      })
+
+  }) (document.querySelector ('#locales'))
 
 }) (document.querySelector ('#__nuxt > header'))
