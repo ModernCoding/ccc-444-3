@@ -1,6 +1,7 @@
 $o-font: "o-font"
 $o-font-my: "o-font-my"
 $o-font-th: "o-font-th"
+$o-font-vi: "o-font-vi"
 
 @font-face
   font-family: "o-font"
@@ -14,10 +15,13 @@ $o-font-th: "o-font-th"
   font-family: "o-font-th"
   src: url("/fonts/prompt.ttf")
 
+@font-face
+  font-family: "o-font-vi"
+  src: url("/fonts/thasadith.ttf")
+
 
 *:not(i.bi)
 
-  font-family: $o-font
   font-size: $twice_54_by_phi_power_3 * 1px
   font-weight: $twice_54_by_phi_power_minus_3
   letter-spacing: $phi * 1px
@@ -25,6 +29,30 @@ $o-font-th: "o-font-th"
 
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+
+#__nuxt
+  
+  *:not(i.bi)
+    font-family: $o-font
+
+
+  &[data-locale="my"]
+  
+    *:not(i.bi)
+      font-family: $o-font-my
+
+
+  &[data-locale="th"]
+  
+    *:not(i.bi)
+      font-family: $o-font-th
+
+
+  &[data-locale="vi"]
+  
+    *:not(i.bi)
+      font-family: $o-font-vi
 
 
 a, a:hover
@@ -54,8 +82,14 @@ label
 .o-font-smaller
   font-size: $once_54_by_phi_power_3 * 1px
 
+.o-font-en, .o-font-en *
+  font-family: $o-font !important
+
 .o-font-my, .o-font-my *
   font-family: $o-font-my !important
 
 .o-font-th, .o-font-th *
   font-family: $o-font-th !important
+
+.o-font-vi, .o-font-vi *
+  font-family: $o-font-vi !important

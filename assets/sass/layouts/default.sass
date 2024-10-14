@@ -26,11 +26,18 @@ figure
   height: dimensions.$height
   width: 100%
   overflow: hidden
-      
+
 
   > *
     display: flex
     color: colors.$light
+    transition: opacity 1s linear
+
+    &[data-is-shown="0"]
+      opacity: 0
+
+    &[data-is-shown="1"]
+      opacity: 1
 
 
   > header

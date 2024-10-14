@@ -19,9 +19,17 @@ $ratioPart: 1 + constants.$phi + math.pow(constants.$phi, 2) + math.pow(constant
   justify-content: center
 
   background-color: colors.$dark
+  transition: opacity .5s linear
 
-  width: 100%
   height: dimensions.$height
+  width: 100%
+
+
+  &[data-is-shown="0"]
+    opacity: 0
+
+  &[data-is-shown="1"]
+    opacity: 1
 
 
   @media screen and (orientation: portrait)

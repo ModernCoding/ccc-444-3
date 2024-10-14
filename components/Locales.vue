@@ -10,14 +10,28 @@
       en: "English",
       fr: "Français",
       my: "မြန်မာဘာသာ",
-      th: "ภาษาไทย"
+      th: "ภาษาไทย",
+      vi: "Tiếng Việt"
     }
 
 
   const _handleSelect = key => {
+      
       locale.value = key
       localStorage.setItem (import.meta.env.VITE_LOCALE_KEY, key)
+
+      ;(nuxt => {
+
+          if (!nuxt) { return }
+
+          [ 'my', 'th', 'vi' ].includes (key)
+            ? nuxt.setAttribute ('data-locale', key)
+            : nuxt.removeAttribute ('data-locale')
+
+        }) (document.querySelector ('#__nuxt'))
+
       modalStore.resetMain ()
+    
     }
 
 
@@ -48,14 +62,16 @@
               o-locale-label
 
               ${
-                [ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''
+                [ 'my', 'th', 'vi' ]
+                  .includes (key) ? `o-font-${ key }` : 'o-font-en'
               }
             `"
         >
           {{ languageOptions [ key ] }}
         </div>
 
-        <div class="o-locale">{{ key }}</div>
+
+        <div class="o-locale o-font-en">{{ key }}</div>
       
       </button>
 

@@ -67,18 +67,15 @@
 
 <template>
 
-  <div id="loader">
+  <div id="loader" :data-is-shown="+loading.showLogo">
 
     <div>
-      <Logo
-        v-show="loading.showLogo"
-        parent="loader"
-      />
+      <Logo parent="loader"/>
     </div>
     
 
     <div class="o-spinner">
-      <div v-show="loading.showLogo" />
+      <div />
     </div>
 
   </div>

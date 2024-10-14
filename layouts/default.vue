@@ -60,6 +60,17 @@
     locale.value = ccc444Locale ?? 'en'
 
 
+    ;(nuxt => {
+
+        if (!nuxt) { return }
+
+        [ 'my', 'th', 'vi' ].includes (ccc444Locale)
+          ? nuxt.setAttribute ('data-locale', ccc444Locale)
+          : nuxt.removeAttribute ('data-locale')
+
+      }) (document.querySelector ('#__nuxt'))
+
+
     _setDimensions ()
     
     window.addEventListener (
@@ -82,14 +93,14 @@
 
 <template>
 
-  <header>
+  <header :data-is-shown="+!loading.is">
 
     <nav />
     <nav v-if="screenProperties.ratioIndex > 2" />
 
     <nav>
       <button
-        class="o-locale"
+        class="o-locale o-font-en"
         @click="_handleModal"
       >
         {{ locale }}
@@ -99,7 +110,7 @@
   </header>
 
 
-  <section>
+  <section :data-is-shown="+!loading.is">
 
     <aside>
       <Logo />
@@ -128,7 +139,7 @@
   </section>
 
 
-  <footer>
+  <footer :data-is-shown="+!loading.is">
     <nav />
     <nav v-if="screenProperties.ratioIndex > 2" />
     <nav id="footer-content" />

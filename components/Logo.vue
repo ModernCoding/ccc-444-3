@@ -89,7 +89,7 @@
     :id="id"
   >
 
-    <header>
+    <header class="o-font-en">
 
       <div>
 

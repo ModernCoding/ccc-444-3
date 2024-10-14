@@ -3,6 +3,7 @@ import { en } from '@/_locales/en'
 import { fr } from '@/_locales/fr'
 import { my } from '@/_locales/my'
 import { th } from '@/_locales/th'
+import { vi } from '@/_locales/vi'
 
 
 export default defineI18nConfig (() => ({
@@ -10,5 +11,5 @@ export default defineI18nConfig (() => ({
   locale: 'en',
   defaultLocale: 'en',
   fallbackLocale: 'en',
-  messages: { de, en, fr, my, th }
+  messages: { de, en, fr, my, th, vi }
 }))
