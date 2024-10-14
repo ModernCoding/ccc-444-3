@@ -1,6 +1,6 @@
 <script setup>
 
-  import { CallToActions, Logo } from '#components'
+  import { Locales } from '#components'
 
   const windowWidths = ref ({})
 
@@ -18,7 +18,7 @@
   const { locale, messages } = useI18n ()
   const languageOptions = ref (Object.keys (messages.value))
 
-  const modalComponents = { CallToActions, Logo }
+  const modalComponents = { Locales }
 
 
   const _getComponent = key => modalComponents [ key ]
@@ -29,7 +29,7 @@
     if (modal.value.main.show) { return modalStore.resetMain () }
 
     modalStore.patchMainShow ()
-    setTimeout (() => modalStore.patchMainContent ('CallToActions'), 1000)
+    setTimeout (() => modalStore.patchMainContent ('Locales'), 1000)
 
   }
 

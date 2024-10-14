@@ -1,9 +1,14 @@
 $o-font: "o-font"
+$o-font-my: "o-font-my"
 $o-font-th: "o-font-th"
 
 @font-face
   font-family: "o-font"
   src: url("/fonts/mukta.ttf")
+
+@font-face
+  font-family: "o-font-my"
+  src: url("/fonts/noto-serif-myanmar.ttf")
 
 @font-face
   font-family: "o-font-th"
@@ -48,6 +53,9 @@ label
 
 .o-font-smaller
   font-size: $once_54_by_phi_power_3 * 1px
+
+.o-font-my, .o-font-my *
+  font-family: $o-font-my !important
 
 .o-font-th, .o-font-th *
   font-family: $o-font-th !important
