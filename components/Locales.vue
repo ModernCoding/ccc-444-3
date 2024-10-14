@@ -1,89 +1,67 @@
 <script setup>
 
-  const screenPropertiesStore
-    = defineScreenPropertiesStoreFromComposable () ()
+  const layoutScripts = collectLayoutScriptsFromComposable ()
+  const modalStore = defineModalStoreFromComposable () ()
+
+  const { locale } = useI18n ()
   
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
+  const languageOptions = {
+      de: "Deutsch",
+      en: "English",
+      fr: "Français",
+      my: "မြန်မာဘာသာ",
+      th: "ภาษาไทย"
+    }
+
+
+  const _handleSelect = key => {
+      locale.value = key
+      localStorage.setItem (import.meta.env.VITE_LOCALE_KEY, key)
+      modalStore.resetMain ()
+    }
+
+
+  onMounted (() => {
+    
+    layoutScripts.setFontSizeHeader ()
+    
+    window.addEventListener (
+        'resize',
+        () => layoutScripts.setFontSizeHeader ()
+      )
+
+  })
 
 </script>
 
 
 <template>
 
-  <section
-    class="o-call-to-actions"
-    :data-number-of-parts="screenProperties.ratioIndex"
-  >
+  <nav id="locales">
 
-    <figure>
-
-      <picture>
+    <button
+      v-for="key in Object.keys (languageOptions)"
+      :key="key"
+      @click="_handleSelect (key)"
+    >
       
-        <NuxtImg
-          src="/images/tharrawaddy-min-bell.png"
-          alt="Tharrawaddy Min Bell"
-          loading="lazy"
-          preload
-        />
+      <div
+        :class="[ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''"
+      >
+        {{ languageOptions [ key ] }}
+      </div>
       
-      </picture>
-
-
-      <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.contactUs') }}
-      </figcaption>
-
-    </figure>
-
-
-    <figure>
-
-      <picture>
-      
-        <NuxtImg
-          src="/images/bus_stop_02.jpg"
-          alt="Request next call"
-          loading="lazy"
-          preload
-        />
-      
-      </picture>
-
-
-      <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.requestCall') }}
-      </figcaption>
-
-    </figure>
-
-
-    <figure>
-
-      <picture>
-      
-        <NuxtImg
-          src="/images/compass.png"
-          alt="Bangsaen, Thailand"
-          loading="lazy"
-          preload
-        />
-      
-      </picture>
-
-
-      <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.findUs') }}
-      </figcaption>
-
-    </figure>
+      <div class="o-locale">{{ key }}</div>
     
-  </section>
+    </button>
+
+  </nav>
 
 </template>
 
 
 <style
   scoped
-  src="@/assets/sass/components/call-to-actions.sass"
+  src="@/assets/sass/components/locales.sass"
   lang="sass"
 ></style>

@@ -8,11 +8,15 @@
   z-index: 8
 
   background-color: colors.$dark
-  transition: height 1s
+  transition: height 1s, opacity 1s
 
 
   &[data-is-shown="0"]
     height: 0
+    opacity: 0
+
+  &[data-is-shown="1"]
+    opacity: 1
 
 
   &[data-number-of-parts="1"]

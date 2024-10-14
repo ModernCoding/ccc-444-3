@@ -15,8 +15,7 @@
   const { modal } = storeToRefs (modalStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  const { locale, messages } = useI18n ()
-  const languageOptions = ref (Object.keys (messages.value))
+  const { locale } = useI18n ()
 
   const modalComponents = { Locales }
 
@@ -29,7 +28,7 @@
     if (modal.value.main.show) { return modalStore.resetMain () }
 
     modalStore.patchMainShow ()
-    setTimeout (() => modalStore.patchMainContent ('Locales'), 1000)
+    modalStore.patchMainContent ('Locales')
 
   }
 
@@ -81,7 +80,7 @@
 
     <nav>
       <button
-        class="o-lang"
+        class="o-locale"
         @click="_handleModal"
       >
         {{ locale }}

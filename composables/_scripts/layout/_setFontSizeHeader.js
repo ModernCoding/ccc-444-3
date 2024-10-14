@@ -23,9 +23,9 @@ export default () => (header => {
     }) ()
 
 
-  ;(lang => {
+  document.querySelectorAll ('.o-locale').forEach (locale => {
 
-      const langHeight = (lH =>
+      const localeHeight = (lH =>
 
           [ TWICE_54_BY_PHI_POWER_4, lH, TWICE_54_BY_PHI_POWER_2 ] [
             +(lH > TWICE_54_BY_PHI_POWER_4)
@@ -35,9 +35,10 @@ export default () => (header => {
         ) (header.getBoundingClientRect ().height / PHI)
 
 
-      lang.style.height = `${ langHeight }px`
-      lang.style.width = `${ langHeight * PHI }px`
+      locale.style.fontSize = `${ fontSize }px`
+      locale.style.height = `${ localeHeight }px`
+      locale.style.width = `${ localeHeight * PHI }px`
 
-    }) (header.querySelector ('.o-lang'))
+    })
 
 }) (document.querySelector ('#__nuxt > header'))
