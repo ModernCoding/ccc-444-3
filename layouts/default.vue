@@ -25,10 +25,7 @@
 
   const _handleModal = () => {
 
-    if (modal.value.main.show) {
-      modalStore.patchMainShow (false)
-      return setTimeout (modalStore.resetMain, 1000)
-    }
+    if (modal.value.main.show) { return modalStore.resetMain () }
 
     modalStore.patchMainShow ()
     modalStore.patchMainContent ('Locales')
