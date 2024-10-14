@@ -90,9 +90,12 @@ export default (
 
         slogan && (() => {
 
+            const h1 = slogan.querySelector ('h1')
+            if (!h1) { return }
+
             screenProperties.ratioIndex < 2 && isSloganInFooter.value
-                ? slogan.classList.remove ('text-uppercase')
-                : slogan.classList.add ('text-uppercase')
+                ? h1.classList.remove ('text-uppercase')
+                : h1.classList.add ('text-uppercase')
 
           }) ()
 
@@ -144,7 +147,8 @@ export default (
 
         slogan && (() => {
 
-            slogan.classList.remove ('text-uppercase')
+            const h1 = slogan.querySelector ('h1')
+            h1 && h1.classList.remove ('text-uppercase')
 
             !isSloganInFooter.value && (() => {
                 slogan.style.height = `${ height }px`
@@ -172,7 +176,10 @@ export default (
         figure.style.height
           = `${ screenProperties.heights.main - PHI }px`
 
-        slogan && slogan.classList.remove ('text-uppercase')
+        const h1 = slogan ? slogan.querySelector ('h1') : null
+
+        h1 && h1.classList.remove ('text-uppercase')
+
 
         const img = figure.querySelector ('img')
         if (!img) { return isSloganInFooter.value = true }
@@ -180,9 +187,9 @@ export default (
         isSloganInFooter.value = img.getBoundingClientRect ().width
             > screenProperties.widths.main / PHI ** 2
 
-        slogan
+        h1
           && !isSloganInFooter.value
-          && slogan.classList.add ('text-uppercase')
+          && h1.classList.add ('text-uppercase')
 
       }
 

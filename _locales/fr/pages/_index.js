@@ -1,5 +1,5 @@
 export const index = {
     slogan: "Votre application sur mesure\xa0!",
-    and: "Ainsi que",
-    more: "davantage"
+    and: "Et bien",
+    more: "davantage\xa0!"
   }
