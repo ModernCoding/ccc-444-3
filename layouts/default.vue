@@ -1,5 +1,7 @@
 <script setup>
 
+  import { CallToActions, Logo } from '#components'
+
   const windowWidths = ref ({})
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
@@ -16,10 +18,7 @@
   const { locale, messages } = useI18n ()
   const languageOptions = ref (Object.keys (messages.value))
 
-  const modalComponents = {
-      cta: resolveComponent('CallToActions'),
-      logo: resolveComponent('Logo')
-    }
+  const modalComponents = { CallToActions, Logo }
 
 
   const _getComponent = key => modalComponents [ key ]
@@ -30,7 +29,7 @@
     if (modal.value.main.show) { return modalStore.resetMain () }
 
     modalStore.patchMainShow ()
-    setTimeout (() => modalStore.patchMainContent ('logo'), 1000)
+    setTimeout (() => modalStore.patchMainContent ('CallToActions'), 1000)
 
   }
 
