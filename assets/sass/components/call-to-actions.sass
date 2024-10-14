@@ -18,7 +18,7 @@
   display: flex
 
 
-  figure
+  a, figure
 
     display: flex
     flex-direction: column
@@ -47,7 +47,7 @@
 
     gap: $_gapOnePart
 
-    figure
+    a, figure
       width: calc(100% / 3 - $_gapOnePart / 3 * 2)
 
 
@@ -55,7 +55,7 @@
 
     gap: $_gapTwoParts
 
-    figure
+    a, figure
       width: calc(100% / 3 - $_gapTwoParts / 3 * 2)
 
 
@@ -63,5 +63,9 @@
 
     gap: $_gapThreeParts
 
-    figure
+    a, figure
       width: calc(100% / 3 - $_gapThreeParts / 3 * 2)
+
+
+  a > figure
+    width: 100% !important

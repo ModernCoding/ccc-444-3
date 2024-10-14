@@ -27,25 +27,29 @@
     :data-number-of-parts="screenProperties.ratioIndex"
   >
 
-    <figure>
+    <a href="mailto:contact@coding-crafting-consulting.com">
 
-      <picture>
-      
-        <NuxtImg
-          src="/images/tharrawaddy-min-bell.png"
-          alt="Tharrawaddy Min Bell"
-          loading="lazy"
-          preload
-        />
-      
-      </picture>
+      <figure>
+
+        <picture>
+        
+          <NuxtImg
+            src="/images/tharrawaddy-min-bell.png"
+            alt="Tharrawaddy Min Bell"
+            loading="lazy"
+            preload
+          />
+        
+        </picture>
 
 
-      <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.contactUs') }}
-      </figcaption>
+        <figcaption class="fw-bold">
+          {{ $t ('components.callToActions.contactUs') }}
+        </figcaption>
 
-    </figure>
+      </figure>
+
+    </a>
 
 
     <figure>
