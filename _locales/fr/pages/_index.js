@@ -1,3 +1,3 @@
 export const index = {
-    slogan: "Nous manufacturons votre application\xa0!"
+    slogan: "Votre application sur mesure\xa0!"
   }
