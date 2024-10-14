@@ -37,25 +37,27 @@
 
 <template>
 
-  <nav id="locales">
+  <menu id="locales">
 
-    <button
-      v-for="key in Object.keys (languageOptions)"
-      :key="key"
-      @click="_handleSelect (key)"
-    >
-      
-      <div
-        :class="[ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''"
-      >
-        {{ languageOptions [ key ] }}
-      </div>
-      
-      <div class="o-locale">{{ key }}</div>
-    
-    </button>
+    <ul v-for="key in Object.keys (languageOptions)" :key="key">
 
-  </nav>
+      <button @click="_handleSelect (key)">
+        
+        <div
+          :class="
+              [ 'my', 'th' ].includes (key) ? `o-font-${ key }` : ''
+            "
+        >
+          {{ languageOptions [ key ] }}
+        </div>
+
+        <div class="o-locale">{{ key }}</div>
+      
+      </button>
+
+    </ul>
+
+  </menu>
 
 </template>
 
