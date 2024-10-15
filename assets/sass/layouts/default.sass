@@ -27,10 +27,7 @@ figure
   width: 100%
   overflow: hidden
 
-
-  > *
-    display: flex
-    color: colors.$light
+  *
     transition: opacity 1s linear
 
     &[data-is-shown="0"]
@@ -38,6 +35,11 @@ figure
 
     &[data-is-shown="1"]
       opacity: 1
+
+
+  > *
+    display: flex
+    color: colors.$light
 
 
   > header
@@ -54,6 +56,13 @@ figure
 
   > section
     align-items: stretch
+
+    > aside
+    
+      > a
+        display: flex
+        justify-content: center
+        width: 100%
 
 
     > main[role="main"]
@@ -100,23 +109,6 @@ figure
 
         height: dimensions.$heightAsideOnePart
         width: dimensions.$asideWidthOnePart
-
-        > nav
-          display: flex
-          align-items: center
-
-          > menu
-
-            > ul
-              display: flex
-              flex-wrap: wrap
-              align-items: center
-              gap: 0 sizes.$twice_54_by_phi_power_2 * 1px
-
-              > li
-                font-size: sizes.$twice_54_by_phi_power_4 * 1px
-                letter-spacing: math.div(sizes.$twice_54_by_phi_power_4, math.pow(constants.$phi, 2)) * 1px
-                text-transform: uppercase
 
 
       > main[role="main"]

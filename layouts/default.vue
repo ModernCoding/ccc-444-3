@@ -124,8 +124,13 @@
   <section :data-is-shown="+!loading.is">
 
     <aside>
-      <Logo />
-      <div id="aside-content" />
+
+      <NuxtLink to="/">
+        <Logo />
+      </NuxtLink>
+      
+      <div id="aside-content" :data-is-shown="+!modal.main.show" />
+    
     </aside>
 
 
