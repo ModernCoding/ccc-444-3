@@ -30,7 +30,12 @@
 
         }) (document.querySelector ('#__nuxt'))
 
+
       modalStore.resetMain ()
+
+      document
+        .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
+        .forEach (element => element.removeAttribute ('data-is-hidden'))
     
     }
 

@@ -2,14 +2,10 @@
 @use 'dimensions' as dimensions
 
 
-#main-modal
-  
+.o-modal
   position: absolute
   z-index: 8
-
-  background-color: colors.$dark
   transition: height .5s linear, opacity .5s linear
-
 
   &[data-is-shown="0"]
     height: 0
@@ -21,13 +17,7 @@
 
   &[data-number-of-parts="1"]
     
-    top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart)
-    
     width: calc(100% - dimensions.$layoutPaddingRightOnePart - dimensions.$layoutPaddingLeftOnePart)
-
-
-    &[data-is-shown="1"]
-      height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
 
 
   &[data-number-of-parts="2"],
@@ -37,6 +27,44 @@
   
     &[data-is-shown="1"]
       height: calc(dimensions.$height - dimensions.$heightHeaderTwoParts)
+
+
+#aside-modal, #central-modal
+
+  &[data-number-of-parts="1"]
+    top: 0
+
+
+#aside-modal
+
+  &[data-number-of-parts="2"]
+    width: dimensions.$asideWidthTwoParts
+
+  &[data-number-of-parts="3"]
+    width: dimensions.$asideWidthThreeParts
+
+
+#central-modal
+
+  &[data-number-of-parts="2"]
+    top: 0
+    height: 0
+
+  &[data-number-of-parts="3"]
+    width: dimensions.$centralWidthThreeParts
+
+
+#main-modal
+  background-color: colors.$dark
+
+
+  &[data-number-of-parts="1"]
+    
+    top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart)
+
+
+    &[data-is-shown="1"]
+      height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
 
 
   &[data-number-of-parts="2"]

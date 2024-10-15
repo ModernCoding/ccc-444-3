@@ -150,7 +150,7 @@
     <Teleport
       v-if="screenProperties.ratioIndex > 2"
       defer
-      to="#central"
+      to="#central-content"
     >
       <CallToActions />
     </Teleport>

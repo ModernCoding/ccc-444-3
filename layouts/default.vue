@@ -28,7 +28,7 @@
   const _handleModal = () => {
 
     document
-      .querySelectorAll ('main[role="main"] > *:not(#main-modal)')
+      .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
       .forEach (element =>
 
           modal.value.main.show
@@ -125,16 +125,40 @@
 
     <aside>
 
-      <NuxtLink to="/">
+      <NuxtLink to="/" :data-is-shown="+!modal.main.show">
         <Logo />
       </NuxtLink>
       
+
       <div id="aside-content" :data-is-shown="+!modal.main.show" />
+
+
+      <div
+        class="o-modal"
+        id="aside-modal"
+        :data-number-of-parts="screenProperties.ratioIndex"
+        :data-is-shown="+modal.main.show"
+      />
     
     </aside>
 
 
-    <section id="central" />
+    <section id="central">
+
+      <article
+        id="central-content"
+        :data-is-shown="+!modal.main.show"
+      />
+
+
+      <div
+        class="o-modal"
+        id="central-modal"
+        :data-number-of-parts="screenProperties.ratioIndex"
+        :data-is-shown="+modal.main.show"
+      />
+
+    </section>
 
 
     <main role="main">
@@ -143,6 +167,7 @@
 
 
       <div
+        class="o-modal"
         id="main-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
