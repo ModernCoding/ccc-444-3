@@ -49,9 +49,10 @@ export default () => (header => {
     if (!locales) { return }
     locales.style.gap = `${ localeHeight / PHI ** 2 }px`
 
-    locales.querySelectorAll ('button').forEach (button => {
-        button.style.gap = `${ localeHeight / PHI }px`
-      })
+    locales.querySelectorAll ('button').forEach (button =>
+        button.style.gap
+          = `${ localeHeight / PHI ** 3 }px ${ localeHeight / PHI }px`
+      )
 
   }) (document.querySelector ('#locales'))
 

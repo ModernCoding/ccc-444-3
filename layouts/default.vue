@@ -27,6 +27,17 @@
 
   const _handleModal = () => {
 
+    document
+      .querySelectorAll ('main[role="main"] > *:not(#main-modal)')
+      .forEach (element =>
+
+          modal.value.main.show
+            ? element.removeAttribute ('data-is-hidden')
+            : element.setAttribute ('data-is-hidden', 1)
+
+        )
+
+
     if (modal.value.main.show) { return modalStore.resetMain () }
 
     modalStore.patchMainShow ()
@@ -139,7 +150,7 @@
   </section>
 
 
-  <footer :data-is-shown="+!loading.is">
+  <footer :data-is-shown="+(!loading.is && !modal.main.show)">
     <nav />
     <nav v-if="screenProperties.ratioIndex > 2" />
     <nav id="footer-content" />

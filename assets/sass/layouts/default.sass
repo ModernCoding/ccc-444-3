@@ -51,8 +51,21 @@ figure
   > header, > footer
     align-items: center
 
+
   > section
     align-items: stretch
+
+
+    > main[role="main"]
+
+      > *:not(#main-modal)
+        transition: opacity 1s linear
+
+        &:not([data-is-hidden])
+          opacity: 1
+
+        &[data-is-hidden]
+          opacity: 0
 
 
   &[data-number-of-parts="1"]
