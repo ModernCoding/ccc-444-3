@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@nuxt/image": "^1.8.1",
-    "@nuxtjs/i18n": "^8.5.5",
-    "@pinia/nuxt": "^0.5.5",
-    "nuxt": "^3.13.2",
-    "vue": "^3.5.11",
+    "@nuxtjs/i18n": "^9.0.0",
+    "@pinia/nuxt": "^0.7.0",
+    "nuxt": "^3.14.159",
+    "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "dependencies": {
