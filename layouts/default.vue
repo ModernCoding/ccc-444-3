@@ -1,6 +1,6 @@
 <script setup>
 
-  import { Locales } from '#components'
+  import { Contact, Locales } from '#components'
 
   const windowWidths = ref ({})
 
@@ -19,13 +19,15 @@
 
   const { locale } = useI18n ()
 
-  const modalComponents = { Locales }
+  const modalComponents = { Contact, Locales }
 
 
   const _getComponent = key => modalComponents [ key ]
 
 
   const _handleModal = () => {
+
+    console.log (modal.value.main.show)
 
     document
       .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
@@ -148,6 +150,7 @@
         id="aside-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
+        @click="_handleModal"
       />
     
     </aside>
@@ -166,6 +169,7 @@
         id="central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
+        @click="_handleModal"
       />
 
     </section>

@@ -5,11 +5,35 @@
   const logoPropertiesStore
     = defineLogoPropertiesStoreFromComposable () ()
 
+  const modalStore = defineModalStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
   const { logoProperties } = storeToRefs (logoPropertiesStore)
+  const { modal } = storeToRefs (modalStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+
+  const _handleModal = () => {
+
+    document
+      .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
+      .forEach (element =>
+
+          modal.value.main.show
+            ? element.removeAttribute ('data-is-hidden')
+            : element.setAttribute ('data-is-hidden', 1)
+
+        )
+
+
+    if (modal.value.main.show) { return modalStore.resetMain () }
+
+    modalStore.patchMainShow ()
+    modalStore.patchMainContent ('Contact')
+
+  }
 
 
   onMounted (() => {
@@ -80,7 +104,7 @@
     </figure>
 
 
-    <figure>
+    <figure @click="_handleModal">
 
       <picture>
       
