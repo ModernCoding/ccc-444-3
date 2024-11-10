@@ -72,7 +72,7 @@
               }
             `"
         >
-          {{ languageOptions [ key ] }}
+          {{ key }}
         </div>
 
 

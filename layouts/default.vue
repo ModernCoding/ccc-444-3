@@ -19,15 +19,11 @@
 
   const { locale } = useI18n ()
 
-  const modalComponents = { Contact, Locales }
 
-
-  const _getComponent = key => modalComponents [ key ]
+  const _getComponent = key => ({ Contact, Locales }) [ key ]
 
 
   const _handleModal = () => {
-
-    console.log (modal.value.main.show)
 
     document
       .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
