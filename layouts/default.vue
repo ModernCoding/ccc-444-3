@@ -5,6 +5,7 @@
   const windowWidths = ref ({})
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
+  const modalScripts = collectModalScriptsFromComposable ()
   const startPageScripts = collectStartPageScriptsFromComposable ()
   
   const loadingStore = defineLoadingStoreFromComposable () ()
@@ -21,27 +22,6 @@
 
 
   const _getComponent = key => ({ Contact, Locales }) [ key ]
-
-
-  const _handleModal = () => {
-
-    document
-      .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
-      .forEach (element =>
-
-          modal.value.main.show
-            ? element.removeAttribute ('data-is-hidden')
-            : element.setAttribute ('data-is-hidden', 1)
-
-        )
-
-
-    if (modal.value.main.show) { return modalStore.resetMain () }
-
-    modalStore.patchMainShow ()
-    modalStore.patchMainContent ('Locales')
-
-  }
 
 
   const _setDimensions = () => {
@@ -111,7 +91,7 @@
 
       <button
         class="o-locale o-font-en"
-        @click="_handleModal"
+        @click="modalScripts.openOrClose (modalStore, modal, 'Locales')"
       >
 
         <i
@@ -146,7 +126,7 @@
         id="aside-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
-        @click="_handleModal"
+        @click="modalScripts.openOrClose (modalStore, modal)"
       />
     
     </aside>
@@ -165,7 +145,7 @@
         id="central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
-        @click="_handleModal"
+        @click="modalScripts.openOrClose (modalStore, modal)"
       />
 
     </section>

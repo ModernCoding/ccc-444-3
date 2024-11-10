@@ -1,6 +1,7 @@
 <script setup>
 
   const ctaScripts = collectCtaScriptsFromComposable ()
+  const modalScripts = collectModalScriptsFromComposable ()
 
   const logoPropertiesStore
     = defineLogoPropertiesStoreFromComposable () ()
@@ -13,27 +14,6 @@
   const { logoProperties } = storeToRefs (logoPropertiesStore)
   const { modal } = storeToRefs (modalStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
-
-
-  const _handleModal = () => {
-
-    document
-      .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
-      .forEach (element =>
-
-          modal.value.main.show
-            ? element.removeAttribute ('data-is-hidden')
-            : element.setAttribute ('data-is-hidden', 1)
-
-        )
-
-
-    if (modal.value.main.show) { return modalStore.resetMain () }
-
-    modalStore.patchMainShow ()
-    modalStore.patchMainContent ('Contact')
-
-  }
 
 
   onMounted (() => {
@@ -104,7 +84,9 @@
     </figure>
 
 
-    <figure @click="_handleModal">
+    <figure
+      @click="modalScripts.openOrClose (modalStore, modal, 'Contact')"
+    >
 
       <picture>
       
