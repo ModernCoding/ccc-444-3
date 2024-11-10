@@ -54,10 +54,17 @@
 
     <figure>
 
-      <picture>
+      <picture id="bus-stop">
       
         <NuxtImg
-          src="/images/bus_stop_02.jpg"
+          src="/images/bus-stop.png"
+          alt="Request next call"
+          loading="lazy"
+          preload
+        />
+      
+        <NuxtImg
+          src="/images/bus-stop-red.png"
           alt="Request next call"
           loading="lazy"
           preload

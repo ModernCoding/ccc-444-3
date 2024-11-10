@@ -42,13 +42,16 @@ export default (screenProperties, logoProperties) => {
 
       ;(delta =>
 
-        pictures.forEach (
+        (height =>
 
-          picture => picture.style.height = `${
-              [ heighestPicture, delta ] [ +(heighestPicture > delta) ]
-            }px`
-        
-        )
+           pictures.forEach (picture => {
+              picture.style.height = `${ height }px`
+              picture.querySelectorAll ('img').forEach (img =>
+                img.style.maxHeight = `${ height }px`
+              )
+           })
+
+        ) ([ heighestPicture, delta ] [ +(heighestPicture > delta) ])
       
       ) (
 
