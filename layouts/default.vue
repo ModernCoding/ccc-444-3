@@ -110,12 +110,22 @@
     <nav v-if="screenProperties.ratioIndex > 2" />
 
     <nav>
+
       <button
         class="o-locale o-font-en"
         @click="_handleModal"
       >
-        {{ locale }}
+
+        <i
+          v-if="modal.main.show"
+          class="bi bi-x-lg"
+          aria-hidden="true"
+        ></i>
+        
+        <span v-else>{{ locale }}</span>
+
       </button>
+
     </nav>
 
   </header>
