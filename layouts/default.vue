@@ -82,7 +82,10 @@
 
 <template>
 
-  <header :data-is-shown="+!loading.is">
+  <header
+    :data-is-shown="+!loading.is"
+    data-is-veiled-at-first-loading
+  >
 
     <nav />
     <nav v-if="screenProperties.ratioIndex > 2" />
@@ -109,7 +112,10 @@
   </header>
 
 
-  <section :data-is-shown="+!loading.is">
+  <section
+    :data-is-shown="+!loading.is"
+    data-is-veiled-at-first-loading
+  >
 
     <aside>
 
@@ -170,7 +176,10 @@
   </section>
 
 
-  <footer :data-is-shown="+(!loading.is && !modal.main.show)">
+  <footer
+    :data-is-shown="+(!loading.is && !modal.main.show)"
+    data-is-veiled-at-first-loading
+  >
     <nav />
     <nav v-if="screenProperties.ratioIndex > 2" />
     <nav id="footer-content" />

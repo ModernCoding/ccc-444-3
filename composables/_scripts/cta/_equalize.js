@@ -6,6 +6,10 @@ export default (screenProperties, logoProperties) => {
         ? cta.style.height = `${ logoProperties.value.height }px`
         : cta.removeAttribute ('style')
 
+      cta
+        .querySelectorAll ('*')
+        .forEach (element => element.removeAttribute ('style'))
+
     })
 
 

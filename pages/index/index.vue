@@ -28,8 +28,8 @@
     if (!window) { return loadingStore.patchIs (false) }
 
 
-    ctaScripts.setFontSize ()
     ctaScripts.equalize (screenProperties, logoProperties)
+    ctaScripts.setFontSize ()
 
     startPageScripts.handleMachine (
         screenPropertiesStore,

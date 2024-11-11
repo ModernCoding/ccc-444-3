@@ -146,9 +146,19 @@ export default (
       logoPropertiesStore.patchWidth (logoWidth)
       break
 
+
     case "loader":
+
       loadingStore.patchShowLogo ()
+
+      document
+        .querySelectorAll ('[data-is-veiled-at-first-loading]')
+        .forEach (element =>
+          element.removeAttribute ('data-is-veiled-at-first-loading')
+        )
+
       break
+
 
     default:
       break
