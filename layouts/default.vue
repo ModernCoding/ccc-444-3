@@ -75,10 +75,7 @@
 
   onUpdated (() => {
 
-    layoutScripts.setFontSizeHeader ()
-      /*
-        need to resize locale font upon modal opening & closing
-      */
+    _setDimensions ()
 
     document.querySelector ('#footer-content .o-slogan')
       && startPageScripts.handleSlogan (screenProperties.value, true)

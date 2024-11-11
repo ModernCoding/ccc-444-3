@@ -36,25 +36,6 @@
     </a>
 
 
-<!--     <picture class="o-bus-stop">
-    
-      <NuxtImg
-        src="/images/bus-stop.png"
-        alt="Request next call"
-        loading="lazy"
-        preload
-      />
-    
-      <NuxtImg
-        src="/images/bus-stop-red.png"
-        alt="Request next call"
-        loading="lazy"
-        preload
-      />
-    
-    </picture> -->
-
-
     <picture>
     
       <NuxtImg
