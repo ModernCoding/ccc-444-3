@@ -9,6 +9,7 @@
       de: "Deutsch",
       en: "English",
       fr: "Français",
+      kh: "ភាសាខ្មែរ",
       my: "မြန်မာဘာသာ",
       th: "ภาษาไทย",
       vi: "Tiếng Việt"
@@ -24,7 +25,7 @@
 
           if (!nuxt) { return }
 
-          [ 'my', 'th', 'vi' ].includes (key)
+          [ 'kh', 'my', 'th', 'vi' ].includes (key)
             ? nuxt.setAttribute ('data-locale', key)
             : nuxt.removeAttribute ('data-locale')
 
@@ -67,7 +68,7 @@
               o-locale-label
 
               ${
-                [ 'my', 'th', 'vi' ]
+                [ 'kh', 'my', 'th', 'vi' ]
                   .includes (key) ? `o-font-${ key }` : 'o-font-en'
               }
             `"
