@@ -49,10 +49,13 @@ export default (screenProperties, logoProperties) => {
         (height =>
 
            pictures.forEach (picture => {
+
               picture.style.height = `${ height }px`
+
               picture.querySelectorAll ('img').forEach (img =>
                 img.style.maxHeight = `${ height }px`
               )
+              
            })
 
         ) ([ heighestPicture, delta ] [ +(heighestPicture > delta) ])

@@ -4,6 +4,7 @@
 
   const windowWidths = ref ({})
 
+  const ctaScripts = collectCtaScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalScripts = collectModalScriptsFromComposable ()
   const startPageScripts = collectStartPageScriptsFromComposable ()
@@ -19,6 +20,7 @@
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const { locale } = useI18n ()
+  const route = useRoute ()
 
 
   const _getComponent = key => ({ Contact, Locales }) [ key ]
@@ -30,6 +32,7 @@
 
     layoutScripts.setMainDimensions (screenPropertiesStore)
     layoutScripts.setFontSizeHeader ()
+    ctaScripts.equalizeInHeader (screenProperties)
 
     windowWidths.value = getWindowWidths (window.innerWidth)
 
@@ -92,8 +95,13 @@
     data-is-veiled-at-first-loading
   >
 
-    <nav />
+    <nav>
+      <CallToActionsHeader v-if="route.name !== 'index'" />
+    </nav>
+
+
     <nav v-if="screenProperties.ratioIndex > 2" />
+
 
     <nav>
 

@@ -58,7 +58,7 @@
 
     <figure>
 
-      <picture id="bus-stop">
+      <picture class="o-bus-stop">
       
         <NuxtImg
           src="/images/bus-stop.png"
@@ -84,27 +84,29 @@
     </figure>
 
 
-    <figure
-      @click="modalScripts.openOrClose (modalStore, modal, 'Contact')"
-    >
+    <NuxtLink to="/contact">
+    
+      <figure>
 
-      <picture>
-      
-        <NuxtImg
-          src="/images/compass.png"
-          alt="Bangsaen, Thailand"
-          loading="lazy"
-          preload
-        />
-      
-      </picture>
+        <picture>
+        
+          <NuxtImg
+            src="/images/compass.png"
+            alt="Bangsaen, Thailand"
+            loading="lazy"
+            preload
+          />
+        
+        </picture>
 
 
-      <figcaption class="fw-bold">
-        {{ $t ('components.callToActions.findUs') }}
-      </figcaption>
+        <figcaption class="fw-bold">
+          {{ $t ('components.callToActions.findUs') }}
+        </figcaption>
 
-    </figure>
+      </figure>
+    
+    </NuxtLink>
     
   </section>
 

@@ -1,10 +1,7 @@
 @use 'sass:math'
 
 @use '@/assets/sass/colors' as colors
-@use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
-@use '@/assets/sass/grid' as grid
-@use '@/assets/sass/sizes' as sizes
 
 
 figure
@@ -89,14 +86,19 @@ figure
 
 
     > header
+      
+      display: flex
+      flex-direction: row !important
+      justify-content: space-between
+
       height: dimensions.$heightHeaderOnePart
 
       > nav:first-child
         margin-right: 0
-        width: 0
+        // width: 0
 
       > nav:last-child
-        width: 100%
+        // width: 100%
 
 
       flex-direction: column
