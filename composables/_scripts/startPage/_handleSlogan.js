@@ -47,13 +47,36 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
 
 
   button.querySelectorAll ('p').forEach ((p, i) => {
+
+      const fontSizeToApply
+        = fontSize / PHI ** (1 + 1 ** !isSloganInFooter)
       
-      p.style.fontSize
-        = `${ fontSize / PHI ** (1 + 1 ** !isSloganInFooter) }px`
+      p.style.fontSize = `${ fontSizeToApply }px`
+      p.style.height = `${ fontSizeToApply * PHI }px`
+
+
+      ;(div => {
+        if (!div) { return }
+        div.style.height = `${ fontSizeToApply }px`
+        div.style.width = `${ fontSizeToApply * PHI }px`
+      }) (p.querySelector ('div'))
+
+
+      ;(i => {
+        if (!i) { return }
+        i.style.fontSize = `${ fontSizeToApply / PHI }px`
+      }) (p.querySelector ('i'))
+
+
+      ;(strong => {
+        if (!strong) { return }
+        strong.style.fontSize = `${ fontSizeToApply }px`
+      }) (p.querySelector ('strong'))
+
 
       i > 0 && (() => {
-          p.style.paddingRight = `${ fontSize / PHI ** 4 }px`
-          p.style.paddingLeft = `${ fontSize / PHI ** 4 }px`
+          p.style.gap = `${ fontSize / PHI ** 3 }px`
+          p.style.paddingRight = `${ fontSize / PHI }px`
         }) ()
 
     })
@@ -81,11 +104,33 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
 
           button.querySelectorAll ('p').forEach ((p, i) => {
 
-              p.style.fontSize = `${ size / PHI ** 2 }px`
+              const fontSizeToApply = size / PHI ** 2
+
+              p.style.fontSize = `${ fontSizeToApply }px`
+              p.style.height = `${ fontSizeToApply * PHI }px`
+
+
+              ;(div => {
+                if (!div) { return }
+                div.style.height = `${ fontSizeToApply }px`
+                div.style.width = `${ fontSizeToApply * PHI }px`
+              }) (p.querySelector ('div'))
+
+
+              ;(i => {
+                if (!i) { return }
+                i.style.fontSize = `${ fontSizeToApply / PHI }px`
+              }) (p.querySelector ('i'))
+
+
+              ;(strong => {
+                if (!strong) { return }
+                strong.style.fontSize = `${ fontSizeToApply }px`
+              }) (p.querySelector ('strong'))
 
               i > 0 && (() => {
-                  p.style.paddingRight = `${ size / PHI ** 5 }px`
-                  p.style.paddingLeft = `${ size / PHI ** 5 }px`
+                  p.style.gap = `${ size / PHI ** 4 }px`
+                  p.style.paddingRight = `${ size / PHI ** 2 }px`
                 }) ()
 
             })

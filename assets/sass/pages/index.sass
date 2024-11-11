@@ -50,8 +50,45 @@ $threePartsWidthRatioPart: 1 + constants.$phi + math.pow(constants.$phi, 2)
     p
       flex-grow: 1
 
-    p:last-child
-      background-color: colors.$danger
+
+      &:first-child
+        // compensation border-bottom on last-child
+        margin-top: sizes.$twice_54_by_phi_power_7 * -1px
+
+
+      &:last-child
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        border-bottom: sizes.$twice_54_by_phi_power_7 * 1px solid colors.$danger
+
+        border-top-left-radius: sizes.$twice_54_by_phi * 1%
+        border-top-right-radius: sizes.$twice_54_by_phi_power_2 * 1%
+        border-bottom-left-radius: sizes.$twice_54_by_phi * 1%
+        border-bottom-right-radius: sizes.$twice_54 * 1%
+
+
+        div
+
+          display: flex
+          align-items: center
+          justify-content: center
+
+          background-color: colors.$danger
+
+          border-top-left-radius: sizes.$twice_54_by_phi * 1%
+          border-bottom-left-radius: sizes.$twice_54 * 1%
+          border-top-right-radius: sizes.$twice_54 * 1%
+          border-bottom-right-radius: sizes.$twice_54_by_phi * 1%
+          
+          height: sizes.$twice_54_by_phi_power_3 * 1px
+          width: sizes.$twice_54_by_phi_power_2 * 1px
+
+
+          i
+            transform: rotate(90deg)
 
 
 #index-machine
