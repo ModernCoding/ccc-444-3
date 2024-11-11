@@ -3,43 +3,6 @@
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalStore = defineModalStoreFromComposable () ()
 
-  const { locale } = useI18n ()
-  
-  const languageOptions = {
-      de: "Deutsch",
-      en: "English",
-      fr: "Français",
-      my: "မြန်မာဘာသာ",
-      th: "ภาษาไทย",
-      vi: "Tiếng Việt"
-    }
-
-
-  const _handleSelect = key => {
-      
-      locale.value = key
-      localStorage.setItem (import.meta.env.VITE_LOCALE_KEY, key)
-
-      ;(nuxt => {
-
-          if (!nuxt) { return }
-
-          [ 'my', 'th', 'vi' ].includes (key)
-            ? nuxt.setAttribute ('data-locale', key)
-            : nuxt.removeAttribute ('data-locale')
-
-        }) (document.querySelector ('#__nuxt'))
-
-
-      modalStore.resetMain ()
-
-      document
-        .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
-        .forEach (element => element.removeAttribute ('data-is-hidden'))
-    
-    }
-
-
   onMounted (() => {
     
     layoutScripts.setFontSizeHeader ()
@@ -56,39 +19,53 @@
 
 <template>
 
-  <menu id="locales">
+  <article class="o-font-en">
 
-    <ul v-for="key in Object.keys (languageOptions)" :key="key">
+    <h1 class="fw-bold">+66.826.71.30.54</h1>
 
-      <button @click="_handleSelect (key)">
-        
-        <div
-          :class="`
-              o-locale-label
+    <a
+      href="mailto:contact@coding-crafting-consulting.com"
+      class="fw-bold text-danger"
+    >
+      contact@coding-crafting-consulting.com
+    </a>
 
-              ${
-                [ 'my', 'th', 'vi' ]
-                  .includes (key) ? `o-font-${ key }` : 'o-font-en'
-              }
-            `"
-        >
-          {{ key }}
-        </div>
+  </article>
 
 
-        <div class="o-locale o-font-en">{{ key }}</div>
-      
-      </button>
+  <article class="o-font-th">
+    <h1>61/29 ถนนบางแสนสาย 4 ใต้</h1>
+    <h2>ถนน ส่วนบุคคล NA วิลล่า 2</h2>
+    <h3>อำเภอเมืองชลบุรี จ.ชลบุรี 20130</h3>
+  </article>
 
-    </ul>
 
-  </menu>
+  <article class="o-font-en">
+    <h1>61/29 Bangsaen Sai 4 Tai Road</h1>
+    <h2>Thanon Suan Bukkhon NA Villa 2</h2>
+    <h3>Saen Suk, Mueang Chonburi, 20130, Thailand</h3>
+  </article>
+
+
+  <nav>
+
+    <a href="https://maps.app.goo.gl/pxzkFhtF86Hmse588" target="_blank">
+
+      <div>
+        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+      </div>
+
+      <strong>Google Maps</strong>
+
+    </a>
+
+  </nav>
 
 </template>
 
 
 <style
   scoped
-  src="@/assets/sass/components/locales.sass"
+  src="@/assets/sass/components/contact.sass"
   lang="sass"
 ></style>

@@ -20,38 +20,42 @@ $o-font-vi: "o-font-vi"
   src: url("/fonts/thasadith.ttf")
 
 
-*:not(i.bi)
-
+*:not(i), i
   font-size: $twice_54_by_phi_power_3 * 1px
   font-weight: $twice_54_by_phi_power_minus_3
+
+*:not(i)
   letter-spacing: $phi * 1px
   vertical-align: middle
 
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+i
+  letter-spacing: 1px
+
 
 #__nuxt
-  
-  *:not(i.bi)
+
+  *:not(i)
     font-family: $o-font
 
 
   &[data-locale="my"]
   
-    *:not(i.bi)
+    *:not(i)
       font-family: $o-font-my
 
 
   &[data-locale="th"]
   
-    *:not(i.bi)
+    *:not(i)
       font-family: $o-font-th
 
 
   &[data-locale="vi"]
   
-    *:not(i.bi)
+    *:not(i)
       font-family: $o-font-vi
 
 

@@ -1,0 +1,52 @@
+@use "sass:math"
+
+@use '@/assets/sass/colors' as colors
+@use '@/assets/sass/sizes' as sizes
+
+
+*
+  text-align: center
+
+
+nav
+
+  display: flex
+  justify-content: center
+  height: sizes.$twice_54_by_phi_power_2 * 1px
+
+
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: calc(sizes.$twice_54_by_phi_power_4 + sizes.$twice_54_by_phi_power_3 * (math.sqrt(2) - 1) / 2) * 1px
+    // gap: sizes.$twice_54_by_phi_power_4 * 1px
+
+
+    border-bottom: 1px solid colors.$light
+    text-transform: uppercase
+
+
+    div
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      background-color: colors.$danger
+      border-radius: sizes.$twice_54_by_phi_power_7 * 1px
+
+      height: calc((sizes.$twice_54_by_phi_power_2 - 1) * math.sqrt(2) / 2) * 1px
+
+      width: calc((sizes.$twice_54_by_phi_power_2 - 1) * math.sqrt(2) / 2) * 1px
+
+      margin-left: calc(sizes.$twice_54_by_phi_power_3 * (math.sqrt(2) - 1) / 2) * 1px
+
+      transform: rotate(45deg)
+
+
+    i, strong
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+
+    i
+      transform: rotate(-45deg)
