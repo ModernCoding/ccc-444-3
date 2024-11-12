@@ -40,21 +40,8 @@
     startPageScripts
       .handleSlogan (screenProperties.value, isSloganInFooter.value)
 
-    layoutScripts.setMainDimensions (screenPropertiesStore)
-
-
-    const _runLayoutScripts = () => {
-
-        layoutScripts.setFontSizeHeader ()
-        loadingStore.patchIs (false)
-        loadingStore.patchIsResizingMode (false)
-
-      }
-
-
-    loading.value.is
-      ? setTimeout (_runLayoutScripts, DELAY_TIMES.ELEMENT)
-      : _runLayoutScripts ()
+    layoutScripts
+      .runResizingScripts (loadingStore, screenPropertiesStore)
 
   }
 
