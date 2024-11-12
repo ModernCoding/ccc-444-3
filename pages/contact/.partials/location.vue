@@ -1,5 +1,9 @@
 <template>
-  <h1>{{ $t ('pages.contact.index.location') }}</h1>
+  
+  <h1 class="o-location">
+    {{ $t ('pages.contact.index.location') }}
+  </h1>
+
 </template>
 
 

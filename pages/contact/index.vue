@@ -121,9 +121,9 @@
   </article>
 
 
-<!--   <ClientOnly>
+  <ClientOnly>
 
-    <Teleport
+<!--     <Teleport
       v-if="screenProperties.ratioIndex === 2"
       defer
       to="#aside-content"
@@ -138,14 +138,14 @@
       to="#central-content"
     >
       <CallToActions />
-    </Teleport>
+    </Teleport> -->
 
 
     <Teleport v-if="isLocationInFooter" defer to="#footer-content">
       <Location />
     </Teleport>
 
-  </ClientOnly> -->
+  </ClientOnly>
 
 </template>
 
