@@ -25,7 +25,7 @@ export default (
         +(fontSize > TWICE_54_BY_PHI_POWER_4)
       ]
 
-    ) (maxHeight / PHI ** 2)
+    ) (maxHeight / PHI ** 5)
 
 
   ratioIndex === 0 && (location.style.height = 'auto')
