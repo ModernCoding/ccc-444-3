@@ -85,9 +85,9 @@ export default (
   logo.style.width = `${ logoWidth }px`
 
 
-  ;(nav =>
-    nav && (nav.style.height = `${ logoHeight / PHI }px`)
-  ) (container.querySelector ('nav'))
+  // ;(nav =>
+  //   nav && (nav.style.height = `${ logoHeight / PHI }px`)
+  // ) (container.querySelector ('nav'))
 
 
   header.style.height = `${ logoHeight / PHI - sectionHeight / 2 }px`

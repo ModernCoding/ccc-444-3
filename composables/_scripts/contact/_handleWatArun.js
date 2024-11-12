@@ -91,7 +91,6 @@ export default (
 
     () => {
 
-
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()
         screenPropertiesStore.patchPaddingTops ()

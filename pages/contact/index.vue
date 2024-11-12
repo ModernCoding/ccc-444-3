@@ -101,27 +101,10 @@
   <article
     id="contact"
     :class="isLocationInFooter ? 'o-no-location' : ''"
-
   >
 
     <WatArun />
     <Location v-if="!isLocationInFooter" />
-
-    <!-- <CallToActions v-if="screenProperties.ratioIndex < 3" /> -->
-    <!-- <ContactInfo v-if="screenProperties.ratioIndex < 2" /> -->
-    
-<!--     <Location
-      v-if="screenProperties.ratioIndex === 2 && !isLocationInFooter"
-    />
- -->
-
-<!--     <div
-      v-if="screenProperties.ratioIndex > 2"
-      :class="isLocationInFooter ? 'o-no-Location' : ''"
-      id="index-ContactInfo"
-    >
-      <Location v-if="!isLocationInFooter" />
-    </div> -->
 
   </article>
 

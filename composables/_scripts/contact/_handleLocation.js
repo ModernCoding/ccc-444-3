@@ -2,7 +2,7 @@ export default (screenProperties, isLocationInFooter) => {
 
   const location = document.querySelector ([
       '#contact > .o-location',
-      '#__nuxt > footer .o-location'
+      '#footer-content .o-location'
     ] [ +isLocationInFooter ])
 
 

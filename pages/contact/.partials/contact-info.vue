@@ -52,7 +52,7 @@
     >
       <h1>61/29 Bangsaen Sai 4 Tai Road</h1>
       <h2>Thanon Suan Bukkhon NA Villa 2</h2>
-      <h3>Saen Suk, Mueang Chonburi, 20130</h3>
+      <h3>Saen Suk, Mueang Chonburi, 20130, Thailand</h3>
     </article>
 
 
