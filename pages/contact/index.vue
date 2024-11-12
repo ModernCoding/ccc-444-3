@@ -1,11 +1,11 @@
 <script setup>
 
-  import Machine from './.partials/machine'
+  import ContactInfo from './.partials/contact-info'
   import Location from './.partials/location'
+  import WatArun from './.partials/wat-arun'
 
-  const ctaScripts = collectCtaScriptsFromComposable ()
+  const contactScripts = collectContactScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
-  const startPageScripts = collectStartPageScriptsFromComposable ()
   
   const loadingStore = defineLoadingStoreFromComposable () ()
 
@@ -28,16 +28,13 @@
     if (!window) { return loadingStore.patchIs (false) }
 
 
-    // ctaScripts.equalize (screenProperties, logoProperties)
-    // ctaScripts.setFontSize ()
+    contactScripts.handleWatArun (
+        screenPropertiesStore,
+        logoProperties,
+        isLocationInFooter
+      )
 
-    // startPageScripts.handleMachine (
-    //     screenPropertiesStore,
-    //     logoProperties,
-    //     isLocationInFooter
-    //   )
-
-    // startPageScripts
+    // contactScripts
     //   .handleLocation (screenProperties.value, isLocationInFooter.value)
 
     layoutScripts
@@ -103,22 +100,23 @@
 
   <article id="contact">
 
+    <WatArun />
+
     <!-- <CallToActions v-if="screenProperties.ratioIndex < 3" /> -->
-    <Machine v-if="screenProperties.ratioIndex < 2" />
+    <!-- <ContactInfo v-if="screenProperties.ratioIndex < 2" /> -->
     
-    <Location
+<!--     <Location
       v-if="screenProperties.ratioIndex === 2 && !isLocationInFooter"
     />
+ -->
 
-
-    <div
+<!--     <div
       v-if="screenProperties.ratioIndex > 2"
       :class="isLocationInFooter ? 'o-no-Location' : ''"
-      id="index-machine"
+      id="index-ContactInfo"
     >
       <Location v-if="!isLocationInFooter" />
-      <Machine />
-    </div>
+    </div> -->
 
   </article>
 
@@ -130,7 +128,7 @@
       defer
       to="#aside-content"
     >
-      <Machine />
+      <ContactInfo />
     </Teleport>
 
 
@@ -154,6 +152,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/index.sass"
+  src="@/assets/sass/pages/contact/index.sass"
   lang="sass"
 ></style>

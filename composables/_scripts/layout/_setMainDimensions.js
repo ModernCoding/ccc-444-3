@@ -1,6 +1,10 @@
 export default screenPropertiesStore => {
 
-  (main => {
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
+
+
+  ;(main => {
 
     if (!main) { return }
 
@@ -51,7 +55,7 @@ export default screenPropertiesStore => {
 
     nuxt && nuxt.setAttribute (
       'data-number-of-parts',
-      screenPropertiesStore.$state.screenProperties.ratioIndex
+      screenProperties.ratioIndex
     )
 
   ) (document.querySelector ('#__nuxt'))

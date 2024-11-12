@@ -4,12 +4,14 @@ export default (
   isSloganInFooter
 ) => {
 
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
+  console.log (screenProperties);
+
   (index =>
     index && index.classList.remove ('o-no-machine')
   ) (document.querySelector ('#index'))
 
-  const { screenProperties: { value: screenProperties } }
-    = storeToRefs (screenPropertiesStore)
 
   const sectionHeight = (section =>
       section ? section.getBoundingClientRect ().height : 0

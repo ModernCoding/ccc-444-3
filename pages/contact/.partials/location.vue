@@ -5,6 +5,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/index.sass"
+  src="@/assets/sass/pages/contact/index.sass"
   lang="sass"
 ></style>

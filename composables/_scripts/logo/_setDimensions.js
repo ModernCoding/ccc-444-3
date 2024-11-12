@@ -11,6 +11,12 @@ export default (
 
   if (!window) { return }
 
+  const { loaderProperties: { value: loaderProperties } }
+    = storeToRefs (loaderPropertiesStore)
+
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
+
   const { id } = getId (parent)
   const logo = document.querySelector (`#${ id }`)
   if (!logo) { return }
@@ -58,14 +64,14 @@ export default (
   let { width: logoWidth } = logo.getBoundingClientRect ()
 
 
-  const maxHeight = ((sP, lP) => ({
-        aside: sP.heights.aside - sP.paddingTops.corrected.aside,
-        loader: lP.heights.logo
-      } [ parent ])
-    ) (
-      screenPropertiesStore.$state.screenProperties,
-      loaderPropertiesStore.$state.loaderProperties
-    )
+  const maxHeight = {
+
+      aside: screenProperties.heights.aside
+          - screenProperties.paddingTops.corrected.aside,
+
+      loader: loaderProperties.heights.logo
+
+    } [ parent ]
 
 
   const logoHeight = (height =>
