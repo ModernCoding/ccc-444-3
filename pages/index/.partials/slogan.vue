@@ -10,9 +10,9 @@
       <p class="fw-bold">{{ $t ('pages.index.and') }}</p>
 
       <p>
-        <div>
+        <span>
           <i class="bi bi-hand-index-fill" aria-hidden="true"></i>
-        </div>
+        </span>
 
         <strong>{{ $t ('pages.index.more') }}</strong>
       </p>

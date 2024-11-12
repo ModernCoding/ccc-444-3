@@ -1,7 +1,7 @@
 <script setup>
 
   import Machine from './.partials/machine'
-  import Slogan from './.partials/slogan'
+  import Location from './.partials/location'
 
   const ctaScripts = collectCtaScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
@@ -19,7 +19,7 @@
   const { logoProperties } = storeToRefs (logoPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  const isSloganInFooter = ref (false)
+  const isLocationInFooter = ref (false)
   const { locale } = useI18n ()
 
 
@@ -28,33 +28,20 @@
     if (!window) { return loadingStore.patchIs (false) }
 
 
-    ctaScripts.equalize (screenProperties, logoProperties)
-    ctaScripts.setFontSize ()
+    // ctaScripts.equalize (screenProperties, logoProperties)
+    // ctaScripts.setFontSize ()
 
-    startPageScripts.handleMachine (
-        screenPropertiesStore,
-        logoProperties,
-        isSloganInFooter
-      )
+    // startPageScripts.handleMachine (
+    //     screenPropertiesStore,
+    //     logoProperties,
+    //     isLocationInFooter
+    //   )
 
-    startPageScripts
-      .handleSlogan (screenProperties.value, isSloganInFooter.value)
+    // startPageScripts
+    //   .handleLocation (screenProperties.value, isLocationInFooter.value)
 
-    layoutScripts.setMainDimensions (screenPropertiesStore)
-
-
-    const _runLayoutScripts = () => {
-
-        layoutScripts.setFontSizeHeader ()
-        loadingStore.patchIs (false)
-        loadingStore.patchIsResizingMode (false)
-
-      }
-
-
-    loading.value.is
-      ? setTimeout (_runLayoutScripts, DELAY_TIMES.ELEMENT)
-      : _runLayoutScripts ()
+    layoutScripts
+      .runResizingScripts (loadingStore, screenPropertiesStore)
 
   }
 
@@ -114,29 +101,29 @@
 
 <template>
 
-  <article id="index">
+  <article id="contact">
 
-    <CallToActions v-if="screenProperties.ratioIndex < 3" />
+    <!-- <CallToActions v-if="screenProperties.ratioIndex < 3" /> -->
     <Machine v-if="screenProperties.ratioIndex < 2" />
     
-    <Slogan
-      v-if="screenProperties.ratioIndex === 2 && !isSloganInFooter"
+    <Location
+      v-if="screenProperties.ratioIndex === 2 && !isLocationInFooter"
     />
 
 
     <div
       v-if="screenProperties.ratioIndex > 2"
-      :class="isSloganInFooter ? 'o-no-slogan' : ''"
+      :class="isLocationInFooter ? 'o-no-Location' : ''"
       id="index-machine"
     >
-      <Slogan v-if="!isSloganInFooter" />
+      <Location v-if="!isLocationInFooter" />
       <Machine />
     </div>
 
   </article>
 
 
-  <ClientOnly>
+<!--   <ClientOnly>
 
     <Teleport
       v-if="screenProperties.ratioIndex === 2"
@@ -156,11 +143,11 @@
     </Teleport>
 
 
-    <Teleport v-if="isSloganInFooter" defer to="#footer-content">
-      <Slogan />
+    <Teleport v-if="isLocationInFooter" defer to="#footer-content">
+      <Location />
     </Teleport>
 
-  </ClientOnly>
+  </ClientOnly> -->
 
 </template>
 

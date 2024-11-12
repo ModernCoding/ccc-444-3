@@ -55,11 +55,11 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
       p.style.height = `${ fontSizeToApply * PHI }px`
 
 
-      ;(div => {
-        if (!div) { return }
-        div.style.height = `${ fontSizeToApply }px`
-        div.style.width = `${ fontSizeToApply * PHI }px`
-      }) (p.querySelector ('div'))
+      ;(span => {
+        if (!span) { return }
+        span.style.height = `${ fontSizeToApply }px`
+        span.style.width = `${ fontSizeToApply * PHI }px`
+      }) (p.querySelector ('span'))
 
 
       ;(i => {
@@ -110,11 +110,11 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
               p.style.height = `${ fontSizeToApply * PHI }px`
 
 
-              ;(div => {
-                if (!div) { return }
-                div.style.height = `${ fontSizeToApply }px`
-                div.style.width = `${ fontSizeToApply * PHI }px`
-              }) (p.querySelector ('div'))
+              ;(span => {
+                if (!span) { return }
+                span.style.height = `${ fontSizeToApply }px`
+                span.style.width = `${ fontSizeToApply * PHI }px`
+              }) (p.querySelector ('span'))
 
 
               ;(i => {
