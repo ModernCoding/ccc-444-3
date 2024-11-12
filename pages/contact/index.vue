@@ -34,8 +34,8 @@
         isLocationInFooter
       )
 
-    // contactScripts
-    //   .handleLocation (screenProperties.value, isLocationInFooter.value)
+    contactScripts
+      .handleLocation (screenProperties.value, isLocationInFooter.value)
 
     layoutScripts
       .runResizingScripts (loadingStore, screenPropertiesStore)
