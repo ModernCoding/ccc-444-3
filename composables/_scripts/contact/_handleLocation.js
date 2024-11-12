@@ -1,7 +1,4 @@
-export default (
-  screenProperties,
-  isLocationInFooter
-) => (ratioIndex => {
+export default (screenProperties, isLocationInFooter) => {
 
   const location = document.querySelector ([
       '#contact > .o-location',
@@ -13,7 +10,6 @@ export default (
 
 
   const maxHeight = [
-      // location.getBoundingClientRect ().height,
       screenProperties.heights.main,
       screenProperties.heights.footer
     ] [ +isLocationInFooter ]
@@ -25,14 +21,7 @@ export default (
         +(fontSize > TWICE_54_BY_PHI_POWER_4)
       ]
 
-    ) (maxHeight / PHI ** 5)
-
-
-  ratioIndex === 0 && (location.style.height = 'auto')
-    /*
-      in 2-part mode,
-      need to temporarily unset previously computed height
-    */
+    ) (maxHeight / PHI ** [ 5, 2 ] [ +isLocationInFooter ])
 
 
   location.style.fontSize = `${ fontSize }px`
@@ -54,10 +43,4 @@ export default (
 
     }) ()
 
-
-  ratioIndex === 0 && (location.style.height = `${ maxHeight }px`)
-    /*
-      in 2-part mode, setting back previously computed height
-    */
-
-}) (screenProperties.ratioIndex - 2)
+}

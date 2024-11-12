@@ -91,70 +91,6 @@ export default (
 
     () => {
 
-        const marginTop = screenProperties.heights.header / PHI
-
-        const height = screenProperties.heights.aside
-            - logoProperties.value.height
-            - marginTop
-
-
-        figure.style.marginTop = `${ marginTop }px`
-        figure.style.height = `${ height }px`
-
-        const img = figure.querySelector ('img')
-
-        if (!img) { return isSloganInFooter.value = true }
-        img.removeAttribute ('style')
-
-
-        isSloganInFooter.value = (() => {
-
-            switch (true) {
-
-              case  height <= 0:
-              case  img.getBoundingClientRect ().width <= 0:
-
-              case  figure
-                .getBoundingClientRect ()
-                .width / img.getBoundingClientRect ().width > PHI ** 2:
-
-                return true
-
-
-              default:
-                return false
-
-            }
-
-          }) ()
-
-
-        isSloganInFooter.value && (figure.style.display = 'none')
-
-
-        slogan && (() => {
-
-            const h1 = slogan.querySelector ('h1')
-            h1 && h1.classList.remove ('text-uppercase')
-
-            !isSloganInFooter.value && (() => {
-                slogan.style.height = `${ height }px`
-                slogan.style.marginTop = `${ marginTop }px`
-              }) ()
-
-          }) ()
-
-
-        screenPropertiesStore.patchRatioIndex (window)
-        screenPropertiesStore.patchHeights ()
-        screenPropertiesStore.patchPaddingTops ()
-        screenPropertiesStore.patchWidths ()
-
-      },
-
-
-    () => {
-
 
         screenPropertiesStore.patchRatioIndex (window)
         screenPropertiesStore.patchHeights ()
@@ -175,6 +111,6 @@ export default (
 
       }
 
-  ] [ screenProperties.ratioIndex - 1 ] ()
+  ] [ +(screenProperties.ratioIndex > 1) ] ()
 
 }
