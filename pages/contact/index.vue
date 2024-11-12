@@ -98,9 +98,14 @@
 
 <template>
 
-  <article id="contact">
+  <article
+    id="contact"
+    :class="isLocationInFooter ? 'o-no-location' : ''"
+
+  >
 
     <WatArun />
+    <Location v-if="!isLocationInFooter" />
 
     <!-- <CallToActions v-if="screenProperties.ratioIndex < 3" /> -->
     <!-- <ContactInfo v-if="screenProperties.ratioIndex < 2" /> -->
