@@ -104,7 +104,7 @@
 
       <button
         class="o-locale o-font-en"
-        @click="modalScripts.openOrClose (modalStore, modal, 'Locales')"
+        @click="modalScripts.openOrClose (modalStore, 'Locales')"
       >
 
         <i
@@ -142,7 +142,7 @@
         id="aside-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
-        @click="modalScripts.openOrClose (modalStore, modal)"
+        @click="modalScripts.openOrClose (modalStore)"
       />
     
     </aside>
@@ -161,7 +161,7 @@
         id="central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.main.show"
-        @click="modalScripts.openOrClose (modalStore, modal)"
+        @click="modalScripts.openOrClose (modalStore)"
       />
 
     </section>
