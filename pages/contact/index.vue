@@ -128,7 +128,7 @@
 
   <ClientOnly>
 
-<!--     <Teleport
+    <Teleport
       v-if="screenProperties.ratioIndex === 2"
       defer
       to="#aside-content"
@@ -142,8 +142,8 @@
       defer
       to="#central-content"
     >
-      <CallToActions />
-    </Teleport> -->
+      <ContactInfo />
+    </Teleport>
 
 
     <Teleport v-if="isLocationInFooter" defer to="#footer-content">

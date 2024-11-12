@@ -1,6 +1,6 @@
 <script setup>
 
-  import { Contact, Locales } from '#components'
+  import { Locales } from '#components'
 
   const windowWidths = ref ({})
 
@@ -23,7 +23,7 @@
   const route = useRoute ()
 
 
-  const _getComponent = key => ({ Contact, Locales }) [ key ]
+  const _getComponent = key => ({ Locales }) [ key ]
 
 
   const _setDimensions = () => {
