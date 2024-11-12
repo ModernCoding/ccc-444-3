@@ -1,3 +1,3 @@
 export const index = {
-    location: "We are based in Thailand!",
+    location: "Nous sommes basés en Thaïlande\xa0!",
   }
