@@ -36,13 +36,11 @@
     ctaScripts.equalizeInHeader (screenProperties)
 
     windowWidths.value = getWindowWidths (window.innerWidth)
-    loadingStore.patchIsImageLoadingComplete ()
 
   }
 
 
   watch (loadingStore, ({ $state: { loading } }) => {
-    loading.isImageLoadingComplete && _setDimensions ()
     loading.isResizingMode && _setDimensions ()
   })
 
@@ -85,6 +83,8 @@
 
     document.querySelector ('#footer-content .o-slogan')
       && startPageScripts.handleSlogan (screenProperties.value, true)
+
+    imageScripts.checkAllImagesLoaded (loadingStore)
 
   })
 

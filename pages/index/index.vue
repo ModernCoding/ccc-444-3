@@ -4,6 +4,7 @@
   import Slogan from './.partials/slogan'
 
   const ctaScripts = collectCtaScriptsFromComposable ()
+  const imageScripts = collectImageScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const startPageScripts = collectStartPageScriptsFromComposable ()
   
@@ -50,7 +51,7 @@
 
     switch (true) {
 
-      case loading.is && loading.showLogo:
+      case loading.is && loading.showLogoInLoader:
         setTimeout (() => _equalizeCtas (), DELAY_TIMES.LOADING)
         break
 
@@ -83,6 +84,7 @@
   onMounted (() => {
 
     loadingStore.patchIs ()
+    imageScripts.checkAllImagesLoaded (loadingStore)
     
     window.addEventListener (
         'resize',

@@ -9,6 +9,7 @@ export default (loadingStore, screenPropertiesStore) => {
 
   const _run = () => {
       setFontSizeHeader ()
+      loadingStore.patchIsImageLoadingComplete ()
       loadingStore.patchIs (false)
       loadingStore.patchIsResizingMode (false)
     }

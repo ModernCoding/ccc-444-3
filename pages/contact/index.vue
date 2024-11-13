@@ -5,6 +5,7 @@
   import WatArun from './.partials/wat-arun'
 
   const contactScripts = collectContactScriptsFromComposable ()
+  const imageScripts = collectImageScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
   
   const loadingStore = defineLoadingStoreFromComposable () ()
@@ -47,13 +48,20 @@
 
     switch (true) {
 
-      case loading.is && loading.showLogo:
+      case  loading.is
+            && loading.showLogoInLoader
+            && loading.isImageLoadingComplete:
+
         setTimeout (() => _equalizeCtas (), DELAY_TIMES.LOADING)
         break
 
-      case !loading.is && loading.isResizingMode:
+
+      case  loading.isImageLoadingComplete:
+      case  !loading.is && loading.isResizingMode:
+
         _equalizeCtas ()
         break
+
 
       default:
         break
@@ -80,6 +88,7 @@
   onMounted (() => {
 
     loadingStore.patchIs ()
+    imageScripts.checkAllImagesLoaded (loadingStore)
     
     window.addEventListener (
         'resize',

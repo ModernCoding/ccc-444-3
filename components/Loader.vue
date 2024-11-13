@@ -67,7 +67,7 @@
 
 <template>
 
-  <div id="loader" :data-is-shown="+loading.showLogo">
+  <div id="loader" :data-is-shown="+loading.showLogoInLoader">
 
     <div>
       <Logo parent="loader"/>

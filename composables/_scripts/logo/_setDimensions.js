@@ -155,7 +155,7 @@ export default (
 
     case "loader":
 
-      loadingStore.patchShowLogo ()
+      loadingStore.patchShowLogoInLoader ()
 
       document
         .querySelectorAll ('[data-is-veiled-at-first-loading]')

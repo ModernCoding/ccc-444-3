@@ -1,15 +1,10 @@
 export default loadingStore => {
-  const { loading } = storeToRefs (loadingStore)
 
   const images = document.querySelectorAll ("img")
   let loadedImages = 0
 
 
   images.forEach (img => {
-
-    console.log('loadedImages >>>', loadedImages)
-    console.log('img.src >>>', img.src)
-    console.log('img.complete >>>', img.complete)
 
     img.complete
 
@@ -45,9 +40,6 @@ export default loadingStore => {
 
         }) ()
 
-
-    console.log (loadedImages, '/', images.length)
-    console.log(loading.value.isImageLoadingComplete)
   })
 
 }
