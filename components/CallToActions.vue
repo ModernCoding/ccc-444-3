@@ -68,7 +68,7 @@
         />
       
         <NuxtImg
-          src="/images/bus-stop-red.png"
+          src="/images/bus-stop-red-lights.png"
           alt="Request next call"
           loading="lazy"
           preload
