@@ -5,6 +5,7 @@
   const windowWidths = ref ({})
 
   const ctaScripts = collectCtaScriptsFromComposable ()
+  const imageScripts = collectImageScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalScripts = collectModalScriptsFromComposable ()
   const startPageScripts = collectStartPageScriptsFromComposable ()
@@ -35,11 +36,13 @@
     ctaScripts.equalizeInHeader (screenProperties)
 
     windowWidths.value = getWindowWidths (window.innerWidth)
+    loadingStore.patchIsImageLoadingComplete ()
 
   }
 
 
   watch (loadingStore, ({ $state: { loading } }) => {
+    loading.isImageLoadingComplete && _setDimensions ()
     loading.isResizingMode && _setDimensions ()
   })
 
@@ -57,13 +60,16 @@
         if (!nuxt) { return }
 
         [ 'my', 'th', 'vi' ].includes (ccc444Locale)
-          ? nuxt.setAttribute ('data-locale', ccc444Locale)
-          : nuxt.removeAttribute ('data-locale')
+            ? nuxt.setAttribute ('data-locale', ccc444Locale)
+            : nuxt.removeAttribute ('data-locale')
 
       }) (document.querySelector ('#__nuxt'))
 
 
-    _setDimensions ()
+    imageScripts.checkAllImagesLoaded (loadingStore)
+
+
+    // _setDimensions ()
     
     window.addEventListener (
         'resize',
