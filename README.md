@@ -1,75 +1,21 @@
-# Nuxt 3 Minimal Starter
+# ccc-444 company website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Get started this way
 
-## Setup
+- check you have `nvm` & `pnpm` installed on your machine
+- check you have the Node version indicated in `.nvmrc` file
+- if not, run `nvm install`
+- run `nvm use`
+- run `pnpm dev`
 
-Make sure to install the dependencies:
+### Important regarding resizings
 
-```bash
-# npm
-npm install
+- all resizing scripts are centralized in layouts/default.vue
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- all components using teleport need to include
+  `
+    <script setup>
+      const loadingStore = defineLoadingStoreFromComposable () ()
+      onUpdated (() => loadingStore.patchIsResizingMode ())
+    </script>
+  `

@@ -10,6 +10,8 @@
   
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
+  onUpdated (() => loadingStore.patchIsResizingMode ())
+
 </script>
 
 
