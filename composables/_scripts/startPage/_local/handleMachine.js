@@ -152,7 +152,7 @@ export const handleMachine = (
         )
 
 
-        screenPropertiesStore.isSentenceInFooter
+        screenProperties.isSentenceInFooter
           && (figure.style.display = 'none')
 
 
@@ -161,7 +161,7 @@ export const handleMachine = (
             const h1 = slogan.querySelector ('h1')
             h1 && h1.classList.remove ('text-uppercase')
 
-            !screenPropertiesStore.isSentenceInFooter && (() => {
+            !screenProperties.isSentenceInFooter && (() => {
                 slogan.style.height = `${ height }px`
                 slogan.style.marginTop = `${ marginTop }px`
               }) ()
@@ -206,7 +206,7 @@ export const handleMachine = (
 
 
         h1
-          && !screenPropertiesStore.isSentenceInFooter
+          && !screenProperties.isSentenceInFooter
           && h1.classList.add ('text-uppercase')
 
       }
