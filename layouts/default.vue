@@ -6,7 +6,6 @@
   const imageScripts = collectImageScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalScripts = collectModalScriptsFromComposable ()
-  const startPageScripts = collectStartPageScriptsFromComposable ()
   
   const loadingStore = defineLoadingStoreFromComposable () ()
 

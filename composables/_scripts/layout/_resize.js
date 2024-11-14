@@ -28,13 +28,16 @@ export default (
 
   setTimeout (() => {
 
-    ctaScripts.equalize (screenProperties, logoProperties)
-    ctaScripts.setFontSize ()
+    switch (route.name) {
 
-    startPageScripts
-      .handleMachine (screenPropertiesStore, logoProperties)
+      case "index":
+        startPageScripts.resize (screenPropertiesStore, logoProperties)
+        break
 
-    startPageScripts.handleSlogan (screenProperties.value)
+      default:
+        break
+
+    }
 
 
     const _run = () => {

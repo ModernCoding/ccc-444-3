@@ -1,4 +1,4 @@
-export default screenProperties => (ratioIndex => {
+export const handleSlogan = screenProperties => (ratioIndex => {
 
   const sloganIndex = ratioIndex
       * +!screenProperties.isSentenceInFooter

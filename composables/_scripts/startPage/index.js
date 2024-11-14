@@ -1,7 +1,5 @@
-import handleMachine from './_handleMachine'
-import handleSlogan from './_handleSlogan'
+import resize from './_resize'
 
 export default {
-  handleMachine,
-  handleSlogan
+  resize
 }

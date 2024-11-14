@@ -1,4 +1,7 @@
-export default (screenPropertiesStore, logoProperties) => {
+export const handleMachine = (
+  screenPropertiesStore,
+  logoProperties
+) => {
 
   (index =>
     index && index.classList.remove ('o-no-machine')
