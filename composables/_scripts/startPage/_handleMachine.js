@@ -1,8 +1,4 @@
-export default (
-  screenPropertiesStore,
-  logoProperties,
-  isSloganInFooter
-) => {
+export default (screenPropertiesStore, logoProperties) => {
 
   (index =>
     index && index.classList.remove ('o-no-machine')
@@ -23,7 +19,10 @@ export default (
     ] [ screenProperties.ratioIndex - 1 ])
 
 
-  if (!figure) { return isSloganInFooter.value = true }
+  if (!figure) {
+    return screenPropertiesStore.patchIsSentenceInFooter ()
+  }
+  
   figure.removeAttribute ('style')
 
   const slogan = document.querySelector ('.o-slogan')
@@ -34,7 +33,7 @@ export default (
 
     () => {
 
-        isSloganInFooter.value = true
+        screenPropertiesStore.patchIsSentenceInFooter ()
 
         const paddingTop
           = screenProperties.paddingTops.calculated.main / PHI
@@ -116,11 +115,17 @@ export default (
 
         const img = figure.querySelector ('img')
 
-        if (!img) { return isSloganInFooter.value = true }
+        if (!img) {
+          return screenPropertiesStore.patchIsSentenceInFooter ()
+        }
+
+
         img.removeAttribute ('style')
 
 
-        isSloganInFooter.value = (() => {
+        screenPropertiesStore.patchIsSentenceInFooter (
+
+          (() => {
 
             switch (true) {
 
@@ -141,8 +146,11 @@ export default (
 
           }) ()
 
+        )
 
-        isSloganInFooter.value && (figure.style.display = 'none')
+
+        screenPropertiesStore.isSentenceInFooter
+          && (figure.style.display = 'none')
 
 
         slogan && (() => {
@@ -150,7 +158,7 @@ export default (
             const h1 = slogan.querySelector ('h1')
             h1 && h1.classList.remove ('text-uppercase')
 
-            !isSloganInFooter.value && (() => {
+            !screenPropertiesStore.isSentenceInFooter && (() => {
                 slogan.style.height = `${ height }px`
                 slogan.style.marginTop = `${ marginTop }px`
               }) ()
@@ -182,13 +190,20 @@ export default (
 
 
         const img = figure.querySelector ('img')
-        if (!img) { return isSloganInFooter.value = true }
 
-        isSloganInFooter.value = img.getBoundingClientRect ().width
+        if (!img) {
+          return screenPropertiesStore.patchIsSentenceInFooter ()
+        }
+
+
+        screenPropertiesStore.patchIsSentenceInFooter (
+          img.getBoundingClientRect ().width
             > screenProperties.widths.main / PHI
+        )
+
 
         h1
-          && !isSloganInFooter.value
+          && !screenPropertiesStore.isSentenceInFooter
           && h1.classList.add ('text-uppercase')
 
       }

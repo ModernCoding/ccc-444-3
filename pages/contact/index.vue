@@ -39,7 +39,7 @@
       .handleLocation (screenProperties.value, isLocationInFooter.value)
 
     layoutScripts
-      .runResizingScripts (loadingStore, screenPropertiesStore)
+      .resize (loadingStore, screenPropertiesStore)
 
   }
 

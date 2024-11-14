@@ -20,7 +20,6 @@
   const { logoProperties } = storeToRefs (logoPropertiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  const isSloganInFooter = ref (false)
   const { locale } = useI18n ()
 
 
@@ -34,15 +33,14 @@
 
     startPageScripts.handleMachine (
         screenPropertiesStore,
-        logoProperties,
-        isSloganInFooter
+        logoProperties
       )
 
     startPageScripts
-      .handleSlogan (screenProperties.value, isSloganInFooter.value)
+      .handleSlogan (screenProperties.value)
 
-    layoutScripts
-      .runResizingScripts (loadingStore, screenPropertiesStore)
+    // layoutScripts
+    //   .resize (loadingStore, screenPropertiesStore)
 
   }
 
@@ -109,16 +107,19 @@
     <Machine v-if="screenProperties.ratioIndex < 2" />
     
     <Slogan
-      v-if="screenProperties.ratioIndex === 2 && !isSloganInFooter"
+      v-if="
+          screenProperties.ratioIndex === 2
+            && !screenProperties.isSentenceInFooter
+        "
     />
 
 
     <div
       v-if="screenProperties.ratioIndex > 2"
-      :class="isSloganInFooter ? 'o-no-slogan' : ''"
+      :class="screenProperties.isSentenceInFooter ? 'o-no-slogan' : ''"
       id="index-machine"
     >
-      <Slogan v-if="!isSloganInFooter" />
+      <Slogan v-if="!screenProperties.isSentenceInFooter" />
       <Machine />
     </div>
 
@@ -145,7 +146,11 @@
     </Teleport>
 
 
-    <Teleport v-if="isSloganInFooter" defer to="#footer-content">
+    <Teleport
+      v-if="screenProperties.isSentenceInFooter"
+      defer
+      to="#footer-content"
+    >
       <Slogan />
     </Teleport>
 

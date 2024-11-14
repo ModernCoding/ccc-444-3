@@ -11,6 +11,10 @@
   const startPageScripts = collectStartPageScriptsFromComposable ()
   
   const loadingStore = defineLoadingStoreFromComposable () ()
+
+  const logoPropertiesStore
+    = defineLogoPropertiesStoreFromComposable () ()
+
   const modalStore = defineModalStoreFromComposable () ()
   
   const screenPropertiesStore
@@ -27,21 +31,35 @@
   const _getComponent = key => ({ Locales }) [ key ]
 
 
-  const _setDimensions = () => {
-  
-    if (!window) { return }
-
-    layoutScripts.setMainDimensions (screenPropertiesStore)
-    layoutScripts.setFontSizeHeader ()
-    ctaScripts.equalizeInHeader (screenProperties)
-
-    windowWidths.value = getWindowWidths (window.innerWidth)
-
-  }
-
-
   watch (loadingStore, ({ $state: { loading } }) => {
-    loading.isResizingMode && _setDimensions ()
+
+    loading.isResizingMode && layoutScripts.resize (
+      loadingStore,
+      logoPropertiesStore,
+      screenPropertiesStore,
+      route
+    )
+
+  })
+
+
+  watch (locale, () => loadingStore.patchIs ())
+
+
+  watch (logoPropertiesStore, ({ $state: { logoProperties } }) => {
+
+    /*
+      if page is loading, do not equalize since equalizing process is
+      already running
+    */
+
+    !loading.value.is && layoutScripts.resize (
+      loadingStore,
+      logoPropertiesStore,
+      screenPropertiesStore,
+      route
+    )
+
   })
 
 
@@ -67,8 +85,6 @@
     imageScripts.checkAllImagesLoaded (loadingStore)
 
 
-    // _setDimensions ()
-    
     window.addEventListener (
         'resize',
         () => loadingStore.patchIsResizingMode ()
@@ -79,7 +95,12 @@
 
   onUpdated (() => {
 
-    _setDimensions ()
+    layoutScripts.resize (
+      loadingStore,
+      logoPropertiesStore,
+      screenPropertiesStore,
+      route
+    )
 
     document.querySelector ('#footer-content .o-slogan')
       && startPageScripts.handleSlogan (screenProperties.value, true)

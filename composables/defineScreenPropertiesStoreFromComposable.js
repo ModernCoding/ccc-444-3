@@ -37,6 +37,8 @@ export default () => defineStore ('screenProperties', {
 
 
       ratioIndex: 1,
+
+      isSentenceInFooter: false
       
     }
 
@@ -44,6 +46,11 @@ export default () => defineStore ('screenProperties', {
 
 
   actions: {
+
+    patchIsSentenceInFooter (is = true) {
+      this.screenProperties.isSentenceInFooter = is
+    },
+
 
     patchRatioIndex (window) {
       if (!window) { return }
