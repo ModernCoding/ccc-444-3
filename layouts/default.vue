@@ -2,8 +2,6 @@
 
   import { Locales } from '#components'
 
-  const windowWidths = ref ({})
-
   const ctaScripts = collectCtaScriptsFromComposable ()
   const imageScripts = collectImageScriptsFromComposable ()
   const layoutScripts = collectLayoutScriptsFromComposable ()

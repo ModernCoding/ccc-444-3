@@ -15,7 +15,6 @@ export default (
 ) => {
 
   if (!window) { return loadingStore.patchIs (false) }
-  console.log (route.name)
 
   const { loading } = storeToRefs (loadingStore)
   const { logoProperties } = storeToRefs (logoPropertiesStore)
