@@ -10,7 +10,8 @@ export default (
   loadingStore,
   logoPropertiesStore,
   screenPropertiesStore,
-  route
+  route,
+  delay = 0
 ) => {
 
   if (!window) { return loadingStore.patchIs (false) }
@@ -41,7 +42,7 @@ export default (
 
         setFontSizeHeader ()
 
-        loadingStore.patchIsImageLoadingComplete ()
+        loadingStore.patchIsImageLoadingComplete (false)
         loadingStore.patchIs (false)
         loadingStore.patchIsResizingMode (false)
 
@@ -50,6 +51,6 @@ export default (
 
     loading.value.is ? setTimeout (_run, DELAY_TIMES.ELEMENT) : _run ()
 
-  }, DELAY_TIMES.LOADING)
+  }, delay)
 
 }

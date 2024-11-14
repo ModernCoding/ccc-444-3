@@ -33,11 +33,37 @@
 
   watch (loadingStore, ({ $state: { loading } }) => {
 
-    loading.isResizingMode && layoutScripts.resize (
+    const delay = (() => {
+
+        switch (true) {
+
+          case  loading.is
+                && loading.showLogoInLoader
+                && loading.isImageLoadingComplete:
+
+            return DELAY_TIMES.LOADING
+
+
+          case  loading.isImageLoadingComplete:
+          case  !loading.is && loading.isResizingMode:
+
+            return 0
+
+
+          default:
+            return -1
+
+        }
+
+      }) ()
+
+
+    delay > -1 && layoutScripts.resize (
       loadingStore,
       logoPropertiesStore,
       screenPropertiesStore,
-      route
+      route,
+      delay
     )
 
   })
@@ -46,24 +72,16 @@
   watch (locale, () => loadingStore.patchIs ())
 
 
-  watch (logoPropertiesStore, ({ $state: { logoProperties } }) => {
-
-    /*
-      if page is loading, do not equalize since equalizing process is
-      already running
-    */
-
-    !loading.value.is && layoutScripts.resize (
-      loadingStore,
-      logoPropertiesStore,
-      screenPropertiesStore,
-      route
-    )
-
+  watch (route, () => {
+    loadingStore.patchIs ()
+    imageScripts.checkAllImagesLoaded (loadingStore)
   })
 
 
   onMounted (() => {
+
+    loadingStore.patchIs ()
+
 
     const ccc444Locale
       = localStorage.getItem (import.meta.env.VITE_LOCALE_KEY)
@@ -89,25 +107,16 @@
         'resize',
         () => loadingStore.patchIsResizingMode ()
       )
+    
+
+    screen
+      .orientation
+      .addEventListener ('change', () => loadingStore.patchIs ())
   
   })
 
 
-  onUpdated (() => {
-
-    layoutScripts.resize (
-      loadingStore,
-      logoPropertiesStore,
-      screenPropertiesStore,
-      route
-    )
-
-    document.querySelector ('#footer-content .o-slogan')
-      && startPageScripts.handleSlogan (screenProperties.value, true)
-
-    imageScripts.checkAllImagesLoaded (loadingStore)
-
-  })
+  onUpdated (() => imageScripts.checkAllImagesLoaded (loadingStore))
 
 </script>
 

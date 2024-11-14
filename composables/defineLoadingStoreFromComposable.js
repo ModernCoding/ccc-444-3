@@ -18,7 +18,7 @@ export default () => defineStore ('loading', {
       this.loading.is = is
     },
 
-    patchIsImageLoadingComplete (is = false) {
+    patchIsImageLoadingComplete (is = true) {
       this.loading.isImageLoadingComplete = is
     },
 
