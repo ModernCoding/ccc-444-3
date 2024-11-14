@@ -1,11 +1,15 @@
-export default (screenProperties, isSloganInFooter) => (ratioIndex => {
+export default screenProperties => (ratioIndex => {
+
+  const sloganIndex = ratioIndex
+      * +!screenProperties.isSentenceInFooter
+      + 2 * +screenProperties.isSentenceInFooter
+
 
   const slogan = document.querySelector ([
       '#index > .o-slogan',
       '#index-machine > .o-slogan',
       '#__nuxt > footer .o-slogan',
-    ] [ ratioIndex * +!isSloganInFooter + 2 * +isSloganInFooter ])
-
+    ] [ sloganIndex ])
 
   if (!slogan) { return }
 
@@ -14,7 +18,7 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
       slogan.getBoundingClientRect ().height,
       screenProperties.heights.main,
       screenProperties.heights.footer
-    ] [ ratioIndex * +!isSloganInFooter + 2 * +isSloganInFooter ]
+    ] [ sloganIndex ]
 
 
   const fontSize = (fontSize =>
@@ -48,8 +52,9 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
 
   button.querySelectorAll ('p').forEach ((p, i) => {
 
-      const fontSizeToApply
-        = fontSize / PHI ** (1 + 1 ** !isSloganInFooter)
+      const fontSizeToApply = fontSize / PHI ** (
+          1 + 1 ** !screenProperties.isSentenceInFooter
+        )
       
       p.style.fontSize = `${ fontSizeToApply }px`
       p.style.height = `${ fontSizeToApply * PHI }px`
@@ -98,8 +103,11 @@ export default (screenProperties, isSloganInFooter) => (ratioIndex => {
 
           button.style.gap = `${ size / PHI ** 4 }px`
 
-          slogan.style.gap
-            = `${ size / PHI ** (2 + 1 ** !isSloganInFooter) }px`
+          slogan.style.gap = `${
+              size / PHI ** (
+                2 + 1 ** !screenProperties.isSentenceInFooter
+              )
+            }px`
 
 
           button.querySelectorAll ('p').forEach ((p, i) => {
