@@ -21,11 +21,7 @@ export const handleLocation = screenProperties => {
         +(fontSize > TWICE_54_BY_PHI_POWER_4)
       ]
 
-    ) (
-      maxHeight / PHI ** [ 0, 2 ] [
-        +screenProperties.isSentenceInFooter
-      ]
-    )
+    ) (maxHeight)
 
 
   const h1 = location.querySelector ('h1')

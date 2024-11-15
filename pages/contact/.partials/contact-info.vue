@@ -1,20 +1,5 @@
 <script setup>
-
-  const layoutScripts = collectLayoutScriptsFromComposable ()
   const { locale } = useI18n ()
-
-
-  onMounted (() => {
-
-    layoutScripts.setFontSizeHeader ()
-    
-    window.addEventListener (
-        'resize',
-        () => layoutScripts.setFontSizeHeader ()
-      )
-
-  })
-
 </script>
 
 
