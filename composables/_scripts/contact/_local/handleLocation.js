@@ -10,9 +10,29 @@ export const handleLocation = screenProperties => {
 
 
   const maxHeight = [
+      screenProperties.heights.footer,
       location.getBoundingClientRect ().height,
-      screenProperties.heights.footer
-    ] [ +screenProperties.isSentenceInFooter ]
+      screenProperties.heights.main
+    ] [ screenProperties.ratioIndex - 1 ]
+
+
+  const maxWidth = location.getBoundingClientRect ().width
+
+      - parseInt (
+          window
+            .getComputedStyle (location)
+            .getPropertyValue ('padding-left')
+            .split ('px')
+            .join ('')
+        )
+
+      // - parseInt (
+      //     window
+      //       .getComputedStyle (location)
+      //       .getPropertyValue ('margin-left')
+      //       .split ('px')
+      //       .join ('')
+      //   )
 
 
   const fontSize = (fontSize =>
@@ -35,13 +55,17 @@ export const handleLocation = screenProperties => {
 
       switch (true) {
         
-        case size <= TWICE_54_BY_PHI_POWER_4:
-        case h1.getBoundingClientRect ().height < maxHeight:
+        case  size <= TWICE_54_BY_PHI_POWER_4:
           return
 
-        default:
+        case  h1.getBoundingClientRect ().height >= maxHeight:
+        case  h1.getBoundingClientRect ().width >= maxWidth:
+
           h1.style.fontSize = `${ size / PHI }px`
           return _set (size / PHI)
+        
+        default:
+          return
 
       }
 

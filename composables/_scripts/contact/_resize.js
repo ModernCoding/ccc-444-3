@@ -1,3 +1,4 @@
+import { handleContactInfo } from './_local/handleContactInfo'
 import { handleLocation } from './_local/handleLocation'
 import { handleWatArun } from './_local/handleWatArun'
 
@@ -8,5 +9,6 @@ export default (screenPropertiesStore, logoProperties) => {
 
   handleWatArun (screenPropertiesStore, logoProperties)
   handleLocation (screenProperties.value)
+  handleContactInfo (screenProperties.value)
 
 }

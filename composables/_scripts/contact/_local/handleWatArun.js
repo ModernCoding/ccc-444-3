@@ -15,15 +15,25 @@ export const handleWatArun = (
   
   figure.removeAttribute ('style')
 
+
   const location = document.querySelector ('.o-location')
-  location && location.removeAttribute ('style')
+  
+  location && (() => {
+
+    location.removeAttribute ('style')
+
+    location.querySelectorAll ('*').forEach (element =>
+      element.removeAttribute ('style')
+    )
+
+  }) ()
 
 
   ;[
 
     () => {
 
-        isSloganInFooter.value = true
+        screenPropertiesStore.patchIsSentenceInFooter ()
 
         const paddingTop
           = screenProperties.paddingTops.calculated.main / PHI
@@ -113,16 +123,19 @@ export const handleWatArun = (
           return screenPropertiesStore.patchIsSentenceInFooter ()
         }
 
+          screenPropertiesStore.patchIsSentenceInFooter ()
+
 
         screenPropertiesStore.patchIsSentenceInFooter ([
 
             img.getBoundingClientRect ().height
               > screenProperties.heights.main / PHI,
-          
+
             img.getBoundingClientRect ().width
               > screenProperties.widths.main / PHI
-          
+
           ] [ +(screenProperties.ratioIndex > 2) ])
+
 
 
         screenProperties.ratioIndex === 2
@@ -140,6 +153,16 @@ export const handleWatArun = (
                 )
 
             }) ()
+
+
+        screenProperties.ratioIndex === 3
+
+          && !screenProperties.isSentenceInFooter
+        
+          && location && (
+              location.style.width
+                = `${ screenProperties.widths.main / PHI ** 2 }px`
+            )
 
       }
 
