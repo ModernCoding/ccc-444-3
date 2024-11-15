@@ -7,6 +7,9 @@
 
 
 .o-location
+  display: flex
+  align-items: center
+  justify-content: center
   text-align: center
 
 
@@ -14,7 +17,6 @@
   display: flex
   align-items: center
   justify-content: center
-
 
   .o-wat-arun
     display: flex
@@ -26,15 +28,21 @@
       max-height: 100%
 
 
-  .o-location
+  &[data-number-of-parts="2"]
+    flex-direction: column
 
-    flex-grow: 1
 
-    border-left: 1px solid colors.$light
+  &[data-number-of-parts="3"]
 
-    margin-left: calc(dimensions.$layoutPaddingRightThreeParts)
+    .o-location
 
-    padding-left: calc(dimensions.$layoutPaddingRightThreeParts / constants.$phi - 1px)
+      flex-grow: 1
+
+      border-left: 1px solid colors.$light
+
+      margin-left: calc(dimensions.$layoutPaddingRightThreeParts)
+
+      padding-left: calc(dimensions.$layoutPaddingRightThreeParts / constants.$phi - 1px)
 
 
 #contact.o-no-location

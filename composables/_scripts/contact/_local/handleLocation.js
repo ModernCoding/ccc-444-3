@@ -10,9 +10,17 @@ export const handleLocation = screenProperties => {
 
 
   const maxHeight = [
-      screenProperties.heights.main,
+
+      screenProperties.heights.main / PHI ** (
+          +(screenProperties.ratioIndex === 2) * 2
+        ),
+
       screenProperties.heights.footer
+
     ] [ +screenProperties.isSentenceInFooter ]
+
+  console.log (maxHeight)
+  console.log (screenProperties)
 
 
   const fontSize = (fontSize =>
@@ -22,7 +30,7 @@ export const handleLocation = screenProperties => {
       ]
 
     ) (
-      maxHeight / PHI ** [ 5, 2 ] [
+      maxHeight / PHI ** [ 3, 2 ] [
         +screenProperties.isSentenceInFooter
       ]
     )

@@ -111,10 +111,32 @@ export const handleWatArun = (
         }
 
 
-        screenPropertiesStore.patchIsSentenceInFooter (
-          img.getBoundingClientRect ().width
-            > screenProperties.widths.main / PHI
-        )
+        screenPropertiesStore.patchIsSentenceInFooter ([
+
+            img.getBoundingClientRect ().height
+              > screenProperties.heights.main / PHI,
+          
+            img.getBoundingClientRect ().width
+              > screenProperties.widths.main / PHI
+          
+          ] [ +(screenProperties.ratioIndex > 2) ])
+
+
+        screenProperties.ratioIndex === 2
+
+          && !screenProperties.isSentenceInFooter
+        
+          && (() => {
+
+              figure.style.height
+                = `${ screenProperties.heights.main / PHI }px`
+
+              location && (
+                  location.style.height
+                    = `${ screenProperties.heights.main / PHI ** 2 }px`
+                )
+
+            }) ()
 
       }
 

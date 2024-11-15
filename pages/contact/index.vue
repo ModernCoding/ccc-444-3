@@ -20,6 +20,7 @@
 
   <article
     id="contact"
+    :data-number-of-parts="screenProperties.ratioIndex"
     :class="screenProperties.isSentenceInFooter ? 'o-no-location' : ''"
   >
 
