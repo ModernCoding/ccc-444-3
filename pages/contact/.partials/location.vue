@@ -1,8 +1,8 @@
 <template>
   
-  <h1 class="o-location">
-    {{ $t ('pages.contact.index.location') }}
-  </h1>
+  <hgroup class="o-location">
+    <h1>{{ $t ('pages.contact.index.location') }}</h1>
+  </hgroup>
 
 </template>
 

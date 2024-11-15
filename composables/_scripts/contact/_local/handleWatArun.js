@@ -77,9 +77,9 @@ export const handleWatArun = (
           ) (document.querySelector ('#index'))
 
 
-        slogan && (() => {
+        location && (() => {
 
-            const h1 = slogan.querySelector ('h1')
+            const h1 = location.querySelector ('h1')
             if (!h1) { return }
 
             screenProperties.ratioIndex < 2 && noMachine
@@ -101,7 +101,10 @@ export const handleWatArun = (
         figure.style.height
           = `${ screenProperties.heights.main }px`
 
-        location && location.classList.add ('text-uppercase')
+
+        const h1 = location ? location.querySelector ('h1') : null
+
+        h1 && h1.classList.add ('text-uppercase')
 
 
         const img = figure.querySelector ('img')
