@@ -1,7 +1,5 @@
-import handleWatArun from './_handleWatArun'
-import handleLocation from './_handleLocation'
+import resize from './_resize'
 
 export default {
-  handleWatArun,
-  handleLocation
+  resize
 }

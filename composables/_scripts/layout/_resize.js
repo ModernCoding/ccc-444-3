@@ -2,6 +2,7 @@ import setFontSizeHeader from './_setFontSizeHeader'
 import setMainDimensions from './_setMainDimensions'
 
 
+const contactScripts = collectContactScriptsFromComposable ()
 const ctaScripts = collectCtaScriptsFromComposable ()
 const startPageScripts = collectStartPageScriptsFromComposable ()
 
@@ -29,6 +30,10 @@ export default (
   setTimeout (() => {
 
     switch (route.name) {
+
+      case "contact":
+        contactScripts.resize (screenPropertiesStore, logoProperties)
+        break
 
       case "index":
         startPageScripts.resize (screenPropertiesStore, logoProperties)

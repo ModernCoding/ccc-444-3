@@ -1,7 +1,6 @@
-export default (
+export const handleWatArun = (
   screenPropertiesStore,
-  logoProperties,
-  isLocationInFooter
+  logoProperties
 ) => {
 
   const { screenProperties: { value: screenProperties } }
@@ -10,7 +9,10 @@ export default (
   const figure = document.querySelector ('.o-wat-arun')
 
 
-  if (!figure) { return isLocationInFooter.value = true }
+  if (!figure) {
+    return screenPropertiesStore.patchIsSentenceInFooter ()
+  }
+  
   figure.removeAttribute ('style')
 
   const location = document.querySelector ('.o-location')
@@ -103,10 +105,16 @@ export default (
 
 
         const img = figure.querySelector ('img')
-        if (!img) { return isLocationInFooter.value = true }
 
-        isLocationInFooter.value = img.getBoundingClientRect ().width
+        if (!img) {
+          return screenPropertiesStore.patchIsSentenceInFooter ()
+        }
+
+
+        screenPropertiesStore.patchIsSentenceInFooter (
+          img.getBoundingClientRect ().width
             > screenProperties.widths.main / PHI
+        )
 
       }
 

@@ -1,9 +1,9 @@
-export default (screenProperties, isLocationInFooter) => {
+export const handleLocation = screenProperties => {
 
   const location = document.querySelector ([
       '#contact > .o-location',
       '#footer-content .o-location'
-    ] [ +isLocationInFooter ])
+    ] [ +screenProperties.isSentenceInFooter ])
 
 
   if (!location) { return }
@@ -12,7 +12,7 @@ export default (screenProperties, isLocationInFooter) => {
   const maxHeight = [
       screenProperties.heights.main,
       screenProperties.heights.footer
-    ] [ +isLocationInFooter ]
+    ] [ +screenProperties.isSentenceInFooter ]
 
 
   const fontSize = (fontSize =>
@@ -21,7 +21,11 @@ export default (screenProperties, isLocationInFooter) => {
         +(fontSize > TWICE_54_BY_PHI_POWER_4)
       ]
 
-    ) (maxHeight / PHI ** [ 5, 2 ] [ +isLocationInFooter ])
+    ) (
+      maxHeight / PHI ** [ 5, 2 ] [
+        +screenProperties.isSentenceInFooter
+      ]
+    )
 
 
   location.style.fontSize = `${ fontSize }px`
