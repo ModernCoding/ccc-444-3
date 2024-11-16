@@ -17,60 +17,64 @@
 
 <template>
 
-  <article id="index">
+  <BaseLayout>
 
-    <CallToActions v-if="screenProperties.ratioIndex < 3" />
-    <Machine v-if="screenProperties.ratioIndex < 2" />
-    
-    <Slogan
-      v-if="
-          screenProperties.ratioIndex === 2
-            && !screenProperties.isSentenceInFooter
-        "
-    />
+    <article id="index">
 
-
-    <div
-      v-if="screenProperties.ratioIndex > 2"
-      :class="screenProperties.isSentenceInFooter ? 'o-no-slogan' : ''"
-      id="index-machine"
-    >
-      <Slogan v-if="!screenProperties.isSentenceInFooter" />
-      <Machine />
-    </div>
-
-  </article>
+      <CallToActions v-if="screenProperties.ratioIndex < 3" />
+      <Machine v-if="screenProperties.ratioIndex < 2" />
+      
+      <Slogan
+        v-if="
+            screenProperties.ratioIndex === 2
+              && !screenProperties.isSentenceInFooter
+          "
+      />
 
 
-  <ClientOnly>
+      <div
+        v-if="screenProperties.ratioIndex > 2"
+        :class="screenProperties.isSentenceInFooter ? 'o-no-slogan' : ''"
+        id="index-machine"
+      >
+        <Slogan v-if="!screenProperties.isSentenceInFooter" />
+        <Machine />
+      </div>
 
-    <Teleport
-      v-if="screenProperties.ratioIndex === 2"
-      defer
-      to="#aside-content"
-    >
-      <Machine />
-    </Teleport>
-
-
-    <Teleport
-      v-if="screenProperties.ratioIndex > 2"
-      defer
-      to="#central-content"
-    >
-      <CallToActions />
-    </Teleport>
+    </article>
 
 
-    <Teleport
-      v-if="screenProperties.isSentenceInFooter"
-      defer
-      to="#footer-content"
-    >
-      <Slogan />
-    </Teleport>
+    <ClientOnly>
 
-  </ClientOnly>
+      <Teleport
+        v-if="screenProperties.ratioIndex === 2"
+        defer
+        to="#aside-content"
+      >
+        <Machine />
+      </Teleport>
+
+
+      <Teleport
+        v-if="screenProperties.ratioIndex > 2"
+        defer
+        to="#central-content"
+      >
+        <CallToActions />
+      </Teleport>
+
+
+      <Teleport
+        v-if="screenProperties.isSentenceInFooter"
+        defer
+        to="#footer-content"
+      >
+        <Slogan />
+      </Teleport>
+
+    </ClientOnly>
+
+  </BaseLayout>
 
 </template>
 
