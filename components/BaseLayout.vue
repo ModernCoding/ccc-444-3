@@ -113,7 +113,10 @@
   })
 
 
-  onUpdated (() => imageScripts.checkAllImagesLoaded (loadingStore))
+  onUpdated (() => {
+    loadingStore.patchIsResizingMode ()
+    imageScripts.checkAllImagesLoaded (loadingStore)
+  })
 
 </script>
 
@@ -227,9 +230,15 @@
     :data-is-shown="+(!loading.is && !modal.main.show)"
     data-is-veiled-at-first-loading
   >
+
     <nav />
+  
     <nav v-if="screenProperties.ratioIndex > 2" />
-    <nav id="footer-content" />
+  
+    <nav id="footer-content">
+      <slot name="footer" />
+    </nav>
+  
   </footer>
 
 

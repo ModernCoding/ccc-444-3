@@ -3,17 +3,10 @@
   import Machine from './.partials/machine'
   import Slogan from './.partials/slogan'
 
-  const loadingStore = defineLoadingStoreFromComposable () ()
-
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
   const { screenProperties } = storeToRefs (screenPropertiesStore)
-
-  onUpdated (() => {
-    console.log ('ttt')
-    loadingStore.patchIsResizingMode ()
-  })
 
 </script>
 
@@ -73,17 +66,12 @@
     </template>
 
 
-    <ClientOnly>
-
-      <Teleport
-        v-if="screenProperties.isSentenceInFooter"
-        defer
-        to="#footer-content"
-      >
-        <Slogan />
-      </Teleport>
-
-    </ClientOnly>
+    <template
+      v-if="screenProperties.isSentenceInFooter"
+      v-slot:footer
+    >
+      <Slogan />
+    </template>
 
   </BaseLayout>
 

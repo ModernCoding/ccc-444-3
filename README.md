@@ -8,14 +8,7 @@
 - run `nvm use`
 - run `pnpm dev`
 
+
 ### Important regarding resizings
 
-- all resizing scripts are centralized in layouts/default.vue
-
-- all components using teleport need to include
-  `
-    <script setup>
-      const loadingStore = defineLoadingStoreFromComposable () ()
-      onUpdated (() => loadingStore.patchIsResizingMode ())
-    </script>
-  `
+- all resizing scripts are centralized in BaseLayout component
