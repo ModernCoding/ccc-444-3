@@ -4,61 +4,63 @@
   import Location from './.partials/location'
   import WatArun from './.partials/wat-arun'
 
-  const loadingStore = defineLoadingStoreFromComposable () ()
-
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
     
   const { screenProperties } = storeToRefs (screenPropertiesStore)
-
-  onUpdated (() => loadingStore.patchIsResizingMode ())
 
 </script>
 
 
 <template>
 
-  <article
-    id="contact"
-    :data-number-of-parts="screenProperties.ratioIndex"
-    :class="screenProperties.isSentenceInFooter ? 'o-no-location' : ''"
-  >
+  <BaseLayout>
 
-    <WatArun />
-    <Location v-if="!screenProperties.isSentenceInFooter" />
-
-  </article>
-
-
-  <ClientOnly>
-
-    <Teleport
+    <template
       v-if="screenProperties.ratioIndex === 2"
-      defer
-      to="#aside-content"
+      v-slot:aside
     >
       <ContactInfo />
-    </Teleport>
+    </template>
 
 
-    <Teleport
+    <template
       v-if="screenProperties.ratioIndex > 2"
-      defer
-      to="#central-content"
+      v-slot:central
     >
       <ContactInfo />
-    </Teleport>
+    </template>
+    
+
+    <template v-slot:main>
+
+      <article
+        id="contact"
+        :data-number-of-parts="screenProperties.ratioIndex"
+
+        :class="
+            screenProperties.isSentenceInFooter
+              ? 'o-no-location'
+              : ''
+          "
+      >
+
+        <WatArun />
+        <Location v-if="!screenProperties.isSentenceInFooter" />
+
+      </article>
+
+    </template>
 
 
-    <Teleport
+    <template
       v-if="screenProperties.isSentenceInFooter"
-      defer
-      to="#footer-content"
+      v-slot:footer
     >
       <Location />
-    </Teleport>
+    </template>
 
-  </ClientOnly>
+  </BaseLayout>
 
 </template>
 
