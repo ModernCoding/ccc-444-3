@@ -167,7 +167,9 @@
       </NuxtLink>
       
 
-      <div id="aside-content" :data-is-shown="+!modal.main.show" />
+      <div id="aside-content" :data-is-shown="+!modal.main.show">
+        <slot name="aside" />
+      </div>
 
 
       <div
@@ -186,7 +188,9 @@
       <article
         id="central-content"
         :data-is-shown="+!modal.main.show"
-      />
+      >
+        <slot name="central" />
+      </article>
 
 
       <div
@@ -202,7 +206,7 @@
 
     <main role="main">
 
-      <slot />
+      <slot name="main" />
 
 
       <div

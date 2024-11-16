@@ -10,7 +10,10 @@
   
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  onUpdated (() => loadingStore.patchIsResizingMode ())
+  onUpdated (() => {
+    console.log ('ttt')
+    loadingStore.patchIsResizingMode ()
+  })
 
 </script>
 
@@ -19,50 +22,58 @@
 
   <BaseLayout>
 
-    <article id="index">
-
-      <CallToActions v-if="screenProperties.ratioIndex < 3" />
-      <Machine v-if="screenProperties.ratioIndex < 2" />
-      
-      <Slogan
-        v-if="
-            screenProperties.ratioIndex === 2
-              && !screenProperties.isSentenceInFooter
-          "
-      />
+    <template
+      v-if="screenProperties.ratioIndex === 2"
+      v-slot:aside
+    >
+      <Machine />
+    </template>
 
 
-      <div
-        v-if="screenProperties.ratioIndex > 2"
-        :class="screenProperties.isSentenceInFooter ? 'o-no-slogan' : ''"
-        id="index-machine"
-      >
-        <Slogan v-if="!screenProperties.isSentenceInFooter" />
-        <Machine />
-      </div>
+    <template
+      v-if="screenProperties.ratioIndex > 2"
+      v-slot:central
+    >
+      <CallToActions />
+    </template>
+    
 
-    </article>
+    <template v-slot:main>
+
+      <article id="index">
+
+        <CallToActions v-if="screenProperties.ratioIndex < 3" />
+        <Machine v-if="screenProperties.ratioIndex < 2" />
+        
+        <Slogan
+          v-if="
+              screenProperties.ratioIndex === 2
+                && !screenProperties.isSentenceInFooter
+            "
+        />
+
+
+        <div
+          v-if="screenProperties.ratioIndex > 2"
+
+          :class="
+              screenProperties.isSentenceInFooter
+                ? 'o-no-slogan'
+                : ''
+            "
+
+          id="index-machine"
+        >
+          <Slogan v-if="!screenProperties.isSentenceInFooter" />
+          <Machine />
+        </div>
+
+      </article>
+
+    </template>
 
 
     <ClientOnly>
-
-      <Teleport
-        v-if="screenProperties.ratioIndex === 2"
-        defer
-        to="#aside-content"
-      >
-        <Machine />
-      </Teleport>
-
-
-      <Teleport
-        v-if="screenProperties.ratioIndex > 2"
-        defer
-        to="#central-content"
-      >
-        <CallToActions />
-      </Teleport>
-
 
       <Teleport
         v-if="screenProperties.isSentenceInFooter"
