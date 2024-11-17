@@ -68,7 +68,7 @@
 
     <template
       v-if="screenProperties.isSentenceInFooter"
-      v-slot:footer
+      v-slot:footer-right
     >
       <Slogan />
     </template>

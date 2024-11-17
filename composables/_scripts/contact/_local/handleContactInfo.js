@@ -2,7 +2,7 @@ export const handleContactInfo = screenProperties => {
 
   const location = document.querySelector ([
       '#contact > .o-location',
-      '#footer-content .o-location'
+      '#footer-right-content .o-location'
     ] [ +screenProperties.isSentenceInFooter ])
 
 

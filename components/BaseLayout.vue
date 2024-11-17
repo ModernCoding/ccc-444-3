@@ -231,12 +231,21 @@
     data-is-veiled-at-first-loading
   >
 
-    <nav />
+    <nav id="footer-left-content">
+      <slot name="footer-left" />
+    </nav>
+
   
-    <nav v-if="screenProperties.ratioIndex > 2" />
+    <nav
+      v-if="screenProperties.ratioIndex > 2"
+      id="footer-central-content"
+    >
+      <slot name="footer-central" />
+    </nav>
+
   
-    <nav id="footer-content">
-      <slot name="footer" />
+    <nav id="footer-right-content">
+      <slot name="footer-right" />
     </nav>
   
   </footer>

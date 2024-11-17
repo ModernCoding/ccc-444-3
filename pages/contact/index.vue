@@ -28,36 +28,13 @@
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
-      <ContactInfo />
+      <WatArun />
     </template>
     
 
     <template v-slot:main>
-
-      <article
-        id="contact"
-        :data-number-of-parts="screenProperties.ratioIndex"
-
-        :class="
-            screenProperties.isSentenceInFooter
-              ? 'o-no-location'
-              : ''
-          "
-      >
-
-        <WatArun />
-        <Location v-if="!screenProperties.isSentenceInFooter" />
-
-      </article>
-
-    </template>
-
-
-    <template
-      v-if="screenProperties.isSentenceInFooter"
-      v-slot:footer
-    >
-      <Location />
+      <ContactInfo v-if="screenProperties.ratioIndex > 2" />
+      <WatArun v-else />
     </template>
 
   </BaseLayout>
