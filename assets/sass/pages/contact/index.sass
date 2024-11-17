@@ -13,42 +13,14 @@
   text-align: center
 
 
-#contact
+.o-wat-arun
   display: flex
   align-items: center
   justify-content: center
 
-  .o-wat-arun
-    display: flex
-    align-items: center
-    justify-content: start
-
-    img
-      max-width: 100%
-      max-height: 100%
-
-
-  &[data-number-of-parts="2"]
-    flex-direction: column
-
-
-  &[data-number-of-parts="3"]
-
-    .o-location
-      flex-grow: 1
-      border-left: 1px solid colors.$light
-
-      margin-left: calc(dimensions.$layoutPaddingRightThreeParts)
-
-      padding-left: calc(dimensions.$layoutPaddingRightThreeParts / constants.$phi - 1px)
-
-
-
-#contact.o-no-location
-
-  .o-wat-arun
-    flex-grow: 1
-    justify-content: center
+  img
+    max-width: 100%
+    max-height: 100%
 
 
 .o-contact-info
