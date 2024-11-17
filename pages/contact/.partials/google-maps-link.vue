@@ -8,7 +8,7 @@
         <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
       </div>
 
-      <strong>Google Maps</strong>
+      <strong class="o-font-en">Google Maps</strong>
 
     </a>
 
