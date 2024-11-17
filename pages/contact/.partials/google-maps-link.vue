@@ -1,6 +1,6 @@
 <template>
 
-  <nav id="contact-google-maps-link">
+  <nav class="o-google-maps-link">
 
     <a href="https://maps.app.goo.gl/pxzkFhtF86Hmse588" target="_blank">
 

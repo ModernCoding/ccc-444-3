@@ -1,5 +1,6 @@
 <script setup>
 
+  import Address from './.partials/address'
   import ContactInfo from './.partials/contact-info'
   import GoogleMapsLink from './.partials/google-maps-link'
   import WatArun from './.partials/wat-arun'
@@ -20,7 +21,7 @@
       v-if="screenProperties.ratioIndex === 2"
       v-slot:aside
     >
-      <ContactInfo />
+      <Address />
       <GoogleMapsLink />
     </template>
 
@@ -36,12 +37,21 @@
     <template v-slot:main>
 
       <template v-if="screenProperties.ratioIndex > 2">
+        <Address />
         <ContactInfo />
         <GoogleMapsLink />
       </template>
 
       <WatArun v-else />
 
+    </template>
+
+
+    <template
+      v-if="screenProperties.ratioIndex === 2"
+      v-slot:footer-right
+    >
+      <ContactInfo />
     </template>
 
   </BaseLayout>
