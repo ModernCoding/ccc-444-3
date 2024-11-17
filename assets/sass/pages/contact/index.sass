@@ -6,8 +6,23 @@
 @use '@/assets/sass/sizes' as sizes
 
 
-.o-address
+.o-address, .o-contact-info
   text-align: center
+
+
+.o-tax-id
+
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  gap: 0 sizes.$twice_54_by_phi_power_6 * 1px
+
+  padding-top: sizes.$twice_54_by_phi_power_4 * 1px
+  padding-bottom: sizes.$twice_54_by_phi_power_5 * 1px
+
+  *
+    font-size: sizes.$twice_54_by_phi_power_5 * 1px
 
 
 .o-wat-arun
@@ -18,11 +33,6 @@
   img
     max-width: 100%
     max-height: 100%
-
-
-.o-contact-info
-
-  text-align: center
 
 
 .o-google-maps-link
