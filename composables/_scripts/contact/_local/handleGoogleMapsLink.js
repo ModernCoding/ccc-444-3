@@ -1,4 +1,4 @@
-export const handleLocation = screenProperties => {
+export const handleGoogleMapsLink = screenProperties => {
 
   const location = document.querySelector ([
       '#contact > .o-location',

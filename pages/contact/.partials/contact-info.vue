@@ -40,21 +40,6 @@
       <h3>Saen Suk, Mueang Chonburi, 20130, Thailand</h3>
     </article>
 
-
-    <nav>
-
-      <a href="https://maps.app.goo.gl/pxzkFhtF86Hmse588" target="_blank">
-
-        <div>
-          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-        </div>
-
-        <strong>Google Maps</strong>
-
-      </a>
-
-    </nav>
-    
   </section>
 
 </template>
