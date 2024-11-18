@@ -1,8 +1,14 @@
 export const handleContact = screenProperties => {
 
   const MAX_HEIGHTS = {
+
       '.o-address': screenProperties.heights.main / PHI,
-      '.o-contact-info': screenProperties.heights.main / PHI ** 2
+
+      '.o-contact-info': [
+          screenProperties.heights.footer,
+          screenProperties.heights.main / PHI ** 2
+        ] [ +(screenProperties.ratioIndex > 2) ]
+
     }
 
 
