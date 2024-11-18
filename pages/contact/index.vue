@@ -35,9 +35,14 @@
     <template v-slot:main>
 
       <template v-if="screenProperties.ratioIndex > 2">
-        <Address />
-        <ContactInfo />
+
+        <article id="contact">
+          <Address />
+          <ContactInfo />
+        </article>
+
       </template>
+
 
       <WatArun v-else />
 

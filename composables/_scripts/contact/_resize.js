@@ -1,4 +1,4 @@
-import { handleContactInfo } from './_local/handleContactInfo'
+import { handleContact } from './_local/handleContact'
 import { handleGoogleMapsLink } from './_local/handleGoogleMapsLink'
 import { handleWatArun } from './_local/handleWatArun'
 
@@ -9,6 +9,6 @@ export default (screenPropertiesStore, logoProperties) => {
 
   handleWatArun (screenPropertiesStore, logoProperties)
   handleGoogleMapsLink (screenProperties.value)
-  handleContactInfo (screenProperties.value)
+  handleContact (screenProperties.value)
 
 }
