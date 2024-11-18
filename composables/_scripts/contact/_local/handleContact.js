@@ -1,13 +1,21 @@
-export const handleContact = screenProperties =>
-  
-  (function _set (elements, i = 0) {
+export const handleContact = screenProperties => {
 
-    if (i >= elements.length) { return }
-    if (!elements [ i ]) { return _set (elements, ++i) }
+  const MAX_HEIGHTS = {
+      '.o-address': screenProperties.heights.main / PHI,
+      '.o-contact-info': screenProperties.heights.main / PHI ** 2
+    }
+
+
+  ;(function _set (keys, i = 0) {
+
+    if (i >= keys.length) { return }
+
+    const element = document.querySelector (keys [ i ])
+    if (!element) { return _set (keys, ++i) }
 
 
     const maxHeight = [
-        elements [ i ].getBoundingClientRect ().height,
+        MAX_HEIGHTS [ keys [ i ] ],
         screenProperties.heights.footer
       ] [ +screenProperties.isSentenceInFooter ]
 
@@ -21,15 +29,15 @@ export const handleContact = screenProperties =>
       ) (maxHeight)
 
 
-    const subElements = elements [ i ].querySelectorAll ('*')
-    subElements.forEach (sE => sE.style.fontSize = `${ fontSize }px`)
+    const subkeys = element.querySelectorAll ('*')
+    subkeys.forEach (sE => sE.style.fontSize = `${ fontSize }px`)
 
 
     ;(function _setFontSize (size = fontSize) {
 
         const _height = ((h = 0) => {
 
-            subElements
+            subkeys
               .forEach (sE => h += sE.getBoundingClientRect ().height)
 
             return h
@@ -42,12 +50,12 @@ export const handleContact = screenProperties =>
           case size <= TWICE_54_BY_PHI_POWER_4:
           case _height < maxHeight:
 
-            return _set (elements, ++i)
+            return _set (keys, ++i)
 
 
           default:
 
-            subElements
+            subkeys
               .forEach (sE => sE.style.fontSize = `${ size / PHI }px`)
 
             return _setFontSize (size / PHI)
@@ -56,7 +64,6 @@ export const handleContact = screenProperties =>
 
       }) ()
 
-  }) ([
-    document.querySelector ('.o-address'),
-    document.querySelector ('.o-contact-info')
-  ])
+  }) (Object.keys (MAX_HEIGHTS))
+
+}

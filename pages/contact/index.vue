@@ -37,8 +37,8 @@
       <template v-if="screenProperties.ratioIndex > 2">
 
         <article id="contact">
-          <Address />
           <ContactInfo />
+          <Address />
         </article>
 
       </template>
