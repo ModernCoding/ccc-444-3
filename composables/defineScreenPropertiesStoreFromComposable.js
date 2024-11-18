@@ -256,10 +256,16 @@ export default () => defineStore ('screenProperties', {
       if (!body) { return }
 
       const { width } = body.getBoundingClientRect ()
-      const maxWidth = width * (1 - 1 / PHI ** 6 - 1 / PHI ** 5)
 
-      const ratioPart
-        = 1 + PHI + PHI ** 2 + PHI ** 3 + PHI ** 4 + PHI ** 5 + PHI ** 6
+      const maxWidth = width * (1 - 1 / PHI ** 6 - 1 / PHI ** 5)
+        /*
+          100% - $layoutPaddingLeftOnePart - $layoutPaddingRightOnePart
+        */
+
+      const ratioPart = [
+          1 + PHI + PHI ** 2 + PHI ** 3 + PHI ** 4,
+          1 + PHI + PHI ** 2 + PHI ** 3 + PHI ** 4 + PHI ** 5 + PHI ** 6
+        ] [ this.screenProperties.ratioIndex - 2 ]
 
 
       this.screenProperties.widths = {

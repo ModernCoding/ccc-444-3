@@ -82,7 +82,6 @@ export const handleContact = screenProperties => {
   const email = document.querySelector ('.o-contact-info > a')
   if (!email) { return }
 
-
   const footerContent = document.querySelector ('#footer-right-content')
   if (!footerContent) { return }
 
