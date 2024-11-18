@@ -280,9 +280,10 @@ export default () => defineStore ('screenProperties', {
             ],
 
 
-          central: [ 0, width / ratioPart * PHI ** 5 ] [
-              +(this.screenProperties.ratioIndex > 2)
-            ],
+          central: [
+              0,
+              width / ratioPart * PHI ** 5    // $centralWidthThreeParts
+            ] [ +(this.screenProperties.ratioIndex > 2) ],
 
 
           main: [
