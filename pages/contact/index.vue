@@ -50,9 +50,14 @@
 
 
     <template
-      v-if="screenProperties.ratioIndex < 3"
+      v-if="screenProperties.ratioIndex === 2"
       v-slot:footer-left
     >
+      <GoogleMapsLink />
+    </template>
+
+
+    <template v-else v-slot:footer-right>
       <GoogleMapsLink />
     </template>
 
@@ -62,14 +67,6 @@
       v-slot:footer-right
     >
       <ContactInfo />
-    </template>
-
-
-    <template
-      v-if="screenProperties.ratioIndex > 2"
-      v-slot:footer-right
-    >
-      <GoogleMapsLink />
     </template>
 
   </BaseLayout>
