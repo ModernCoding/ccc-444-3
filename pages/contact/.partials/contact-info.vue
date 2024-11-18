@@ -11,7 +11,7 @@
       v-if="locale === 'th'"
       class="fw-bold o-font-th"
     >
-      โทร ๐๘๒๖๗๑๓๐๕๔
+      โทร ๐๘๒-๖๗๑๓๐๕๔
     </h1>
     
     <h1 v-else class="fw-bold o-font-en">+66.826.71.30.54</h1>
