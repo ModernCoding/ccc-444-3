@@ -1,71 +1,81 @@
 export const handleGoogleMapsLink = screenProperties => {
 
-  const location = document.querySelector ([
-      '#contact > .o-address',
-      '#footer-right-content .o-address'
-    ] [ +screenProperties.isSentenceInFooter ])
+  const googleMapsLink = document.querySelector ('.o-google-maps-link')
+  if (!googleMapsLink) { return }
 
 
-  if (!location) { return }
+  googleMapsLink.removeAttribute ('style')
+
+  googleMapsLink
+    .querySelectorAll ('*')
+    .forEach (element => element.removeAttribute ('style'))
 
 
-  const maxHeight = [
-      screenProperties.heights.footer,
-      location.getBoundingClientRect ().height,
-      screenProperties.heights.main
-    ] [ screenProperties.ratioIndex - 1 ]
+  const strong = googleMapsLink.querySelector ('strong')
+  if (!strong) { return }
+
+  const div = googleMapsLink.querySelector ('div')
+  if (!div) { return }
+
+  const i = googleMapsLink.querySelector ('i')
+  if (!i) { return }
+
+  const a = googleMapsLink.querySelector ('a')
+  if (!a) { return }
 
 
-  const maxWidth = location.getBoundingClientRect ().width
+  const size = (size =>
 
-      - parseInt (
-          window
-            .getComputedStyle (location)
-            .getPropertyValue ('padding-left')
-            .split ('px')
-            .join ('')
-        )
-
-      // - parseInt (
-      //     window
-      //       .getComputedStyle (location)
-      //       .getPropertyValue ('margin-left')
-      //       .split ('px')
-      //       .join ('')
-      //   )
-
-
-  const fontSize = (fontSize =>
-
-      [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
-        +(fontSize > TWICE_54_BY_PHI_POWER_4)
+      [ TWICE_54_BY_PHI_POWER_3, size, TWICE_54_BY_PHI ] [
+        +(size > TWICE_54_BY_PHI_POWER_3)
+        + +(size > TWICE_54_BY_PHI)
       ]
 
-    ) (maxHeight)
+    ) (screenProperties.heights.footer / PHI)
 
 
-  const h1 = location.querySelector ('h1')
-  if (!h1) { return }
+  googleMapsLink.style.height = `${ size }px`
+
+  a.style.paddingRight = `${ size / PHI ** 2 }px`
+  a.style.gap = `${ size / PHI ** 2 }px`
+
+  strong.style.fontSize = `${ size / PHI ** 2 }px`
+  i.style.fontSize = `${ size / PHI ** 2 }px`
+
+  div.style.height = `${ size / PHI }px`
+  div.style.width = `${ size }px`
 
 
-  h1.style.fontSize = `${ fontSize }px`
-
-
-  ;(function _set (size = fontSize) {
+  ;(function _set (s = size) {
 
       switch (true) {
         
-        case  size <= TWICE_54_BY_PHI_POWER_4:
+        case  s < TWICE_54_BY_PHI_POWER_3:
+
+        case  a.getBoundingClientRect ().width
+              < screenProperties.widths [
+                  [ 'aside', 'main' ] [
+                    +(screenProperties.ratioIndex > 2)
+                  ]
+                ]:
+
           return
 
-        case  h1.getBoundingClientRect ().height >= maxHeight:
-        case  h1.getBoundingClientRect ().width >= maxWidth:
 
-          h1.style.fontSize = `${ size / PHI }px`
-          return _set (size / PHI)
-        
         default:
-          return
+
+          googleMapsLink.style.height = `${ s / PHI }px`
+
+          a.style.paddingRight = `${ s / PHI ** 3 }px`
+          a.style.gap = `${ s / PHI ** 3 }px`
+      
+          strong.style.fontSize = `${ s / PHI ** 3 }px`
+          i.style.fontSize = `${ s / PHI ** 3 }px`
+
+          div.style.height = `${ s / PHI ** 2 }px`
+          div.style.width = `${ s / PHI }px`
+
+          return _set (s / PHI)
 
       }
 
