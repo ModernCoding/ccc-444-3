@@ -18,7 +18,7 @@
 
     <a
       href="mailto:contact@coding-crafting-consulting.com"
-      class="fw-bold text-danger o-font-en"
+      class="text-danger fw-bold o-font-en"
     >
       contact@coding&#8209;crafting&#8209;consulting.com
     </a>
