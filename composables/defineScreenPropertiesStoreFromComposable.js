@@ -272,8 +272,8 @@ export default () => defineStore ('screenProperties', {
 
           aside: [
               maxWidth,
-              width / ratioPart * PHI ** 3,
-              width / ratioPart * PHI ** 4
+              width / ratioPart * PHI ** 3,   // $asideWidthTwoParts
+              width / ratioPart * PHI ** 4    // $asideWidthThreeParts
             ] [
               +(this.screenProperties.ratioIndex > 1)
               + +(this.screenProperties.ratioIndex > 2)
@@ -287,8 +287,8 @@ export default () => defineStore ('screenProperties', {
 
           main: [
               maxWidth,
-              width / ratioPart * PHI ** 4,
-              width / ratioPart * PHI ** 6
+              width / ratioPart * PHI ** 4,   // $mainWidthTwoParts
+              width / ratioPart * PHI ** 6    // $mainWidthThreeParts
             ] [
               +(this.screenProperties.ratioIndex > 1)
               + +(this.screenProperties.ratioIndex > 2)

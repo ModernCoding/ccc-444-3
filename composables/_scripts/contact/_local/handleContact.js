@@ -96,7 +96,7 @@ export const handleContact = screenProperties => {
         case  size <= minSize:
 
         case  email.getBoundingClientRect ().width
-              < footerContent.getBoundingClientRect ().width:
+              < screenProperties.widths.main:
 
           return
 
