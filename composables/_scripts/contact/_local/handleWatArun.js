@@ -40,7 +40,6 @@ export const handleWatArun = (
 
         const height = screenProperties.heights.main
             - screenProperties.paddingTops.corrected.main
-            - sectionHeight
 
 
         figure.style.paddingTop = `${ paddingTop }px`

@@ -20,7 +20,7 @@
       href="mailto:contact@coding-crafting-consulting.com"
       class="fw-bold text-danger o-font-en"
     >
-      contact@coding-crafting-consulting.com
+      contact@coding&#8209;crafting&#8209;consulting.com
     </a>
 
   </article>

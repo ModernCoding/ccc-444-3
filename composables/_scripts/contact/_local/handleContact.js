@@ -12,64 +12,103 @@ export const handleContact = screenProperties => {
     }
 
 
+  let appliedFontSize = 0
+
+
   ;(function _set (keys, i = 0) {
 
-    if (i >= keys.length) { return }
+      if (i >= keys.length) { return }
 
-    const element = document.querySelector (keys [ i ])
-    if (!element) { return _set (keys, ++i) }
-
-
-    const maxHeight = [
-        MAX_HEIGHTS [ keys [ i ] ],
-        screenProperties.heights.footer
-      ] [ +screenProperties.isSentenceInFooter ]
+      const element = document.querySelector (keys [ i ])
+      if (!element) { return _set (keys, ++i) }
 
 
-    const fontSize = (fontSize =>
-
-        [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
-          +(fontSize > TWICE_54_BY_PHI_POWER_4)
-        ]
-
-      ) (maxHeight)
+      const maxHeight = [
+          MAX_HEIGHTS [ keys [ i ] ],
+          screenProperties.heights.footer
+        ] [ +screenProperties.isSentenceInFooter ]
 
 
-    const subkeys = element.querySelectorAll ('*')
-    subkeys.forEach (sE => sE.style.fontSize = `${ fontSize }px`)
+      const fontSize = (fontSize =>
+
+          [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
+            +(fontSize > TWICE_54_BY_PHI_POWER_4)
+          ]
+
+        ) (maxHeight)
 
 
-    ;(function _setFontSize (size = fontSize) {
-
-        const _height = ((h = 0) => {
-
-            subkeys
-              .forEach (sE => h += sE.getBoundingClientRect ().height)
-
-            return h
-
-          }) ()
+      const subkeys = element.querySelectorAll ('*')
+      subkeys.forEach (sE => sE.style.fontSize = `${ fontSize }px`)
 
 
-        switch (true) {
-          
-          case size <= TWICE_54_BY_PHI_POWER_4:
-          case _height < maxHeight:
+      ;(function _setFontSize (size = fontSize) {
 
-            return _set (keys, ++i)
+          appliedFontSize = size
 
 
-          default:
+          const _height = ((h = 0) => {
 
-            subkeys
-              .forEach (sE => sE.style.fontSize = `${ size / PHI }px`)
+              subkeys
+                .forEach (sE => h += sE.getBoundingClientRect ().height)
 
-            return _setFontSize (size / PHI)
+              return h
 
-        }
+            }) ()
 
-      }) ()
 
-  }) (Object.keys (MAX_HEIGHTS))
+          switch (true) {
+            
+            case size <= TWICE_54_BY_PHI_POWER_4:
+            case _height < maxHeight:
+
+              return _set (keys, ++i)
+
+
+            default:
+
+              subkeys
+                .forEach (sE => sE.style.fontSize = `${ size / PHI }px`)
+
+              return _setFontSize (size / PHI)
+
+          }
+
+        }) ()
+
+    }) (Object.keys (MAX_HEIGHTS))
+
+
+  const email = document.querySelector ('.o-contact-info > a')
+  if (!email) { return }
+
+
+  const footerContent = document.querySelector ('#footer-right-content')
+  if (!footerContent) { return }
+
+
+  ;(function _adjust (
+    size = appliedFontSize,
+    minSize = TWICE_54_BY_PHI_POWER_5
+  ) {
+
+      switch (true) {
+        
+        case  size <= minSize:
+
+        case  email.getBoundingClientRect ().width
+              < footerContent.getBoundingClientRect ().width:
+
+          return
+
+
+        default:
+
+          email.style.fontSize = `${ size / PHI }px`
+          return _adjust (size / PHI)
+
+      }
+
+    }) ()
 
 }
