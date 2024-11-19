@@ -51,18 +51,18 @@ export const handleGoogleMapsLink = screenProperties => {
       switch (true) {
         
         case  s < TWICE_54_BY_PHI_POWER_3:
+          return
+
+
+        case  googleMapsLink.getBoundingClientRect ().height
+              >= screenProperties.heights.footer:
 
         case  a.getBoundingClientRect ().width
-              < screenProperties.widths [
+              >= screenProperties.widths [
                   [ 'aside', 'main' ] [
                     +(screenProperties.ratioIndex > 2)
                   ]
                 ]:
-
-          return
-
-
-        default:
 
           googleMapsLink.style.height = `${ s / PHI }px`
 
@@ -76,6 +76,10 @@ export const handleGoogleMapsLink = screenProperties => {
           div.style.width = `${ s / PHI }px`
 
           return _set (s / PHI)
+
+
+        default:
+          return
 
       }
 

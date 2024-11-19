@@ -19,8 +19,8 @@
   <BaseLayout>
 
     <template v-slot:aside>
-      <TaxId />
       <Address v-if="screenProperties.ratioIndex === 2" />
+      <TaxId />
     </template>
 
 
