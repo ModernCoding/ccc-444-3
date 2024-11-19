@@ -1,7 +1,4 @@
-export const handleWatArun = (
-  screenPropertiesStore,
-  logoProperties
-) => {
+export const handleWatArun = screenPropertiesStore => {
 
   const { screenProperties: { value: screenProperties } }
     = storeToRefs (screenPropertiesStore)

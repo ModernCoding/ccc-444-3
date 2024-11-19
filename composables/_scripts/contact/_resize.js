@@ -7,8 +7,8 @@ export default (screenPropertiesStore, logoProperties) => {
   
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  handleWatArun (screenPropertiesStore, logoProperties)
+  handleWatArun (screenPropertiesStore)
   handleGoogleMapsLink (screenProperties.value)
-  handleContact (screenProperties.value)
+  handleContact (screenProperties.value, logoProperties.value)
 
 }
