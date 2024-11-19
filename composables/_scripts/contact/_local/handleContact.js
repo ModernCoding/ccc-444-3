@@ -1,12 +1,22 @@
-export const handleContact = (
-  screenProperties,
-  logoProperties,
-  pagesStore
-) => {
+export const handleContact = (screenProperties, logoProperties) => {
 
   const MAX_HEIGHTS = {
 
-      '.o-address': screenProperties.heights.main / PHI,
+      '.o-address': [
+
+          screenProperties.heights.aside
+
+            - logoProperties.height
+
+            - (taxId => 
+                taxId ? taxId.getBoundingClientRect ().height : 0
+              ) (document.querySelector ('.o-tax-id')),
+
+
+          screenProperties.heights.main / PHI
+
+        ] [ +(screenProperties.ratioIndex > 2) ],
+
 
       '.o-contact-info': [
           screenProperties.heights.footer,
@@ -14,6 +24,10 @@ export const handleContact = (
         ] [ +(screenProperties.ratioIndex > 2) ]
 
     }
+
+
+  const address = document.querySelector ('.o-address')
+  address && address.removeAttribute ('style')
 
 
   let appliedFontSize = 0
@@ -113,5 +127,19 @@ export const handleContact = (
       }
 
     }) ()
+
+
+  if (screenProperties.ratioIndex !== 2) { return }
+  if (!address) { return }
+
+
+  if (
+    address.getBoundingClientRect ().height
+      >= MAX_HEIGHTS [ '.o-address' ]
+  ) {
+    address.style.display = 'none'
+  }
+
+
 
 }

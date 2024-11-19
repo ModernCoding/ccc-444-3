@@ -8,7 +8,7 @@
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
-    
+
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 </script>

@@ -3,17 +3,12 @@ import { handleGoogleMapsLink } from './_local/handleGoogleMapsLink'
 import { handleWatArun } from './_local/handleWatArun'
 
 
-export default (screenPropertiesStore, pagesStore, logoProperties) => {
+export default (screenPropertiesStore, logoProperties) => {
   
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   handleWatArun (screenPropertiesStore)
   handleGoogleMapsLink (screenProperties.value)
-  
-  handleContact (
-    screenProperties.value,
-    logoProperties.value,
-    pagesStore
-  )
+  handleContact (screenProperties.value, logoProperties.value)
 
 }

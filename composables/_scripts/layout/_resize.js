@@ -10,7 +10,6 @@ const startPageScripts = collectStartPageScriptsFromComposable ()
 export default (
   loadingStore,
   logoPropertiesStore,
-  pagesStore,
   screenPropertiesStore,
   route,
   delay = 0
@@ -33,12 +32,8 @@ export default (
     switch (route.name) {
 
       case "contact":
-
-        contactScripts
-          .resize (screenPropertiesStore, pagesStore, logoProperties)
-      
+        contactScripts.resize (screenPropertiesStore, logoProperties)
         break
-
 
       case "index":
         startPageScripts.resize (screenPropertiesStore, logoProperties)
