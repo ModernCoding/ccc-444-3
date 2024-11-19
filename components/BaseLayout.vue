@@ -13,6 +13,7 @@
     = defineLogoPropertiesStoreFromComposable () ()
 
   const modalStore = defineModalStoreFromComposable () ()
+  const pagesStore = definePagesStoreFromComposable () ()
   
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -58,6 +59,7 @@
     delay > -1 && layoutScripts.resize (
       loadingStore,
       logoPropertiesStore,
+      pagesStore,
       screenPropertiesStore,
       route,
       delay
