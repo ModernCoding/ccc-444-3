@@ -1,6 +1,6 @@
 export const handleContact = (screenProperties, logoProperties) => {
 
-  const MAX_HEIGHTS = {
+  const maxHeights = {
 
       '.o-address': [
 
@@ -26,6 +26,11 @@ export const handleContact = (screenProperties, logoProperties) => {
     }
 
 
+  const maxWidth = screenProperties.widths [
+      [ 'aside', 'main' ] [ +(screenProperties.ratioIndex > 2) ]
+    ]
+
+
   const address = document.querySelector ('.o-address')
   address && address.removeAttribute ('style')
 
@@ -42,7 +47,7 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
       const maxHeight = [
-          MAX_HEIGHTS [ keys [ i ] ],
+          maxHeights [ keys [ i ] ],
           screenProperties.heights.footer
         ] [ +screenProperties.isSentenceInFooter ]
 
@@ -78,8 +83,15 @@ export const handleContact = (screenProperties, logoProperties) => {
           switch (true) {
             
             case size <= TWICE_54_BY_PHI_POWER_4:
-            case _height < maxHeight:
 
+              subkeys.forEach (sE =>
+                  sE.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+                )
+              
+              return _set (keys, ++i)
+
+
+            case _height < maxHeight:
               return _set (keys, ++i)
 
 
@@ -94,7 +106,7 @@ export const handleContact = (screenProperties, logoProperties) => {
 
         }) ()
 
-    }) (Object.keys (MAX_HEIGHTS))
+    }) (Object.keys (maxHeights))
 
 
   const email = document.querySelector ('.o-contact-info > a')
@@ -112,6 +124,9 @@ export const handleContact = (screenProperties, logoProperties) => {
       switch (true) {
         
         case  size <= minSize:
+          email.style.fontSize = `${ minSize }px`
+          return
+
 
         case  email.getBoundingClientRect ().width
               < screenProperties.widths.main:
@@ -120,7 +135,6 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
         default:
-
           email.style.fontSize = `${ size / PHI }px`
           return _adjust (size / PHI)
 
@@ -129,17 +143,47 @@ export const handleContact = (screenProperties, logoProperties) => {
     }) ()
 
 
+  address.querySelectorAll ('*').forEach (hx => (function _adjust (
+    size = appliedFontSize,
+    minSize = TWICE_54_BY_PHI_POWER_5
+  ) {
+
+      switch (true) {
+        
+        case size <= minSize:
+          hx.style.fontSize = `${ minSize }px`
+          return
+
+        case hx.scrollWidth < maxWidth:
+          return
+
+        default:
+          hx.style.fontSize = `${ size / PHI }px`
+          return _adjust (size / PHI)
+
+      }
+
+    }) ())
+
+
   if (screenProperties.ratioIndex !== 2) { return }
   if (!address) { return }
 
 
-  if (
-    address.getBoundingClientRect ().height
-      >= MAX_HEIGHTS [ '.o-address' ]
-  ) {
-    address.style.display = 'none'
+  switch (true) {
+
+    case  address.getBoundingClientRect ().height
+          >= maxHeights [ '.o-address' ]:
+
+    case  address.scrollWidth >= maxWidth:
+
+      address.style.display = 'none'
+      break
+
+
+    default:
+      break
+
   }
-
-
 
 }
