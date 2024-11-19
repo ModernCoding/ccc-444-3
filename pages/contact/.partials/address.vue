@@ -9,16 +9,21 @@
     v-if="locale === 'th'"
     class="o-font-th o-address"
   >
-    <h1>๖๑/๒๙ ถนนบางแสนสาย ๔ ใต้</h1>
-    <h2>ถนน ส่วนบุคคล NA วิลล่า ๒</h2>
-    <h3>อำเภอเมืองชลบุรี จ.ชลบุรี ๒๐๑๓๐</h3>
+    <h1>๖๑/๒๙&nbsp;ถนนบางแสนสาย&nbsp;๔&nbsp;ใต้</h1>
+    <h2>ถนน&nbsp;ส่วนบุคคล&nbsp;NA&nbsp;วิลล่า&nbsp;๒</h2>
+    <h3>อำเภอเมืองชลบุรี&nbsp;จ.ชลบุรี&nbsp;๒๐๑๓๐</h3>
   </article>
 
 
   <article v-else class="o-font-en o-address">
-    <h1>61/29 Bangsaen Sai 4 Tai Road</h1>
-    <h2>Thanon Suan Bukkhon NA Villa 2</h2>
-    <h3>Saen Suk, Mueang Chonburi, 20130, Thailand</h3>
+
+    <h1>61/29&nbsp;Bangsaen&nbsp;Sai&nbsp;4&nbsp;Tai&nbsp;Road</h1>
+    <h2>Thanon&nbsp;Suan&nbsp;Bukkhon&nbsp;NA&nbsp;Villa&nbsp;2</h2>
+
+    <h3>
+      Saen&nbsp;Suk,&nbsp;Mueang&nbsp;Chonburi,&nbsp;20130,&nbsp;Thailand
+    </h3>
+
   </article>
 
 </template>
