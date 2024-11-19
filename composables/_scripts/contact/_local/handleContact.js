@@ -1,4 +1,8 @@
-export const handleContact = (screenProperties, logoProperties) => {
+export const handleContact = (
+  screenProperties,
+  logoProperties,
+  pagesStore
+) => {
 
   const MAX_HEIGHTS = {
 
