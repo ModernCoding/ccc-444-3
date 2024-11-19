@@ -257,6 +257,6 @@
 
 
 <style
-  src="@/assets/sass/layouts/default.sass"
+  src="@/assets/sass/components/base-layout.sass"
   lang="sass"
 ></style>
