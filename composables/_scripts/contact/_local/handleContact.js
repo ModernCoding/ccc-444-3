@@ -32,25 +32,30 @@ const _adjust = (
 
 const _handleOnePartMode = (screenProperties, logoProperties) => {
 
-  const _setFontSize = (
-    element,
-    size,
-    minSize = TWICE_54_BY_PHI_POWER_5,
-    maxWidth
-  ) => {
+  const _setFontSize = (element, size, minSize, maxHeight) => {
 
       switch (true) {
         
         case size <= minSize:
-          element.forEach (e => e.style.fontSize = `${ minSize }px`)
+
+          element
+            .querySelectorAll ('*')
+            .forEach (e => e.style.fontSize = `${ minSize }px`)
+
           return
 
-        case element.getBoundingClientRect ().height < maxHeight:
+
+        case element.scrollHeight < maxHeight:
           return
+
 
         default:
-          element.forEach (e => e.style.fontSize = `${ size / PHI }px`)
-          return _setFontSize (size / PHI)
+
+          element
+            .querySelectorAll ('*')
+            .forEach (e => e.style.fontSize = `${ size / PHI }px`)
+
+          return _setFontSize (element, size / PHI, minSize, maxHeight)
 
       }
 
@@ -76,26 +81,40 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
   const taxId = document.querySelector ('#contact > .o-tax-id')
 
 
-  address && (() => {
+  address && (height => {
 
-      address.style.height = `${ smallestPartHeight * PHI ** 2 }px`
+      address.style.height = `${ height }px`
 
       address.querySelectorAll ('*').forEach (hx =>
           hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
         )
 
-    }) ()
+      _setFontSize (
+        address,
+        TWICE_54_BY_PHI_POWER_4,
+        TWICE_54_BY_PHI_POWER_5,
+        height
+      )
+
+    }) (smallestPartHeight * PHI ** 2)
 
 
-  contactInfo && (() => {
+  contactInfo && (height => {
 
-      contactInfo.style.height = `${ smallestPartHeight * PHI }px`
+      contactInfo.style.height = `${ height }px`
 
       contactInfo.querySelectorAll ('*').forEach (e =>
           e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
         )
 
-    }) ()
+      _setFontSize (
+        contactInfo,
+        TWICE_54_BY_PHI_POWER_4,
+        TWICE_54_BY_PHI_POWER_5,
+        height
+      )
+
+    }) (smallestPartHeight * PHI)
 
 
   taxId && (taxId.style.height = `${ smallestPartHeight }px`)
