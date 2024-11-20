@@ -32,7 +32,16 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
   const address = document.querySelector ('.o-address')
-  address && address.removeAttribute ('style')
+
+  address && (() => {
+
+    address.removeAttribute ('style')
+
+    address
+      .querySelectorAll ('*')
+      .forEach (hx => hx.removeAttribute ('style'))
+
+  }) ()
 
 
   let appliedFontSize = 0
@@ -143,6 +152,9 @@ export const handleContact = (screenProperties, logoProperties) => {
     }) ()
 
 
+  if (!address) { return }
+
+
   address.querySelectorAll ('*').forEach (hx => (function _adjust (
     size = appliedFontSize,
     minSize = TWICE_54_BY_PHI_POWER_5
@@ -166,24 +178,32 @@ export const handleContact = (screenProperties, logoProperties) => {
     }) ())
 
 
-  if (screenProperties.ratioIndex !== 2) { return }
-  if (!address) { return }
+  ;(h2 => {
+
+      switch (true) {
+
+        case  !h2:
+          break
 
 
-  switch (true) {
+        case  h2.scrollWidth >= maxWidth:
 
-    case  address.getBoundingClientRect ().height
-          >= maxHeights [ '.o-address' ]:
+        case  address.getBoundingClientRect ().height
+              >= maxHeights [ '.o-address' ]:
 
-    case  address.scrollWidth >= maxWidth:
-
-      address.style.display = 'none'
-      break
+          h2.style.display = 'none'
+          break
 
 
-    default:
-      break
+        default:
+          break
 
-  }
+      }
+
+    }) (address.querySelector ('h2'))
+
+
+  address.getBoundingClientRect ().height
+    >= maxHeights [ '.o-address' ] && (address.style.display = 'none')
 
 }
