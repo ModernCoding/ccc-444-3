@@ -114,20 +114,20 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
         height
       )
 
+
+      const email = contactInfo.querySelector ('a')
+
+      email && _adjust (
+          email,
+          TWICE_54_BY_PHI_POWER_4,
+          TWICE_54_BY_PHI_POWER_5,
+          screenProperties.widths.main
+        )
+
     }) (smallestPartHeight * PHI)
 
 
   taxId && (taxId.style.height = `${ smallestPartHeight }px`)
-
-
-  const email = contactInfo.querySelector ('a')
-
-  email && _adjust (
-      email,
-      TWICE_54_BY_PHI_POWER_4,
-      TWICE_54_BY_PHI_POWER_5,
-      screenProperties.widths.main
-    )
 
 
   document.querySelectorAll ('#contact *:not(a)').forEach (hx =>
