@@ -1,17 +1,29 @@
-const _adjustEmail = (email, size, minSize, maxWidth) => {
+const _adjust = (
+  element,
+  size,
+  minSize,
+  maxWidth,
+  considerScrollWidth = false
+) => {
 
   switch (true) {
     
     case size <= minSize:
-      email.style.fontSize = `${ minSize }px`
+      element.style.fontSize = `${ minSize }px`
       return
 
-    case email.getBoundingClientRect ().width < maxWidth:
+
+    case [
+      element.getBoundingClientRect ().width,
+      element.scrollWidth
+    ] [ +considerScrollWidth ] < maxWidth:
+      
       return
+
 
     default:
-      email.style.fontSize = `${ size / PHI }px`
-      return _adjustEmail (email, size / PHI, minSize)
+      element.style.fontSize = `${ size / PHI }px`
+      return _adjust (element, size / PHI, minSize, considerScrollWidth)
 
   }
 
@@ -67,7 +79,7 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
 
   const email = contactInfo.querySelector ('a')
 
-  email && _adjustEmail (
+  email && _adjust (
       email,
       TWICE_54_BY_PHI_POWER_3,
       TWICE_54_BY_PHI_POWER_5,
@@ -208,7 +220,7 @@ export const handleContact = (screenProperties, logoProperties) => {
   const footerContent = document.querySelector ('#footer-right-content')
   if (!footerContent) { return }
 
-  _adjustEmail (
+  _adjust (
     email,
     appliedFontSize,
     TWICE_54_BY_PHI_POWER_5,
@@ -219,27 +231,17 @@ export const handleContact = (screenProperties, logoProperties) => {
   if (!address) { return }
 
 
-  address.querySelectorAll ('*').forEach (hx => (function _adjust (
-    size = appliedFontSize,
-    minSize = TWICE_54_BY_PHI_POWER_5
-  ) {
+  address.querySelectorAll ('*').forEach (hx =>
 
-      switch (true) {
-        
-        case size <= minSize:
-          hx.style.fontSize = `${ minSize }px`
-          return
+      _adjust (
+        hx,
+        appliedFontSize,
+        TWICE_54_BY_PHI_POWER_5,
+        maxWidth,
+        true
+      )
 
-        case hx.scrollWidth < maxWidth:
-          return
-
-        default:
-          hx.style.fontSize = `${ size / PHI }px`
-          return _adjust (size / PHI)
-
-      }
-
-    }) ())
+    )
 
 
   ;(h2 => {
