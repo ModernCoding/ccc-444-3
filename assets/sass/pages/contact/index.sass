@@ -6,17 +6,6 @@
 @use '@/assets/sass/sizes' as sizes
 
 
-#contact
-
-  &:not([data-number-of-parts="1"])
-    
-    .o-address
-      height: math.div(dimensions.$heightSectionTwoParts, constants.$phi)
-
-    .o-contact-info
-      height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
-
-
 .o-address, .o-contact-info
   display: flex
   flex-direction: column
@@ -45,7 +34,7 @@
 
   padding-top: sizes.$twice_54_by_phi_power_4 * 1px
   padding-bottom: sizes.$twice_54_by_phi_power_5 * 1px
-
+  
   *
     font-size: sizes.$twice_54_by_phi_power_5 * 1px
 
@@ -105,3 +94,26 @@
 
     i, strong
       font-size: sizes.$twice_54_by_phi_power_4 * 1px
+
+
+
+
+
+#contact
+
+  .o-tax-id
+    padding-top: 0
+    padding-bottom: 0
+
+
+  &:not([data-number-of-parts="1"])
+    
+    .o-address
+      height: math.div(dimensions.$heightSectionTwoParts, constants.$phi)
+
+    .o-contact-info
+      height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
+
+    .o-tax-id
+      padding-top: sizes.$twice_54_by_phi_power_4 * 1px
+      padding-bottom: sizes.$twice_54_by_phi_power_5 * 1px

@@ -58,10 +58,9 @@
 
 
         <template v-if="screenProperties.ratioIndex < 2">
-          <TaxId />
           <ContactInfo />
           <Address />
-          <!-- <WatArun /> -->
+          <TaxId />
         </template>
     
       </article>

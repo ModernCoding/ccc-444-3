@@ -36,23 +36,46 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
     .querySelectorAll ("#contact *")
     .forEach (e => e.removeAttribute ('style'))
 
+  console.log (screenProperties)
+
+
+  const smallestPartHeight = (
+      screenProperties.heights.main
+        - screenProperties.paddingTops.corrected.main
+    ) / (1 + PHI + PHI ** 2)
+
   
   const address = document.querySelector ('#contact > .o-address')
 
   const contactInfo
     = document.querySelector ('#contact > .o-contact-info')
 
-
   const taxId = document.querySelector ('#contact > .o-tax-id')
 
 
-  address && address.querySelectorAll ('*').forEach (hx =>
-      hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
-    )
+  address && (() => {
 
-  contactInfo && contactInfo.querySelectorAll ('*').forEach (e =>
-      e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
-    )
+      address.style.height = `${ smallestPartHeight * PHI ** 2 }px`
+
+      address.querySelectorAll ('*').forEach (hx =>
+          hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+        )
+
+    }) ()
+
+
+  contactInfo && (() => {
+
+      contactInfo.style.height = `${ smallestPartHeight * PHI }px`
+
+      contactInfo.querySelectorAll ('*').forEach (e =>
+          e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+        )
+
+    }) ()
+
+
+  taxId && (taxId.style.height = `${ smallestPartHeight }px`)
 
 
   const email = contactInfo.querySelector ('a')
@@ -106,7 +129,7 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
       '.o-contact-info': [
-          screenProperties.heights.footer,
+          screenProperties.heights.footer / PHI ** 2,
           screenProperties.heights.main / PHI ** 2
         ] [ +(screenProperties.ratioIndex > 2) ]
 
@@ -210,6 +233,7 @@ export const handleContact = (screenProperties, logoProperties) => {
 
   const footerContent = document.querySelector ('#footer-right-content')
   if (!footerContent) { return }
+
 
   _adjust (
     email,
