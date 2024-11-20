@@ -155,23 +155,31 @@ export default () => defineStore ('screenProperties', {
 
           ;(logo =>
 
-              logo && (({ height }) => {
+              this.screenProperties.paddingTops.corrected.main = !logo
 
-                this.screenProperties.paddingTops.corrected.main
-                  = (value => value < 0 ? 0 : value) (
+                  ? this.screenProperties.paddingTops.calculated.main
 
-                      this.screenProperties.paddingTops.calculated.main
-                        - this.screenProperties.heights.aside
-                        + height
-                        + this
+                  : (({ height }) =>
+
+                      (value => value < 0 ? 0 : value) (
+
+                          this
                             .screenProperties
                             .paddingTops
-                            .corrected
-                            .aside
-                    
-                    )
+                            .calculated
+                            .main
 
-              }) (logo.getBoundingClientRect ())
+                              - this.screenProperties.heights.aside
+                              + height
+                              + this
+                                  .screenProperties
+                                  .paddingTops
+                                  .corrected
+                                  .aside
+                        
+                        )
+
+                    ) (logo.getBoundingClientRect ())
 
             ) (document.querySelector ('#logo'))
 

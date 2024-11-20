@@ -18,12 +18,18 @@
 
   <BaseLayout>
 
-    <template
-      v-if="screenProperties.ratioIndex > 1"
-      v-slot:aside
-    >
-      <TaxId />
-      <Address v-if="screenProperties.ratioIndex < 3" />
+    <template v-slot:aside>
+
+      <template v-if="screenProperties.ratioIndex > 1">
+        <TaxId />
+        <Address v-if="screenProperties.ratioIndex < 3" />
+      </template>
+
+
+      <NuxtLink v-else to="/">
+        <WatArun />
+      </NuxtLink>
+
     </template>
 
 
@@ -55,7 +61,7 @@
           <TaxId />
           <ContactInfo />
           <Address />
-          <WatArun />
+          <!-- <WatArun /> -->
         </template>
     
       </article>

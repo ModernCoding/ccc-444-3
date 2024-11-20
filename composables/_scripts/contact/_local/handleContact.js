@@ -37,43 +37,21 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
     .forEach (e => e.removeAttribute ('style'))
 
   
-  ;(taxId =>
-
-      taxId && (marginTop => {
-
-        taxId.style.marginTop = `${ marginTop }px`
-        taxId.style.marginBottom = `${ -marginTop }px`
-    
-      }) (
-
-        logoProperties.height
-          - screenProperties.heights.aside
-          - screenProperties.paddingTops.corrected.main
-
-          /*
-            delta aside height / logo height
-              & corrected main padding top to:
-                - remove from top
-                - compensate at bottom
-          */
-      
-      )
-    
-    ) (document.querySelector ('#contact > .o-tax-id'))
-
-
   const address = document.querySelector ('#contact > .o-address')
 
   const contactInfo
     = document.querySelector ('#contact > .o-contact-info')
 
 
+  const taxId = document.querySelector ('#contact > .o-tax-id')
+
+
   address && address.querySelectorAll ('*').forEach (hx =>
-      hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_3 }px`
+      hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
     )
 
   contactInfo && contactInfo.querySelectorAll ('*').forEach (e =>
-      e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_3 }px`
+      e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
     )
 
 
@@ -81,9 +59,22 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
 
   email && _adjust (
       email,
-      TWICE_54_BY_PHI_POWER_3,
+      TWICE_54_BY_PHI_POWER_4,
       TWICE_54_BY_PHI_POWER_5,
       screenProperties.widths.main
+    )
+
+
+  document.querySelectorAll ('#contact *:not(a)').forEach (hx =>
+
+      _adjust (
+        hx,
+        TWICE_54_BY_PHI_POWER_4,
+        TWICE_54_BY_PHI_POWER_5,
+        screenProperties.widths.main,
+        true
+      )
+
     )
 
 }

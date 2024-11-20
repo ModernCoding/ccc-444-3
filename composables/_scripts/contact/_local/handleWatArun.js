@@ -4,26 +4,21 @@ export const handleWatArun = screenPropertiesStore => {
     = storeToRefs (screenPropertiesStore)
 
   const figure = document.querySelector ('.o-wat-arun')
+  figure && figure.removeAttribute ('style')
 
 
-  if (!figure) {
-    return screenPropertiesStore.patchIsSentenceInFooter ()
-  }
-  
-  figure.removeAttribute ('style')
+  screenPropertiesStore.patchRatioIndex (window)
+  screenPropertiesStore.patchHeights ()
+  screenPropertiesStore.patchPaddingTops ()
+  screenPropertiesStore.patchWidths ()
 
 
-  // formatting in 1-part mode is being done in handleContact
+  figure && (height => figure.style.height = `${ height }px`) (
 
-  screenProperties.ratioIndex > 1 && (() => {
+      screenProperties.heights [
+        [ 'aside', 'main' ] [ +(screenProperties.ratioIndex > 1) ]
+      ]
 
-      screenPropertiesStore.patchRatioIndex (window)
-      screenPropertiesStore.patchHeights ()
-      screenPropertiesStore.patchPaddingTops ()
-      screenPropertiesStore.patchWidths ()
-
-      figure.style.height = `${ screenProperties.heights.main }px`
-
-    }) ()
+    )
 
 }

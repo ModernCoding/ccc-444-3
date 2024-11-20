@@ -165,7 +165,15 @@
 
     <aside>
 
-      <NuxtLink to="/" :data-is-shown="+!modal.main.show">
+      <NuxtLink
+        v-if="
+            screenProperties.ratioIndex > 1
+              || route.name !== 'contact'
+          "
+
+        to="/"
+        :data-is-shown="+!modal.main.show"
+      >
         <Logo />
       </NuxtLink>
       
