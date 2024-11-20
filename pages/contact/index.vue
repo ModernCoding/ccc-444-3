@@ -18,9 +18,12 @@
 
   <BaseLayout>
 
-    <template v-slot:aside>
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:aside
+    >
       <TaxId />
-      <Address v-if="screenProperties.ratioIndex === 2" />
+      <Address v-if="screenProperties.ratioIndex < 3" />
     </template>
 
 
