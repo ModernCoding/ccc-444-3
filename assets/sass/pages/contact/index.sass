@@ -7,12 +7,14 @@
 
 
 #contact
-  
-  .o-address
-    height: math.div(dimensions.$heightSectionTwoParts, constants.$phi)
 
-  .o-contact-info
-    height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
+  &:not([data-number-of-parts="1"])
+    
+    .o-address
+      height: math.div(dimensions.$heightSectionTwoParts, constants.$phi)
+
+    .o-contact-info
+      height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
 
 
 .o-address, .o-contact-info

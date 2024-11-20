@@ -1,4 +1,26 @@
+const _handleOnePartMode = (screenProperties, logoProperties) => {
+  
+  console.log (screenProperties)
+  console.log (logoProperties);
+
+  (taxId => taxId && (marginTop =>
+        taxId.style.marginTop = `${ marginTop }px`
+      ) (
+        logoProperties.height
+          - screenProperties.heights.aside
+          - screenProperties.paddingTops.corrected.main
+      )
+    ) (document.querySelector ('#contact > .o-tax-id'))
+
+}
+
+
 export const handleContact = (screenProperties, logoProperties) => {
+
+  if (screenProperties.ratioIndex < 2) {
+    return _handleOnePartMode (screenProperties, logoProperties)
+  }
+
 
   const maxHeights = {
 

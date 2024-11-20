@@ -37,7 +37,10 @@
 
     <template v-slot:main>
       
-      <article id="contact">
+      <article
+        id="contact" 
+        :data-number-of-parts="screenProperties.ratioIndex"
+      >
 
         <template v-if="screenProperties.ratioIndex > 2">
           <ContactInfo />
