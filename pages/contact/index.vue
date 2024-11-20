@@ -36,18 +36,24 @@
     
 
     <template v-slot:main>
+      
+      <article id="contact">
 
-      <template v-if="screenProperties.ratioIndex > 2">
-
-        <article id="contact">
+        <template v-if="screenProperties.ratioIndex > 2">
           <ContactInfo />
           <Address />
-        </article>
+        </template>
 
-      </template>
+        <WatArun v-if="screenProperties.ratioIndex > 1" />
 
-
-      <WatArun v-else />
+        <template v-else>
+          <TaxId />
+          <ContactInfo />
+          <Address />
+          <WatArun />
+        </template>
+    
+      </article>
 
     </template>
 
