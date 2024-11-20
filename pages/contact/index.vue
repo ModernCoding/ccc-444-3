@@ -47,9 +47,11 @@
           <Address />
         </template>
 
-        <WatArun v-if="screenProperties.ratioIndex > 1" />
 
-        <template v-else>
+        <WatArun v-if="screenProperties.ratioIndex === 2" />
+
+
+        <template v-if="screenProperties.ratioIndex < 2">
           <TaxId />
           <ContactInfo />
           <Address />

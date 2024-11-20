@@ -1,6 +1,31 @@
+const _adjustEmail = (email, size, minSize, maxWidth) => {
+
+  switch (true) {
+    
+    case size <= minSize:
+      email.style.fontSize = `${ minSize }px`
+      return
+
+    case email.getBoundingClientRect ().width < maxWidth:
+      return
+
+    default:
+      email.style.fontSize = `${ size / PHI }px`
+      return _adjustEmail (email, size / PHI, minSize)
+
+  }
+
+}
+
+
 const _handleOnePartMode = (screenProperties, logoProperties) => {
+
+  document
+    .querySelectorAll ("#contact *")
+    .forEach (e => e.removeAttribute ('style'))
+
   
-  (taxId =>
+  ;(taxId =>
 
       taxId && (marginTop => {
 
@@ -23,6 +48,31 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
       )
     
     ) (document.querySelector ('#contact > .o-tax-id'))
+
+
+  const address = document.querySelector ('#contact > .o-address')
+
+  const contactInfo
+    = document.querySelector ('#contact > .o-contact-info')
+
+
+  address && address.querySelectorAll ('*').forEach (hx =>
+      hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_3 }px`
+    )
+
+  contactInfo && contactInfo.querySelectorAll ('*').forEach (e =>
+      e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_3 }px`
+    )
+
+
+  const email = contactInfo.querySelector ('a')
+
+  email && _adjustEmail (
+      email,
+      TWICE_54_BY_PHI_POWER_3,
+      TWICE_54_BY_PHI_POWER_5,
+      screenProperties.widths.main
+    )
 
 }
 
@@ -158,32 +208,12 @@ export const handleContact = (screenProperties, logoProperties) => {
   const footerContent = document.querySelector ('#footer-right-content')
   if (!footerContent) { return }
 
-
-  ;(function _adjust (
-    size = appliedFontSize,
-    minSize = TWICE_54_BY_PHI_POWER_5
-  ) {
-
-      switch (true) {
-        
-        case  size <= minSize:
-          email.style.fontSize = `${ minSize }px`
-          return
-
-
-        case  email.getBoundingClientRect ().width
-              < screenProperties.widths.main:
-
-          return
-
-
-        default:
-          email.style.fontSize = `${ size / PHI }px`
-          return _adjust (size / PHI)
-
-      }
-
-    }) ()
+  _adjustEmail (
+    email,
+    appliedFontSize,
+    TWICE_54_BY_PHI_POWER_5,
+    screenProperties.widths.main
+  )
 
 
   if (!address) { return }
