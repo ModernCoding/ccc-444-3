@@ -1,8 +1,5 @@
 const _handleOnePartMode = (screenProperties, logoProperties) => {
   
-  console.log (screenProperties)
-  console.log (logoProperties);
-
   (taxId =>
 
       taxId && (marginTop => {
@@ -15,6 +12,13 @@ const _handleOnePartMode = (screenProperties, logoProperties) => {
         logoProperties.height
           - screenProperties.heights.aside
           - screenProperties.paddingTops.corrected.main
+
+          /*
+            delta aside height / logo height
+              & corrected main padding top to:
+                - remove from top
+                - compensate at bottom
+          */
       
       )
     
