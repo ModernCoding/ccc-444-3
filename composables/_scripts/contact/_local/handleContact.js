@@ -32,17 +32,40 @@ const _adjust = (
 
 const _handleOnePartMode = (screenProperties, logoProperties) => {
 
-  document
-    .querySelectorAll ("#contact *")
-    .forEach (e => e.removeAttribute ('style'))
+  const _setFontSize = (
+    element,
+    size,
+    minSize = TWICE_54_BY_PHI_POWER_5,
+    maxWidth
+  ) => {
 
-  console.log (screenProperties)
+      switch (true) {
+        
+        case size <= minSize:
+          element.forEach (e => e.style.fontSize = `${ minSize }px`)
+          return
+
+        case element.getBoundingClientRect ().height < maxHeight:
+          return
+
+        default:
+          element.forEach (e => e.style.fontSize = `${ size / PHI }px`)
+          return _setFontSize (size / PHI)
+
+      }
+
+    }
 
 
   const smallestPartHeight = (
       screenProperties.heights.main
         - screenProperties.paddingTops.corrected.main
     ) / (1 + PHI + PHI ** 2)
+
+
+  document
+    .querySelectorAll ("#contact *")
+    .forEach (e => e.removeAttribute ('style'))
 
   
   const address = document.querySelector ('#contact > .o-address')
