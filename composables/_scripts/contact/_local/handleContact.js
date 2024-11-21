@@ -4,38 +4,6 @@ const FONT_SIZE_FACTORS = {
   }
 
 
-const _adjust = (
-  element,
-  size,
-  minSize,
-  maxWidth,
-  considerScrollWidth = false
-) => {
-
-  switch (true) {
-    
-    case size <= minSize:
-      element.style.fontSize = `${ minSize }px`
-      return
-
-
-    case [
-      element.getBoundingClientRect ().width,
-      element.scrollWidth
-    ] [ +considerScrollWidth ] < maxWidth:
-      
-      return
-
-
-    default:
-      element.style.fontSize = `${ size / PHI }px`
-      return _adjust (element, size / PHI, minSize, considerScrollWidth)
-
-  }
-
-}
-
-
 const _calcFontSize = (fontSize, minSize, key, i) => (s =>
     [ minSize, s ] [ +(s > minSize) ]
   ) (fontSize / PHI ** FONT_SIZE_FACTORS [ key ] [ i ])
@@ -184,7 +152,6 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
             case _height >= maxHeight:
-            case element.scrollWidth >= maxWidths [ keys [ i ] ]:
 
               subkeys.forEach ((sK, iSK) =>
 
@@ -206,7 +173,35 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
             default:
-              return _set (keys, ++i)
+
+              let nextLoopNeeded = false
+
+
+              subkeys.forEach ((sK, iSK) => {
+
+                  if (sK.scrollWidth >= maxWidths [ keys [ i ] ]) {
+
+                    nextLoopNeeded = true
+
+                    ;(s => sK.style.fontSize = `${ s }px`) (
+                          
+                        _calcFontSize (
+                          size / PHI,
+                          TWICE_54_BY_PHI_POWER_5,
+                          keys [ i ],
+                          iSK
+                        )
+                      
+                      )
+
+                  }
+                
+                })
+
+
+              return nextLoopNeeded
+                ? _setFontSize (size / PHI)
+                : _set (keys, ++i)
 
           }
 
