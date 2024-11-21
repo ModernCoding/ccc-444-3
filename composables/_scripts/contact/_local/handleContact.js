@@ -1,3 +1,9 @@
+const FONT_SIZE_FACTORS = {
+    '.o-address': [ 1, 2, 1, 0 ],
+    '.o-contact-info': [ 2, 1 ]
+  }
+
+
 const _adjust = (
   element,
   size,
@@ -226,14 +232,18 @@ export const handleContact = (screenProperties, logoProperties) => {
 
       
       subkeys.forEach ((sK, iSK) =>
-        
-        (s => sK.style.fontSize = `${ s }px`) (
-          fontSize / PHI ** (
-            Math.abs (iSK % 2 - +(keys [ i ] === '.o-contact-info'))
+
+          (s => sK.style.fontSize = `${ s }px`) (
+            (s =>
+              [ TWICE_54_BY_PHI_POWER_4, s ] [
+                +(s > TWICE_54_BY_PHI_POWER_4)
+              ]
+            ) (
+              fontSize / PHI ** FONT_SIZE_FACTORS [ keys [ i ] ] [ iSK ]
+            )
           )
-        )
         
-      )
+        )
               
 
       ;(function _setFontSize (size = fontSize) {
@@ -267,19 +277,23 @@ export const handleContact = (screenProperties, logoProperties) => {
 
 
             default:
-
       
               subkeys.forEach ((sK, iSK) =>
-                
+
                   (s => sK.style.fontSize = `${ s }px`) (
-                    size / PHI ** (
-                      1 + Math.abs (
-                        iSK % 2 - +(keys [ i ] === '.o-contact-info')
+                    (s =>
+                      [ TWICE_54_BY_PHI_POWER_4, s ] [
+                        +(s > TWICE_54_BY_PHI_POWER_4)
+                      ]
+                    ) (
+                      size / PHI ** (
+                        1 + FONT_SIZE_FACTORS [ keys [ i ] ] [ iSK ]
                       )
                     )
                   )
-                  
+                
                 )
+
 
               return _setFontSize (size / PHI)
 
@@ -288,6 +302,10 @@ export const handleContact = (screenProperties, logoProperties) => {
         }) ()
 
     }) (Object.keys (maxHeights))
+
+
+return
+
 
 
   const email = document.querySelector ('.o-contact-info > a')
