@@ -200,11 +200,6 @@ export const handleContact = (screenProperties, logoProperties) => {
     }
 
 
-  const maxWidth = screenProperties.widths [
-      [ 'aside', 'main' ] [ +(screenProperties.ratioIndex > 2) ]
-    ]
-
-
   const address = document.querySelector ('.o-address')
 
   address && (() => {
@@ -326,7 +321,7 @@ export const handleContact = (screenProperties, logoProperties) => {
           break
 
 
-        case  h2.scrollWidth >= maxWidth:
+        case  h2.scrollWidth >= maxWidths [ '.o-address' ]:
 
         case  address.getBoundingClientRect ().height
               >= maxHeights [ '.o-address' ]:
