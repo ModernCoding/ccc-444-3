@@ -189,6 +189,17 @@ export const handleContact = (screenProperties, logoProperties) => {
     }
 
 
+  const maxWidths = {
+
+      '.o-address': screenProperties.widths [
+          [ 'aside', 'main' ] [ +(screenProperties.ratioIndex > 2) ]
+        ],
+
+      '.o-contact-info': screenProperties.widths.main
+
+    }
+
+
   const maxWidth = screenProperties.widths [
       [ 'aside', 'main' ] [ +(screenProperties.ratioIndex > 2) ]
     ]
@@ -205,9 +216,6 @@ export const handleContact = (screenProperties, logoProperties) => {
       .forEach (hx => hx.removeAttribute ('style'))
 
   }) ()
-
-
-  const appliedFontSize = {}
 
 
   ;(function _set (keys, i = 0) {
@@ -254,31 +262,6 @@ export const handleContact = (screenProperties, logoProperties) => {
 
       ;(function _setFontSize (size = fontSize) {
 
-          appliedFontSize [ keys [ i ] ] = (function _calc (
-              sizes = [],
-              iFSF = 0
-            ) {
-
-              return iFSF >= FONT_SIZE_FACTORS [ keys [ i ] ].length
-
-                  ? sizes
-
-                  : _calc ([
-
-                      ...sizes,
-                    
-                      _calcFontSize (
-                        size,
-                        TWICE_54_BY_PHI_POWER_5,
-                        keys [ i ],
-                        iFSF
-                      )
-
-                    ], ++iFSF)
-
-            }) ()
-
-
           const _height = ((h = 0) => {
 
               subkeys
@@ -300,12 +283,9 @@ export const handleContact = (screenProperties, logoProperties) => {
               return _set (keys, ++i)
 
 
-            case _height < maxHeight:
-              return _set (keys, ++i)
+            case _height >= maxHeight:
+            case element.scrollWidth >= maxWidths [ keys [ i ] ]:
 
-
-            default:
-      
               subkeys.forEach ((sK, iSK) =>
 
                   (s => sK.style.fontSize = `${ s }px`) (
@@ -324,6 +304,10 @@ export const handleContact = (screenProperties, logoProperties) => {
 
               return _setFontSize (size / PHI)
 
+
+            default:
+              return _set (keys, ++i)
+
           }
 
         }) ()
@@ -331,40 +315,7 @@ export const handleContact = (screenProperties, logoProperties) => {
     }) (Object.keys (maxHeights))
 
 
-console.log (appliedFontSize)
-return
-
-
-
-  const email = document.querySelector ('.o-contact-info > a')
-  if (!email) { return }
-
-  const footerContent = document.querySelector ('#footer-right-content')
-  if (!footerContent) { return }
-
-
-  _adjust (
-    email,
-    appliedFontSize,
-    TWICE_54_BY_PHI_POWER_5,
-    screenProperties.widths.main
-  )
-
-
   if (!address) { return }
-
-
-  address.querySelectorAll ('*').forEach (hx =>
-
-      _adjust (
-        hx,
-        appliedFontSize,
-        TWICE_54_BY_PHI_POWER_5,
-        maxWidth,
-        true
-      )
-
-    )
 
 
   ;(h2 => {
