@@ -36,6 +36,11 @@ const _adjust = (
 }
 
 
+const _calcFontSize = (fontSize, minSize, key, i) => (s =>
+    [ minSize, s ] [ +(s > minSize) ]
+  ) (fontSize / PHI ** FONT_SIZE_FACTORS [ key ] [ i ])
+
+
 const _handleOnePartMode = (screenProperties, logoProperties) => {
 
   const _setFontSize = (element, size, minSize, maxHeight) => {
@@ -221,8 +226,8 @@ export const handleContact = (screenProperties, logoProperties) => {
 
       const fontSize = (fontSize =>
 
-          [ TWICE_54_BY_PHI_POWER_4, fontSize ] [
-            +(fontSize > TWICE_54_BY_PHI_POWER_4)
+          [ TWICE_54_BY_PHI_POWER_5, fontSize ] [
+            +(fontSize > TWICE_54_BY_PHI_POWER_5)
           ]
 
         ) (maxHeight)
@@ -234,14 +239,15 @@ export const handleContact = (screenProperties, logoProperties) => {
       subkeys.forEach ((sK, iSK) =>
 
           (s => sK.style.fontSize = `${ s }px`) (
-            (s =>
-              [ TWICE_54_BY_PHI_POWER_4, s ] [
-                +(s > TWICE_54_BY_PHI_POWER_4)
-              ]
-            ) (
-              fontSize / PHI ** FONT_SIZE_FACTORS [ keys [ i ] ] [ iSK ]
+                
+              _calcFontSize (
+                fontSize,
+                TWICE_54_BY_PHI_POWER_5,
+                keys [ i ],
+                iSK
+              )
+            
             )
-          )
         
         )
               
@@ -263,10 +269,10 @@ export const handleContact = (screenProperties, logoProperties) => {
 
           switch (true) {
             
-            case size <= TWICE_54_BY_PHI_POWER_4:
+            case size <= TWICE_54_BY_PHI_POWER_5:
 
               subkeys.forEach (sE =>
-                  sE.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+                  sE.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 }px`
                 )
               
               return _set (keys, ++i)
@@ -281,16 +287,15 @@ export const handleContact = (screenProperties, logoProperties) => {
               subkeys.forEach ((sK, iSK) =>
 
                   (s => sK.style.fontSize = `${ s }px`) (
-                    (s =>
-                      [ TWICE_54_BY_PHI_POWER_4, s ] [
-                        +(s > TWICE_54_BY_PHI_POWER_4)
-                      ]
-                    ) (
-                      size / PHI ** (
-                        1 + FONT_SIZE_FACTORS [ keys [ i ] ] [ iSK ]
+                        
+                      _calcFontSize (
+                        size / PHI,
+                        TWICE_54_BY_PHI_POWER_5,
+                        keys [ i ],
+                        iSK
                       )
+                    
                     )
-                  )
                 
                 )
 
