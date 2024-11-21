@@ -30,9 +30,9 @@
 
   $_gapOnePart: dimensions.$layoutPaddingRightOnePart
 
-  $_gapTwoParts: math.div(dimensions.$layoutPaddingRightTwoParts, constants.$phi)
+  $_gapTwoParts: calc(dimensions.$layoutPaddingRightTwoParts / constants.$phi)
 
-  $_gapThreeParts: math.div(dimensions.$asideMarginRightThreeParts, constants.$phi)
+  $_gapThreeParts: calc(dimensions.$asideMarginRightThreeParts / constants.$phi)
 
 
   display: flex
