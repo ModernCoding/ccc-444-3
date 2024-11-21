@@ -41,131 +41,48 @@ const _calcFontSize = (fontSize, minSize, key, i) => (s =>
   ) (fontSize / PHI ** FONT_SIZE_FACTORS [ key ] [ i ])
 
 
-const _handleOnePartMode = (screenProperties, logoProperties) => {
-
-  const _setFontSize = (element, size, minSize, maxHeight) => {
-
-      switch (true) {
-        
-        case size <= minSize:
-
-          element
-            .querySelectorAll ('*')
-            .forEach (e => e.style.fontSize = `${ minSize }px`)
-
-          return
-
-
-        case element.scrollHeight < maxHeight:
-          return
-
-
-        default:
-
-          element
-            .querySelectorAll ('*')
-            .forEach (e => e.style.fontSize = `${ size / PHI }px`)
-
-          return _setFontSize (element, size / PHI, minSize, maxHeight)
-
-      }
-
-    }
-
-
-  const smallestPartHeight = (
-      screenProperties.heights.main
-        - screenProperties.paddingTops.corrected.main
-    ) / (1 + PHI + PHI ** 2)
-
+export const handleContact = (screenProperties, logoProperties) => {
 
   document
     .querySelectorAll ("#contact *")
     .forEach (e => e.removeAttribute ('style'))
 
-  
-  const address = document.querySelector ('#contact > .o-address')
 
-  const contactInfo
-    = document.querySelector ('#contact > .o-contact-info')
+  const smallestPartHeight = screenProperties.ratioIndex < 2
 
-  const taxId = document.querySelector ('#contact > .o-tax-id')
+      ? (
+          screenProperties.heights.main
+            - screenProperties.paddingTops.corrected.main
+        ) / (1 + PHI + PHI ** 2)
+
+      : null
 
 
-  address && (height => {
+  const address = document.querySelector ('.o-address')
+  const contactInfo = document.querySelector ('.o-contact-info')
 
-      address.style.height = `${ height }px`
 
-      address.querySelectorAll ('*').forEach (hx =>
-          hx.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+  screenProperties.ratioIndex < 2 && (taxId => {
+
+      address && (
+          address.style.height = `${ smallestPartHeight * PHI ** 2 }px`
         )
 
-      _setFontSize (
-        address,
-        TWICE_54_BY_PHI_POWER_4,
-        TWICE_54_BY_PHI_POWER_5,
-        height
-      )
-
-    }) (smallestPartHeight * PHI ** 2)
-
-
-  contactInfo && (height => {
-
-      contactInfo.style.height = `${ height }px`
-
-      contactInfo.querySelectorAll ('*').forEach (e =>
-          e.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+      contactInfo && (
+          contactInfo.style.height = `${ smallestPartHeight * PHI }px`
         )
 
-      _setFontSize (
-        contactInfo,
-        TWICE_54_BY_PHI_POWER_4,
-        TWICE_54_BY_PHI_POWER_5,
-        height
-      )
+      taxId && (taxId.style.height = `${ smallestPartHeight }px`)
 
-
-      const email = contactInfo.querySelector ('a')
-
-      email && _adjust (
-          email,
-          TWICE_54_BY_PHI_POWER_4,
-          TWICE_54_BY_PHI_POWER_5,
-          screenProperties.widths.main
-        )
-
-    }) (smallestPartHeight * PHI)
-
-
-  taxId && (taxId.style.height = `${ smallestPartHeight }px`)
-
-
-  document.querySelectorAll ('#contact *:not(a)').forEach (hx =>
-
-      _adjust (
-        hx,
-        TWICE_54_BY_PHI_POWER_4,
-        TWICE_54_BY_PHI_POWER_5,
-        screenProperties.widths.main,
-        true
-      )
-
-    )
-
-}
-
-
-export const handleContact = (screenProperties, logoProperties) => {
-
-  if (screenProperties.ratioIndex < 2) {
-    return _handleOnePartMode (screenProperties, logoProperties)
-  }
+    }) (document.querySelector ('#contact > .o-tax-id'))
 
 
   const maxHeights = {
 
       '.o-address': [
+
+          smallestPartHeight * PHI ** 2,
+
 
           screenProperties.heights.aside
 
@@ -178,13 +95,14 @@ export const handleContact = (screenProperties, logoProperties) => {
 
           screenProperties.heights.main / PHI
 
-        ] [ +(screenProperties.ratioIndex > 2) ],
+        ] [ screenProperties.ratioIndex - 1 ],
 
 
       '.o-contact-info': [
+          smallestPartHeight * PHI,
           screenProperties.heights.footer / PHI ** 2,
           screenProperties.heights.main / PHI ** 2
-        ] [ +(screenProperties.ratioIndex > 2) ]
+        ] [ screenProperties.ratioIndex - 1 ]
 
     }
 
@@ -198,19 +116,6 @@ export const handleContact = (screenProperties, logoProperties) => {
       '.o-contact-info': screenProperties.widths.main
 
     }
-
-
-  const address = document.querySelector ('.o-address')
-
-  address && (() => {
-
-    address.removeAttribute ('style')
-
-    address
-      .querySelectorAll ('*')
-      .forEach (hx => hx.removeAttribute ('style'))
-
-  }) ()
 
 
   ;(function _set (keys, i = 0) {
