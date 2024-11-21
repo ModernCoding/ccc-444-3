@@ -207,7 +207,7 @@ export const handleContact = (screenProperties, logoProperties) => {
   }) ()
 
 
-  let appliedFontSize = 0
+  const appliedFontSize = {}
 
 
   ;(function _set (keys, i = 0) {
@@ -254,7 +254,29 @@ export const handleContact = (screenProperties, logoProperties) => {
 
       ;(function _setFontSize (size = fontSize) {
 
-          appliedFontSize = size
+          appliedFontSize [ keys [ i ] ] = (function _calc (
+              sizes = [],
+              iFSF = 0
+            ) {
+
+              return iFSF >= FONT_SIZE_FACTORS [ keys [ i ] ].length
+
+                  ? sizes
+
+                  : _calc ([
+
+                      ...sizes,
+                    
+                      _calcFontSize (
+                        size,
+                        TWICE_54_BY_PHI_POWER_5,
+                        keys [ i ],
+                        iFSF
+                      )
+
+                    ], ++iFSF)
+
+            }) ()
 
 
           const _height = ((h = 0) => {
@@ -309,6 +331,7 @@ export const handleContact = (screenProperties, logoProperties) => {
     }) (Object.keys (maxHeights))
 
 
+console.log (appliedFontSize)
 return
 
 
