@@ -11,11 +11,6 @@ const _calcFontSize = (fontSize, minSize, key, i) => (s =>
 
 export const handleContact = (screenProperties, logoProperties) => {
 
-  document
-    .querySelectorAll ("#contact *")
-    .forEach (e => e.removeAttribute ('style'))
-
-
   const smallestPartHeight = screenProperties.ratioIndex < 2
 
       ? (
@@ -28,9 +23,29 @@ export const handleContact = (screenProperties, logoProperties) => {
 
   const address = document.querySelector ('.o-address')
   const contactInfo = document.querySelector ('.o-contact-info')
+  const taxId = document.querySelector ('.o-tax-id')
 
 
-  screenProperties.ratioIndex < 2 && (taxId => {
+  ;(elements =>
+
+      elements.forEach (element => {
+          
+          element && (() => {
+
+              element.removeAttribute ('style')
+
+              element
+                .querySelectorAll ('*')
+                .forEach (e => e.removeAttribute ('style'))
+            
+            }) ()
+
+        })
+
+    ) ([ address, contactInfo, taxId ])
+
+
+  screenProperties.ratioIndex < 2 && (() => {
 
       address && (
           address.style.height = `${ smallestPartHeight * PHI ** 2 }px`
@@ -42,7 +57,7 @@ export const handleContact = (screenProperties, logoProperties) => {
 
       taxId && (taxId.style.height = `${ smallestPartHeight }px`)
 
-    }) (document.querySelector ('#contact > .o-tax-id'))
+    }) ()
 
 
   const maxHeights = {
