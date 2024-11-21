@@ -236,54 +236,58 @@ export const handleContact = (screenProperties, logoProperties) => {
       )
               
 
+      ;(function _setFontSize (size = fontSize) {
+
+          appliedFontSize = size
+
+
+          const _height = ((h = 0) => {
+
+              subkeys
+                .forEach (sE => h += sE.getBoundingClientRect ().height)
+
+              return h
+
+            }) ()
+
+
+          switch (true) {
+            
+            case size <= TWICE_54_BY_PHI_POWER_4:
+
+              subkeys.forEach (sE =>
+                  sE.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+                )
+              
               return _set (keys, ++i)
 
 
-      // ;(function _setFontSize (size = fontSize) {
-
-      //     appliedFontSize = size
-
-
-      //     const _height = ((h = 0) => {
-
-      //         subkeys
-      //           .forEach (sE => h += sE.getBoundingClientRect ().height)
-
-      //         return h
-
-      //       }) ()
+            case _height < maxHeight:
+              return _set (keys, ++i)
 
 
-      //     switch (true) {
-            
-      //       case size <= TWICE_54_BY_PHI_POWER_4:
+            default:
 
-      //         subkeys.forEach (sE =>
-      //             sE.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
-      //           )
-              
-      //         return _set (keys, ++i)
+      
+              subkeys.forEach ((sK, iSK) =>
+                
+                  (s => sK.style.fontSize = `${ s }px`) (
+                    size / PHI ** (
+                      1 + Math.abs (
+                        iSK % 2 - +(keys [ i ] === '.o-contact-info')
+                      )
+                    )
+                  )
+                  
+                )
 
+              return _setFontSize (size / PHI)
 
-      //       case _height < maxHeight:
-      //         return _set (keys, ++i)
+          }
 
-
-      //       default:
-
-      //         subkeys
-      //           .forEach (sE => sE.style.fontSize = `${ size / PHI }px`)
-
-      //         return _setFontSize (size / PHI)
-
-      //     }
-
-      //   }) ()
+        }) ()
 
     }) (Object.keys (maxHeights))
-
-
-  return
 
 
   const email = document.querySelector ('.o-contact-info > a')
