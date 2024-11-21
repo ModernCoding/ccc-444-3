@@ -174,34 +174,38 @@ export const handleContact = (screenProperties, logoProperties) => {
 
             default:
 
-              let nextLoopNeeded = false
+              return ((nextLoopNeeded = false) => {
 
+                  subkeys.forEach ((sK, iSK) => {
 
-              subkeys.forEach ((sK, iSK) => {
+                      if (sK.scrollWidth >= maxWidths [ keys [ i ] ]) {
 
-                  if (sK.scrollWidth >= maxWidths [ keys [ i ] ]) {
+                        nextLoopNeeded = true
 
-                    nextLoopNeeded = true
-
-                    ;(s => sK.style.fontSize = `${ s }px`) (
+                        ;(s => sK.style.fontSize = `${ s }px`) (
+                              
+                            _calcFontSize (
+                              size / PHI,
+                              TWICE_54_BY_PHI_POWER_5,
+                              keys [ i ],
+                              iSK
+                            )
                           
-                        _calcFontSize (
-                          size / PHI,
-                          TWICE_54_BY_PHI_POWER_5,
-                          keys [ i ],
-                          iSK
-                        )
-                      
-                      )
+                          )
 
-                  }
-                
-                })
+                      }
+                    
+                    })
 
 
-              return nextLoopNeeded
-                ? _setFontSize (size / PHI)
-                : _set (keys, ++i)
+                  return nextLoopNeeded
+
+                }) ()
+
+
+                  ? _setFontSize (size / PHI)
+
+                  : _set (keys, ++i)
 
           }
 
