@@ -44,6 +44,37 @@ export default () => (header => {
     })
 
 
+  ;(headerLeftModal =>
+      headerLeftModal && headerLeftModal.removeAttribute ('style')
+    ) (document.querySelector ('#header-left-modal'))
+
+
+  ;(headerLeftModal => {
+
+    if (!headerLeftModal) { return }
+
+
+    const width = parseFloat (
+
+        window
+          .getComputedStyle (headerLeftModal)
+          .getPropertyValue ('width')
+          .split ('px')
+          .join ('')
+
+      ) - localeHeight * PHI
+
+    headerLeftModal.style.width = `${ width }px`
+
+  }) (
+
+    document.querySelector (
+      '#header-left-modal[data-number-of-parts="1"][data-is-shown="1"]'
+    )
+
+  )
+
+
   ;(locales => {
 
     if (!locales) { return }

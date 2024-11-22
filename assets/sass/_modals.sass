@@ -29,13 +29,30 @@
       height: calc(dimensions.$height - dimensions.$heightHeaderTwoParts)
 
 
-#aside-modal, #central-modal
+#header-left-modal, #header-central-modal
+
+  &[data-is-shown="1"]
+
+    &[data-number-of-parts="1"]
+      top: dimensions.$layoutPaddingTopOnePart
+      height: dimensions.$heightHeaderOnePart
+    
+      width: calc(100% - dimensions.$layoutPaddingRightOnePart - dimensions.$layoutPaddingLeftOnePart)
+
+
+    &[data-number-of-parts="2"],
+    &[data-number-of-parts="3"]
+      top: 0
+      height: dimensions.$heightHeaderTwoParts
+
+
+#header-left-modal
 
   &[data-number-of-parts="1"]
-    top: 0
+    width: 100%
 
 
-#aside-modal
+#aside-modal, #header-left-modal
 
   &[data-number-of-parts="2"]
     width: dimensions.$asideWidthTwoParts
@@ -44,7 +61,7 @@
     width: dimensions.$asideWidthThreeParts
 
 
-#central-modal
+#central-modal, #header-central-modal
 
   &[data-number-of-parts="2"]
     top: 0

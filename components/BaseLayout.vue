@@ -129,11 +129,37 @@
   >
 
     <nav>
-      <CallToActionsHeader v-if="route.name !== 'index'" />
+
+      <nav :data-is-shown="+!modal.main.show">
+        <CallToActionsHeader v-if="route.name !== 'index'" />
+      </nav>
+      
+
+      <div
+        class="o-modal"
+        id="header-left-modal"
+        :data-number-of-parts="screenProperties.ratioIndex"
+        :data-is-shown="+modal.main.show"
+        @click="modalScripts.openOrClose (modalStore)"
+      />
+
     </nav>
 
 
-    <nav v-if="screenProperties.ratioIndex > 2" />
+    <nav
+      v-if="screenProperties.ratioIndex > 2"
+      :data-is-shown="+!modal.main.show"
+    >
+      
+      <div
+        class="o-modal"
+        id="header-central-modal"
+        :data-number-of-parts="screenProperties.ratioIndex"
+        :data-is-shown="+modal.main.show"
+        @click="modalScripts.openOrClose (modalStore)"
+      />
+
+    </nav>
 
 
     <nav>
