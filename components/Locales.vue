@@ -71,13 +71,23 @@
                 [ 'kh', 'my', 'th', 'vi' ]
                   .includes (key) ? `o-font-${ key }` : 'o-font-en'
               }
+
+              ${ key === locale ? 'fw-bold' : '' }
             `"
         >
           {{ languageOptions [ key ] }}
         </div>
 
 
-        <div class="o-locale o-font-en">{{ key }}</div>
+        <div
+          :class="`
+              o-locale
+              o-font-en
+              ${ key === locale ? 'fw-bold' : '' }
+            `"
+        >
+          {{ key }}
+        </div>
       
       </button>
 
