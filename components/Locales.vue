@@ -3,6 +3,7 @@
   const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalStore = defineModalStoreFromComposable () ()
 
+  const { modal } = storeToRefs (modalStore)
   const { locale } = useI18n ()
   
   const languageOptions = {
@@ -32,12 +33,33 @@
         }) (document.querySelector ('#__nuxt'))
 
 
-      modalStore.resetModal ()
 
-      document
-        .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
-        .forEach (element => element.removeAttribute ('data-is-hidden'))
-    
+      modalStore.patchOpenModals (
+          modal.value.openModals.filter (oM => oM !== 'Locales')
+        )
+
+
+      if (modal.value.show) {
+
+        modalStore.patchContent (
+            modal.value.openModals [ modal.value.openModals.length - 1 ]
+          )
+
+      }
+
+
+      else {
+
+        modalStore.resetModal ()
+
+        document
+          .querySelectorAll ('main[role="main"] > *:not(.o-modal)')
+          .forEach (element =>
+              element.removeAttribute ('data-is-hidden')
+            )
+      
+      }
+
     }
 
 
