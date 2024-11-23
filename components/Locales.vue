@@ -32,7 +32,7 @@
         }) (document.querySelector ('#__nuxt'))
 
 
-      modalStore.resetMain ()
+      modalStore.resetModal ()
 
       document
         .querySelectorAll ('main[role="main"] > *:not(.o-modal)')

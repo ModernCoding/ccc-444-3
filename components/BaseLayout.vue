@@ -130,7 +130,7 @@
 
     <nav>
 
-      <nav :data-is-shown="+!modal.main.show">
+      <nav :data-is-shown="+!modal.show">
         <CallToActionsHeader v-if="route.name !== 'index'" />
       </nav>
       
@@ -139,7 +139,7 @@
         class="o-modal"
         id="header-left-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
-        :data-is-shown="+modal.main.show"
+        :data-is-shown="+modal.show"
         @click="modalScripts.openOrClose (modalStore)"
       />
 
@@ -148,14 +148,14 @@
 
     <nav
       v-if="screenProperties.ratioIndex > 2"
-      :data-is-shown="+!modal.main.show"
+      :data-is-shown="+!modal.show"
     >
       
       <div
         class="o-modal"
         id="header-central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
-        :data-is-shown="+modal.main.show"
+        :data-is-shown="+modal.show"
         @click="modalScripts.openOrClose (modalStore)"
       />
 
@@ -170,7 +170,7 @@
       >
 
         <i
-          :class="`bi bi-${ modal.main.show ? 'x-lg' : 'list' }`"
+          :class="`bi bi-${ modal.show ? 'x-lg' : 'list' }`"
           aria-hidden="true"
         ></i>
 
@@ -183,7 +183,7 @@
       >
 
         <i
-          v-if="modal.main.show"
+          v-if="modal.show"
           class="bi bi-x-lg"
           aria-hidden="true"
         ></i>
@@ -211,13 +211,13 @@
           "
 
         to="/"
-        :data-is-shown="+!modal.main.show"
+        :data-is-shown="+!modal.show"
       >
         <Logo />
       </NuxtLink>
       
 
-      <div id="aside-content" :data-is-shown="+!modal.main.show">
+      <div id="aside-content" :data-is-shown="+!modal.show">
         <slot name="aside" />
       </div>
 
@@ -226,7 +226,7 @@
         class="o-modal"
         id="aside-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
-        :data-is-shown="+modal.main.show"
+        :data-is-shown="+modal.show"
         @click="modalScripts.openOrClose (modalStore)"
       />
     
@@ -237,7 +237,7 @@
 
       <article
         id="central-content"
-        :data-is-shown="+!modal.main.show"
+        :data-is-shown="+!modal.show"
       >
         <slot name="central" />
       </article>
@@ -247,7 +247,7 @@
         class="o-modal"
         id="central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
-        :data-is-shown="+modal.main.show"
+        :data-is-shown="+modal.show"
         @click="modalScripts.openOrClose (modalStore)"
       />
 
@@ -263,9 +263,9 @@
         class="o-modal"
         id="main-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
-        :data-is-shown="+modal.main.show"
+        :data-is-shown="+modal.show"
       >
-        <component :is="_getComponent (modal.main.content)" />
+        <component :is="_getComponent (modal.content)" />
       </div>
 
     </main>
@@ -274,7 +274,7 @@
 
 
   <footer
-    :data-is-shown="+(!loading.is && !modal.main.show)"
+    :data-is-shown="+(!loading.is && !modal.show)"
     data-is-veiled-at-first-loading
   >
 

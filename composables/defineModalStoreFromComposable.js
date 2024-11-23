@@ -3,22 +3,9 @@ export default () => defineStore ('modal', {
   state: () => ({
 
     modal: {
-
-      aside: {
-        content: null,
-        show: false
-      },
-
-      central: {
-        content: null,
-        show: false
-      },
-
-      main: {
-        content: null,
-        show: false
-      }
-
+      content: null,
+      openModals: [],
+      show: false
     }
 
   }),
@@ -26,46 +13,23 @@ export default () => defineStore ('modal', {
 
   actions: {
 
-    patchAsideContent (content) {
-        this.modal.aside.content = content
+    patchContent (content) {
+        this.modal.content = content
       },
 
-    patchAsideShow (is = true) {
-        this.modal.aside.show = is
+    patchOpenModals (payload) {
+        this.modal.openModals = payload
+        this.modal.show = payload.length > 0
       },
 
-
-    patchCentralContent (content) {
-        this.modal.central.content = content
+    patchShow (is = true) {
+        this.modal.show = is
       },
 
-    patchCentralShow (is = true) {
-        this.modal.central.show = is
-      },
-
-
-    patchMainContent (content) {
-        this.modal.main.content = content
-      },
-
-    patchMainShow (is = true) {
-        this.modal.main.show = is
-      },
-
-
-    resetAside () {
-        this.modal.aside.content = null
-        this.modal.aside.show = false
-      },
-
-    resetCentral () {
-        this.modal.central.content = null
-        this.modal.central.show = false
-      },
-
-    resetMain () {
-        this.modal.main.content = null
-        this.modal.main.show = false
+    resetModal () {
+        this.modal.content = null
+        this.modal.openModals = []
+        this.modal.show = false
       }
 
   }
