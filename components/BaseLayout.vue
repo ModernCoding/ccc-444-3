@@ -1,6 +1,6 @@
 <script setup>
 
-  import { Locales } from '#components'
+  import { Locales, Menu } from '#components'
 
   const ctaScripts = collectCtaScriptsFromComposable ()
   const imageScripts = collectImageScriptsFromComposable ()
@@ -25,7 +25,7 @@
   const route = useRoute ()
 
 
-  const _getComponent = key => ({ Locales }) [ key ]
+  const _getComponent = key => ({ Locales, Menu }) [ key ]
 
 
   watch (loadingStore, ({ $state: { loading } }) => {
@@ -163,6 +163,19 @@
 
 
     <nav>
+
+      <button
+        class="o-locale"
+        @click="modalScripts.openOrClose (modalStore, 'Menu')"
+      >
+
+        <i
+          :class="`bi bi-${ modal.main.show ? 'x-lg' : 'list' }`"
+          aria-hidden="true"
+        ></i>
+
+      </button>
+
 
       <button
         class="o-locale o-font-en"
