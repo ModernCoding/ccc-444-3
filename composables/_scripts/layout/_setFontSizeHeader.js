@@ -34,14 +34,27 @@ export default () => (header => {
 
 
   document.querySelectorAll ('.o-locale').forEach (locale => {
+
       locale.style.fontSize = `${ fontSize }px`
       locale.style.height = `${ localeHeight }px`
-      locale.style.width = `${ localeHeight * PHI }px`
+
+      locale.style.width = `${
+        localeHeight * PHI ** +(
+          getWindowWidths (window.innerWidth).isAtLeastSmHalf
+        )
+      }px`
+
     })
+
 
   document.querySelectorAll ('.o-locale-label').forEach (label => {
       label.style.fontSize = `${ fontSize }px`
     })
+
+
+  ;(nav =>
+      nav && (nav.style.gap = `${ localeHeight / PHI ** 2 }px`)
+    ) (document.querySelector ('#__nuxt > header > nav:last-child'))
 
 
   ;(headerLeftModal =>

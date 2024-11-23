@@ -165,12 +165,24 @@
     <nav>
 
       <button
-        class="o-locale"
+        :class="`
+            o-locale
+            ${ modal.show && modal.content === 'Menu' ? 'fw-bold' : '' }
+          `"
+
         @click="modalScripts.openOrClose (modalStore, 'Menu')"
       >
 
         <i
-          :class="`bi bi-${ modal.show ? 'x-lg' : 'list' }`"
+          :class="`
+              bi
+              bi-${
+                  modal.show && modal.content === 'Menu'
+                    ? 'x-lg'
+                    : 'list'
+                }
+            `"
+
           aria-hidden="true"
         ></i>
 
@@ -178,12 +190,19 @@
 
 
       <button
-        class="o-locale o-font-en"
+        :class="`
+            o-locale
+            o-font-en
+            ${
+              modal.show && modal.content === 'Locales' ? 'fw-bold' : ''
+            }
+          `"
+
         @click="modalScripts.openOrClose (modalStore, 'Locales')"
       >
 
         <i
-          v-if="modal.show"
+          v-if="modal.show && modal.content === 'Locales'"
           class="bi bi-x-lg"
           aria-hidden="true"
         ></i>
