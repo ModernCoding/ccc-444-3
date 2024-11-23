@@ -16,13 +16,25 @@ export default (modalStore, key) => {
 
   switch (true) {
 
-    case !key:
+    case  !key:
 
       modalStore.resetModal ()
       break
 
 
-    case modal.value.openModals.includes (key):
+    case  modal.value.openModals.includes (key)
+          && modal.value.content === 'Locales'
+          && key !== 'Locales':
+
+      modalStore.patchOpenModals (
+          modal.value.openModals.filter (oM => oM !== 'Locales')
+        )
+
+      modalStore.patchContent (key)
+      break
+
+
+    case  modal.value.openModals.includes (key):
 
       modalStore.patchOpenModals (
           modal.value.openModals.filter (oM => oM !== key)
