@@ -26,7 +26,7 @@
       </template>
 
 
-      <NuxtLink v-else to="/">
+      <NuxtLink v-else :to="{ name: 'index' }">
         <WatArun />
       </NuxtLink>
 

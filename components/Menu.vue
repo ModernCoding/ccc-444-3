@@ -3,6 +3,7 @@
   const modalStore = defineModalStoreFromComposable () ()
 
   const { locale } = useI18n ()
+  const route = useRoute ()
   
   // onMounted (() => {
     
@@ -22,9 +23,48 @@
 
   <menu id="menu">
 
-    <ul>
-      <li>Women in tech</li>
-    </ul>
+    <li>
+
+      <NuxtLink :to="{ name: 'index' }">
+        
+        <i
+          :class="`
+              bi
+              bi-house${ route.name === 'index' ? '-fill' : '' }
+            `"
+
+          aria-hidden="true"
+        />
+        
+        <span :class="[ '', 'fw-bold' ] [ +(route.name === 'index') ]">
+          Home
+        </span>
+
+      </NuxtLink>
+
+    </li>
+
+
+    <li>
+
+      <NuxtLink :to="{ name: 'contact' }">
+        
+        <i
+          :class="`
+              bi
+              bi-hand-index${ route.name === 'contact' ? '-fill' : '' }
+            `"
+
+          aria-hidden="true"
+        />
+        
+        <span :class="[ '', 'fw-bold' ] [ +(route.name === 'contact') ]">
+          Contact
+        </span>
+
+      </NuxtLink>
+
+    </li>
 
   </menu>
 

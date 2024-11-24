@@ -81,7 +81,7 @@
 
   <menu id="locales">
 
-    <ul v-for="key in Object.keys (languageOptions)" :key="key">
+    <li v-for="key in Object.keys (languageOptions)" :key="key">
 
       <button @click="_handleSelect (key)">
         
@@ -113,7 +113,7 @@
       
       </button>
 
-    </ul>
+    </li>
 
   </menu>
 

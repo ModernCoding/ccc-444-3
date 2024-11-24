@@ -84,7 +84,7 @@
     </figure>
 
 
-    <NuxtLink to="/contact">
+    <NuxtLink :to="{ name: 'contact' }">
     
       <figure>
 

@@ -229,7 +229,7 @@
               || route.name !== 'contact'
           "
 
-        to="/"
+        :to="{ name: 'index' }"
         :data-is-shown="+!modal.show"
       >
         <Logo />

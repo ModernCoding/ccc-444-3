@@ -48,7 +48,7 @@
     </picture>
 
 
-    <NuxtLink to="/contact">
+    <NuxtLink :to="{ name: 'contact' }">
 
       <picture>
     
