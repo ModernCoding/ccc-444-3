@@ -1,5 +1,6 @@
 <script setup>
 
+  import Ada from './.partials/ada'
   import Article from './.partials/article'
 
   const screenPropertiesStore
@@ -15,10 +16,28 @@
   <BaseLayout>
 
     <template
-      v-if="screenProperties.ratioIndex > 1"
-      v-slot:main
+      v-if="screenProperties.ratioIndex === 2"
+      v-slot:aside
     >
-      <Article />
+      <Ada />
+    </template>
+
+
+    <template
+      v-if="screenProperties.ratioIndex > 2"
+      v-slot:central
+    >
+      <Ada />
+    </template>
+
+
+    <template v-slot:main>
+      
+      <article id="long-text">
+        <Article v-if="screenProperties.ratioIndex > 1" />
+        <Ada v-if="screenProperties.ratioIndex < 2" />
+      </article>
+
     </template>
 
   </BaseLayout>

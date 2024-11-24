@@ -4,6 +4,7 @@ import setMainDimensions from './_setMainDimensions'
 
 const contactScripts = collectContactScriptsFromComposable ()
 const ctaScripts = collectCtaScriptsFromComposable ()
+const longTextScripts = collectLongTextScriptsFromComposable ()
 const startPageScripts = collectStartPageScriptsFromComposable ()
 
 
@@ -37,6 +38,10 @@ export default (
 
       case "index":
         startPageScripts.resize (screenPropertiesStore, logoProperties)
+        break
+
+      case "long-text":
+        longTextScripts.resize (screenPropertiesStore, logoProperties)
         break
 
       default:
