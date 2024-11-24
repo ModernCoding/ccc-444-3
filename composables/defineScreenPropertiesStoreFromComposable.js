@@ -135,9 +135,9 @@ export default () => defineStore ('screenProperties', {
 
       this.screenProperties.ratioIndex < 2 && (() => {
 
-          (headerNav =>
+          (header =>
 
-              headerNav && (({ height }) => {
+              header && (({ height }) => {
 
                 this.screenProperties.paddingTops.corrected.aside
                   = (value => value < 0 ? 0 : value) (
@@ -148,9 +148,9 @@ export default () => defineStore ('screenProperties', {
                     
                     )
 
-              }) (headerNav.getBoundingClientRect ())
+              }) (header.getBoundingClientRect ())
 
-            ) (document.querySelector ('#__nuxt > header > nav'))
+            ) (document.querySelector ('#__nuxt > header'))
 
 
           ;(logo =>

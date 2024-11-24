@@ -17,7 +17,7 @@ export default screenPropertiesStore => {
       // if (main.scrollHeight <= main.clientHeight + PHI) { return }
 
       if (mainContent.scrollHeight <= mainContent.clientHeight) {
-        return
+        return mainContent.style.overflowY = 'hidden'
       }
 
 
