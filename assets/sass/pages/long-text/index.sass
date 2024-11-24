@@ -1,11 +1,13 @@
-@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/sizes' as sizes
 
 
 article
 
+  display: flex
+  flex-direction: column
+  gap: sizes.$twice_54_by_phi_power_5 * 1px
+
+
   p
-    // color: colors.$secondary-5 !important
     font-size: sizes.$twice_54_by_phi_power_4 * 1px
-    padding-bottom: sizes.$twice_54_by_phi_power_5 * 1px
     text-align: justify

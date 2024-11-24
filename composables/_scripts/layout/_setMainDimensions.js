@@ -10,15 +10,18 @@ export default screenPropertiesStore => {
 
 
     (mainContent => {
-      
+
       if (!mainContent) { return }
       mainContent.removeAttribute ('style')
 
-      if (main.scrollHeight <= main.clientHeight + PHI) { return }
+      // if (main.scrollHeight <= main.clientHeight + PHI) { return }
 
-      // if (mainContent.scrollHeight <= mainContent.clientHeight) {
-      //   return
-      // }
+      if (mainContent.scrollHeight <= mainContent.clientHeight) {
+        return
+      }
+
+
+      if ([ 'index', 'contact' ].includes (useRoute ().name)) { return }
 
 
       const mainPaddingLeft = parseInt (
