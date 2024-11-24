@@ -36,13 +36,12 @@
               bi
               bi-${
                   [ 'hand-index', 'house' ] [ +(item === 'index') ]
-                }${
-                  route.name === item ? '-fill' : ''
-                }
+                }${ route.name === item ? '-fill' : '' }
             `"
 
           aria-hidden="true"
         />
+        
         
         <span :class="[ '', 'fw-bold' ] [ +(route.name === item) ]">
           Home
