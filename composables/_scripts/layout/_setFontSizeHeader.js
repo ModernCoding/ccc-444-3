@@ -90,14 +90,31 @@ export default () => (header => {
 
   ;(locales => {
 
-    if (!locales) { return }
-    locales.style.gap = `${ localeHeight / PHI ** 2 }px`
+      if (!locales) { return }
+      locales.style.gap = `${ localeHeight / PHI ** 2 }px`
 
-    locales.querySelectorAll ('button').forEach (button =>
-        button.style.gap
-          = `${ localeHeight / PHI ** 3 }px ${ localeHeight / PHI }px`
-      )
+      locales.querySelectorAll ('button').forEach (button =>
+          button.style.gap
+            = `${ localeHeight / PHI ** 3 }px ${ localeHeight / PHI }px`
+        )
 
-  }) (document.querySelector ('#locales'))
+    }) (document.querySelector ('#locales'))
+
+
+  ;(menu => {
+
+      if (!menu) { return }
+      menu.style.gap = `${ localeHeight / PHI ** 2 }px`
+
+      menu.querySelectorAll ('a').forEach (a =>
+          a.style.gap
+            = `${ localeHeight / PHI ** 3 }px ${ localeHeight / PHI }px`
+        )
+
+      menu.querySelectorAll ('a > *').forEach (element =>
+          element.style.fontSize = `${ fontSize }px`
+        )
+
+    }) (document.querySelector ('#menu'))
 
 }) (document.querySelector ('#__nuxt > header'))

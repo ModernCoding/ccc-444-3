@@ -29,7 +29,10 @@
 
     <li v-for="item in menu" :key="item">
 
-      <NuxtLink :to="{ name: item }">
+      <NuxtLink
+        :to="{ name: item }"
+        @click="modalStore.resetModal ()"
+      >
         
         <i
           :class="`
@@ -43,9 +46,9 @@
         />
         
 
-        <span :class="[ '', 'fw-bold' ] [ +(route.name === item) ]">
+        <div :class="[ '', 'fw-bold' ] [ +(route.name === item) ]">
           {{ $t (`components.menu.${ item }`) }}
-        </span>
+        </div>
 
       </NuxtLink>
 
