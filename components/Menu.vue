@@ -31,7 +31,7 @@
 
       <NuxtLink
         :to="{ name: item }"
-        @click="modalStore.resetModal ()"
+        @click="item !== route.name && modalStore.resetModal ()"
       >
         
         <i
