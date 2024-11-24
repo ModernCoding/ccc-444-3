@@ -1,20 +1,24 @@
 <script setup>
 
+  const layoutScripts = collectLayoutScriptsFromComposable ()
   const modalStore = defineModalStoreFromComposable () ()
 
   const { locale } = useI18n ()
   const route = useRoute ()
-  
-  // onMounted (() => {
-    
-  //   layoutScripts.setFontSizeHeader ()
-    
-  //   window.addEventListener (
-  //       'resize',
-  //       () => layoutScripts.setFontSizeHeader ()
-  //     )
 
-  // })
+  const menu = [ 'index', 'contact' ]
+
+
+  onMounted (() => {
+    
+    layoutScripts.setFontSizeHeader ()
+    
+    window.addEventListener (
+        'resize',
+        () => layoutScripts.setFontSizeHeader ()
+      )
+
+  })
 
 </script>
 
@@ -23,43 +27,25 @@
 
   <menu id="menu">
 
-    <li>
+    <li v-for="item in menu" :key="item">
 
-      <NuxtLink :to="{ name: 'index' }">
+      <NuxtLink :to="{ name: item }">
         
         <i
           :class="`
               bi
-              bi-house${ route.name === 'index' ? '-fill' : '' }
+              bi-${
+                  [ 'hand-index', 'house' ] [ +(item === 'index') ]
+                }${
+                  route.name === item ? '-fill' : ''
+                }
             `"
 
           aria-hidden="true"
         />
         
-        <span :class="[ '', 'fw-bold' ] [ +(route.name === 'index') ]">
+        <span :class="[ '', 'fw-bold' ] [ +(route.name === item) ]">
           Home
-        </span>
-
-      </NuxtLink>
-
-    </li>
-
-
-    <li>
-
-      <NuxtLink :to="{ name: 'contact' }">
-        
-        <i
-          :class="`
-              bi
-              bi-hand-index${ route.name === 'contact' ? '-fill' : '' }
-            `"
-
-          aria-hidden="true"
-        />
-        
-        <span :class="[ '', 'fw-bold' ] [ +(route.name === 'contact') ]">
-          Contact
         </span>
 
       </NuxtLink>
