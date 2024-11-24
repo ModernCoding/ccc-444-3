@@ -1,4 +1,4 @@
 export const menu = {
-    index: "Starseite",
+    index: "Startseite",
     contact: "Kontaktdaten"
   }

@@ -42,9 +42,9 @@
           aria-hidden="true"
         />
         
-        
+
         <span :class="[ '', 'fw-bold' ] [ +(route.name === item) ]">
-          Home
+          {{ $t (`components.menu.${ item }`) }}
         </span>
 
       </NuxtLink>
