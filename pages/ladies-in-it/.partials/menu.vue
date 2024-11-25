@@ -1,6 +1,6 @@
 <script setup>
-  const index = ref (0)
-  const ladies = [ 'Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton' ]
+  const ladiesStore = defineLadiesStoreFromComposable () ()
+  const { ladies } = storeToRefs (ladiesStore)
 </script>
 
 
@@ -9,16 +9,18 @@
   <menu id="ladies">
 
     <li
-      v-for="lady, i in ladies"
+      v-for="lady, i in ladies.names"
       :key="lady"
-      @click="index = i"
+      @click="ladiesStore.patchIndex (i)"
     >
 
       <i
         :class="`
             bi
             bi-hand-index${
-                index === ladies.indexOf (lady) ? '-fill' : ''
+                ladies.index === ladies.names.indexOf (lady)
+                  ? '-fill'
+                  : ''
               }
           `"
 
@@ -28,7 +30,9 @@
 
       <div
         :class="
-            [ '', 'fw-bold' ] [ +(index === ladies.indexOf (lady)) ]
+            [ '', 'fw-bold' ] [
+              +(ladies.index === ladies.names.indexOf (lady))
+            ]
           "
       >
         {{ lady }}
