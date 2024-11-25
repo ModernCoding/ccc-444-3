@@ -1,3 +1,3 @@
 export const index = {
-    taxId: "Steuer-Nr.",
+    justFacts: "Fakten pur!",
   }

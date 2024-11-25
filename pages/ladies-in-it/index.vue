@@ -1,4 +1,7 @@
 <script setup>
+  
+  import JustFacts from './.partials/just-facts'
+
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -11,6 +14,14 @@
 <template>
 
   <BaseLayout>
+
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:aside
+    >
+      <JustFacts />
+    </template>
+
 
     <template v-slot:main>
 
@@ -49,7 +60,7 @@
             <picture>
             
               <NuxtImg
-                src="/images/grace.png"
+                src="/images/grace_no_transperency.png"
                 alt="Grace Hopper"
                 loading="lazy"
                 class="w-100"
@@ -97,6 +108,18 @@
 
       </article>
 
+    </template>
+
+
+    <template
+      v-if="
+        screenProperties.ratioIndex < 2
+          || screenProperties.isSentenceInFooter
+        "
+
+      v-slot:footer-right
+    >
+      <JustFacts />
     </template>
 
   </BaseLayout>
