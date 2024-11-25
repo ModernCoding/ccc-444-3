@@ -1,4 +1,4 @@
-export default (modalStore, key) => {
+export default (screenProperties, modalStore, key) => {
 
   const { modal } = storeToRefs (modalStore)
 
@@ -64,5 +64,26 @@ export default (modalStore, key) => {
       break
 
   }
+
+
+  const mainModal = document.querySelector ('#main-modal')
+
+  if (!mainModal) { return }
+  mainModal.removeAttribute ('style')
+
+  if (!modal.value.show) { return }
+
+
+  ;(_resize => {
+
+      _resize ()
+      window.addEventListener ('resize', _resize)
+
+    }) (
+
+      () => mainModal.style.paddingTop
+          = `${ screenProperties.paddingTops.corrected.aside }px`
+
+    )
 
 }

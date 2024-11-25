@@ -140,7 +140,7 @@
         id="header-left-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.show"
-        @click="modalScripts.openOrClose (modalStore)"
+        @click="modalScripts.openOrClose (screenProperties, modalStore)"
       />
 
     </nav>
@@ -156,7 +156,7 @@
         id="header-central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.show"
-        @click="modalScripts.openOrClose (modalStore)"
+        @click="modalScripts.openOrClose (screenProperties, modalStore)"
       />
 
     </nav>
@@ -170,7 +170,10 @@
             ${ modal.show && modal.content === 'Menu' ? 'fw-bold' : '' }
           `"
 
-        @click="modalScripts.openOrClose (modalStore, 'Menu')"
+        @click="
+            modalScripts
+              .openOrClose (screenProperties, modalStore, 'Menu')
+          "
       >
 
         <i
@@ -198,7 +201,10 @@
             }
           `"
 
-        @click="modalScripts.openOrClose (modalStore, 'Locales')"
+        @click="
+            modalScripts
+              .openOrClose (screenProperties, modalStore, 'Locales')
+          "
       >
 
         <i
@@ -246,7 +252,7 @@
         id="aside-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.show"
-        @click="modalScripts.openOrClose (modalStore)"
+        @click="modalScripts.openOrClose (screenProperties, modalStore)"
       />
     
     </aside>
@@ -267,7 +273,7 @@
         id="central-modal"
         :data-number-of-parts="screenProperties.ratioIndex"
         :data-is-shown="+modal.show"
-        @click="modalScripts.openOrClose (modalStore)"
+        @click="modalScripts.openOrClose (screenProperties, modalStore)"
       />
 
     </section>
