@@ -13,7 +13,13 @@
 
 <template>
 
+  <ModalLayout v-if="screenProperties.ratioIndex < 2">
+    <Article />
+  </ModalLayout>
+
+
   <BaseLayout>
+
 
     <template
       v-if="screenProperties.ratioIndex === 2"

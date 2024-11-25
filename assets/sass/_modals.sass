@@ -4,7 +4,7 @@
 
 .o-modal
   position: absolute
-  z-index: 8
+  z-index: 7
   transition: height .5s linear, opacity .5s linear
 
   &[data-is-shown="0"]
@@ -71,7 +71,7 @@
     width: dimensions.$centralWidthThreeParts
 
 
-#main-modal
+#main-modal, #modal-layout
   background-color: colors.$dark
 
 
@@ -89,3 +89,17 @@
 
   &[data-number-of-parts="3"]
     width: dimensions.$mainWidthThreeParts
+
+
+#modal-layout
+  
+  background-color: colors.$dark
+  z-index: 8
+    
+  top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart)
+
+  width: calc(100% - dimensions.$layoutPaddingRightOnePart - dimensions.$layoutPaddingLeftOnePart)
+
+  height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
+
+  overflow-y: auto
