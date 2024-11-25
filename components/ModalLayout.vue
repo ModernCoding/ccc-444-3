@@ -1,8 +1,11 @@
 <script setup>
 
+  const loadingStore = defineLoadingStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
+  const { loading } = storeToRefs (loadingStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
@@ -37,7 +40,8 @@
           )
 
 
-        modalContent.style.paddingRight = `${ modalPaddingLeft / PHI }px`
+        modalContent.style.paddingRight
+          = `${ modalPaddingLeft / PHI }px`
 
       }) (modalLayout.querySelector ('*'))
 
@@ -58,7 +62,11 @@
 <template>
 
   <section class="o-modal" id="modal-layout">
-    <slot />
+
+    <template v-if="!loading.is">
+      <slot />
+    </template>
+  
   </section>
   
 </template>
