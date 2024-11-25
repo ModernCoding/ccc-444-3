@@ -4,7 +4,7 @@
 
 .o-modal
   position: absolute
-  z-index: 7
+  z-index: 8
   transition: height .5s linear, opacity .5s linear
 
   &[data-is-shown="0"]
@@ -94,7 +94,7 @@
 #modal-layout
   
   background-color: colors.$dark
-  z-index: 8
+  z-index: 7
     
   top: calc(dimensions.$layoutPaddingTopOnePart + dimensions.$heightHeaderOnePart)
 
@@ -102,4 +102,5 @@
 
   height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
 
-  overflow-y: auto
+  > *
+    overflow-y: auto
