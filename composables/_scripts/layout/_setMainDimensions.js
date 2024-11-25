@@ -14,14 +14,17 @@ export default screenPropertiesStore => {
       if (!mainContent) { return }
       mainContent.removeAttribute ('style')
 
-      // if (main.scrollHeight <= main.clientHeight + PHI) { return }
 
-      if (mainContent.scrollHeight <= mainContent.clientHeight) {
-        return mainContent.style.overflowY = 'hidden'
+      switch (true) {
+
+        case mainContent.scrollHeight <= mainContent.clientHeight:
+        case [ 'index', 'contact' ].includes (useRoute ().name):
+          return mainContent.style.overflowY = 'hidden'
+
+        default:
+          break
+
       }
-
-
-      if ([ 'index', 'contact' ].includes (useRoute ().name)) { return }
 
 
       const mainPaddingLeft = parseInt (
