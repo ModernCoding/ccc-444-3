@@ -1,4 +1,5 @@
 export const menu = {
     index: "Startseite",
-    contact: "Kontaktdaten"
+    contact: "Kontaktdaten",
+    "ladies-in-it": "Damen in der Informatik"
   }

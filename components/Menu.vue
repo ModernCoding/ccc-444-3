@@ -6,7 +6,12 @@
   const { locale } = useI18n ()
   const route = useRoute ()
 
-  const menu = [ 'index', 'contact', 'long-text' ]
+  const menu = [
+      'index',
+      'contact',
+      'ladies-in-it',
+      'long-text'
+    ]
 
 
   onMounted (() => {

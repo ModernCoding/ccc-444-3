@@ -88,6 +88,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/women/index.sass"
+  src="@/assets/sass/pages/ladies-in-it/index.sass"
   lang="sass"
 ></style>
