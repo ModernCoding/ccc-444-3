@@ -1,6 +1,7 @@
 <script setup>
   
   import JustFacts from './.partials/just-facts'
+  import Menu from './.partials/menu'
 
 
   const screenPropertiesStore
@@ -20,6 +21,14 @@
       v-slot:aside
     >
       <JustFacts />
+    </template>
+
+
+    <template
+      v-if="screenProperties.ratioIndex > 2"
+      v-slot:central
+    >
+      <Menu />
     </template>
 
 
