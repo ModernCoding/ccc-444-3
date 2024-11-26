@@ -6,7 +6,7 @@
 
 <template>
 
-  <menu id="ladies">
+  <menu class="o-ladies-menu">
 
     <li
       v-for="i in ladies.MAP.keys ()"

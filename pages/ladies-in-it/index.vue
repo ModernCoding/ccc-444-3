@@ -42,6 +42,7 @@
 
       <article id="ladies-in-it">
         <Ladies />
+        <Menu v-if="screenProperties.ratioIndex < 3" />
       </article>
 
     </template>

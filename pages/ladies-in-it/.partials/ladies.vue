@@ -14,7 +14,7 @@
 
 <template>
 
-  <section class="d-flex align-items-center">
+  <section class="o-ladies">
       
     <figure>
 
