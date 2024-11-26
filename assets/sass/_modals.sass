@@ -102,5 +102,11 @@
 
   height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart + dimensions.$heightFooterOnePart)
 
+
+  &[data-is-shorter="1"]
+
+    height: calc(dimensions.$heightAsideOnePart + dimensions.$heightMainOnePart)
+
+
   > *
     overflow-y: auto

@@ -1,5 +1,15 @@
 <script setup>
 
+  const { isShorter } = defineProps ({
+
+      isShorter: {
+          type: String,
+          default: "0"
+        }
+
+    })
+
+
   const loadingStore = defineLoadingStoreFromComposable () ()
 
   const screenPropertiesStore
@@ -61,7 +71,11 @@
 
 <template>
 
-  <section class="o-modal" id="modal-layout">
+  <section
+    class="o-modal"
+    id="modal-layout"
+    :data-is-shorter="isShorter"
+  >
 
     <template v-if="!loading.is">
       <slot />

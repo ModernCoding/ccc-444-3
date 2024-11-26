@@ -20,9 +20,14 @@
 
 <template>
 
-  <ModalLayout v-if="screenProperties.ratioIndex < 2">
-    <Menu />
-    <Ladies />
+  <ModalLayout
+    v-if="screenProperties.ratioIndex < 2"
+    isShorter="1"
+  >
+    <section>
+      <Menu />
+      <Ladies />
+    </section>
   </ModalLayout>
 
   <BaseLayout>
