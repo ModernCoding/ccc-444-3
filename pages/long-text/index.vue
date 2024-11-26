@@ -20,7 +20,6 @@
 
   <BaseLayout>
 
-
     <template
       v-if="screenProperties.ratioIndex === 2"
       v-slot:aside

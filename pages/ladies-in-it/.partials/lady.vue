@@ -1,0 +1,43 @@
+<script setup>
+  
+  const ladiesStore = defineLadiesStoreFromComposable () ()
+
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+
+
+  const { ladies } = storeToRefs (ladiesStore)
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+</script>
+
+
+<template>
+
+  <h1 class="o-lady">
+
+    <span
+      v-for="
+          sentence, i in $t (
+            `pages.ladiesInIt.index.${
+              ladies.MAP.get (ladies.index).key
+            }`
+          ).split ('%')
+        "
+
+      :key="i"
+      :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
+    >
+      {{ sentence }}
+    </span>
+  
+  </h1>
+
+</template>
+
+
+<style
+  scoped
+  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  lang="sass"
+></style>

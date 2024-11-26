@@ -1,8 +1,9 @@
 <script setup>
   
   import JustFacts from './.partials/just-facts'
-  import Ladies from './.partials/ladies'
+  import Lady from './.partials/lady'
   import Menu from './.partials/menu'
+  import Picture from './.partials/picture'
 
 
   const ladiesStore = defineLadiesStoreFromComposable () ()
@@ -27,7 +28,8 @@
 
     <section>
       <Menu />
-      <Ladies />
+      <Picture />
+      <Lady />
     </section>
   
   </ModalLayout>
@@ -57,8 +59,9 @@
     >
 
       <article id="ladies-in-it">
-        <Ladies />
         <Menu v-if="screenProperties.ratioIndex < 3" />
+        <Picture />
+        <Lady />
       </article>
 
     </template>
