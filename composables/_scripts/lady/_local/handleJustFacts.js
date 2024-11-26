@@ -3,14 +3,45 @@ export const handleJustFacts = (
   logoProperties
 ) => {
 
+  const justFacts = document.querySelector ('.o-just-facts')
+  if (!justFacts) { return }
+
+  justFacts.removeAttribute ('style')
+
+  const h1 = justFacts.querySelector ('h1')
+  if (!h1) { return }
+  
+
   const { screenProperties: { value: screenProperties } }
     = storeToRefs (screenPropertiesStore)
 
 
-  const justFacts = document.querySelector ('.o-just-facts')
-  if (!justFacts) { return }
-  
-  justFacts.removeAttribute ('style')
+  const _setFontSize = (maxHeight, maxWidth, fontSize) => {
+
+      h1.style.fontSize = `${ fontSize }px`
+      console.log (h1.getBoundingClientRect ())
+      console.log (h1.scrollWidth)
+
+
+      switch (true) {
+        
+        case fontSize <= TWICE_54_BY_PHI_POWER_4:
+
+          return h1.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+
+
+        case h1.getBoundingClientRect ().height >= maxHeight:
+        case h1.scrollWidth >= maxWidth:
+
+          return _setFontSize (maxHeight, maxWidth, fontSize / PHI)
+
+
+        default:
+          return
+
+      }
+
+    }
 
 
   ;[
@@ -25,15 +56,26 @@ export const handleJustFacts = (
 
         justFacts.style.height = `${ height }px`
 
+        _setFontSize (
+          height,
+          screenProperties.widths.main,
+          height / PHI ** 2
+        )
+
       },
   
 
-    () => {
+    () => (height => {
 
-        justFacts.style.height
-          = `${ screenProperties.heights.footer }px`
+        justFacts.style.height = `${ height }px`
+        
+        _setFontSize (
+          height,
+          screenProperties.widths.aside,
+          height / PHI ** 2
+        )
 
-      },
+      }) (screenProperties.heights.footer)
   
   ] [ +(screenProperties.ratioIndex < 2) ] ()
 
