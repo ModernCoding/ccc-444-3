@@ -24,11 +24,14 @@
     v-if="screenProperties.ratioIndex < 2"
     isShorter="1"
   >
+
     <section>
       <Menu />
       <Ladies />
     </section>
+  
   </ModalLayout>
+
 
   <BaseLayout>
 
