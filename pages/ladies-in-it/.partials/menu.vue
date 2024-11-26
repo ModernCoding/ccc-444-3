@@ -9,33 +9,23 @@
   <menu id="ladies">
 
     <li
-      v-for="lady, i in ladies.names"
-      :key="lady"
+      v-for="i in ladies.MAP.keys ()"
+      :key="i"
       @click="ladiesStore.patchIndex (i)"
     >
 
       <i
         :class="`
             bi
-            bi-hand-index${
-                ladies.index === ladies.names.indexOf (lady)
-                  ? '-fill'
-                  : ''
-              }
+            bi-hand-index${ ladies.index === i ? '-fill' : '' }
           `"
 
         aria-hidden="true"
       />
 
 
-      <div
-        :class="
-            [ '', 'fw-bold' ] [
-              +(ladies.index === ladies.names.indexOf (lady))
-            ]
-          "
-      >
-        {{ lady }}
+      <div :class="[ '', 'fw-bold' ] [ +(ladies.index === i) ]">
+        {{ ladies.MAP.get (i).name }}
       </div>
 
     </li>
