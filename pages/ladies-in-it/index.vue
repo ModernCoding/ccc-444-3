@@ -5,10 +5,15 @@
   import Menu from './.partials/menu'
 
 
+  const ladiesStore = defineLadiesStoreFromComposable () ()
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
   const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+
+  onUnmounted (ladiesStore.resetIndex)
 
 </script>
 

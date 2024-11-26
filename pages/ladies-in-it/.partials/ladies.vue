@@ -36,7 +36,21 @@
     </figure>
 
 
-    <h1>{{ ladies.MAP.get (ladies.index).key }}</h1>
+    <h1>
+
+      <span
+        v-for="
+            sentence, i
+              in $t (`pages.ladiesInIt.index.${ ladies.MAP.get (ladies.index).key }`).split ('%')
+          "
+
+        :key="i"
+        :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
+      >
+        {{ sentence }}
+      </span>
+    
+    </h1>
   
   </section>
 
