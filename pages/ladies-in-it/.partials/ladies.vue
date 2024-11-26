@@ -23,6 +23,7 @@
         <NuxtImg
           :src="`/images/${ ladies.MAP.get (ladies.index).key }.png`"
           :alt="ladies.MAP.get (ladies.index).name"
+          :modifiers="{ b: '#110d0d', opacity: 1 }"
           loading="lazy"
         />
       
