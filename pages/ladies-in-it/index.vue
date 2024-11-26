@@ -20,6 +20,11 @@
 
 <template>
 
+  <ModalLayout v-if="screenProperties.ratioIndex < 2">
+    <Menu />
+    <Ladies />
+  </ModalLayout>
+
   <BaseLayout>
 
     <template
@@ -38,7 +43,10 @@
     </template>
 
 
-    <template v-slot:main>
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:main
+    >
 
       <article id="ladies-in-it">
         <Ladies />
