@@ -2,20 +2,10 @@ export const index = {
 
     justFacts: "Just facts!",
 
-    ada: [
-        "Hinter der allerersten Weltpremiere in der Informatik stand ",
-        "eine",
-        " Programmierer",
-        "in",
-        "."
-      ],
+    ada: "%She% is the very first computer programmer in history.",
   
-    grace: [
-        "Oder: Die Mona Lisa der Informatik! Sie ist die Erfinderin der allerersten menschlich ähnlichen Programmiersprache und somit auch des allerersten Compilers."
-      ],
+    grace: "The Mona Lisa of IT! %She% invented the very first human-readable programming language, and with it: the very first compiler.",
   
-    margaret: [
-        "Sie kam als allererste Person ins Apollo-Projekt der NASA und ist somit die allererste Software-Ingenieur in der Geschichte der Informatik."
-      ]
+    margaret: "%She% is the very first person to have joined the Apollo project at the NASA, which makes %her% the very first Software Engineer in history as well."
 
   }

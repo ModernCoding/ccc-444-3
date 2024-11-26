@@ -15,7 +15,7 @@
 <template>
 
   <section class="d-flex align-items-center">
-
+      
     <figure>
 
       <picture>
