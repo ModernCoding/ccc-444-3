@@ -58,10 +58,15 @@
       v-slot:main
     >
 
-      <article id="ladies-in-it">
+      <article
+        id="ladies-in-it"
+        :data-number-of-parts="screenProperties.ratioIndex"
+      >
+
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <Picture />
         <Lady />
+      
       </article>
 
     </template>

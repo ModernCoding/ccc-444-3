@@ -8,8 +8,12 @@
 
 #ladies-in-it
   display: flex
-  flex-direction: column
+  flex-wrap: wrap
   align-items: center
+
+  &[data-number-of-parts="2"]
+    > .o-lady
+      width: 100%
 
 
 .o-just-facts
