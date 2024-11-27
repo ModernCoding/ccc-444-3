@@ -74,8 +74,8 @@
 
     <template
       v-if="
-        screenProperties.ratioIndex < 2
-          || screenProperties.isSentenceInFooter
+          screenProperties.ratioIndex < 2
+            || screenProperties.isSentenceInFooter
         "
 
       v-slot:footer-right

@@ -25,7 +25,13 @@
     > *
       height: dimensions.$heightSectionTwoParts
 
+
     > .o-lady-picture
+
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
       text-align: center
 
 
@@ -38,7 +44,7 @@
         align-items: center
         justify-content: center
 
-        height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
+        // height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
 
 
     > .o-lady
@@ -52,6 +58,7 @@
   align-items: center
   justify-content: center
   text-align: center
+  text-wrap: nowrap
 
 
 .o-lady
@@ -73,6 +80,7 @@
   li
     display: flex
     align-items: center
+    cursor: pointer
 
     > div
       // text-transform: uppercase

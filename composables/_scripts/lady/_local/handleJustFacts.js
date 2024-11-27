@@ -56,7 +56,7 @@ export const handleJustFacts = (
 
         _setFontSize (
           height,
-          screenProperties.widths.main,
+          screenProperties.widths.aside,
           height / PHI ** 2
         )
 
@@ -69,7 +69,7 @@ export const handleJustFacts = (
         
         _setFontSize (
           height,
-          screenProperties.widths.aside,
+          screenProperties.widths.main,
           height / PHI ** 2
         )
 
