@@ -1,3 +1,25 @@
+const _handleFontSize = (screenProperties, p) => {
+
+  (screen =>
+
+    (factor => {
+
+      p.querySelectorAll ('span').forEach (span =>
+          span.style.fontSize
+            = `${ TWICE_54_BY_PHI_POWER_5 * factor }px`
+        )
+
+      screenProperties.ratioIndex < 2 && (
+          p.style.paddingTop = `${ TWICE_54_BY_PHI_POWER_5 * factor }px`
+        )
+
+    }) (PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastSm))
+
+  ) (getWindowWidths (screenProperties.widths.main))
+
+}
+
+
 export const handleLady = screenProperties => {
 
   const lady = document.querySelector ('.o-lady')
@@ -14,6 +36,12 @@ export const handleLady = screenProperties => {
   p.querySelectorAll ('span').forEach (span =>
       span.removeAttribute ('style')
     )
+
+
+  if (screenProperties.ratioIndex < 3) {
+    return _handleFontSize (screenProperties, p)
+  }
+
 
   const ladyHeight = lady.getBoundingClientRect ().height
 

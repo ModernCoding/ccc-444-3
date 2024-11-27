@@ -6,21 +6,21 @@
 
 
 #ladies-in-it
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: dimensions.$heightSectionTwoParts
 
   > .o-lady
     display: flex
     align-items: center
-
-
-  &[data-number-of-parts="2"],
-  &[data-number-of-parts="3"]
     height: dimensions.$heightSectionTwoParts
-
 
   &[data-number-of-parts="3"]
     overflow-y: hidden !important
 
-    > *
+    > .o-lady
       height: dimensions.$heightSectionTwoParts
 
 
@@ -41,8 +41,8 @@
   p
     line-height: 1
 
-  span.fw-bold
-    text-decoration: underline
+    span.fw-bold
+      text-decoration: underline
 
 
 .o-lady-picture
