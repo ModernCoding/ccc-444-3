@@ -1,14 +1,10 @@
-export const handleMenu = (screenPropertiesStore, logoProperties) => {
+export const handleMenu = screenProperties => {
 
   const menu
     = document.querySelector ('#central-content > .o-lady-menu')
   
   if (!menu) { return }
   
-
-  const { screenProperties: { value: screenProperties } }
-    = storeToRefs (screenPropertiesStore)
-
 
   const listItems = menu.querySelectorAll ('li')
   const menuItems = menu.querySelectorAll ('i, div')
@@ -29,7 +25,7 @@ export const handleMenu = (screenPropertiesStore, logoProperties) => {
           mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
         )
 
-    }) (PHI ** (+screen.isAtLeastSmMinus + +screen.isAtLeastSm))
+    }) (PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastSm))
 
   ) (getWindowWidths (screenProperties.widths.central))
 
