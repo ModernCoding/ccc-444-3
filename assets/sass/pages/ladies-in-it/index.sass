@@ -22,10 +22,6 @@
     text-align: center
 
 
-    img
-      height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
-
-
     figcaption
       display: flex
       align-items: center
@@ -37,7 +33,6 @@
   > .o-lady
     display: flex
     align-items: center
-    width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
 
 
   &[data-number-of-parts="2"]
@@ -46,14 +41,28 @@
     > .o-lady-menu
       width: 100%
 
+    > .o-lady
+      width: calc(dimensions.$mainWidthTwoParts / constants.$phi)
+
 
   &[data-number-of-parts="3"]
-  
+
     height: dimensions.$heightSectionTwoParts
     overflow-y: hidden !important
 
     > *
       height: dimensions.$heightSectionTwoParts
+
+
+    > .o-lady-picture
+
+      img
+        height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
+
+
+    > .o-lady
+      width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
+
 
 
 .o-just-facts
