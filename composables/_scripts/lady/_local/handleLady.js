@@ -13,7 +13,7 @@ export const handleLady = screenProperties => {
               ]
             }px`
         
-        ) (screenProperties.heights.main / PHI ** 4)
+        ) (ladyFigcaption.getBoundingClientRect ().height / PHI ** 2)
 
     }) (document.querySelector ('.o-lady-picture > figcaption'))
 
