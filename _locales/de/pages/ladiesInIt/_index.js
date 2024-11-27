@@ -2,7 +2,7 @@ export const index = {
     
     justFacts: "Fakten pur!",
 
-    ada: "Hinter der allerersten Weltpremiere in der Informatik stand %eine% Programmierer%in%.",
+    ada: "Hinter der ganz großen Erfindung der Informatik stand %eine% Programmierer%in%.",
   
     grace: "Oder: Die Mona Lisa der Informatik! %Sie% ist %die% Erfinder%in% der allerersten menschlich ähnlichen Programmiersprache und somit auch des allerersten Compilers.",
   

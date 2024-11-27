@@ -1,19 +1,51 @@
 @use "sass:math"
 
-@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
-@use '@/assets/sass/grid' as grid
+@use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/sizes' as sizes
 
 
 #ladies-in-it
+
   display: flex
   flex-wrap: wrap
   align-items: center
+  justify-content: space-between
+
 
   &[data-number-of-parts="2"]
+
     > .o-lady
       width: 100%
+
+
+  &[data-number-of-parts="3"]
+    height: dimensions.$heightSectionTwoParts
+
+    > *
+      height: dimensions.$heightSectionTwoParts
+
+    > .o-lady-picture
+      text-align: center
+
+
+      img
+        height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
+
+  
+      figcaption
+        display: flex
+        align-items: center
+        justify-content: center
+
+        height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
+
+        font-size: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 4))
+  
+    > .o-lady
+      display: flex
+      align-items: center
+      width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
 
 
 .o-just-facts
@@ -26,7 +58,7 @@
 .o-lady
   text-align: justify
 
-  > span.fw-bold
+  span.fw-bold
     text-transform: uppercase
     text-decoration: underline
 

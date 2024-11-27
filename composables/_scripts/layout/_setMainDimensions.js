@@ -18,7 +18,8 @@ export default screenPropertiesStore => {
       switch (true) {
 
         case mainContent.scrollHeight <= mainContent.clientHeight:
-        case [ 'index', 'contact' ].includes (useRoute ().name):
+        case ROUTES_WITHOUT_SCROLLING.includes (useRoute ().name):
+        
           return mainContent.style.overflowY = 'hidden'
 
         default:

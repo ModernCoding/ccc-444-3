@@ -16,20 +16,24 @@
 
   <h1 class="o-lady">
 
-    <span
-      v-for="
-          sentence, i in $t (
-            `pages.ladiesInIt.index.${
-              ladies.MAP.get (ladies.index).key
-            }`
-          ).split ('%')
-        "
+    <p>
 
-      :key="i"
-      :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
-    >
-      {{ sentence }}
-    </span>
+      <span
+        v-for="
+            sentence, i in $t (
+              `pages.ladiesInIt.index.${
+                ladies.MAP.get (ladies.index).key
+              }`
+            ).split ('%')
+          "
+
+        :key="i"
+        :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
+      >
+        {{ sentence }}
+      </span>
+
+    </p>
   
   </h1>
 
