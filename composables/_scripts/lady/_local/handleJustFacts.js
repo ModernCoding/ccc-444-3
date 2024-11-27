@@ -19,8 +19,6 @@ export const handleJustFacts = (
   const _setFontSize = (maxHeight, maxWidth, fontSize) => {
 
       h1.style.fontSize = `${ fontSize }px`
-      console.log (h1.getBoundingClientRect ())
-      console.log (h1.scrollWidth)
 
 
       switch (true) {
