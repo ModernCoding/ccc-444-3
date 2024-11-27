@@ -9,8 +9,12 @@ const _handleFontSize = (screenProperties, p) => {
             = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
         )
 
+
       screenProperties.ratioIndex < 2 && (
-          p.style.paddingTop = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
+
+          p.style.paddingTop
+            = `${ TWICE_54_BY_PHI_POWER_3 * factor * PHI }px`
+        
         )
 
     }) (PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastSm))

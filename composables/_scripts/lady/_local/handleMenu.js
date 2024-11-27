@@ -28,8 +28,11 @@ export const handleMenu = screenProperties => {
 
       screenProperties.ratioIndex < 3 && (
 
-          menu.style.paddingBottom
-            = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
+          menu.style.paddingBottom = `${ 
+              TWICE_54_BY_PHI_POWER_3
+                * factor
+                * PHI ** (+(screenProperties.ratioIndex < 2))
+            }px`
 
         )
 
