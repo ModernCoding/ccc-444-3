@@ -38,12 +38,16 @@ export const handleLady = screenProperties => {
     )
 
 
-  if (screenProperties.ratioIndex < 3) {
+  if (screenProperties.ratioIndex < 2) {
     return _handleFontSize (screenProperties, p)
   }
 
 
-  const ladyHeight = lady.getBoundingClientRect ().height
+  const ladyHeight = [
+      screenProperties.heights.main / PHI,
+      lady.getBoundingClientRect ().height
+    ] [ +(screenProperties.ratioIndex > 2) ]
+
 
   const fontSize = [ ladyHeight, TWICE_54_BY_PHI ] [
       +(ladyHeight > TWICE_54_BY_PHI)
