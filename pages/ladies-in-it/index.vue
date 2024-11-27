@@ -41,7 +41,11 @@
       v-if="screenProperties.ratioIndex > 1"
       v-slot:aside
     >
-      <Picture />
+
+      <NuxtLink :to="{ name: 'index' }">
+        <Picture />
+      </NuxtLink>
+      
     </template>
 
 
