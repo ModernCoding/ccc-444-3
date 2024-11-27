@@ -1,29 +1,5 @@
 export const handleLady = screenProperties => {
 
-  (ladyFigcaption => {
-
-      if (!ladyFigcaption) { return }
-      ladyFigcaption.removeAttribute ('style')
-
-
-      ;(fontSize =>
-
-          (size => {
-
-              ladyFigcaption.style.fontSize = `${ size }px`
-              ladyFigcaption.style.height = `${ size * PHI ** 2 }px`
-
-            }) (
-              [ fontSize, TWICE_54_BY_PHI_POWER_3 ] [
-                +(fontSize > TWICE_54_BY_PHI_POWER_3)
-              ]
-            )
-        
-        ) (screenProperties.heights.main / PHI ** 2)
-
-    }) (document.querySelector ('.o-lady-picture > figcaption'))
-
-
   const lady = document.querySelector ('.o-lady')
 
   if (!lady) { return }

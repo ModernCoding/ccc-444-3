@@ -231,8 +231,9 @@
 
       <NuxtLink
         v-if="
-            screenProperties.ratioIndex > 1
-              || route.name !== 'contact'
+            !ROUTES_WITHOUT_LOGO.includes (
+              `${ route.name }@${ screenProperties.ratioIndex }`
+            )
           "
 
         :to="{ name: 'index' }"

@@ -41,7 +41,7 @@
       v-if="screenProperties.ratioIndex > 1"
       v-slot:aside
     >
-      <JustFacts />
+      <Picture />
     </template>
 
 
@@ -64,7 +64,6 @@
       >
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
-        <Picture />
         <Lady />
       
       </article>
@@ -72,14 +71,7 @@
     </template>
 
 
-    <template
-      v-if="
-          screenProperties.ratioIndex < 2
-            || screenProperties.isSentenceInFooter
-        "
-
-      v-slot:footer-right
-    >
+    <template v-slot:footer-right>
       <JustFacts />
     </template>
 

@@ -7,62 +7,21 @@
 
 #ladies-in-it
 
-  display: flex
-  flex-wrap: wrap
-  align-items: center
-  justify-content: space-between
-
-
-  > .o-lady-picture
-
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    text-align: center
-
-
-    figcaption
-      display: flex
-      align-items: center
-      justify-content: center
-
-      // height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
-
-
   > .o-lady
     display: flex
     align-items: center
 
 
-  &[data-number-of-parts="2"]
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
     height: dimensions.$heightSectionTwoParts
-
-    > .o-lady-menu
-      width: 100%
-
-    > .o-lady
-      width: calc(dimensions.$mainWidthTwoParts / constants.$phi)
 
 
   &[data-number-of-parts="3"]
-
-    height: dimensions.$heightSectionTwoParts
     overflow-y: hidden !important
 
     > *
       height: dimensions.$heightSectionTwoParts
-
-
-    > .o-lady-picture
-
-      img
-        height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
-
-
-    > .o-lady
-      width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
-
 
 
 .o-just-facts
@@ -70,7 +29,9 @@
   align-items: center
   justify-content: center
   text-align: center
-  text-wrap: nowrap
+
+  > *
+    text-wrap: nowrap
 
 
 .o-lady
@@ -82,6 +43,17 @@
 
   span.fw-bold
     text-decoration: underline
+
+
+.o-lady-picture
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  img
+    max-height: 100%
+    max-width: 100%
 
 
 .o-lady-menu

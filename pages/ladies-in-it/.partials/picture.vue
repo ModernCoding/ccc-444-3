@@ -15,21 +15,12 @@
 
   <figure class="o-lady-picture">
 
-    <picture>
-    
-      <NuxtImg
-        :src="`/images/${ ladies.MAP.get (ladies.index).key }.png`"
-        :alt="ladies.MAP.get (ladies.index).name"
-        :modifiers="{ b: '#110d0d', opacity: 1 }"
-        loading="lazy"
-      />
-    
-    </picture>
-    
-
-    <figcaption>
-      {{ ladies.MAP.get (ladies.index).dates }}
-    </figcaption>
+    <NuxtImg
+      :src="`/images/${ ladies.MAP.get (ladies.index).key }.png`"
+      :alt="ladies.MAP.get (ladies.index).name"
+      :modifiers="{ b: '#110d0d', opacity: 1 }"
+      loading="lazy"
+    />
 
   </figure>
 
