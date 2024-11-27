@@ -1,8 +1,9 @@
 export const handleMenu = screenProperties => {
 
   const menu = document.querySelector ('.o-lady-menu')
-  
+
   if (!menu) { return }
+  menu.removeAttribute ('style')
   
 
   const listItems = menu.querySelectorAll ('li')
@@ -22,6 +23,14 @@ export const handleMenu = screenProperties => {
 
       menuItems.forEach (mI =>
           mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
+        )
+
+
+      screenProperties.ratioIndex < 3 && (
+
+          menu.style.paddingBottom
+            = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
+
         )
 
     }) (
