@@ -24,8 +24,16 @@ export const handleMenu = screenProperties => {
           mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
         )
 
-    }) (PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastSm))
+    }) (PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastSm - +(screenProperties.ratioIndex < 3)))
 
-  ) (getWindowWidths (screenProperties.widths.central))
+  ) (
+
+    getWindowWidths (
+      screenProperties.widths [
+          [ 'main', 'central' ] [ +(screenProperties.ratioIndex > 2) ]
+        ]
+    )
+  
+  )
 
 }

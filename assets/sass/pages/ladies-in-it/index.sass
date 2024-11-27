@@ -41,13 +41,16 @@
 
 
   &[data-number-of-parts="2"]
+    height: dimensions.$heightSectionTwoParts
 
     > .o-lady-menu
       width: 100%
 
 
   &[data-number-of-parts="3"]
+  
     height: dimensions.$heightSectionTwoParts
+    overflow-y: hidden !important
 
     > *
       height: dimensions.$heightSectionTwoParts
