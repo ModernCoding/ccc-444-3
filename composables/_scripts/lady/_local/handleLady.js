@@ -81,4 +81,27 @@ export const handleLady = screenProperties => {
 
   }) ()
 
+
+  if (screenProperties.ratioIndex > 2) { return }
+
+
+  const menu = document.querySelector ('.o-lady-menu')
+  if (!menu) { return }
+
+
+  ;((menuHeight, ladyHeight) => {
+
+    if (menuHeight + ladyHeight > screenProperties.heights.main) {
+      return
+    }
+
+
+    lady.style.height
+      = `${ screenProperties.heights.main - menuHeight }px`
+
+  }) (
+    menu.getBoundingClientRect ().height,
+    lady.getBoundingClientRect ().height
+  )
+
 }
