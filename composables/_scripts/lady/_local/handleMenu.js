@@ -10,46 +10,27 @@ export const handleMenu = (screenPropertiesStore, logoProperties) => {
     = storeToRefs (screenPropertiesStore)
 
 
-  const menuItems = menu.querySelectorAll ('*')
+  const listItems = menu.querySelectorAll ('li')
+  const menuItems = menu.querySelectorAll ('i, div')
 
-  menu.removeAttribute ('style')
+  listItems.forEach (e => e.removeAttribute ('style'))
   menuItems.forEach (e => e.removeAttribute ('style'))
-  console.log(screenProperties)
-
-  menu.style.height = `${ screenProperties.heights.main }px`
 
 
-  ;(function _setFontSize (size = screenProperties.heights.main) {
+  ;(screen =>
 
-      if (size <= TWICE_54_BY_PHI_POWER_4) {
+    (factor => {
+    
+      listItems.forEach (lI =>
+          lI.style.gap = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
+        )
 
-        menuItems.forEach (mI =>
-            mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
-          )
+      menuItems.forEach (mI =>
+          mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
+        )
 
-        return
+    }) (PHI ** (+screen.isAtLeastSmMinus + +screen.isAtLeastSm))
 
-      }
-
-
-      menuItems.forEach (mI => mI.style.fontSize = `${ size }px`)
-      console.log(menu.scrollWidth)
-      console.log(menu.scrollHeight)
-
-
-
-      switch (true) {
-        
-        case menu.scrollHeight >= screenProperties.heights.main:
-        case menu.scrollWidth >= screenProperties.widths.central:
-          return _setFontSize (size / PHI)
-
-        default:
-          return
-
-      }
-
-    }) ()
-
+  ) (getWindowWidths (screenProperties.widths.central))
 
 }
