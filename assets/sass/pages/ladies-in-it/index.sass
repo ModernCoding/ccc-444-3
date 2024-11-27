@@ -13,9 +13,36 @@
   justify-content: space-between
 
 
+  > .o-lady-picture
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+
+
+    img
+      height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
+
+
+    figcaption
+      display: flex
+      align-items: center
+      justify-content: center
+
+      // height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
+
+
+  > .o-lady
+    display: flex
+    align-items: center
+    width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
+
+
   &[data-number-of-parts="2"]
 
-    > .o-lady
+    > .o-lady-menu
       width: 100%
 
 
@@ -24,33 +51,6 @@
 
     > *
       height: dimensions.$heightSectionTwoParts
-
-
-    > .o-lady-picture
-
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      text-align: center
-
-
-      img
-        height: calc(dimensions.$heightSectionTwoParts / constants.$phi)
-
-  
-      figcaption
-        display: flex
-        align-items: center
-        justify-content: center
-
-        // height: calc(dimensions.$heightSectionTwoParts / math.pow(constants.$phi, 2))
-
-
-    > .o-lady
-      display: flex
-      align-items: center
-      width: calc(dimensions.$mainWidthThreeParts / constants.$phi)
 
 
 .o-just-facts

@@ -1,7 +1,6 @@
 export const handleMenu = screenProperties => {
 
-  const menu
-    = document.querySelector ('#central-content > .o-lady-menu')
+  const menu = document.querySelector ('.o-lady-menu')
   
   if (!menu) { return }
   

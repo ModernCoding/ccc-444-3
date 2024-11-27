@@ -1,36 +1,17 @@
 <script setup>
   
-  const ladyScripts = collectLadyScriptsFromComposable ()
+  const imageScripts = collectImageScriptsFromComposable ()
 
   const ladiesStore = defineLadiesStoreFromComposable () ()
-
-  const logoPropertiesStore
-    = defineLogoPropertiesStoreFromComposable () ()
-
-  const screenPropertiesStore
-    = defineScreenPropertiesStoreFromComposable () ()
-
+  const loadingStore = defineLoadingStoreFromComposable () ()
 
   const { ladies } = storeToRefs (ladiesStore)
-  const { logoProperties } = storeToRefs (logoPropertiesStore)
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 
-  onMounted (() => {
-
-      ladyScripts.resize (screenPropertiesStore, logoProperties)
-
-      window.addEventListener (
-          'resize',
-          ladyScripts.resize (screenPropertiesStore, logoProperties)
-        )
-
+  watch (ladiesStore, () => {
+      loadingStore.patchIsResizingMode ()
+      imageScripts.checkAllImagesLoaded (loadingStore)
     })
-
-
-  onUpdated (() =>
-      ladyScripts.resize (screenPropertiesStore, logoProperties)
-    )
 
 </script>
 

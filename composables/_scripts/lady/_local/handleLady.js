@@ -41,8 +41,12 @@ export const handleLady = screenProperties => {
 
   const ladyHeight = lady.getBoundingClientRect ().height
 
+  const fontSize = [ ladyHeight, TWICE_54_BY_PHI ] [
+      +(ladyHeight > TWICE_54_BY_PHI)
+    ]
 
-  ;(function _setFontSize (size = ladyHeight) {
+
+  ;(function _setFontSize (size = fontSize) {
 
 
     p.querySelectorAll ('span').forEach (span =>

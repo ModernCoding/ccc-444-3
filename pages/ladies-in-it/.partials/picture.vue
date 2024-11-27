@@ -1,7 +1,6 @@
 <script setup>
   
   const ladiesStore = defineLadiesStoreFromComposable () ()
-
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
