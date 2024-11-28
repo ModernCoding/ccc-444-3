@@ -25,16 +25,13 @@
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
-      <CallToActions />
     </template>
     
 
     <template v-slot:main>
 
-      <article id="index">
+      <article id="team">
 
-        <CallToActions v-if="screenProperties.ratioIndex < 3" />
-        
         <Introduction
           v-if="
               screenProperties.ratioIndex === 2
