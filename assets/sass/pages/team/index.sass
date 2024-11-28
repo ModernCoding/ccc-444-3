@@ -6,6 +6,48 @@
 @use '@/assets/sass/sizes' as sizes
 
 
+.o-introduction
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  button
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    text-transform: uppercase
+
+    background-color: transparent
+    color: colors.$light
+
+    border: none
+    padding: 0
+
+    p
+      flex-grow: 1
+
+
+      &:first-child
+        // compensating border-bottom on last-child
+        margin-top: sizes.$twice_54_by_phi_power_7 * -1px
+
+
+      &:last-child
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        border-bottom: sizes.$twice_54_by_phi_power_7 * 1px solid colors.$danger
+
+        border-top-left-radius: sizes.$twice_54_by_phi * 1%
+        border-top-right-radius: sizes.$twice_54_by_phi_power_2 * 1%
+        border-bottom-left-radius: sizes.$twice_54_by_phi * 1%
+        border-bottom-right-radius: sizes.$twice_54 * 1%
+
+
 .o-members
   
   figcaption
@@ -31,4 +73,3 @@
   align-items: center
   justify-content: center
   text-wrap: nowrap
-  

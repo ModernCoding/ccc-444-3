@@ -1,5 +1,6 @@
 <script setup>
 
+  import Introduction from './.partials/introduction'
   import Members from './.partials/members'
   import Title from './.partials/title'
 
@@ -41,7 +42,11 @@
     </template>
 
 
-    <template v-slot:footer-right>
+    <template
+      v-if="screenProperties.ratioIndex < 3"
+      v-slot:footer-right
+    >
+      <Introduction />
     </template>
 
   </BaseLayout>
