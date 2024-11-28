@@ -8,13 +8,28 @@
   <article class="o-contact-info">
 
     <h1
+      v-if="locale === 'my'"
+      class="fw-bold o-font-my"
+    >
+      +၆၆.၈၂.၆၇.၁၃၀.၅၄
+    </h1>
+
+
+    <h1
       v-if="locale === 'th'"
       class="fw-bold o-font-th"
     >
       โทร ๐๘๒-๖๗๑๓๐๕๔
     </h1>
+
     
-    <h1 v-else class="fw-bold o-font-en">+66.826.71.30.54</h1>
+    <h1
+      v-if="locale === 'en'"
+      class="fw-bold o-font-en"
+    >
+      +66.82.67.130.54
+    </h1>
+
 
     <a
       href="mailto:contact@coding-crafting-consulting.com"

@@ -9,6 +9,15 @@
     
     <h1>{{ $t ('pages.contact.index.taxId') }}</h1>
 
+
+    <h2
+      v-if="locale === 'my'"
+      class="o-font-my"
+    >
+      ၀၁၀၅၅၆၅၀၄၈၉၈၁
+    </h2>
+
+
     <h2
       v-if="locale === 'th'"
       class="o-font-th"
@@ -16,7 +25,11 @@
       ๐๑๐๕๕๖๕๐๔๘๙๘๑
     </h2>
 
-    <h2 v-else class="o-font-th">
+
+    <h2
+      v-if="locale === 'en'"
+      class="o-font-en"
+    >
       0105565048981
     </h2>
 
