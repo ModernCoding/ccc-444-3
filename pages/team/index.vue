@@ -1,6 +1,7 @@
 <script setup>
 
-  import Introduction from './.partials/introduction'
+  import Members from './.partials/members'
+  import Title from './.partials/title'
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -31,28 +32,8 @@
     <template v-slot:main>
 
       <article id="team">
-
-        <Introduction
-          v-if="
-              screenProperties.ratioIndex === 2
-                && !screenProperties.isSentenceInFooter
-            "
-        />
-
-
-        <div
-          v-if="screenProperties.ratioIndex > 2"
-
-          :class="
-              screenProperties.isSentenceInFooter
-                ? 'o-no-Introduction'
-                : ''
-            "
-
-          id="index-machine"
-        >
-          <Introduction v-if="!screenProperties.isSentenceInFooter" />
-        </div>
+        
+        <Members />
 
       </article>
 
@@ -60,7 +41,7 @@
 
 
     <template v-slot:footer-right>
-      <Introduction />
+      <Title />
     </template>
 
   </BaseLayout>

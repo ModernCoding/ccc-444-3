@@ -3,6 +3,27 @@ export const DELAY_TIMES = {
     LOADING: 1000
   }
 
+
+export const NAMES = {
+
+    babe: {
+        en: 'Jetsadakorn Siwamoke',
+        th: 'เจษฎากร สิวะโมกข์'
+      },
+  
+    fah: {
+        en: 'Tanwa Deesiri',
+        th: 'เจษฎากร สิวะโมกข์'
+      },
+  
+    mon: {
+        en: 'Saw Mon Han',
+        my: 'စောမွန်ဟန်'
+      }
+  
+  }
+
+
 export const PHI = 2 * Math.sin (54 * Math.PI / 180)
 
 

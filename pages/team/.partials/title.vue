@@ -1,6 +1,6 @@
 <template>
 
-  <hgroup class="o-introduction">
+  <hgroup class="o-title">
     <h1>{{ $t ('pages.team.index.title') }}</h1>
   </hgroup>
   
