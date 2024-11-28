@@ -69,12 +69,12 @@
 
   <div id="loader" :data-is-shown="+loading.showLogoInLoader">
 
-    <div>
+    <div v-show="!loading.isVeilMode">
       <Logo parent="loader"/>
     </div>
     
 
-    <div class="o-spinner">
+    <div v-show="!loading.isVeilMode" class="o-spinner">
       <div />
     </div>
 

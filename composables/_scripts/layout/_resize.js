@@ -62,6 +62,7 @@ export default (
         loadingStore.patchIsImageLoadingComplete (false)
         loadingStore.patchIs (false)
         loadingStore.patchIsResizingMode (false)
+        loadingStore.patchIsVeilMode (false)
 
       }
 

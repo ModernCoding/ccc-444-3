@@ -1,6 +1,24 @@
 <script setup>
+
+  const imageScripts = collectImageScriptsFromComposable ()
+  
   const ladiesStore = defineLadiesStoreFromComposable () ()
+  const loadingStore = defineLoadingStoreFromComposable () ()
+
   const { ladies } = storeToRefs (ladiesStore)
+
+
+  const _handle = i => {
+    
+    loadingStore.patchIsVeilMode ()
+
+    setTimeout (() => {
+        ladiesStore.patchIndex (i)
+        imageScripts.checkAllImagesLoaded (loadingStore)
+      }, DELAY_TIMES.ELEMENT)
+
+  }
+
 </script>
 
 
@@ -11,7 +29,7 @@
     <li
       v-for="i in ladies.MAP.keys ()"
       :key="i"
-      @click="ladiesStore.patchIndex (i)"
+      @click="_handle (i)"
     >
 
       <i

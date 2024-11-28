@@ -41,6 +41,10 @@
             return DELAY_TIMES.LOADING
 
 
+          case  loading.isVeilMode && loading.isImageLoadingComplete:
+            return DELAY_TIMES.ELEMENT
+
+
           case  loading.isImageLoadingComplete:
           case  !loading.is && loading.isResizingMode:
 
@@ -324,7 +328,7 @@
   </footer>
 
 
-  <Loader v-if="loading.is" />
+  <Loader v-if="loading.is || loading.isVeilMode" />
   
 </template>
 

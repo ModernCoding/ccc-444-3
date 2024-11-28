@@ -8,10 +8,10 @@
   const { ladies } = storeToRefs (ladiesStore)
 
 
-  watch (ladiesStore, () => {
-      loadingStore.patchIsResizingMode ()
-      imageScripts.checkAllImagesLoaded (loadingStore)
-    })
+  // watch (ladiesStore, () => {
+  //     loadingStore.patchIsResizingMode ()
+  //     imageScripts.checkAllImagesLoaded (loadingStore)
+  //   })
 
 </script>
 
