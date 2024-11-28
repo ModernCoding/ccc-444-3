@@ -13,7 +13,7 @@ export const NAMES = {
   
     fah: {
         en: 'Tanwa Deesiri',
-        th: 'เจษฎากร สิวะโมกข์'
+        th: 'ธันวา ดีศิริ'
       },
   
     mon: {

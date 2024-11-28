@@ -7,6 +7,7 @@ const ctaScripts = collectCtaScriptsFromComposable ()
 const ladyScripts = collectLadyScriptsFromComposable ()
 const longTextScripts = collectLongTextScriptsFromComposable ()
 const startPageScripts = collectStartPageScriptsFromComposable ()
+const teamScripts = collectTeamScriptsFromComposable ()
 
 
 export default (
@@ -47,6 +48,10 @@ export default (
 
       case "long-text":
         longTextScripts.resize (screenPropertiesStore, logoProperties)
+        break
+
+      case "team":
+        teamScripts.resize (screenPropertiesStore, logoProperties)
         break
 
       default:
