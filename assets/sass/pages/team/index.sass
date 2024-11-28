@@ -6,6 +6,26 @@
 @use '@/assets/sass/sizes' as sizes
 
 
+.o-members
+  
+  figcaption
+    text-align: center
+    text-transform: uppercase
+
+    &:not([data-name="babe"])
+      text-wrap: nowrap
+
+
+  &[data-number-of-parts="1"]
+
+    figure
+      width: 100%
+
+      img
+        max-height: 100%
+        max-width: 100%
+
+
 .o-title
   display: flex
   align-items: center

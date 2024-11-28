@@ -114,6 +114,7 @@
 
         <figcaption
           :class="`o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }`"
+          :data-name="[ '', 'babe' ] [ +(locale !== 'th') ]"
         >
           {{ NAMES.babe [ locale ] ?? NAMES.babe.en }}
         </figcaption>
@@ -129,6 +130,6 @@
 
 <style
   scoped
-  src="@/assets/sass/components/call-to-actions.sass"
+  src="@/assets/sass/pages/team/index.sass"
   lang="sass"
 ></style>
