@@ -16,18 +16,12 @@
 
   <BaseLayout>
 
-    <template
-      v-if="screenProperties.ratioIndex > 1"
-      v-slot:aside
-    >
-      <Title />
-    </template>
-
 
     <template
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
+      <Introduction />
     </template>
     
 
@@ -39,6 +33,14 @@
 
       </article>
 
+    </template>
+
+
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:footer-left
+    >
+      <Title />
     </template>
 
 

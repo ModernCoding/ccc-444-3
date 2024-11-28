@@ -16,19 +16,13 @@ export const handleTitle = (
     = storeToRefs (screenPropertiesStore)
 
 
-  const marginTop = screenProperties.heights.header / PHI
-
-  const height = screenProperties.heights.aside
-      - logoProperties.value.height
-
-
-  title.style.height = `${ height }px`
+  title.style.height = `${ screenProperties.heights.footer }px`
 
 
   ;(function _setFontSize (
-    maxHeight = height,
+    maxHeight = screenProperties.heights.footer,
     maxWidth = screenProperties.widths.aside,
-    fontSize = height / PHI ** 2
+    fontSize = screenProperties.heights.footer / PHI ** 2
   ) {
 
     h1.style.fontSize = `${ fontSize }px`
