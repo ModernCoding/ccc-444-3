@@ -1,7 +1,6 @@
 <script setup>
 
-  import Machine from './.partials/machine'
-  import Slogan from './.partials/slogan'
+  import Introduction from './.partials/introduction'
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -19,7 +18,6 @@
       v-if="screenProperties.ratioIndex === 2"
       v-slot:aside
     >
-      <Machine />
     </template>
 
 
@@ -36,9 +34,8 @@
       <article id="index">
 
         <CallToActions v-if="screenProperties.ratioIndex < 3" />
-        <Machine v-if="screenProperties.ratioIndex < 2" />
         
-        <Slogan
+        <Introduction
           v-if="
               screenProperties.ratioIndex === 2
                 && !screenProperties.isSentenceInFooter
@@ -51,14 +48,13 @@
 
           :class="
               screenProperties.isSentenceInFooter
-                ? 'o-no-slogan'
+                ? 'o-no-Introduction'
                 : ''
             "
 
           id="index-machine"
         >
-          <Slogan v-if="!screenProperties.isSentenceInFooter" />
-          <Machine />
+          <Introduction v-if="!screenProperties.isSentenceInFooter" />
         </div>
 
       </article>
@@ -66,11 +62,8 @@
     </template>
 
 
-    <template
-      v-if="screenProperties.isSentenceInFooter"
-      v-slot:footer-right
-    >
-      <Slogan />
+    <template v-slot:footer-right>
+      <Introduction />
     </template>
 
   </BaseLayout>
@@ -80,6 +73,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/index.sass"
+  src="@/assets/sass/pages/team/index.sass"
   lang="sass"
 ></style>
