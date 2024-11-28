@@ -15,7 +15,10 @@
 
   <BaseLayout>
 
-    <template v-slot:aside>
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:aside
+    >
       <Title />
     </template>
 
