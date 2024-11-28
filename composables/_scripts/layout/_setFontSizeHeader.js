@@ -40,7 +40,7 @@ export default () => (header => {
 
       locale.style.width = `${
         localeHeight * PHI ** +(
-          getWindowWidths (window.innerWidth).isAtLeastSmHalf
+          getWindowWidths (window.innerWidth).isAtLeastSmMinus
         )
       }px`
 
