@@ -33,8 +33,8 @@
         </picture>
 
 
-        <figcaption class="o-font-en">
-          <h1>Michel Boretti</h1>
+        <figcaption>
+          <h1 class="o-font-en">Michel Boretti</h1>
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.founder') }}</h3>
           <h4>+ {{ $t ('pages.team.index.consulting') }}</h4>
@@ -62,13 +62,20 @@
         </picture>
 
 
-        <figcaption
-          :class="`o-font-${ [ 'en', locale ] [ +(locale === 'my') ] }`"
-        >
-          <h1>{{ NAMES.mon [ locale ] ?? NAMES.mon.en }}</h1>
+        <figcaption>
+
+          <h1
+            :class="`
+                o-font-${ [ 'en', locale ] [ +(locale === 'my') ] }
+              `"
+          >
+            {{ NAMES.mon [ locale ] ?? NAMES.mon.en }}
+          </h1>
+          
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.graphicDesign') }}</h3>
           <h4>+ {{ $t ('pages.team.index.animation') }}</h4>
+
         </figcaption>
 
       </figure>
@@ -92,12 +99,19 @@
         </picture>
 
 
-        <figcaption
-          :class="`o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }`"
-        >
-          <h1>{{ NAMES.fah [ locale ] ?? NAMES.fah.en }}</h1>
+        <figcaption>
+
+          <h1
+            :class="`
+                o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }
+              `"
+          >
+            {{ NAMES.fah [ locale ] ?? NAMES.fah.en }}
+          </h1>
+        
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.graphicDesign') }}</h3>
+        
         </figcaption>
 
       </figure>
@@ -121,13 +135,19 @@
         </picture>
 
 
-        <figcaption
-          :class="`o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }`"
-          :data-name="[ '', 'babe' ] [ +(locale !== 'th') ]"
-        >
-          <h1>{{ NAMES.babe [ locale ] ?? NAMES.babe.en }}</h1>
+        <figcaption :data-name="[ '', 'babe' ] [ +(locale !== 'th') ]">
+
+          <h1
+            :class="`
+                o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }
+              `"
+          >
+            {{ NAMES.babe [ locale ] ?? NAMES.babe.en }}
+          </h1>
+          
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.api') }}</h3>
+
         </figcaption>
 
       </figure>
