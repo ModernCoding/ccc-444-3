@@ -123,6 +123,29 @@
 
     </NuxtLink>
 
+
+    <figure class="o-user-girls">
+
+      <NuxtImg
+        src="/images/user-girl-2.svg"
+        loading="lazy"
+        preload
+      /> 
+
+      <NuxtImg
+        src="/images/user-girl-1.svg"
+        loading="lazy"
+        preload
+      /> 
+
+      <NuxtImg
+        src="/images/user-girl-1.svg"
+        loading="lazy"
+        preload
+      /> 
+
+    </figure>
+
   </section>
 
 </template>
