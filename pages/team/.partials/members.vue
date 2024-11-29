@@ -21,16 +21,12 @@
 
       <figure>
 
-        <picture>
-        
-          <NuxtImg
-            src="/images/profiles/michel.png"
-            alt="Michel Boretti"
-            loading="lazy"
-            preload
-          />
-        
-        </picture>
+        <NuxtImg
+          src="/images/profiles/michel.png"
+          alt="Michel Boretti"
+          loading="lazy"
+          preload
+        />
 
 
         <figcaption class="o-font-en">
@@ -46,16 +42,12 @@
 
       <figure>
 
-        <picture>
-        
-          <NuxtImg
-            src="/images/profiles/mon.png"
-            :alt="NAMES.mon [ locale ] ?? NAMES.mon.en"
-            loading="lazy"
-            preload
-          />
-        
-        </picture>
+        <NuxtImg
+          src="/images/profiles/mon.png"
+          :alt="NAMES.mon [ locale ] ?? NAMES.mon.en"
+          loading="lazy"
+          preload
+        />
 
 
         <figcaption
@@ -73,16 +65,12 @@
 
       <figure>
 
-        <picture>
-        
-          <NuxtImg
-            src="/images/profiles/fah.png"
-            :alt="NAMES.fah [ locale ] ?? NAMES.fah.en"
-            loading="lazy"
-            preload
-          />
-        
-        </picture>
+        <NuxtImg
+          src="/images/profiles/fah.png"
+          :alt="NAMES.fah [ locale ] ?? NAMES.fah.en"
+          loading="lazy"
+          preload
+        />
 
 
         <figcaption
@@ -100,16 +88,12 @@
 
       <figure>
 
-        <picture>
-        
-          <NuxtImg
-            src="/images/profiles/babe.png"
-            :alt="NAMES.babe [ locale ] ?? NAMES.babe.en"
-            loading="lazy"
-            preload
-          />
-        
-        </picture>
+        <NuxtImg
+          src="/images/profiles/babe.png"
+          :alt="NAMES.babe [ locale ] ?? NAMES.babe.en"
+          loading="lazy"
+          preload
+        />
 
 
         <figcaption
