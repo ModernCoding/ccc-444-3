@@ -7,6 +7,7 @@ export const handleIntroduction = screenProperties => {
 
 
   if (!introduction) { return }
+  introduction.removeAttribute ('style')
 
 
   const maxHeight = [
@@ -55,5 +56,10 @@ export const handleIntroduction = screenProperties => {
       }
 
     }) ()
+
+
+  introduction.getBoundingClientRect ().height >= maxHeight && (
+      introduction.style.display = 'none'
+    )
 
 }
