@@ -7,11 +7,11 @@
   const route = useRoute ()
 
   const menu = [
+      // 'long-text',
       'index',
       'contact',
+      'team',
       'ladies-in-it',
-      // 'long-text',
-      'team'
     ]
 
 
@@ -44,7 +44,11 @@
           :class="`
               bi
               bi-${
-                  [ 'hand-index', 'house' ] [ +(item === 'index') ]
+                  [
+                    'hand-index',
+                    'house',
+                    'envelope-at'
+                  ] [ +(item === 'index') + 2 * +(item === 'contact') ]
                 }${ route.name === item ? '-fill' : '' }
             `"
 
