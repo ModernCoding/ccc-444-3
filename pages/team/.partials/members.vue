@@ -34,11 +34,16 @@
 
 
         <figcaption>
+          
           <h1 class="o-font-en">Michel Boretti</h1>
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.founder') }}</h3>
           <h4>+ {{ $t ('pages.team.index.consulting') }}</h4>
-          <h5>+ {{ $t ('pages.team.index.teamLeading') }}</h5>
+          
+          <h5 data-wrap="1">
+            + {{ $t ('pages.team.index.teamLeading') }}
+          </h5>
+        
         </figcaption>
 
       </figure>
@@ -135,12 +140,14 @@
         </picture>
 
 
-        <figcaption :data-name="[ '', 'babe' ] [ +(locale !== 'th') ]">
+        <figcaption>
 
           <h1
             :class="`
                 o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }
               `"
+
+            :data-wrap="[ '0', '1' ] [ +(locale !== 'th') ]"
           >
             {{ NAMES.babe [ locale ] ?? NAMES.babe.en }}
           </h1>

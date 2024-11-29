@@ -4,7 +4,7 @@ export const index = {
     fullstack: "Fullstack",
     founder: "Business Leader",
     consulting: "Consulting",
-    teamLeading: "External Team-Leading",
+    teamLeading: "External Team Leading",
     graphicDesign: "Grafic Design",
     animation: "Animation",
     api: "API Specialist"

@@ -46,18 +46,22 @@
 
     gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
 
+
     > a
 
       > figure
+
         gap: calc(dimensions.$layoutPaddingRightOnePart / constants.$phi)
 
         // picture, img
         picture
+
           width: calc(dimensions.$mainWidthOnePart / math.pow(constants.$phi, 2) - dimensions.$layoutPaddingRightOnePart / constants.$phi)
 
 
   &[data-number-of-parts="2"],
   &[data-number-of-parts="3"]
+  
     gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
 
 
@@ -66,9 +70,12 @@
     > a
 
       > figure
+
         gap: calc(dimensions.$layoutPaddingRightTwoParts / math.pow(constants.$phi, 2))
 
+
         picture, img
+
           width: calc(dimensions.$mainWidthTwoParts / math.pow(constants.$phi, 2) - dimensions.$layoutPaddingRightTwoParts / math.pow(constants.$phi, 2))
 
 
@@ -77,9 +84,12 @@
     > a
 
       > figure
+
         gap: calc(dimensions.$layoutPaddingRightThreeParts / math.pow(constants.$phi, 2))
 
+
         picture, img
+
           width: calc(dimensions.$mainWidthThreeParts / math.pow(constants.$phi, 2) - dimensions.$layoutPaddingRightThreeParts / math.pow(constants.$phi, 2))
 
 
@@ -91,7 +101,7 @@
     *
       text-align: center
 
-      &:not([data-name="babe"])
+      &:not([data-wrap="1"])
         text-wrap: nowrap
 
 

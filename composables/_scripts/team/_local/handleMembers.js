@@ -44,4 +44,18 @@ export const handleMembers = screenProperties => {
         */
 
 
+  const screen = getWindowWidths (screenProperties.widths.main)
+
+
+  members.querySelectorAll ('a figcaption > *').forEach (hx =>
+
+    (size => hx.style.fontSize = `${ size }px`) (
+
+      TWICE_54_BY_PHI_POWER_5
+        * PHI ** (+screen.isAtLeastSmMinus + +screen.isAtLeastMdMinus)
+    
+    )
+
+  )
+
 }
