@@ -27,7 +27,7 @@
 
 
     <h2
-      v-if="locale === 'en'"
+      v-if="![ 'my', 'th' ].includes (locale)"
       class="o-font-en"
     >
       0105565048981
