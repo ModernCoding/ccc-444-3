@@ -47,6 +47,7 @@
     gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
 
     > a
+
       > figure
         gap: calc(dimensions.$layoutPaddingRightOnePart / constants.$phi)
 
@@ -63,6 +64,7 @@
   &[data-number-of-parts="2"]
 
     > a
+
       > figure
         gap: calc(dimensions.$layoutPaddingRightTwoParts / math.pow(constants.$phi, 2))
 
@@ -73,6 +75,7 @@
   &[data-number-of-parts="3"]
 
     > a
+
       > figure
         gap: calc(dimensions.$layoutPaddingRightThreeParts / math.pow(constants.$phi, 2))
 
@@ -81,11 +84,15 @@
 
 
   figcaption
-    text-align: center
-    text-transform: uppercase
 
-    &:not([data-name="babe"])
-      text-wrap: nowrap
+    h1
+      text-transform: uppercase
+
+    *
+      text-align: center
+
+      &:not([data-name="babe"])
+        text-wrap: nowrap
 
 
   .o-user-girls
