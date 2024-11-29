@@ -24,7 +24,7 @@
 
     
     <h1
-      v-if="locale === 'en'"
+      v-if="![ 'my', 'th' ].includes (locale)"
       class="fw-bold o-font-en"
     >
       +66.82.67.130.54
