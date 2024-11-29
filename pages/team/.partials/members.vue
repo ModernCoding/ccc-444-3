@@ -164,7 +164,7 @@
 
     <article id="team-girls">
 
-      <h1></h1>
+      <p>{{ $t ('pages.team.index.backstage') }}</p>
 
 
       <ul
