@@ -2,18 +2,17 @@
 
   <hgroup class="o-introduction">
 
-    <h1>{{ $t ('pages.team.index.all') }}</h1>
+    <h1>
 
+      <span
+        v-for="sentence, i in $t ('pages.team.index.all').split ('%')"
+        :key="i"
+        :class="[ '', 'o-underline' ] [ +(i % 2 !== 0) ]"
+      >
+        {{ sentence }}
+      </span>
 
-    <button>
-
-      <p class="fw-bold">{{ $t ('pages.team.index.and') }}</p>
-
-      <p>
-        <strong>{{ $t ('pages.team.index.more') }}</strong>
-      </p>
-
-    </button>
+    </h1>
 
   </hgroup>
   
