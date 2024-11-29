@@ -28,23 +28,11 @@
 
 
 .o-members
-
   display: flex
-  flex-wrap: wrap
-  align-items: center
-  justify-content: center
-
-
-  &[data-number-of-parts="1"]
-    gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
-
-  &[data-number-of-parts="2"],
-  &[data-number-of-parts="3"]
-    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
+  flex-direction: column
 
 
   > a
-    width: 100%
 
     > figure
       display: flex
@@ -52,6 +40,44 @@
 
       figcaption
         flex-grow: 1
+
+
+  &[data-number-of-parts="1"]
+
+    gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+
+    > a
+      > figure
+        gap: calc(dimensions.$layoutPaddingRightOnePart / constants.$phi)
+
+        // picture, img
+        picture
+          width: calc(dimensions.$mainWidthOnePart / math.pow(constants.$phi, 2))
+
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
+
+
+  &[data-number-of-parts="2"]
+
+    > a
+      > figure
+        gap: calc(dimensions.$layoutPaddingRightTwoParts / math.pow(constants.$phi, 2))
+
+        picture, img
+          width: calc(dimensions.$mainWidthTwoParts / math.pow(constants.$phi, 2))
+
+
+  &[data-number-of-parts="3"]
+
+    > a
+      > figure
+        gap: calc(dimensions.$layoutPaddingRightThreeParts / math.pow(constants.$phi, 2))
+
+        picture, img
+          width: calc(dimensions.$mainWidthThreeParts / math.pow(constants.$phi, 2))
 
 
   figcaption

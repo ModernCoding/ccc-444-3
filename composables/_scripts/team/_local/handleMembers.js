@@ -25,18 +25,4 @@ export const handleMembers = screenProperties => {
     .querySelectorAll ('*')
     .forEach (e => e.removeAttribute ('style'))
 
-
-  members.querySelectorAll ('a img').forEach (img => {
-
-      img.style.width
-        = `${ members.getBoundingClientRect ().width / PHI ** 2 }px`
-
-    })
-
-
-  members.querySelectorAll ('a figure').forEach (figure => {
-      figure.style.gap = `${ layoutPaddingRight / PHI ** 2 }px`
-    })
-
-
 }
