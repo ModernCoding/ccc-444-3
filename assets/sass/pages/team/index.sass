@@ -21,7 +21,24 @@
 
 
 .o-members
-  
+
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+
+  gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+  height: dimensions.$heightSectionTwoParts
+
+
+  > a
+
+    > figure
+      display: flex
+      align-items: center
+      justify-content: center
+
+
   figcaption
     text-align: center
     text-transform: uppercase
