@@ -120,27 +120,48 @@
         text-wrap: nowrap
 
 
-  .o-user-girls
-    display: flex
-    align-items: center
-    justify-content: center
-
-    > img
-      width: 20%
-
-
-  &[data-number-of-parts="1"]
-
-    figure
-      width: 100%
-
-      img
-        max-height: 100%
-        max-width: 100%
-
-
 .o-title
   display: flex
   align-items: center
   justify-content: center
   text-wrap: nowrap
+
+
+#team-girls
+
+  figure
+
+    $_gapOnePart: dimensions.$layoutPaddingRightOnePart
+
+    $_gapTwoParts: calc(dimensions.$layoutPaddingRightTwoParts / constants.$phi)
+
+    $_gapThreeParts: calc(dimensions.$asideMarginRightThreeParts / constants.$phi)
+
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+    &[data-number-of-parts="1"]
+
+      gap: $_gapOnePart
+    
+      img
+        width: calc(100% / 3 - $_gapOnePart / 3 * 2)
+
+
+    &[data-number-of-parts="2"]
+
+      gap: $_gapTwoParts
+
+      img
+        width: calc(100% / 3 - $_gapTwoParts / 3 * 2)
+
+
+    &[data-number-of-parts="3"]
+
+      gap: $_gapThreeParts
+
+      img
+        width: calc(100% / 3 - $_gapThreeParts / 3 * 2)

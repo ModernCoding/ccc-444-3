@@ -162,27 +162,34 @@
     </NuxtLink>
 
 
-    <figure class="o-user-girls">
+    <article id="team-girls">
 
-      <NuxtImg
-        src="/images/user-girl-2.svg"
-        loading="lazy"
-        preload
-      /> 
+      <figure
+        class="o-user-girls"
+        :data-number-of-parts="screenProperties.ratioIndex"
+      >
 
-      <NuxtImg
-        src="/images/user-boy-white.svg"
-        loading="lazy"
-        preload
-      /> 
+        <NuxtImg
+          src="/images/user-girl-2.svg"
+          loading="lazy"
+          preload
+        /> 
 
-      <NuxtImg
-        src="/images/user-girl-1.svg"
-        loading="lazy"
-        preload
-      /> 
+        <NuxtImg
+          src="/images/user-boy-white.svg"
+          loading="lazy"
+          preload
+        /> 
 
-    </figure>
+        <NuxtImg
+          src="/images/user-girl-1.svg"
+          loading="lazy"
+          preload
+        /> 
+
+      </figure>
+
+    </article>
 
   </section>
 
