@@ -6,6 +6,11 @@ export const handleMembers = screenProperties => {
   members.removeAttribute ('style')
 
 
+  members
+    .querySelectorAll ('*')
+    .forEach (e => e.removeAttribute ('style'))
+
+
   const layoutPaddingRight = (nuxt =>
 
       !nuxt ? 0 : parseInt (
@@ -21,8 +26,22 @@ export const handleMembers = screenProperties => {
     ) (document.querySelector ('#__nuxt'))
 
 
-  members
-    .querySelectorAll ('*')
-    .forEach (e => e.removeAttribute ('style'))
+  const maxWidth = screenProperties.widths.main
+
+      - screenProperties.widths.main / PHI ** 2
+        /*
+          image width
+        */
+
+      - layoutPaddingRight / PHI
+        /*
+          padding right upon scrollbar
+        */
+
+      - layoutPaddingRight / PHI ** 2
+        /*
+          figure gap
+        */
+
 
 }
