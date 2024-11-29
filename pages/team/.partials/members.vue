@@ -17,7 +17,7 @@
     :data-number-of-parts="screenProperties.ratioIndex"
   >
 
-    <NuxtLink :to="{ name: 'contact' }">
+    <NuxtLink :to="{ name: 'team-michel' }">
 
       <figure :data-number-of-parts="screenProperties.ratioIndex">
 
