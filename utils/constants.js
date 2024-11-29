@@ -19,7 +19,22 @@ export const NAMES = {
     mon: {
         en: 'Saw Mon Han',
         my: 'စောမွန်ဟန်'
-      }
+      },
+  
+    nok: {
+        en: 'Pakkawan Chaiyamunee',
+        th: 'ภควรรณ ชัยยมุณี'
+      },
+  
+    ketsara: {
+        en: 'Ketsara Thongsuk',
+        th: 'เกศรา ทองสุฃ'
+      },
+  
+    yuwadee: {
+        en: 'Yuwadee Thongsuksai',
+        th: 'ยุวดี ทองสุฃใส'
+      },
   
   }
 

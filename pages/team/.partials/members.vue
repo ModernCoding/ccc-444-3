@@ -164,6 +164,13 @@
 
     <article id="team-girls">
 
+      <h1></h1>
+
+      <ul>
+        <li></li>
+      </ul>
+
+
       <figure
         class="o-user-girls"
         :data-number-of-parts="screenProperties.ratioIndex"
