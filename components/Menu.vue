@@ -7,10 +7,10 @@
   const route = useRoute ()
 
   const menu = [
-      'contact',
       'index',
+      'contact',
       'ladies-in-it',
-      'long-text',
+      // 'long-text',
       'team'
     ]
 

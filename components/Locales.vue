@@ -10,10 +10,10 @@
       de: "Deutsch",
       en: "English",
       fr: "Français",
-      kh: "ភាសាខ្មែរ",
+      // kh: "ភាសាខ្មែរ",
       my: "မြန်မာဘာသာ",
       th: "ภาษาไทย",
-      vi: "Tiếng Việt"
+      // vi: "Tiếng Việt"
     }
 
 
