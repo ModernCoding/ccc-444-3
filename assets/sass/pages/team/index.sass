@@ -1,8 +1,8 @@
 @use "sass:math"
 
-@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/grid' as grid
 @use '@/assets/sass/sizes' as sizes
 
 
@@ -11,6 +11,21 @@
 
   &[data-number-of-parts="1"]
     height: dimensions.$heightMainOnePart
+
+
+  > .o-introduction
+
+    *
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+      padding-bottom: sizes.$twice_54_by_phi_power_3 * 1px
+
+      @media screen and (min-width: grid.$md-half)
+        font-size: sizes.$twice_54_by_phi_power_3 * 1px
+        padding-bottom: sizes.$twice_54_by_phi_power_2 * 1px
+
+      @media screen and (min-width: grid.$md-twice)
+        font-size: sizes.$twice_54_by_phi_power_2 * 1px
+        padding-bottom: sizes.$twice_54_by_phi * 1px
 
 
 .o-introduction

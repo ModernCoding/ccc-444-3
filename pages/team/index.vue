@@ -30,6 +30,7 @@
         id="team"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
+        <Introduction v-if="screenProperties.ratioIndex < 2" />
         <Members />
       </article>
 
