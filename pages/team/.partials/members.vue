@@ -166,8 +166,13 @@
 
       <h1></h1>
 
-      <ul>
-        <li></li>
+
+      <ul
+        :class="`o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }`"
+      >
+        <li>{{ NAMES.nok [ locale ] ?? NAMES.nok.en }}</li>
+        <li>{{ NAMES.ketsara [ locale ] ?? NAMES.ketsara.en }}</li>
+        <li>{{ NAMES.yuwadee [ locale ] ?? NAMES.yuwadee.en }}</li>
       </ul>
 
 

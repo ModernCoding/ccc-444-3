@@ -129,6 +129,10 @@
 
 #team-girls
 
+  ul
+    text-align: center
+
+
   figure
 
     $_gapOnePart: dimensions.$layoutPaddingRightOnePart
@@ -148,7 +152,7 @@
       gap: $_gapOnePart
     
       img
-        width: calc(100% / 3 - $_gapOnePart / 3 * 2)
+        width: calc(100% / constants.$phi / 3 - $_gapOnePart / 3 * 2)
 
 
     &[data-number-of-parts="2"]
@@ -156,7 +160,7 @@
       gap: $_gapTwoParts
 
       img
-        width: calc(100% / 3 - $_gapTwoParts / 3 * 2)
+        width: calc(100% / constants.$phi / 3 - $_gapTwoParts / 3 * 2)
 
 
     &[data-number-of-parts="3"]
@@ -164,4 +168,4 @@
       gap: $_gapThreeParts
 
       img
-        width: calc(100% / 3 - $_gapThreeParts / 3 * 2)
+        width: calc(100% / constants.$phi / 3 - $_gapThreeParts / 3 * 2)
