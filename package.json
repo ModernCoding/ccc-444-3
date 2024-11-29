@@ -21,6 +21,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "hyphen": "^1.10.6",
     "sass": "1.77.6",
     "uikit": "^3.21.13"
   }

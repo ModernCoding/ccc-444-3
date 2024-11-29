@@ -1,5 +1,9 @@
 <script setup>
 
+  import { hyphenateSync as hyphenateDe } from "hyphen/de"
+  import { hyphenateSync as hyphenateEn } from "hyphen/en"
+  import { hyphenateSync as hyphenateFr } from "hyphen/fr"
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -164,7 +168,7 @@
 
     <article id="team-girls">
 
-      <p>{{ $t ('pages.team.index.backstage') }}</p>
+      <p>{{ hyphenateDe ($t ('pages.team.index.backstage')) }}</p>
 
 
       <ul
