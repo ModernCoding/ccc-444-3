@@ -1,7 +1,7 @@
 export const index = {
 
     title: "Das Team",
-    all: "%Alle% Fullstack und auch noch %mehr%!",
+    all: "Wir sind %alle% Fullstack und auch noch %mehr%!",
     fullstack: "Fullstack",
     founder: "Firmenführung",
     consulting: "Beratung",
