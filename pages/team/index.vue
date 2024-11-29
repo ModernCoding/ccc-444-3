@@ -16,7 +16,6 @@
 
   <BaseLayout>
 
-
     <template
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
@@ -27,10 +26,11 @@
 
     <template v-slot:main>
 
-      <article id="team">
-        
+      <article
+        id="team"
+        :data-number-of-parts="screenProperties.ratioIndex"
+      >
         <Members />
-
       </article>
 
     </template>
@@ -44,11 +44,9 @@
     </template>
 
 
-    <template
-      v-if="screenProperties.ratioIndex < 3"
-      v-slot:footer-right
-    >
-      <Introduction />
+    <template v-slot:footer-right>
+      <Title v-if="screenProperties.ratioIndex < 2" />
+      <Introduction v-if="screenProperties.ratioIndex === 2" />
     </template>
 
   </BaseLayout>

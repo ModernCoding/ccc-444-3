@@ -6,6 +6,13 @@
 @use '@/assets/sass/sizes' as sizes
 
 
+#team
+  overflow-y: auto !important
+
+  &[data-number-of-parts="1"]
+    height: dimensions.$heightMainOnePart
+
+
 .o-introduction
   display: flex
   flex-direction: column
@@ -27,16 +34,25 @@
   align-items: center
   justify-content: center
 
-  gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
-  height: dimensions.$heightSectionTwoParts
+
+  &[data-number-of-parts="1"]
+    gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
 
 
   > a
+    width: 100%
 
     > figure
       display: flex
       align-items: center
       justify-content: center
+
+      figcaption
+        flex-grow: 1
 
 
   figcaption

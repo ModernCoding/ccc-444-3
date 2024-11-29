@@ -133,7 +133,7 @@
       /> 
 
       <NuxtImg
-        src="/images/user-girl-1.svg"
+        src="/images/user-boy-white.svg"
         loading="lazy"
         preload
       /> 
