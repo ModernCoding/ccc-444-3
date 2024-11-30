@@ -88,7 +88,7 @@
     </NuxtLink>
 
 
-    <NuxtLink :to="{ name: 'contact' }">
+    <NuxtLink :to="{ name: 'team-fah' }">
 
       <figure>
 
