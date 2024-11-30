@@ -22,11 +22,19 @@
     isShorter="1"
   >
 
-    <section>
-      <ProfilePicture />
-      <CountryName />
-      <CountryPicture />
+    <section class="o-team-member-in-modal">
+
+      <NuxtLink :to="{ name: 'team' }">
+        <ProfilePicture />
+      </NuxtLink>
+
+      <div>
+        <CountryName />
+        <CountryPicture />
+      </div>
+
       <ProfileText />
+
     </section>
   
   </ModalLayout>
@@ -66,8 +74,11 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
-        <CountryName v-if="screenProperties.ratioIndex < 3" />
-        <CountryPicture v-if="screenProperties.ratioIndex < 3" />
+        <div v-if="screenProperties.ratioIndex < 3">
+          <CountryName />
+          <CountryPicture />
+        </div>
+
         <ProfileText v-if="screenProperties.ratioIndex > 1" />
       
       </article>
