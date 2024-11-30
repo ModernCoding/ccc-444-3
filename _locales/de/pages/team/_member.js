@@ -26,6 +26,13 @@ export const member = {
           > %mit% Deutschen, Franzosen, Italienern, Portugiesen, Spaniern, Vietnamesen, Khmers, Thais und Burmesen gearbeitet
         `
       
-      ]
+      ],
+
+
+    cambodia: "In Kambodscha habe ich auch...",
+    mentoring: "...Kunden-Juniorentwickler als Gast-Teamführer betreut.",
+
+    vietnam: "In Vietnam habe ich auch...",
+    teaching: "...an der Uni unterrichtet."
 
   }

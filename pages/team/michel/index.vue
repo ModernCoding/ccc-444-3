@@ -2,9 +2,12 @@
   
   import CountryName from './.partials/country-name'
   import CountryPicture from './.partials/country-picture'
+
+  import ProfileCambodia from './.partials/profile-cambodia'
   import ProfileName from './.partials/profile-name'
   import ProfilePicture from './.partials/profile-picture'
   import ProfileText from './.partials/profile-text'
+
 
 
   const screenPropertiesStore
@@ -34,6 +37,7 @@
       </div>
 
       <ProfileText />
+      <ProfileCambodia />
 
     </section>
   
@@ -79,7 +83,10 @@
           <CountryPicture />
         </div>
 
-        <ProfileText v-if="screenProperties.ratioIndex > 1" />
+        <template v-if="screenProperties.ratioIndex > 1">
+          <ProfileText />
+          <ProfileCambodia />
+        </template>
       
       </article>
 
