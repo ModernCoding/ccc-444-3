@@ -3,7 +3,7 @@
   <figure class="o-country-picture">
 
     <NuxtImg
-      src="/images/profiles/michel.png"
+      src="/images/countries/saint-michel.png"
       alt="Michel Boretti"
       :modifiers="{ b: '#110d0d', opacity: 1 }"
       loading="lazy"
