@@ -1,7 +1,4 @@
-export const handleNames = (
-  screenPropertiesStore,
-  logoProperties
-) => {
+export const handleNames = screenPropertiesStore => {
 
   const { screenProperties: { value: screenProperties } }
     = storeToRefs (screenPropertiesStore)

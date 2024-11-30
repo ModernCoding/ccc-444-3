@@ -1,4 +1,4 @@
-export const handleMembers = screenProperties => {
+export const handleTeamMember = screenProperties => {
 
   const members = document.querySelector ('.o-members')
   if (!members) { return }

@@ -1,6 +1,8 @@
+import { handleTeamMember } from './_local/handleTeamMember'
 import { handleNames } from './_local/handleNames'
 
 
-export default (screenPropertiesStore, logoProperties) => {
-  handleNames (screenPropertiesStore, logoProperties)
+export default screenPropertiesStore => {
+  handleNames (screenPropertiesStore)
+  handleTeamMember (screenPropertiesStore)
 }

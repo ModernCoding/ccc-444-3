@@ -56,7 +56,7 @@ export default (
         break
 
       case "team-michel":
-        teamMemberScripts.resize (screenPropertiesStore, logoProperties)
+        teamMemberScripts.resize (screenPropertiesStore)
         break
 
       default:
