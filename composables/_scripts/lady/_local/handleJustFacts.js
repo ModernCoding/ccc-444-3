@@ -46,8 +46,6 @@ export const handleJustFacts = (
 
     () => {
 
-        const marginTop = screenProperties.heights.header / PHI
-
         const height = screenProperties.heights.aside
             - logoProperties.value.height
 

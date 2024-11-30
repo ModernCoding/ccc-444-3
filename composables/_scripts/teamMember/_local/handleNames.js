@@ -3,20 +3,11 @@ export const handleNames = (
   logoProperties
 ) => {
 
-  const justFacts = document.querySelector ('.o-just-facts')
-  if (!justFacts) { return }
-
-  justFacts.removeAttribute ('style')
-
-  const h1 = justFacts.querySelector ('h1')
-  if (!h1) { return }
-  
-
   const { screenProperties: { value: screenProperties } }
     = storeToRefs (screenPropertiesStore)
+  
 
-
-  const _setFontSize = (maxHeight, maxWidth, fontSize) => {
+  const _setFontSize = (h1, maxHeight, maxWidth, fontSize) => {
 
       h1.style.fontSize = `${ fontSize }px`
 
@@ -31,7 +22,7 @@ export const handleNames = (
         case h1.getBoundingClientRect ().height >= maxHeight:
         case h1.scrollWidth >= maxWidth:
 
-          return _setFontSize (maxHeight, maxWidth, fontSize / PHI)
+          return _setFontSize (h1, maxHeight, maxWidth, fontSize / PHI)
 
 
         default:
@@ -42,39 +33,55 @@ export const handleNames = (
     }
 
 
-  ;[
+  // resizing process starts here
 
-    () => {
+  document
+    
+    .querySelectorAll ('#footer-central-content > .o-country-name, #footer-right-content > .o-profile-name')
+    
+    .forEach (name => {
 
-        const marginTop = screenProperties.heights.header / PHI
+        name.removeAttribute ('style')
 
-        const height = screenProperties.heights.aside
-            - logoProperties.value.height
+        const h1 = name.querySelector ('h1')
+        if (!h1) { return }
 
 
-        justFacts.style.height = `${ height }px`
+        ;[
 
-        _setFontSize (
-          height,
-          screenProperties.widths.aside,
-          height / PHI ** 2
-        )
+          () => {
 
-      },
-  
+              const height = screenProperties.heights.aside
+                  - logoProperties.value.height
 
-    () => (height => {
 
-        justFacts.style.height = `${ height }px`
+              name.style.height = `${ height }px`
+
+              _setFontSize (
+                h1,
+                height,
+                screenProperties.widths.aside,
+                height / PHI ** 2
+              )
+
+            },
         
-        _setFontSize (
-          height,
-          screenProperties.widths.main,
-          height / PHI ** 2
-        )
 
-      }) (screenProperties.heights.footer)
-  
-  ] [ +(screenProperties.ratioIndex < 2) ] ()
+          () => (height => {
+
+              name.style.height = `${ height }px`
+              
+              _setFontSize (
+                h1,
+                height,
+                screenProperties.widths.main,
+                height / PHI ** 2
+              )
+
+            }) (screenProperties.heights.footer)
+        
+        ] [ +(screenProperties.ratioIndex < 2) ] ()
+
+      })
 
 }
