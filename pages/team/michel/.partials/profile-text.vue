@@ -1,3 +1,13 @@
+<script setup>
+  
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+</script>
+
+
 <template>
 
   <article class="o-profile-text">
@@ -5,7 +15,10 @@
     <h1>Alle Menschen werden Brüder!</h1>
 
 
-    <figure>
+    <figure
+      class="o-beethoven"
+      :data-number-of-parts="screenProperties.ratioIndex"
+    >
 
       <NuxtImg
         src="/images/beethoven.png"
