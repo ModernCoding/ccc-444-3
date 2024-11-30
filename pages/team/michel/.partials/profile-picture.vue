@@ -1,6 +1,19 @@
+<script setup>
+  
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+</script>
+
+
 <template>
 
-  <figure class="o-profile-picture">
+  <figure
+    class="o-profile-picture"
+    :data-number-of-parts="screenProperties.ratioIndex"
+  >
 
     <NuxtImg
       src="/images/profiles/michel.png"

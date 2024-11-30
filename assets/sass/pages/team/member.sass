@@ -26,17 +26,15 @@
     text-wrap: nowrap
 
 
-.o-country-picture
-
-    &[data-number-of-parts="3"]
-      height: dimensions.$heightSectionTwoParts
-
-
 .o-country-picture, .o-profile-picture
   display: flex
   align-items: center
   justify-content: center
   text-align: center
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+    height: dimensions.$heightSectionTwoParts
 
   img
     max-height: 100%
