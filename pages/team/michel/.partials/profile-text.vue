@@ -32,18 +32,28 @@
     </figure>
 
 
-    <p
-      v-for="p in $tm('pages.team.member.text')"
-      :key="p"
-    >
+    <template v-for="p in $tm('pages.team.member.text')" :key="p">
 
-      <span
-        v-for="s, i in p.split ('%')"
-        :key="s"
-        :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
-      >{{ hyphenate (s, locale) }}</span>
-    
-    </p>
+      <ul v-if="p.includes ('>')">
+
+        <template v-for="s, i in p.split ('>')" :key="s">
+          <li v-if="i > 0">{{ hyphenate (s, locale) }}</li>
+        </template>
+
+      </ul>
+
+
+      <p v-else>
+
+        <span
+          v-for="s, i in p.split ('%')"
+          :key="s"
+          :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+        >{{ hyphenate (s, locale) }}</span>
+      
+      </p>
+
+    </template>
 
   </article>
 

@@ -26,8 +26,8 @@ export const handleTeamMember = screenProperties => {
   document
 
     .querySelectorAll ([
-        '.o-team-member-in-modal p',
-        '.o-team-member p',
+        '.o-team-member-in-modal p, .o-team-member-in-modal ul',
+        '.o-team-member p, .o-team-member ul',
       ] [ +(screenProperties.ratioIndex > 1) ])
 
 

@@ -18,6 +18,11 @@
     flex-direction: column
     gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
 
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 3))
+
 
 .o-team-member-in-modal
   display: flex
@@ -28,6 +33,11 @@
     display: flex
     flex-direction: column
     gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 2))
+
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 3))
 
 
 .o-profile-text
@@ -45,6 +55,12 @@
 
     > .o-underline
       text-decoration: underline
+
+
+  li
+    text-align: justify
+    list-style-image: url("/images/bubble.png")
+    list-style-position: inside
 
 
 .o-country-name

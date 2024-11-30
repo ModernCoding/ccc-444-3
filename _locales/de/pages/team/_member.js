@@ -11,9 +11,12 @@ export const member = {
 
         "%Ich%, im Gegenteil, komme näher!",
 
-        "Während meiner über 15jährigen Berufserfahrung, als ich mit unterschiedlichen Programmiersprachen und Technologien Softwares entwickelt habe, habe ich auch:",
-        
-        "Während meiner über 15jährigen Berufserfahrung, als ich mit unterschiedlichen Programmiersprachen und Technologien Softwares entwickelt habe, habe ich auch: in verschiedenen Ländern, mit verschiedenen Menschen aus ganz unterschiedlichen Kulturkreisen gelebt bzw. gearbeitet",
+        "In meiner Laufbahn, habe ich ja mit unterschiedlichen Programmiersprachen und Technologien gearbeitet; ich habe aber auch:",
+
+        `
+          > in verschiedenen Ländern gelebt und gearbeitet
+          > in verschiedenen Ländern gelebt und gearbeitet
+        `
       
       ]
 
