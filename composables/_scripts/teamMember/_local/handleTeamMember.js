@@ -3,24 +3,26 @@ export const handleTeamMember = screenProperties => {
   const screen = getWindowWidths (screenProperties.widths.main)
 
 
-  const h1s = document.querySelectorAll ([
-      '.o-team-member-in-modal h1',
-      '.o-team-member h1',
-    ] [ +(screenProperties.ratioIndex > 1) ])
+  document
+
+    .querySelectorAll ([
+        '.o-team-member-in-modal h1',
+        '.o-team-member h1',
+      ] [ +(screenProperties.ratioIndex > 1) ])
 
 
-  h1s.forEach (h1 => {
-    
-      h1.removeAttribute ('style')
-
-      ;(size => h1.style.fontSize = `${ size }px`) (
-
-        TWICE_54_BY_PHI_POWER_4
-          * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdHalf)
+    .forEach (h1 => {
       
-      )
-    
-    })
+        h1.removeAttribute ('style')
+
+        ;(size => h1.style.fontSize = `${ size }px`) (
+
+          TWICE_54_BY_PHI_POWER_4
+            * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdHalf)
+        
+        )
+      
+      })
 
 
 
