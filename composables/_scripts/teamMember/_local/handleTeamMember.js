@@ -16,39 +16,29 @@ export const handleTeamMember = screenProperties => {
         h1.removeAttribute ('style')
 
         ;(size => h1.style.fontSize = `${ size }px`) (
-
           TWICE_54_BY_PHI_POWER_4
             * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdHalf)
-        
         )
       
       })
 
 
+  document
+
+    .querySelectorAll ([
+        '.o-team-member-in-modal p',
+        '.o-team-member p',
+      ] [ +(screenProperties.ratioIndex > 1) ])
 
 
-  // ;((p, ul) => {
+    .forEach (p => {
+      
+        p.removeAttribute ('style')
 
-  //     p && ul && (size => {
-
-  //       p.style.fontSize = `${ size }px`
-  //       p.style.paddingBottom = `${ size * PHI }px`
-  //       ul.style.paddingBottom = `${ size * PHI ** 2 }px`
-
-  //       ul
-  //         .querySelectorAll ('li')
-  //         .forEach (li => li.style.fontSize = `${ size }px`)
-
-  //     }) (
-
-  //       TWICE_54_BY_PHI_POWER_4
-  //         * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdTwice)
-
-  //     )
-
-  //   }) (
-  //     document.querySelector ('#team-girls p'),
-  //     document.querySelector ('#team-girls ul')
-  //   )
+        ;(size => p.style.fontSize = `${ size }px`) (
+          TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
+        )
+      
+      })
 
 }
