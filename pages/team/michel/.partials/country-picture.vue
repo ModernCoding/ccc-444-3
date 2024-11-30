@@ -12,6 +12,7 @@
 
   <figure
     class="o-country-picture"
+    data-country="fr"
     :data-number-of-parts="screenProperties.ratioIndex"
   >
 

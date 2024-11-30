@@ -66,10 +66,21 @@
   justify-content: center
   text-align: center
 
-  &[data-number-of-parts="2"],
   &[data-number-of-parts="3"]
     height: dimensions.$heightSectionTwoParts
+  
+  &[data-country="fr"]
+
+    &[data-number-of-parts="2"]
+      height: dimensions.$heightSectionTwoParts
 
   img
     max-height: 100%
     max-width: 100%
+
+
+.o-profile-picture
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+    height: dimensions.$heightSectionTwoParts
