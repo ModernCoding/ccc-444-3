@@ -7,7 +7,7 @@
   import ProfileName from './.partials/profile-name'
   import ProfilePicture from './.partials/profile-picture'
   import ProfileText from './.partials/profile-text'
-
+  import ProfileVietnam from './.partials/profile-vietnam'
 
 
   const screenPropertiesStore
@@ -38,6 +38,7 @@
 
       <ProfileText />
       <ProfileCambodia />
+      <ProfileVietnam />
 
     </section>
   
@@ -86,6 +87,7 @@
         <template v-if="screenProperties.ratioIndex > 1">
           <ProfileText />
           <ProfileCambodia />
+          <ProfileVietnam />
         </template>
       
       </article>
