@@ -1,5 +1,6 @@
 <script setup>
   
+  import CountryName from './.partials/country-name'
   import CountryPicture from './.partials/country-picture'
   import ProfileName from './.partials/profile-name'
   import ProfilePicture from './.partials/profile-picture'
@@ -69,6 +70,10 @@
 
     </template>
 
+
+    <template v-slot:footer-central>
+      <CountryName />
+    </template>
 
     <template v-slot:footer-right>
       <ProfileName />

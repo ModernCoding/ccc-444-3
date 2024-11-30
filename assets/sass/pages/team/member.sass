@@ -16,7 +16,7 @@
       height: dimensions.$heightSectionTwoParts
 
 
-.o-profile-name
+.o-country-name, .o-profile-name
   display: flex
   align-items: center
   justify-content: center
@@ -24,6 +24,20 @@
 
   > *
     text-wrap: nowrap
+
+
+.o-country-picture
+  height: dimensions.$heightSectionTwoParts
+  
+.o-country-picture, .o-profile-picture
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  img
+    max-height: 100%
+    max-width: 100%
 
 
 .o-profile-text
@@ -35,14 +49,3 @@
 
     span.fw-bold
       text-decoration: underline
-
-
-.o-country-picture, .o-profile-picture
-  display: flex
-  align-items: center
-  justify-content: center
-  text-align: center
-
-  img
-    max-height: 100%
-    max-width: 100%
