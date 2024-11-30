@@ -11,6 +11,8 @@
       :class="`
           o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }
         `"
+        
+      :data-wrap="[ '0', '1' ] [ +(locale !== 'th') ]"
     >
       {{ NAMES.babe [ locale ] ?? NAMES.babe.en }}
     </h1>
