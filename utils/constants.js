@@ -42,6 +42,11 @@ export const NAMES = {
 export const PHI = 2 * Math.sin (54 * Math.PI / 180)
 
 
+export const ROUTES_WITHOUT_IMAGE_WAITING = [
+    'team-michel'
+  ]
+
+
 export const ROUTES_WITHOUT_LOGO = [
 
     'contact@1',

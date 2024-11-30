@@ -36,6 +36,13 @@
 
           case  loading.is
                 && loading.showLogoInLoader
+                && ROUTES_WITHOUT_IMAGE_WAITING.includes (route.name):
+
+            return DELAY_TIMES.LOADING
+
+
+          case  loading.is
+                && loading.showLogoInLoader
                 && loading.isImageLoadingComplete:
 
             return DELAY_TIMES.LOADING
