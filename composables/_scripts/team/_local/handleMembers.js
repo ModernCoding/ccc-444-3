@@ -26,24 +26,6 @@ export const handleMembers = screenProperties => {
     ) (document.querySelector ('#__nuxt'))
 
 
-  const maxWidth = screenProperties.widths.main
-
-      - screenProperties.widths.main / PHI ** 2
-        /*
-          image width
-        */
-
-      - layoutPaddingRight / PHI
-        /*
-          padding right upon scrollbar
-        */
-
-      - layoutPaddingRight / PHI ** 2
-        /*
-          figure gap
-        */
-
-
   const screen = getWindowWidths (screenProperties.widths.main)
 
 
