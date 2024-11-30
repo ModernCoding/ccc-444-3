@@ -7,16 +7,18 @@ export const member = {
 
     text: [
         
-        "Von diesem Wunsch, entfernen sich allerdings die Menschen immer weiter!",
+        `Von diesem Wunsch, den Friedrich Schiller in seiner berühmten Ode "An Die Freude" ausdrückte, und die Ludwig van Beethoven in seiner legendären Neunten Symphonie vertonte, entfernen sich allerdings die meisten Menschen immer weiter!`,
 
         "%Ich%, im Gegenteil, komme näher!",
 
-        "In meiner Laufbahn, habe ich ja mit unterschiedlichen Programmiersprachen und Technologien in unterschiedlichen Gebieten gearbeitet; ich habe nämlich auch:",
+        "In meiner Laufbahn, habe ich ja mit unterschiedlichen Programmiersprachen und Technologien in unterschiedlichen Gebieten gearbeitet: u.a. COBOL, C#, Ruby, PHP und jetzt JavaScript; Banken, Finanzinstituten, E-Commerce, Startups, Fintech.",
+
+        "Ich habe %vor allem auch%:",
 
         `
           > in verschiedenen Ländern gelebt und gearbeitet
           > mit Menschen aus ganz unterschiedlichen Kulturkreisen gearbeitet, sowohl als KollegInnen, wie als MitarbeiterInnen
-          > verschiedene Sprache erlernt, und fünf davon kann ich fließend
+          > verschiedene Sprache erlernt; fünf davon kann ich fließend
         `,
 
         "So habe ich:",
