@@ -7,7 +7,6 @@
   const route = useRoute ()
 
   const menu = [
-      // 'long-text',
       'index',
       'contact',
       'team',
