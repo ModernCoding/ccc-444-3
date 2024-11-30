@@ -5,6 +5,16 @@ export const member = {
     myanmar: "Myanmar",
     thailand: "Thailand",
 
-    text: [1,2,3]
+    text: [
+        
+        "Von diesem Wunsch, entfernen sich allerdings die Menschen immer weiter!",
+
+        "%Ich%, im Gegenteil, komme näher!",
+
+        "Während meiner über 15jährigen Berufserfahrung, als ich mit unterschiedlichen Programmiersprachen und Technologien Softwares entwickelt habe, habe ich auch:",
+        
+        "Während meiner über 15jährigen Berufserfahrung, als ich mit unterschiedlichen Programmiersprachen und Technologien Softwares entwickelt habe, habe ich auch: in verschiedenen Ländern, mit verschiedenen Menschen aus ganz unterschiedlichen Kulturkreisen gelebt bzw. gearbeitet",
+      
+      ]
 
   }

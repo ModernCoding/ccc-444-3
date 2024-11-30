@@ -35,9 +35,13 @@ export const handleTeamMember = screenProperties => {
       
         p.removeAttribute ('style')
 
-        ;(size => p.style.fontSize = `${ size }px`) (
-          TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
-        )
+        ;(size =>
+            p
+              .querySelectorAll ('*')
+              .forEach (e => e.style.fontSize = `${ size }px`)
+          ) (
+            TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
+          )
       
       })
 
