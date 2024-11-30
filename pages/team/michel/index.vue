@@ -71,11 +71,26 @@
     </template>
 
 
-    <template v-slot:footer-central>
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:footer-left
+    >
+      <ProfileName />
+    </template>
+
+
+    <template 
+      v-if="screenProperties.ratioIndex > 2"
+      v-slot:footer-central
+    >
       <CountryName />
     </template>
 
-    <template v-slot:footer-right>
+
+    <template
+      v-if="screenProperties.ratioIndex < 2"
+      v-slot:footer-right
+    >
       <ProfileName />
     </template>
 

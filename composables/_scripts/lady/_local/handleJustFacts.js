@@ -42,37 +42,16 @@ export const handleJustFacts = (
     }
 
 
-  ;[
+  ;(height => {
 
-    () => {
+    justFacts.style.height = `${ height }px`
+    
+    _setFontSize (
+      height,
+      screenProperties.widths.main,
+      height / PHI ** 2
+    )
 
-        const height = screenProperties.heights.aside
-            - logoProperties.value.height
-
-
-        justFacts.style.height = `${ height }px`
-
-        _setFontSize (
-          height,
-          screenProperties.widths.aside,
-          height / PHI ** 2
-        )
-
-      },
-  
-
-    () => (height => {
-
-        justFacts.style.height = `${ height }px`
-        
-        _setFontSize (
-          height,
-          screenProperties.widths.main,
-          height / PHI ** 2
-        )
-
-      }) (screenProperties.heights.footer)
-  
-  ] [ +(screenProperties.ratioIndex < 2) ] ()
+  }) (screenProperties.heights.footer)
 
 }

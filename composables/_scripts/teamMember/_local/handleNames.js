@@ -46,12 +46,13 @@ export const handleNames = (
   // resizing process starts here
 
   const names = document
-      .querySelectorAll ('#footer-central-content > .o-country-name, #footer-right-content > .o-profile-name')
+      .querySelectorAll ('#footer-central-content > .o-country-name, #footer-left-content > .o-profile-name')
   
 
   names.forEach (name => {
 
       name.removeAttribute ('style')
+      console.log (name.classList [ 0 ])
 
       const h1 = name.querySelector ('h1')
       if (!h1) { return }
@@ -97,12 +98,12 @@ export const handleNames = (
 
   // equalizing font sizes
   
-  names.forEach (name =>
+  // names.forEach (name =>
 
-    (h1 =>
-      h1 && (h1.style.fontSize = `${ appliedFontSize }px`)
-    ) (name.querySelector ('h1'))
+  //   (h1 =>
+  //     h1 && (h1.style.fontSize = `${ appliedFontSize }px`)
+  //   ) (name.querySelector ('h1'))
 
-  )
+  // )
 
 }
