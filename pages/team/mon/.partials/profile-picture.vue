@@ -4,6 +4,8 @@
     = defineScreenPropertiesStoreFromComposable () ()
 
   const { screenProperties } = storeToRefs (screenPropertiesStore)
+  
+  const { locale } = useI18n ()
 
 </script>
 
@@ -11,13 +13,13 @@
 <template>
 
   <figure
-    class="o-country-picture"
+    class="o-profile-picture"
     :data-number-of-parts="screenProperties.ratioIndex"
   >
 
     <NuxtImg
-      src="/images/countries/saint-michel.png"
-      alt="Saint-Michel"
+      src="/images/profiles/mon.png"
+      :alt="NAMES.mon [ locale ] ?? NAMES.mon.en"
       :modifiers="{ b: '#110d0d', opacity: 1 }"
       loading="lazy"
     />

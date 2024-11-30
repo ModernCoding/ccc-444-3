@@ -16,8 +16,8 @@
   >
 
     <NuxtImg
-      src="/images/countries/saint-michel.png"
-      alt="Saint-Michel"
+      src="/images/countries/shwedagon.png"
+      alt="Shwedagon Pagoda"
       :modifiers="{ b: '#110d0d', opacity: 1 }"
       loading="lazy"
     />
