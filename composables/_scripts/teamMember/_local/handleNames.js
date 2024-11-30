@@ -1,8 +1,4 @@
-export const handleNames = screenPropertiesStore => {
-
-  const { screenProperties: { value: screenProperties } }
-    = storeToRefs (screenPropertiesStore)
-
+export const handleNames = screenProperties => {
 
   const _setFontSize = (h1, maxHeight, maxWidth, fontSize) => {
 

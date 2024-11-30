@@ -3,6 +3,10 @@ import { handleNames } from './_local/handleNames'
 
 
 export default screenPropertiesStore => {
-  handleNames (screenPropertiesStore)
-  handleTeamMember (screenPropertiesStore)
+
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
+    
+  handleNames (screenProperties)
+  handleTeamMember (screenProperties)
 }

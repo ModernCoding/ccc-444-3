@@ -74,7 +74,7 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
-        <div v-if="screenProperties.ratioIndex < 3">
+        <div v-if="screenProperties.ratioIndex === 2">
           <CountryName />
           <CountryPicture />
         </div>

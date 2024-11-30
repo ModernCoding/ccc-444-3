@@ -1,53 +1,52 @@
 export const handleTeamMember = screenProperties => {
 
-  const members = document.querySelector ('.o-members')
-  if (!members) { return }
-
-  members.removeAttribute ('style')
-
-
-  members
-    .querySelectorAll ('*')
-    .forEach (e => e.removeAttribute ('style'))
-
-
   const screen = getWindowWidths (screenProperties.widths.main)
 
 
-  members.querySelectorAll ('a figcaption > *').forEach (hx =>
-
-      (size => hx.style.fontSize = `${ size }px`) (
-
-        TWICE_54_BY_PHI_POWER_5
-          * PHI ** (+screen.isAtLeastSmMinus + +screen.isAtLeastMdMinus)
-      
-      )
-
-    )
+  const h1s = document.querySelectorAll ([
+      '.o-team-member-in-modal h1',
+      '.o-team-member h1',
+    ] [ +(screenProperties.ratioIndex > 1) ])
 
 
-  ;((p, ul) => {
+  h1s.forEach (h1 => {
+    
+      h1.removeAttribute ('style')
 
-      p && ul && (size => {
-
-        p.style.fontSize = `${ size }px`
-        p.style.paddingBottom = `${ size * PHI }px`
-        ul.style.paddingBottom = `${ size * PHI ** 2 }px`
-
-        ul
-          .querySelectorAll ('li')
-          .forEach (li => li.style.fontSize = `${ size }px`)
-
-      }) (
+      ;(size => h1.style.fontSize = `${ size }px`) (
 
         TWICE_54_BY_PHI_POWER_4
-          * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdTwice)
-
+          * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdHalf)
+      
       )
+    
+    })
 
-    }) (
-      document.querySelector ('#team-girls p'),
-      document.querySelector ('#team-girls ul')
-    )
+
+
+
+  // ;((p, ul) => {
+
+  //     p && ul && (size => {
+
+  //       p.style.fontSize = `${ size }px`
+  //       p.style.paddingBottom = `${ size * PHI }px`
+  //       ul.style.paddingBottom = `${ size * PHI ** 2 }px`
+
+  //       ul
+  //         .querySelectorAll ('li')
+  //         .forEach (li => li.style.fontSize = `${ size }px`)
+
+  //     }) (
+
+  //       TWICE_54_BY_PHI_POWER_4
+  //         * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdTwice)
+
+  //     )
+
+  //   }) (
+  //     document.querySelector ('#team-girls p'),
+  //     document.querySelector ('#team-girls ul')
+  //   )
 
 }
