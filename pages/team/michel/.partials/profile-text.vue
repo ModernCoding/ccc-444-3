@@ -37,7 +37,17 @@
       <ul v-if="p.includes ('>')">
 
         <template v-for="s, i in p.split ('>')" :key="s">
-          <li v-if="i > 0">{{ hyphenate (s, locale) }}</li>
+
+          <li v-if="i > 0">
+
+            <span
+              v-for="s0, i in s.split ('%')"
+              :key="s0"
+              :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+            >{{ hyphenate (s0, locale) }}</span>
+
+          </li>
+
         </template>
 
       </ul>
