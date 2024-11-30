@@ -30,6 +30,12 @@
     </figure>
 
 
+    <p
+      v-for="p in $tm('pages.team.member.text')"
+      :key="p"
+    >{{ p }}</p>
+
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu libero, consectetur eget lacus eu, pellentesque malesuada sem. Aliquam erat volutpat. Phasellus blandit, enim ut porta facilisis, ex nisl venenatis lacus, vel finibus libero sem quis massa. Etiam blandit luctus volutpat. Etiam porttitor purus sem, sed imperdiet dui bibendum vel. In finibus, justo in condimentum elementum, justo lectus molestie diam, at vehicula elit massa sed velit. Sed eget ligula eu sem varius placerat. Sed elit risus, sodales ut cursus vel, efficitur quis neque.
     </p>
