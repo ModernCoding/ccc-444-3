@@ -10,6 +10,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  src="@/assets/sass/pages/team/member.sass"
   lang="sass"
 ></style>

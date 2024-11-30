@@ -27,8 +27,11 @@
 
 
 .o-country-picture
-  height: dimensions.$heightSectionTwoParts
-  
+
+    &[data-number-of-parts="3"]
+      height: dimensions.$heightSectionTwoParts
+
+
 .o-country-picture, .o-profile-picture
   display: flex
   align-items: center
