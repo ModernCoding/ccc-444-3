@@ -7,12 +7,7 @@ export const handleNames = (
     = storeToRefs (screenPropertiesStore)
 
 
-  let appliedFontSize = 0
-  
-
   const _setFontSize = (h1, maxHeight, maxWidth, fontSize) => {
-
-      appliedFontSize === 0 && (appliedFontSize = fontSize)
 
       h1.style.fontSize = `${ fontSize }px`
 
@@ -20,10 +15,6 @@ export const handleNames = (
       switch (true) {
         
         case fontSize <= TWICE_54_BY_PHI_POWER_4:
-
-          TWICE_54_BY_PHI_POWER_4 < appliedFontSize
-            && (appliedFontSize = TWICE_54_BY_PHI_POWER_4)
-
           return h1.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
 
 
@@ -34,9 +25,7 @@ export const handleNames = (
 
 
         default:
-
-          return fontSize < appliedFontSize
-              && (appliedFontSize = fontSize)
+          return
 
       }
 
@@ -46,64 +35,38 @@ export const handleNames = (
   // resizing process starts here
 
   const names = document
-      .querySelectorAll ('#footer-central-content > .o-country-name, #footer-left-content > .o-profile-name')
-  
+      .querySelectorAll ('#footer-central-content > .o-country-name, #__nuxt > footer .o-profile-name')
+
 
   names.forEach (name => {
 
-      name.removeAttribute ('style')
-      console.log (name.classList [ 0 ])
+    name.removeAttribute ('style')
 
-      const h1 = name.querySelector ('h1')
-      if (!h1) { return }
-
-
-      ;[
-
-        () => {
-
-            const height = screenProperties.heights.aside
-                - logoProperties.value.height
+    const h1 = name.querySelector ('h1')
+    if (!h1) { return }
 
 
-            name.style.height = `${ height }px`
+    ;(height => {
 
-            _setFontSize (
-              h1,
-              height,
-              screenProperties.widths.aside,
-              height / PHI ** 2
-            )
-
-          },
+      name.style.height = `${ height }px`
       
+      _setFontSize (
+        
+        h1,
+        height,
+        
+        {
+            country: screenProperties.widths.central,
+            profile: screenProperties.widths.aside
+          } [ name.classList [ 0 ].split ('-') [ 1 ] ],
 
-        () => (height => {
-
-            name.style.height = `${ height }px`
-            
-            _setFontSize (
-              h1,
-              height,
-              screenProperties.widths.main,
-              height / PHI ** 2
-            )
-
-          }) (screenProperties.heights.footer)
+        screenProperties.widths.main,
+        height / PHI ** 2
       
-      ] [ +(screenProperties.ratioIndex < 2) ] ()
+      )
 
-    })
+    }) (screenProperties.heights.footer)
 
-
-  // equalizing font sizes
-  
-  // names.forEach (name =>
-
-  //   (h1 =>
-  //     h1 && (h1.style.fontSize = `${ appliedFontSize }px`)
-  //   ) (name.querySelector ('h1'))
-
-  // )
+  })
 
 }
