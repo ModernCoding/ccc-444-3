@@ -11,6 +11,8 @@
       :class="`
           o-font-${ [ 'en', locale ] [ +(locale === 'my') ] }
         `"
+        
+      data-wrap="0"
     >
       {{ NAMES.mon [ locale ] ?? NAMES.mon.en }}
     </h1>

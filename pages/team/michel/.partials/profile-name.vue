@@ -1,7 +1,11 @@
 <template>
 
   <hgroup class="o-profile-name">
-    <h1 class="o-font-en">Michel Boretti</h1>
+
+    <h1 class="o-font-en" data-wrap="0">
+      Michel Boretti
+    </h1>
+
   </hgroup>
   
 </template>

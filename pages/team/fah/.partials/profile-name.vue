@@ -12,7 +12,7 @@
           o-font-${ [ 'en', locale ] [ +(locale === 'th') ] }
         `"
 
-      :data-wrap="[ '0', '1' ] [ +(locale !== 'th') ]"
+      data-wrap="0"
     >
       {{ NAMES.fah [ locale ] ?? NAMES.fah.en }}
     </h1>
