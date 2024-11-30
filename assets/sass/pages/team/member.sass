@@ -10,10 +10,12 @@
 
   > .o-profile-text
     display: flex
-    align-items: center
+    flex-direction: column
+    gap: sizes.$twice_54_by_phi_power_3 * 1px
 
-    &[data-number-of-parts="3"]
-      height: dimensions.$heightSectionTwoParts
+    p
+      font-size: sizes.$twice_54_by_phi_power_4 * 1px
+      text-align: justify
 
 
 .o-country-name
@@ -50,14 +52,3 @@
   img
     max-height: 100%
     max-width: 100%
-
-
-.o-profile-text
-  text-align: center
-  text-transform: uppercase
-
-  p
-    line-height: 1
-
-    span.fw-bold
-      text-decoration: underline

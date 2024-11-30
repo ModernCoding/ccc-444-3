@@ -64,7 +64,7 @@
       >
 
         <CountryPicture v-if="screenProperties.ratioIndex < 3" />
-        <ProfileText />
+        <ProfileText v-if="screenProperties.ratioIndex > 1" />
       
       </article>
 
