@@ -1,18 +1,6 @@
 <script setup>
-  
-  const imageScripts = collectImageScriptsFromComposable ()
-
   const ladiesStore = defineLadiesStoreFromComposable () ()
-  const loadingStore = defineLoadingStoreFromComposable () ()
-
   const { ladies } = storeToRefs (ladiesStore)
-
-
-  // watch (ladiesStore, () => {
-  //     loadingStore.patchIsResizingMode ()
-  //     imageScripts.checkAllImagesLoaded (loadingStore)
-  //   })
-
 </script>
 
 

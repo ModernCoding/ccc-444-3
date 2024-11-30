@@ -1,6 +1,6 @@
 <template>
 
-  <figure class="o-profile-picture">
+  <figure class="o-country-picture">
 
     <NuxtImg
       src="/images/profiles/michel.png"

@@ -1,9 +1,9 @@
 <script setup>
   
-  import Lady from './.partials/lady'
-  import Menu from './.partials/menu'
+  import CountryPicture from './.partials/country-picture'
   import ProfileName from './.partials/profile-name'
   import ProfilePicture from './.partials/profile-picture'
+  import ProfileText from './.partials/profile-text'
 
 
   const screenPropertiesStore
@@ -22,9 +22,9 @@
   >
 
     <section>
-      <Menu />
+      <CountryPicture />
       <ProfilePicture />
-      <Lady />
+      <ProfileText />
     </section>
   
   </ModalLayout>
@@ -48,7 +48,7 @@
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
-      <Menu />
+      <CountryPicture />
     </template>
 
 
@@ -62,8 +62,8 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
-        <Menu v-if="screenProperties.ratioIndex < 3" />
-        <Lady />
+        <CountryPicture v-if="screenProperties.ratioIndex < 3" />
+        <ProfileText />
       
       </article>
 
