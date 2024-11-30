@@ -55,9 +55,15 @@ export default (
         teamScripts.resize (screenPropertiesStore, logoProperties)
         break
 
+
       case "team-michel":
+      case "team-mon":
+      case "team-fah":
+      case "team-babe":
+
         teamMemberScripts.resize (screenPropertiesStore)
         break
+
 
       default:
         break
