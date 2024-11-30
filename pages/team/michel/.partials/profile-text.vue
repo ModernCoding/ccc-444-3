@@ -12,7 +12,7 @@
 
   <article class="o-profile-text">
 
-    <h1>Alle Menschen werden Brüder!</h1>
+    <h1 class="o-font-en">Alle Menschen werden Brüder!</h1>
 
 
     <figure

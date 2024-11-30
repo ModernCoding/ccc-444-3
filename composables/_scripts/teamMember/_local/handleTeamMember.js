@@ -17,7 +17,7 @@ export const handleTeamMember = screenProperties => {
 
         ;(size => h1.style.fontSize = `${ size }px`) (
           TWICE_54_BY_PHI_POWER_4
-            * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdHalf)
+            * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastLgHalf)
         )
       
       })
