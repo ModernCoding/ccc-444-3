@@ -23,8 +23,9 @@
   >
 
     <section>
-      <CountryPicture />
       <ProfilePicture />
+      <CountryName />
+      <CountryPicture />
       <ProfileText />
     </section>
   
@@ -38,7 +39,7 @@
       v-slot:aside
     >
 
-      <NuxtLink :to="{ name: 'index' }">
+      <NuxtLink :to="{ name: 'team' }">
         <ProfilePicture />
       </NuxtLink>
       
@@ -49,7 +50,9 @@
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
-      <CountryPicture />
+      <NuxtLink :to="{ name: 'team' }">
+        <CountryPicture />
+      </NuxtLink>
     </template>
 
 
@@ -63,6 +66,7 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
+        <CountryName v-if="screenProperties.ratioIndex < 3" />
         <CountryPicture v-if="screenProperties.ratioIndex < 3" />
         <ProfileText v-if="screenProperties.ratioIndex > 1" />
       
