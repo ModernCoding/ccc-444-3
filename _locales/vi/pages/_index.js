@@ -1,5 +1,6 @@
 export const index = {
-    slogan: "We craft your app!",
+    slogan: "We unite Beauty and High Technicity into Your App!",
+    // slogan: "We craft your app!",
     and: "And we do",
     more: "more!"
   }
