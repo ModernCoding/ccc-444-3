@@ -1,34 +1,15 @@
 <script setup>
   
-  import JustFacts from './.partials/just-facts'
   import Lady from './.partials/lady'
   import Menu from './.partials/menu'
-  import Picture from './.partials/picture'
+  import ProfileName from './.partials/profile-name'
+  import ProfilePicture from './.partials/profile-picture'
 
-
-  const ladiesStore = defineLadiesStoreFromComposable () ()
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
   const { screenProperties } = storeToRefs (screenPropertiesStore)
-
-
-  watch (ladiesStore, () => {
-
-    const content = document.querySelector (
-        [ '#ladies-in-it', '#modal-layout > *' ] [
-          +(screenProperties.ratioIndex < 2)
-        ]
-      )
-    
-
-    content && content.scrollTo ({ top: 0, behavior: 'smooth' })
-
-  })
-
-
-  onUnmounted (ladiesStore.resetIndex)
 
 </script>
 
@@ -42,7 +23,7 @@
 
     <section>
       <Menu />
-      <Picture />
+      <ProfilePicture />
       <Lady />
     </section>
   
@@ -57,7 +38,7 @@
     >
 
       <NuxtLink :to="{ name: 'index' }">
-        <Picture />
+        <ProfilePicture />
       </NuxtLink>
       
     </template>
@@ -77,7 +58,7 @@
     >
 
       <article
-        id="ladies-in-it"
+        class="o-team-member"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
@@ -90,7 +71,7 @@
 
 
     <template v-slot:footer-right>
-      <JustFacts />
+      <ProfileName />
     </template>
 
   </BaseLayout>
@@ -100,6 +81,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  src="@/assets/sass/pages/team/member.sass"
   lang="sass"
 ></style>

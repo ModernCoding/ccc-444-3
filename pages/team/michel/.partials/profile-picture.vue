@@ -1,11 +1,8 @@
 <script setup>
   
-  const ladiesStore = defineLadiesStoreFromComposable () ()
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
-
-  const { ladies } = storeToRefs (ladiesStore)
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
 </script>
@@ -13,11 +10,11 @@
 
 <template>
 
-  <figure class="o-lady-picture">
+  <figure class="o-profile-picture">
 
     <NuxtImg
-      :src="`/images/${ ladies.MAP.get (ladies.index).key }.png`"
-      :alt="ladies.MAP.get (ladies.index).name"
+      src="/images/profiles/michel.png"
+      alt="Michel Boretti"
       :modifiers="{ b: '#110d0d', opacity: 1 }"
       loading="lazy"
     />
@@ -29,6 +26,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  src="@/assets/sass/pages/team/member.sass"
   lang="sass"
 ></style>

@@ -1,0 +1,48 @@
+@use "sass:math"
+
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/sizes' as sizes
+
+
+.o-team-member
+  height: dimensions.$heightSectionTwoParts
+
+  > .o-lady
+    display: flex
+    align-items: center
+
+    &[data-number-of-parts="3"]
+      height: dimensions.$heightSectionTwoParts
+
+
+.o-profile-name
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  > *
+    text-wrap: nowrap
+
+
+.o-lady
+  text-align: center
+  text-transform: uppercase
+
+  p
+    line-height: 1
+
+    span.fw-bold
+      text-decoration: underline
+
+
+.o-profile-picture
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  img
+    max-height: 100%
+    max-width: 100%
