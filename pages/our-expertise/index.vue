@@ -2,6 +2,7 @@
 
   import Ada from './.partials/ada'
   import Article from './.partials/article'
+  import Slogan from './.partials/slogan'
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -43,6 +44,11 @@
         <Ada v-if="screenProperties.ratioIndex < 2" />
       </article>
 
+    </template>
+
+
+    <template v-slot:footer-right>
+      <Slogan />
     </template>
 
   </BaseLayout>
