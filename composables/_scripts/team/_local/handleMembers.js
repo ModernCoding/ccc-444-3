@@ -38,12 +38,7 @@ export const handleMembers = screenProperties => {
           .querySelectorAll ('li')
           .forEach (li => li.style.fontSize = `${ size }px`)
 
-      }) (
-
-        TWICE_54_BY_PHI_POWER_4
-          * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastMdTwice)
-
-      )
+      }) (TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus))
 
     }) (
       document.querySelector ('#team-girls p'),
