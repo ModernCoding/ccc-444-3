@@ -24,10 +24,9 @@
     </h1>
 
 
-
     <NuxtLink :to="{ name: 'our-expertise' }">
 
-      <button>
+      <button class="o-expertise-know-how">
 
         <p class="fw-bold">
           {{ $t ('pages.ourExpertise.index.expertise.craft.know') }}

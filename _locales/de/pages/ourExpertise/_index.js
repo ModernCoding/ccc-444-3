@@ -8,7 +8,7 @@ export const index = {
     expertise: {
 
         craft: {
-            slogan: "Wir fertigen Ihre App!",
+            slogan: "Wir fertigen Ihre\xa0App!",
             know: "Hier ist",
             how: "wie."
           },
