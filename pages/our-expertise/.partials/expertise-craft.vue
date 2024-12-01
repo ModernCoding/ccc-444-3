@@ -14,7 +14,14 @@
 
   <article class="o-expertise-text">
 
-    <h1>Alle Menschen werden Brüder!</h1>
+    <h1>
+      {{ 
+        hyphenate (
+          $t ('pages.ourExpertise.index.expertise.craft.slogan'),
+          locale
+        )
+      }}
+    </h1>
 
   </article>
 
