@@ -69,12 +69,28 @@ export const handleExpertise = screenProperties => {
       })
 
 
-  if (screenProperties.ratioIndex > 1) { return }
+  if (screenProperties.ratioIndex < 2) {
+
+    (slogan => slogan && (slogan.style.fontSize = `${ fontSize }px`)) (
+      document
+        .querySelector ('.o-expertise-in-modal .o-expertise-slogan h1')
+    )
+
+  }
 
 
-  ;(slogan => slogan && (slogan.style.fontSize = `${ fontSize }px`)) (
-    document
-      .querySelector ('.o-expertise-in-modal .o-expertise-slogan h1')
-  )
+  else {
+
+    (expertise =>
+
+      expertise && expertise.style.overflowY === 'hidden' && (
+          expertise.style.justifyContent = 'center'
+        )
+
+
+
+    ) (document.querySelector ('#our-expertise'))
+
+  }
 
 }

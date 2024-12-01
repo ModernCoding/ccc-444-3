@@ -1,6 +1,7 @@
 export const index = {
 
-    slogan: "We unite Beauty and High Technicity, as this website shows!",
+    slogan:
+      "We unite Beauty and High Technicity, as this website shows!",
 
     title: "Our Expertise",
 
@@ -15,8 +16,8 @@ export const index = {
 
         consulting: {
             slogan: "We help you craft yours!",
-            know: "Like",
-            how: "here"
+            know: "Know",
+            how: "more"
           },
 
         guestLead: {
