@@ -10,19 +10,25 @@ export const index = {
         craft: {
             slogan: "Wir fertigen Ihre\xa0Apps!",
             know: "Hier ist",
-            how: "wie."
+            how: "wie"
           },
 
         graphicDesign: {
             slogan: "Einschließlich Grafik-Design!",
             know: "Hier ist unser",
-            how: "Trumpf."
+            how: "Trumpf"
           },
 
         consulting: {
             slogan: "Wir helfen Ihnen beim Selbermachen!",
             know: "Wie z.B.",
-            how: "hier."
+            how: "hier"
+          },
+
+        guestLead: {
+            slogan: "Wir betreuen Ihre Teams!",
+            know: "Hier ist",
+            how: "warum"
           },
       
       }

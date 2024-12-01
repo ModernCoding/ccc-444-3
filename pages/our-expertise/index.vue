@@ -1,12 +1,14 @@
 <script setup>
 
   import Ada from './.partials/ada'
-  
+
   import ExpertiseConsulting from './.partials/expertise-consulting'
   import ExpertiseCraft from './.partials/expertise-craft'
   
   import ExpertiseGraphicDesign
     from './.partials/expertise-graphic-design'
+
+  import ExpertiseGuestLead from './.partials/expertise-guest-lead'
   
   import Slogan from './.partials/slogan'
   import Title from './.partials/title'
@@ -36,6 +38,7 @@
       <ExpertiseCraft />
       <ExpertiseGraphicDesign />
       <ExpertiseConsulting />
+      <ExpertiseGuestLead />
 
       <Slogan />
 
@@ -73,6 +76,7 @@
           <ExpertiseCraft />
           <ExpertiseGraphicDesign />
           <ExpertiseConsulting />
+          <ExpertiseGuestLead />
         </template>
 
       </article>

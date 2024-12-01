@@ -31,7 +31,7 @@ export const handleExpertise = screenProperties => {
     .forEach (knowHow => {
       
         knowHow.removeAttribute ('style')
-        knowHow.style.gap = `${ fontSize / PHI ** 3 }px`
+        knowHow.style.gap = `${ fontSize / PHI ** 2 }px`
 
 
         knowHow.querySelectorAll ('p').forEach ((p, i) => {
