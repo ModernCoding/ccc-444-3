@@ -81,15 +81,24 @@ export const handleExpertise = screenProperties => {
 
   else {
 
-    (expertise =>
+    (expertise => {
 
-      expertise && expertise.style.overflowY === 'hidden' && (
-          expertise.style.justifyContent = 'center'
-        )
+      if (!expertise) { return }
 
 
+      expertise.style.overflowY === 'hidden'
 
-    ) (document.querySelector ('#our-expertise'))
+        ? expertise.style.justifyContent = 'center'
+
+        : (slogan => slogan.style.display = 'none') (
+
+            document.querySelector (
+              '#footer-right-content > .o-expertise-slogan'
+            )
+
+          )
+
+    }) (document.querySelector ('#our-expertise'))
 
   }
 
