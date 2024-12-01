@@ -5,6 +5,7 @@ import setMainDimensions from './_setMainDimensions'
 const contactScripts = collectContactScriptsFromComposable ()
 const ctaScripts = collectCtaScriptsFromComposable ()
 const ladyScripts = collectLadyScriptsFromComposable ()
+const ourExpertiseScripts = collectOurExpertiseScriptsFromComposable ()
 const startPageScripts = collectStartPageScriptsFromComposable ()
 const teamScripts = collectTeamScriptsFromComposable ()
 const teamMemberScripts = collectTeamMemberScriptsFromComposable ()
@@ -45,6 +46,15 @@ export default (
       case "ladies-in-it":
         ladyScripts.resize (screenPropertiesStore, logoProperties)
         break
+
+
+      case "our-expertise":
+
+        ourExpertiseScripts
+          .resize (screenPropertiesStore, logoProperties)
+
+        break
+
 
       case "team":
         teamScripts.resize (screenPropertiesStore, logoProperties)
