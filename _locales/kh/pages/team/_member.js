@@ -18,7 +18,7 @@ export const member = {
 
         `
           > I have been living and working in several countries
-          > I have been working with people coming from completely diffrent cultural backgrounds, be they colleagues or coworkers
+          > I have been working with people coming from completely different cultural backgrounds, be they colleagues or coworkers
           > I have learned several languages and become fluent in 5 of them
         `,
 
@@ -35,7 +35,7 @@ export const member = {
     cambodia: "In Cambodia, I have also...",
 
     mentoring:
-      "...mentored customers' junior developers & fresh graduates as a %guest tech team leader%.",
+      "...instructed & mentored customers' junior developers & fresh graduates as a %guest tech team leader%.",
 
     vietnam: "In Vietnam, I have also taught at Universities."
 
