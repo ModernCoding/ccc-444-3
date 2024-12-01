@@ -26,7 +26,7 @@ export const index = {
           },
 
         guestLead: {
-            slogan: "Wir betreuen Ihre Teams!",
+            slogan: "Wir betreuen Ihre Teams als Gast-Teamleiter!",
             know: "Hier ist",
             how: "warum"
           },
