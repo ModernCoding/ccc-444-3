@@ -3,5 +3,5 @@ export const menu = {
     index: "Début",
     "ladies-in-it": "Trois Grandes Dames",
     "our-expertise": "Notre Savoir-Faire",
-    team: "L'équipe"
+    team: "L'Équipe"
   }
