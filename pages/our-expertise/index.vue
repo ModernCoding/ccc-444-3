@@ -15,7 +15,10 @@
 
 <template>
 
-  <ModalLayout v-if="screenProperties.ratioIndex < 2">
+  <ModalLayout
+    v-if="screenProperties.ratioIndex < 2"
+    isShorter="1"
+  >
     <Article />
   </ModalLayout>
 
@@ -58,7 +61,7 @@
 
     <template v-slot:footer-right>
       <Title v-if="screenProperties.ratioIndex < 2" />
-      <Slogan />
+      <Slogan v-if="screenProperties.ratioIndex > 1" />
     </template>
 
   </BaseLayout>
