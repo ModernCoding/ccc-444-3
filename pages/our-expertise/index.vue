@@ -1,7 +1,6 @@
 <script setup>
 
   import Ada from './.partials/ada'
-  import Article from './.partials/article'
   import Slogan from './.partials/slogan'
   import Title from './.partials/title'
 
@@ -21,7 +20,6 @@
   >
     <section>
       <Ada />
-      <Article />
     </section>
   </ModalLayout>
 
@@ -47,7 +45,6 @@
     <template v-slot:main>
       
       <article id="our-expertise">
-        <Article v-if="screenProperties.ratioIndex > 1" />
       </article>
 
     </template>
