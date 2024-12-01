@@ -4,10 +4,6 @@
 
   import ExpertiseConsulting from './.partials/expertise-consulting'
   import ExpertiseCraft from './.partials/expertise-craft'
-  
-  import ExpertiseGraphicDesign
-    from './.partials/expertise-graphic-design'
-
   import ExpertiseGuestLead from './.partials/expertise-guest-lead'
   
   import Slogan from './.partials/slogan'
@@ -36,7 +32,6 @@
       </NuxtLink>
 
       <ExpertiseCraft />
-      <ExpertiseGraphicDesign />
       <ExpertiseConsulting />
       <ExpertiseGuestLead />
 
@@ -74,7 +69,6 @@
 
         <template v-if="screenProperties.ratioIndex > 1">
           <ExpertiseCraft />
-          <ExpertiseGraphicDesign />
           <ExpertiseConsulting />
           <ExpertiseGuestLead />
         </template>

@@ -8,15 +8,9 @@ export const index = {
     expertise: {
 
         craft: {
-            slogan: "We craft your\xa0apps!",
+            slogan: "We craft your\xa0apps, including grafic design!",
             know: "Know",
             how: "how"
-          },
-
-        graphicDesign: {
-            slogan: "Including grafic design!",
-            know: "Know our",
-            how: "plus"
           },
 
         consulting: {
