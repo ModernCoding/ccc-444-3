@@ -1,6 +1,7 @@
 <script setup>
 
   import Ada from './.partials/ada'
+  import ExpertiseCraft from './.partials/expertise-craft'
   import Slogan from './.partials/slogan'
   import Title from './.partials/title'
 
@@ -18,9 +19,19 @@
     v-if="screenProperties.ratioIndex < 2"
     isShorter="1"
   >
-    <section>
-      <Ada />
+
+    <section class="o-expertise-in-modal">
+
+      <NuxtLink :to="{ name: 'index' }">
+        <Ada />
+      </NuxtLink>
+
+      <ExpertiseCraft />
+
+      <Slogan />
+
     </section>
+
   </ModalLayout>
 
 
@@ -42,9 +53,17 @@
     </template>
 
 
-    <template v-slot:main>
+    <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:main
+    >
       
       <article id="our-expertise">
+
+        <template v-if="screenProperties.ratioIndex > 1">
+          <ExpertiseCraft />
+        </template>
+
       </article>
 
     </template>
