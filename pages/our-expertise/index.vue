@@ -2,8 +2,13 @@
 
   import Ada from './.partials/ada'
   import ExpertiseCraft from './.partials/expertise-craft'
+  
+  import ExpertiseGraphicDesign
+    from './.partials/expertise-graphic-design'
+  
   import Slogan from './.partials/slogan'
   import Title from './.partials/title'
+
 
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
@@ -27,6 +32,7 @@
       </NuxtLink>
 
       <ExpertiseCraft />
+      <ExpertiseGraphicDesign />
 
       <Slogan />
 
@@ -62,6 +68,7 @@
 
         <template v-if="screenProperties.ratioIndex > 1">
           <ExpertiseCraft />
+          <ExpertiseGraphicDesign />
         </template>
 
       </article>

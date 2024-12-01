@@ -11,6 +11,7 @@
   display: flex
   flex-direction: column
   gap: calc(dimensions.$heightHeaderTwoParts / constants.$phi)
+  // gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
 
   height: dimensions.$heightSectionTwoParts
 
@@ -24,6 +25,7 @@
   display: flex
   flex-direction: column
   gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+  // gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 2))
 
   > *
     display: flex

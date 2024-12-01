@@ -12,6 +12,12 @@ export const index = {
             know: "Hier ist",
             how: "wie."
           },
+
+        graphicDesign: {
+            slogan: "Einschließlich Grafik-Design!",
+            know: "Hier ist unser",
+            how: "Trumpf."
+          },
       
       }
   

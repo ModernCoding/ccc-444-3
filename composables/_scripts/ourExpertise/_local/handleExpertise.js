@@ -2,7 +2,7 @@ export const handleExpertise = screenProperties => {
 
   const screen = getWindowWidths (screenProperties.widths.main)
 
-  const fontSize = TWICE_54_BY_PHI_POWER_4 * PHI ** (
+  const fontSize = TWICE_54_BY_PHI_POWER_5 * PHI ** (
       +screen.isAtLeastSmHalf + +screen.isAtLeastLgHalf
     )
 
