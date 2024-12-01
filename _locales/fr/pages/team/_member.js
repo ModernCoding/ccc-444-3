@@ -35,7 +35,7 @@ export const member = {
     cambodia: "Au Cambodge, j'ai également...",
 
     mentoring:
-      "...formé et coaché les développeurs juniors & jeunes diplômés de mes clients en tant que développeur sénior %invité%.",
+      "...formé, coaché et dirigé les développeurs juniors & jeunes diplômés de mes clients en tant que %chef invité%.",
 
     vietnam: "Au Vietnam, j'ai également enseigné à l'Université."
 
