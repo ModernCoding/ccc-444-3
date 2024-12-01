@@ -5,19 +5,24 @@
     <h1>{{ $t ('pages.index.slogan') }}</h1>
 
 
-    <button>
 
-      <p class="fw-bold">{{ $t ('pages.index.and') }}</p>
+    <NuxtLink :to="{ name: 'our-expertise' }">
 
-      <p>
-        <span>
-          <i class="bi bi-hand-index-fill" aria-hidden="true"></i>
-        </span>
+      <button>
 
-        <strong>{{ $t ('pages.index.more') }}</strong>
-      </p>
+        <p class="fw-bold">{{ $t ('pages.index.and') }}</p>
 
-    </button>
+        <p>
+          <span>
+            <i class="bi bi-hand-index-fill" aria-hidden="true" />
+          </span>
+
+          <strong>{{ $t ('pages.index.more') }}</strong>
+        </p>
+
+      </button>
+
+    </NuxtLink>
 
   </hgroup>
   
