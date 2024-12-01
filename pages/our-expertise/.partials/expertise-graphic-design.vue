@@ -16,10 +16,7 @@
 
     <h1>
       {{ 
-        hyphenate (
-          $t ('pages.ourExpertise.index.expertise.graphicDesign.slogan'),
-          locale
-        )
+        $t ('pages.ourExpertise.index.expertise.graphicDesign.slogan')
       }}
     </h1>
 

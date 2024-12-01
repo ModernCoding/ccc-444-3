@@ -1,6 +1,8 @@
 <script setup>
 
   import Ada from './.partials/ada'
+  
+  import ExpertiseConsulting from './.partials/expertise-consulting'
   import ExpertiseCraft from './.partials/expertise-craft'
   
   import ExpertiseGraphicDesign
@@ -33,6 +35,7 @@
 
       <ExpertiseCraft />
       <ExpertiseGraphicDesign />
+      <ExpertiseConsulting />
 
       <Slogan />
 
@@ -69,6 +72,7 @@
         <template v-if="screenProperties.ratioIndex > 1">
           <ExpertiseCraft />
           <ExpertiseGraphicDesign />
+          <ExpertiseConsulting />
         </template>
 
       </article>

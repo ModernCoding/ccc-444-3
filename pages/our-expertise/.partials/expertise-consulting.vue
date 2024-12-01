@@ -15,7 +15,7 @@
   <article class="o-expertise-text">
 
     <h1>
-      {{ $t ('pages.ourExpertise.index.expertise.craft.slogan') }}
+      {{ $t ('pages.ourExpertise.index.expertise.consulting.slogan') }}
     </h1>
 
 
@@ -24,7 +24,9 @@
       <button class="o-expertise-know-how">
 
         <p class="fw-bold">
-          {{ $t ('pages.ourExpertise.index.expertise.craft.know') }}
+          {{
+            $t ('pages.ourExpertise.index.expertise.consulting.know')
+          }}
         </p>
 
 
@@ -35,7 +37,9 @@
           </span>
 
           <strong>
-            {{ $t ('pages.ourExpertise.index.expertise.craft.how') }}
+            {{
+              $t ('pages.ourExpertise.index.expertise.consulting.how')
+            }}
           </strong>
 
         </p>

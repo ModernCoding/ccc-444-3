@@ -18,6 +18,12 @@ export const index = {
             know: "Hier ist unser",
             how: "Trumpf."
           },
+
+        consulting: {
+            slogan: "Wir helfen Ihnen beim Selbermachen!",
+            know: "Wie z.B.",
+            how: "hier."
+          },
       
       }
   
