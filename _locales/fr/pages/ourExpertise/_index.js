@@ -8,13 +8,13 @@ export const index = {
     expertise: {
 
         craft: {
-            slogan: "Vos\xa0applis sur mesure, design graphique inclus\xa0!",
+            slogan: "Vos\xa0applis sur mesure + design graphique\xa0!",
             know: "Savoir",
             how: "comment"
           },
 
         consulting: {
-            slogan: "Nos conseils pour vos propres développements\xa0!",
+            slogan: "Nos conseils pour vos développements\xa0!",
             know: "En savoir",
             how: "plus"
           },
