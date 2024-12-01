@@ -38,7 +38,7 @@
 
     <template v-slot:main>
       
-      <article id="long-text">
+      <article id="our-expertise">
         <Article v-if="screenProperties.ratioIndex > 1" />
         <Ada v-if="screenProperties.ratioIndex < 2" />
       </article>
@@ -52,6 +52,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/long-text/index.sass"
+  src="@/assets/sass/pages/our-expertise/index.sass"
   lang="sass"
 ></style>

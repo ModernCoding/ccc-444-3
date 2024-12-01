@@ -5,7 +5,7 @@ export const handleAda2 = (screenPropertiesStore, logoProperties) => {
 
   const sectionHeight = (section =>
       section ? section.getBoundingClientRect ().height : 0
-    ) (document.querySelector ('#long-text > section'))
+    ) (document.querySelector ('#our-expertise > section'))
 
 
   const figure = document.querySelector ('.o-ada-2')

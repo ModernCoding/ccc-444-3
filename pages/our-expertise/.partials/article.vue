@@ -85,6 +85,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/long-text/index.sass"
+  src="@/assets/sass/pages/our-expertise/index.sass"
   lang="sass"
 ></style>
