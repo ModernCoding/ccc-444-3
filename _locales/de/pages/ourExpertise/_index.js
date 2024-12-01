@@ -9,8 +9,8 @@ export const index = {
 
         craft: {
             slogan: "Wir fertigen Ihre App!",
-            know: "Das ist",
-            how: "wie"
+            know: "Hier ist",
+            how: "wie."
           },
       
       }
