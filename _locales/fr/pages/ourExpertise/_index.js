@@ -1,4 +1,3 @@
 export const index = {
-    slogan: "Nous unissons le Beau et la Haute Technicité.",
-    and: "Vous le visualisez à l'instant\xa0!"
+    slogan: "Nous unissons le Beau et la Haute Technicité, comme le montre ce site web\xa0!",
   }
