@@ -8,10 +8,10 @@
 
   const menu = [
       'index',
-      'contact',
       'our-expertise',
       'team',
       'ladies-in-it',
+      'contact',
     ]
 
 
