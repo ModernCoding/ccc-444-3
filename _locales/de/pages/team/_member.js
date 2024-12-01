@@ -25,7 +25,7 @@ export const member = {
 
         `
           > %in% Deutschland, Frankreich, Portugal, Spanien, Vietnam, Kambodscha und jetzt Thailand
-          > %mit% Deutschen, Franzosen, Italienern, Portugiesen, Spaniern, Vietnamesen, Khmern, Thailändern und Burmesen gearbeitet
+          > %mit% Deutschen, Franzosen, Italienern, Portugiesen, Spaniern, Vietnamesen, Amerikanern, Tschechen, Khmern, Thailändern und Burmesen gearbeitet
         `
       
       ],
@@ -34,7 +34,7 @@ export const member = {
     cambodia: "In Kambodscha habe ich auch...",
 
     mentoring:
-      "...Kunden-Juniorentwickler als Gast-Teamführer betreut.",
+      "...Kunden-Juniorentwickler als %technischer Gast-Teamleiter% betreut.",
 
     vietnam: "In Vietnam habe ich auch an Universitäten unterrichtet."
 

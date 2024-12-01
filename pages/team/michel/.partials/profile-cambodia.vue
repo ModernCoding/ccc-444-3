@@ -32,9 +32,15 @@
 
 
     <p>
-      <span>
-        {{ hyphenate ($t ('pages.team.member.mentoring'), locale) }}
+
+      <span
+        v-for="s, i in $t ('pages.team.member.mentoring').split ('%')"
+        :key="s"
+        :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+      >
+        {{ hyphenate (s, locale) }}
       </span>
+
     </p>
 
   </article>
