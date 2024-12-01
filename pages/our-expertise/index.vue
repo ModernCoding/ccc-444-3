@@ -19,7 +19,10 @@
     v-if="screenProperties.ratioIndex < 2"
     isShorter="1"
   >
-    <Article />
+    <section>
+      <Ada />
+      <Article />
+    </section>
   </ModalLayout>
 
 
@@ -45,7 +48,6 @@
       
       <article id="our-expertise">
         <Article v-if="screenProperties.ratioIndex > 1" />
-        <Ada v-if="screenProperties.ratioIndex < 2" />
       </article>
 
     </template>

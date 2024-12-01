@@ -12,55 +12,10 @@ export const handleAda2 = (screenPropertiesStore, logoProperties) => {
   if (!figure) { return }
   
   figure.removeAttribute ('style')
+  if (screenProperties.ratioIndex < 2) { return }
 
 
   ;[
-
-    () => {
-
-        const paddingTop
-          = screenProperties.paddingTops.calculated.main / PHI
-
-        const height = screenProperties.heights.main
-            - screenProperties.paddingTops.corrected.main
-            - sectionHeight
-
-
-        figure.style.paddingTop = `${ paddingTop }px`
-        figure.style.height = `${ height }px`
-
-        const img = figure.querySelector ('img')
-
-        if (!img) { return }
-        img.removeAttribute ('style')
-
-
-        switch (true) {
-
-          case  height <= 0:
-          case  img.getBoundingClientRect ().width <= 0:
-
-          case  figure
-            .getBoundingClientRect ()
-            .width / img.getBoundingClientRect ().width > PHI ** 2:
-
-            figure.style.display = 'none'
-            break
-
-
-          default:
-            break
-
-        }
-
-
-        screenPropertiesStore.patchRatioIndex (window)
-        screenPropertiesStore.patchHeights ()
-        screenPropertiesStore.patchPaddingTops ()
-        screenPropertiesStore.patchWidths ()
-
-      },
-
 
     () => {
 
@@ -119,6 +74,6 @@ export const handleAda2 = (screenPropertiesStore, logoProperties) => {
 
       }
 
-  ] [ screenProperties.ratioIndex - 1 ] ()
+  ] [ screenProperties.ratioIndex - 2 ] ()
 
 }
