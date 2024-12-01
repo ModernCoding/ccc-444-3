@@ -1,18 +1,38 @@
 <script setup>
 
   const layoutScripts = collectLayoutScriptsFromComposable ()
+  const modalScripts = collectModalScriptsFromComposable ()
+
   const modalStore = defineModalStoreFromComposable () ()
+  
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
   const { locale } = useI18n ()
   const route = useRoute ()
 
-  const menu = [
+
+  const MENU = [
       'index',
       'our-expertise',
       'team',
       'ladies-in-it',
       'contact',
     ]
+
+
+  const _handleSelect = item => {
+
+    item !== route.name
+      
+      ? modalStore.resetModal ()
+      
+      : modalScripts
+          .openOrClose (screenProperties.value, modalStore, 'Menu')
+
+  }
 
 
   onMounted (() => {
@@ -33,11 +53,11 @@
 
   <menu id="menu">
 
-    <li v-for="item in menu" :key="item">
+    <li v-for="item in MENU" :key="item">
 
       <NuxtLink
         :to="{ name: item }"
-        @click="item !== route.name && modalStore.resetModal ()"
+        @click="_handleSelect (item)"
       >
         
         <i
