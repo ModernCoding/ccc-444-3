@@ -12,42 +12,9 @@
 
 <template>
 
-  <article class="o-profile-text">
+  <article class="o-expertise-text">
 
-    <h1 class="o-font-en">Alle Menschen werden Brüder!</h1>
-
-    <template v-for="p in $tm('pages.team.member.text')" :key="p">
-
-      <ul v-if="p.includes ('>')">
-
-        <template v-for="s, i in p.split ('>')" :key="s">
-
-          <li v-if="i > 0">
-
-            <span
-              v-for="s0, i in s.split ('%')"
-              :key="s0"
-              :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
-            >{{ hyphenate (s0, locale) }}</span>
-
-          </li>
-
-        </template>
-
-      </ul>
-
-
-      <p v-else>
-
-        <span
-          v-for="s, i in p.split ('%')"
-          :key="s"
-          :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
-        >{{ hyphenate (s, locale) }}</span>
-      
-      </p>
-
-    </template>
+    <h1>Alle Menschen werden Brüder!</h1>
 
   </article>
 
