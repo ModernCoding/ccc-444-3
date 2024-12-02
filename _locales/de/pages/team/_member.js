@@ -11,7 +11,7 @@ export const member = {
 
         "%Ich%, im Gegenteil, komme näher!",
 
-        "In meiner Laufbahn, habe ich ja mit unterschiedlichen Programmiersprachen und Technologien in unterschiedlichen Gebieten gearbeitet: u.a. COBOL, C#, Ruby, PHP und jetzt JavaScript; Banken, Finanzinstituten, E-Commerce, Startups, Fintech.",
+        "In meiner Laufbahn, habe ich ja mit unterschiedlichen Programmiersprachen und Technologien in unterschiedlichen Gebieten gearbeitet: u.a. COBOL, C#, Ruby, PHP, DB2, MySQL und jetzt JavaScript mit PostgreSQL; Banken, Finanzinstituten, E-Commerce, Startups, Fintech.",
 
         "Ich habe %vor allem auch%:",
 

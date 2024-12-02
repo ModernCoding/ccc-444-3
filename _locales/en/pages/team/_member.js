@@ -11,7 +11,7 @@ export const member = {
 
         "On the opposite, %I am getting closer!%",
 
-        "In my still ongoing career, for sure I have worked with different programming languages and technologies for different domains; among many: COBOL, C#, Ruby, PHP and now JavaScript for the banking and financial industry, welfare, e-commerce, startups, fintech.",
+        "In my still ongoing career, for sure I have worked with different programming languages and technologies for different domains; among many: COBOL, C#, Ruby, PHP, DB2, MySQL and now JavaScript with PostgreSQL for the banking and financial industry, welfare, e-commerce, startups, fintech.",
 
 
         "%Most important is however:%",

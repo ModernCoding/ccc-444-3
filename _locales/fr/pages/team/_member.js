@@ -11,7 +11,7 @@ export const member = {
 
         "Moi, en revanche, %je m'en rapproche\xa0!%",
 
-        "Tout au long de mon parcours professionnel, lequel continue, j'ai bien entendu travaillé avec différents langages de programmation et différentes technologies pour différents domaines\xa0: COBOL, Ruby, PHP et maintenant JavaScript, pour les domaines Banque Finance Assurance, Social, E-Commerce, Start-Ups, FinTech, pour ne citer que les principaux.",
+        "Tout au long de mon parcours professionnel, lequel continue, j'ai bien entendu travaillé avec différents langages de programmation et différentes technologies pour différents domaines\xa0: COBOL, Ruby, PHP, DB2, MySQL et maintenant JavaScript & PostgreSQL, pour les domaines Banque Finance Assurance, Social, E-Commerce, Start-Ups, FinTech, pour ne citer que les principaux.",
 
 
         "J'ai %également et surtout\xa0:%",
