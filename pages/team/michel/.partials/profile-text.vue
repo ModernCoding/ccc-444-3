@@ -32,7 +32,10 @@
     </figure>
 
 
-    <template v-for="p in $tm('pages.team.member.text')" :key="p">
+    <template
+      v-for="p in $tm('pages.team.member.michel.text')"
+      :key="p"
+    >
 
       <ul v-if="p.includes ('>')">
 

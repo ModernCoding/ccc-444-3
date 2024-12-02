@@ -15,7 +15,7 @@
   <article class="o-profile-text">
 
     <h1>
-      {{ hyphenate ($t ('pages.team.member.cambodia'), locale) }}
+      {{ hyphenate ($t ('pages.team.member.michel.cambodia'), locale) }}
     </h1>
 
 
@@ -34,7 +34,10 @@
     <p>
 
       <span
-        v-for="s, i in $t ('pages.team.member.mentoring').split ('%')"
+        v-for="
+            s, i
+              in $t ('pages.team.member.michel.mentoring').split ('%')
+          "
         :key="s"
         :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
       >

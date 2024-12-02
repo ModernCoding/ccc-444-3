@@ -15,7 +15,7 @@
   <article class="o-profile-text">
 
     <h1>
-      {{ hyphenate ($t ('pages.team.member.vietnam'), locale) }}
+      {{ hyphenate ($t ('pages.team.member.michel.vietnam'), locale) }}
     </h1>
 
 
