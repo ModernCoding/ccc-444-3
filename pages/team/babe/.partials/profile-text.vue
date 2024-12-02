@@ -27,7 +27,44 @@
     </h1>
 
 
-    <h2>{{ $t ('pages.team.member.babe.by') }}</h2>
+    <h2>({{ $t ('pages.team.member.babe.by') }})</h2>
+
+
+    <template
+      v-for="p in $tm('pages.team.member.babe.text')"
+      :key="p"
+    >
+
+      <ul v-if="p.includes ('>')">
+
+        <template v-for="s, i in p.split ('>')" :key="s">
+
+          <li v-if="i > 0">
+
+            <span
+              v-for="s0, i in s.split ('%')"
+              :key="s0"
+              :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+            >{{ hyphenate (s0, locale) }}</span>
+
+          </li>
+
+        </template>
+
+      </ul>
+
+
+      <p v-else>
+
+        <span
+          v-for="s, i in p.split ('%')"
+          :key="s"
+          :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+        >{{ hyphenate (s, locale) }}</span>
+      
+      </p>
+
+    </template>
 
   </article>
 
