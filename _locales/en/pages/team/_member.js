@@ -42,6 +42,30 @@ export const member = {
 
       vietnam: "In Vietnam, I have also taught at Universities."
 
+    },
+
+
+    babe: {
+
+      quote: "In the moment when I truly %understand% my enemy, understand him well enough to defeat him, then in that very moment I also %love% him.",
+
+      by: `Orson Scott Card, "Ender's Game"`,
+
+
+      text: [
+
+          "Road %building% and building %building% had always been a mystery to me, so I had decided to study Civil Engineering at the Kasetsart University, Sriracha Campus, Thailand, in order to %understand% these.",
+
+          "During my studies, I got the will to also %understand web development%. As soon as I started understanding it, I also %started loving it!%",
+
+          "So I decided to embrace a career in web development, %building% projects of %high quality%.",
+
+          "Right now, I am specializing in JavaScript technologies: Node.js, React, Nuxt, Sequelize, as well as PostgreSQL for the database.",
+
+          "I also conduct %research and development% in order to understand what others do not understand yet."
+      
+        ]
+
     }
 
   }
