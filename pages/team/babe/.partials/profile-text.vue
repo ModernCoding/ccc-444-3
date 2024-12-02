@@ -21,10 +21,13 @@
         :key="s"
         :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
       >
-        {{ hyphenate (s, locale) }}
+        {{ s }}
       </span>
     
     </h1>
+
+
+    <h2>{{ $t ('pages.team.member.babe.by') }}</h2>
 
   </article>
 
