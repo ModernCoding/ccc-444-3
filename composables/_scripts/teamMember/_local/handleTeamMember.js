@@ -44,7 +44,16 @@ export const handleTeamMember = screenProperties => {
       
         h2.removeAttribute ('style')
 
-        ;(size => h2.style.fontSize = `${ size }px`) (
+        const spans = h2.querySelectorAll ('span')
+        spans.forEach (span => span.removeAttribute ('style'))
+
+
+        ;(size => {
+        
+          h2.style.fontSize = `${ size }px`
+          spans.forEach (span => span.style.fontSize = `${ size }px`)
+
+        }) (
           TWICE_54_BY_PHI_POWER_5
             * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastLgHalf)
         )
