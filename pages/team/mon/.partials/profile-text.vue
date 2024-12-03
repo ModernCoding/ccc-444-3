@@ -20,13 +20,13 @@
 
     <h2>
 
-      <span
+      (<span
         v-for="s, i in $t ('pages.team.member.mon.by').split ('^')"
         :key="s"
         :class="[ '', 'o-font-en' ] [ +(i % 2 !== 0) ]"
       >
         {{ s }}
-      </span>
+      </span>)
 
     </h2>
 
