@@ -94,6 +94,35 @@ export const member = {
       
         ]
 
+    },
+
+
+    fah: {
+
+      quote: "Le design n'est pas à quoi le produit ressemble ou quelle impression il donne. Le design, c'est comment il fonctionne.",
+
+      by: `Steve Jobs`,
+
+      introduction: "Créer un site web, c'est comme construire une maison: plus l'on accorde d'attention aux détails, plus la maison est accueillante et chaleureuse.",
+
+      text: [
+
+          `Je viens de la province de Trat, en Thaïlande, un endroit connu pour son %"Pont Pour Tester Votre Volonté"%.`,
+
+          "Ceci explique sûrement ma %volonté de faire le pont entre la technologie et la créativité%\xa0: depuis mon enfance, j'ai toujours aimé créer de nouvelles choses, et j'ai toujours été attiré par les gadgets modernes.",
+
+          "Cette passion m'a amené à pour suivre un cursus en informatique afin d'explorer le fonctionnement de cette technologie.",
+
+          "À la remise des diplômes, j'ai également eu la %volonté de faire le pont entre la technologie et l'art\xa0!%",
+
+          "Ma %volonté de faire le pont entre mon bagage technique et ma passion pour le design graphique% m'a amené à concevoir des sites web qui répondent aux besoins de l'utilisateur.",
+
+          "Alors que l'art et la technologie semblent appartenir à deux mondes distincts, je les fais briller ensemble afin de créer quelque chose de %réellement unique\xa0!%",
+
+          "Pour moi, concevoir un site web est comme concevoir une maison\xa0: cela requiert un plan méticuleusement réfléchi, un design bien pensé, ainsi qu'une %attention particulière au moindre détail% afin d'en faire un lieu de vie agréable et chaleureux."
+      
+        ]
+
     }
 
   }
