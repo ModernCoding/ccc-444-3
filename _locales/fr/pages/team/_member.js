@@ -62,7 +62,7 @@ export const member = {
 
           "Je suis en train de me spécialiser dans l'ensemble des technologies JavaScript\xa0: Node.js, React, Nuxt, Sequelize, ainsi que PostgreSQL pour les bases de données.",
 
-          "Je mène également des %Recherches & Développements% afin d'acquérir des savoirs que d'autres n'ont pas."
+          "Je mène également des projets de %Recherche & Développement% afin d'acquérir des savoirs que d'autres n'ont pas."
       
         ]
 
