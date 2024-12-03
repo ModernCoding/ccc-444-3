@@ -19,16 +19,16 @@ export const member = {
           "%Most important is however:%",
 
           `
-            > I have been living and working in several countries
-            > I have been working with people coming from completely different cultural backgrounds, be they colleagues or coworkers
-            > I have learned several languages and become fluent in 5 of them
+            >I have been living and working in several countries
+            >I have been working with people coming from completely different cultural backgrounds, be they colleagues or coworkers
+            >I have learned several languages and become fluent in 5 of them
           `,
 
           "This is how I have worked:",
 
           `
-            > %in% France, Germany, Portugal, Spain, Vietnam, Cambodia and now Thailand
-            > %with% French, Germans, Italians, Portuguese, Spaniards, Vietnamese, Americans, Czechs, Khmers, Thais und Burmese
+            >%in% France, Germany, Portugal, Spain, Vietnam, Cambodia and now Thailand
+            >%with% French, Germans, Italians, Portuguese, Spaniards, Vietnamese, Americans, Czechs, Khmers, Thais und Burmese
           `
         
         ],

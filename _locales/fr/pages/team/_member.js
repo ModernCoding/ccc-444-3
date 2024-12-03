@@ -19,16 +19,16 @@ export const member = {
           "J'ai %également et surtout\xa0:%",
 
           `
-            > vécu et travaillé dans différents pays
-            > travaillé avec des personnes issues de milieux culturels complètement différents, qu'elles fussent collègues, membres des équipes que j'ai dirigées, ou membre de l'entreprise que je dirige
-            > appris plusieurs langues et en parle 5 couramment
+            >vécu et travaillé dans différents pays
+            >travaillé avec des personnes issues de milieux culturels complètement différents, qu'elles fussent collègues, membres des équipes que j'ai dirigées, ou membre de l'entreprise que je dirige
+            >appris plusieurs langues et en parle 5 couramment
           `,
 
           "Ainsi, j'ai travaillé\xa0:",
 
           `
-            > %en% France, en Allemagne, au Portugal, en Espagne, au Vietnam, au Cambodge et maintenant en Thaïlande
-            > %avec% des Français, Allemands, Italiens, Portugais, Espagnols, Vietnamien, Américains, Tchèques, Khmers, Thais et Birmans
+            >%en% France, en Allemagne, au Portugal, en Espagne, au Vietnam, au Cambodge et maintenant en Thaïlande
+            >%avec% des Français, Allemands, Italiens, Portugais, Espagnols, Vietnamien, Américains, Tchèques, Khmers, Thais et Birmans
           `
         
         ],
