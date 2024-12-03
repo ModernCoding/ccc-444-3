@@ -60,7 +60,17 @@
           v-for="s, i in p.split ('%')"
           :key="s"
           :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
-        >{{ hyphenate (s, locale) }}</span>
+        >
+
+          <span
+            v-for="a, j in s.split ('@')"
+            :key="a"
+            :class="[ '', 'o-font-en' ] [ +(j % 2 !== 0) ]"
+          >
+            {{ hyphenate (a, locale) }}
+          </span>
+
+        </span>
       
       </p>
 
