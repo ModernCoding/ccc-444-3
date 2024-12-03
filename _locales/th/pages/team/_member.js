@@ -9,37 +9,37 @@ export const member = {
 
       text: [
           
-          `This sweet dream, that Friedrich Schiller expressed in his famous ode "An Die Freude", and which Ludwig van Beethoven later set to music in his legendary Ninth Symphony, well: most people are going farther away from it!`,
+          `ความฝันอันแสนหวาน ที่ฟรีดริช ชิลเลอร์ได้แสดงออกในบทกวีอันโด่งดังของเขา ^"An Die Freude"^ (ถึงความชื่นชมยินดี) และที่ ลูทวิช ฟัน เบทโฮเฟิน นำมาสร้างสรรค์เป็นบทเพลงในซิมโฟนีหมายเลข ^9^ ที่ยิ่งใหญ่ของเขา แต่น่าเสียดายที่คนส่วนใหญ่มักจะเดินห่างออกไปจากความฝันนี้!`,
 
-          "On the opposite, %I am getting closer!%",
+          "แต่สำหรับผม %ผมกลับเข้าใกล้มันมากขึ้นเรื่อย ๆ%",
 
-          "In my still ongoing career, for sure I have worked with different programming languages and technologies for different domains; among many: COBOL, C#, Ruby, PHP, DB2, MySQL and now JavaScript with PostgreSQL for the banking and financial industry, welfare, e-commerce, startups, fintech.",
+          "ในเส้นทางอาชีพที่ยังคงดำเนินต่อไปของผม แน่นอนว่าผมได้ทำงานกับภาษาโปรแกรมและเทคโนโลยีที่หลากหลาย รวมถึงในหลาย ๆ อุตสาหกรรม เช่น การธนาคารและการเงิน, สวัสดิการ, อีคอมเมิร์ซ, สตาร์ทอัพ และฟินเทค โดยใช้เทคโนโลยีต่าง ๆ เช่น ^COBOL, C#, Ruby, PHP, DB2, MySQL^ และตอนนี้ ^JavaScript^ กับ ^PostgreSQL^",
 
 
-          "%Most important is however:%",
+          "%แต่สิ่งที่สำคัญที่สุดคือ:%",
 
           `
-            > I have been living and working in several countries
-            > I have been working with people coming from completely different cultural backgrounds, be they colleagues or coworkers
-            > I have learned several languages and become fluent in 5 of them
+            >ผมเคยอาศัยและทำงานในหลายประเทศ
+            >ผมเคยร่วมงานกับผู้คนจากพื้นฐานทางวัฒนธรรมที่แตกต่างกันอย่างสิ้นเชิง ไม่ว่าจะเป็นเพื่อนร่วมงานหรือผู้ร่วมงาน
+            >ผมได้เรียนรู้หลายภาษา และสามารถพูดได้คล่องถึง ^5^ ภาษา
           `,
 
-          "This is how I have worked:",
+          "นี่คือที่ที่ผมเคยทำงาน:",
 
           `
-            > %in% France, Germany, Portugal, Spain, Vietnam, Cambodia and now Thailand
-            > %with% French, Germans, Italians, Portuguese, Spaniards, Vietnamese, Americans, Czechs, Khmers, Thais und Burmese
+            >%ใน%ฝรั่งเศส, เยอรมนี, โปรตุเกส, สเปน, เวียดนาม, กัมพูชา และตอนนี้ในประเทศไทย
+            >%กับผู้คนจากหลายชาติ% ฝรั่งเศส, เยอรมัน, อิตาลี, โปรตุเกส, สเปน, เวียดนาม, อเมริกัน, เช็ก, ชาวเขมร, ไทย และพม่า
           `
         
         ],
 
 
-      cambodia: "In Cambodia, I have also...",
+      cambodia: "ในกัมพูชา ผมยังได้:",
 
       mentoring:
-        "...instructed & mentored my customers' junior developers & fresh graduates as a %guest tech team leader%.",
+        "%เป็นผู้สอนและที่ปรึกษา% ให้กับนักพัฒนาหน้าใหม่ และรวมถึงบัณฑิตจบใหม่ ในฐานะผู้นำทีมเทคนิคชั่วคราว",
 
-      vietnam: "In Vietnam, I have also taught at Universities."
+      vietnam: "ในเวียดนาม ผมยังได้สอนที่มหาวิทยาลัย"
 
     },
 

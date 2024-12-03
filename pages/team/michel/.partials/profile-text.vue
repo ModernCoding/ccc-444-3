@@ -44,10 +44,22 @@
           <li v-if="i > 0">
 
             <span
-              v-for="s0, i in s.split ('%')"
+              v-for="s0, i in s.split ('^')"
               :key="s0"
-              :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
-            >{{ hyphenate (s0, locale) }}</span>
+              :class="[ '', 'o-font-en' ] [ +(i % 2 !== 0) ]"
+            >
+
+              <span
+                v-for="a, j in s0.split ('%')"
+                :key="a"
+                :class="
+                    [ '', 'fw-bold o-underline' ] [ +(j % 2 !== 0) ]
+                  "
+              >
+                {{ hyphenate (a, locale) }}
+              </span>
+
+            </span>
 
           </li>
 
