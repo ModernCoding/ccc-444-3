@@ -47,22 +47,22 @@ export const member = {
 
     babe: {
 
-      quote: "In the moment when I truly %understand% my enemy, understand him well enough to defeat him, then in that very moment I also %love% him.",
+      quote: "ကျွန်ုပ်၏ ရန်သူကို အနိုင်ယူနိုင်လောက်အောင်  %အပြည့်ဝနားလည်%နိုင်တဲ့အချိန်မှာပင် ကျွန်ုပ်သည် သူ့ကို%ချစ်တတ်သွား%ခဲ့ပြီ။",
 
-      by: `Orson Scott Card, "Ender's Game"`,
+      by: `အော်စန် စကော့ ကတ်ဒ်၊ အန်ဒါစ်ဂိမ်း`,
 
 
       text: [
 
-          "Road %building% and building %building% had always been a mystery to me, so I had decided to study Civil Engineering at the Kasetsart University, Sriracha Campus, Thailand, in order to %understand% these.",
+          "%လမ်းဆောက်ခြင်း၊  အဆောက်ဦ% ဆောက်လုပ်ခြင်းတို့သည် ကျွန်ုပ်အတွက် အမြဲလို လျို့၀ှက်နက်နဲပြီး စိတ်၀င်စားစရာကောင်းသည်။ ထို့‌ကြောင့် ကျွန်တော် ကာစက်စာ တက္ကသိုလ်၊ စရီရာချာကမ်းပတ်စ်မှာ မြို့ပြအင်ဂျင်နီယာပညာကို %နားလည်အောင်% လေ့လာဖို့ဆုံးဖြတ်ခဲ့ပါသည်။",
 
-          "During my studies, I got the will to also %understand web development%. As soon as I started understanding it, I also %started loving it!%",
+          "ထိုသို့လေ့လာနေစဥ်အတွင်း %ဝက်ဘ်ဆိုက် ဖန်တီးမှုကိုလည်း နားလည်လိုသော% ဆန္ဒ ဖြစ်ခဲ့ပါသည်။ ထို့သို့တစတစ နားလည်ဖို့ကြိုးစားရင်းကပင် %ချစ်မြတ်နိုး%လာခဲ့သည်။",
 
-          "So I decided to embrace a career in web development, %building% projects of %high quality%.",
+          "သိုနှင့်%အရည်သွေးမြင့် ပရောဂျက်များ% ဖန်တီးလိုသည့်အတွက် ဝက်ဘ်ဆိုက်ရေးသားဖန်တီးမှု အသက်မွေးဝမ်းကြောင်း စတင်ဖို့  ဆုံးဖြတ်လိုက်သည်။",
 
-          "Right now, I am specializing in JavaScript technologies: Node.js, React, Nuxt, Sequelize, as well as PostgreSQL for the database.",
+          "ယခု Javascript အခြေပြုနည်းပညာများဖြစ်သော Node.js, React, Nuxt, Sequelize နှင့် PostgreSQL- database နည်းပညာအထူးပြု applications များရေးသားဖန်တီးနေပါသည်။",
 
-          "I also conduct %research and development% in order to understand what others do not understand yet."
+          "%နည်းပညာဖွံ့ဖြိုးမှုနှင့် သုတေသန% လည်းလုပ်ဆောင်နေပြီး နည်းပညာအသစ်များကိုလေ့လာနေပါသည်။"
       
         ]
 
