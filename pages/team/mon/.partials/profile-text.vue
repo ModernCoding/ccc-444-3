@@ -15,7 +15,10 @@
   <article class="o-profile-text">
 
     <h1>{{ $tm ('pages.team.member.mon.quote') [ 0 ] }}</h1>
-    <h1>{{ $tm ('pages.team.member.mon.quote') [ 1 ] }}</h1>
+    
+    <h1 v-if="$tm ('pages.team.member.mon.quote').length > 1">
+      {{ $tm ('pages.team.member.mon.quote') [ 1 ] }}
+    </h1>
 
 
     <h2>
