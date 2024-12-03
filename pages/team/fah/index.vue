@@ -4,6 +4,7 @@
   import CountryPicture from './.partials/country-picture'
   import ProfileName from './.partials/profile-name'
   import ProfilePicture from './.partials/profile-picture'
+  import ProfileQuote from './.partials/profile-quote'
   import ProfileText from './.partials/profile-text'
 
 
@@ -25,6 +26,7 @@
     <section class="o-team-member-in-modal">
 
       <NuxtLink :to="{ name: 'team' }">
+        <ProfileQuote />
         <ProfilePicture />
       </NuxtLink>
 
@@ -79,7 +81,11 @@
           <CountryPicture />
         </div>
 
-        <ProfileText v-if="screenProperties.ratioIndex > 1" />
+
+        <template v-if="screenProperties.ratioIndex > 1">
+          <ProfileQuote />
+          <ProfileText />
+        </template>
       
       </article>
 

@@ -96,6 +96,35 @@ export const member = {
       
         ]
 
+    },
+
+
+    fah: {
+
+      quote: "Design is not just what it looks like and feels like. Design is how it works.",
+
+      by: `Steve Jobs`,
+
+      introduction: "Creating a website is like building a house: the more attention you put into the details, the more inviting and vibrant it becomes.",
+
+      text: [
+
+          `I come from the Trat province, Thailand, a place famous for its %"Bridge To Test Your Willingness"%.`,
+
+          "This must be why I have always had the %willingness to bridge technology and creativity%: since childhood, I have always loved inventing new things, as well as I have always been attracted by modern gadgets.",
+
+          "This passion led me to pursue a degree in Computer Science to explore how technology works.",
+
+          "After graduating, I also got the %willingness to bridge technology and art% as well!",
+
+          "My %willingness to bridge my technical background and my passion for graphic design% has led me to design websites that meet the users’ needs.",
+
+          "While art and technology seem to be two separate worlds, I make them blend together in order to create something %truly unique!%",
+
+          "To me, building a website is like building a house: it requires thoughtful planning, a well-thought design, and %attention to detail% to make it a place everyone wants to live in."
+      
+        ]
+
     }
 
   }
