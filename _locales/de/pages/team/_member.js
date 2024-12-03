@@ -64,6 +64,37 @@ export const member = {
       
         ]
 
+    },
+
+
+    mon: {
+
+      quote: [
+          
+          "Sei selbst dein eig'ner Herr! Wer könnte sonst dich schützen?",
+
+          "Nur wer sich selbst beherrscht, wird sichern Schutz besitzen."
+        
+        ],
+
+
+      by: `Dhammapada Kapitel 12 “Sich Selbst (Attavaggo)”, verse 160`,
+
+
+      text: [
+
+          "Ich stamme aus einem Land, das durch eine extreme politische Lage geht. Ich entschloss, %Initiative zu ergreifen%, statt abzuwarten, dass uns ausländische Hilfe retten!",
+
+          "Ich ergrief schon die Initiativ, eine erfahrene Fullstack-Etnwicklerin zu werden, um %solide% und %leistungsfähige% Anwendungen zu bauen, die auch mit hervorragendem User Experience kommen. Dabei wurden Technologien wie .NET, Java, JavaScript, Vue, React und RDBMS verwendet.",
+
+          "Ich gab mir auch viel Mühe, um meine %Leidenschaft% für Design und Animation %in einen wirklichen Beruf% umzuwandeln, was mir sowohl das Entwerfen von %personalisierten Icons% für Webseite, wie die Handfertigung von %Visual Storytelling% stärkenden engagierenden Animationen erlaubt.",
+
+          "Mit dem Sicht einer Künstlerin, kombiniert mit meinem technischen Know-How, vermage ich Produkte anzubieten, in denen %Funktionalität und Ästhetik harmonisch zusammenpassen!%",
+
+          "Mit dieser Fähigkeit, die Lücke zwischen Kunst und Technologie zu %überbrücken%, habe ich meine Koffer gepackt und gegen alle Hindernisse gekämpft, um die Brücke zwischen Myanmar und Thailand durchzukehren!"
+      
+        ]
+
     }
 
   }
