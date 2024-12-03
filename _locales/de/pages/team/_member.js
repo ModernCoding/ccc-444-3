@@ -41,6 +41,30 @@ export const member = {
 
       vietnam: "In Vietnam habe ich auch an Universitäten unterrichtet."
 
+    },
+
+
+    babe: {
+
+      quote: "In dem Moment, in dem ich meinen Feind wirklich %verstehe%, ihn gut genug verstehe, um ihn zu besiegen, %liebe% ich ihn in diesem selben Moment auch.",
+
+      by: `Orson Scott Card, "Ender's Game - Das Große Spiel"`,
+
+
+      text: [
+
+          "Mir waren sowohl Hoch- wie Tief%bau% immer ein Geheimnis gewesen. Um beides zu %verstehen%, entschied ich mich für ein Studium des Bauingenieurwesens an der Kasetsart Universität, Thailand.",
+
+          "Mir kam während dieses Studiums die Wille, Webentwicklung auch zu %verstehen%. Sobald ich anfing, es zu verstehen, fing ich an, %es auch zu lieben!%",
+
+          "So kam ich zur Entscheidung, direkt nach meinem Abschluss eine Karriere in der Webentwicklung zu starten, und %Hochqualitäts%projekte zu %bauen%.",
+
+          "Jetzt laufe ich meine Bahn als JavaScript-Technologie-Spezialist: Node.js, React, Nuxt, Sequelize, sowie PostgreSQL für die Datenbanken.",
+
+          "Ich führe auch angewandte %Forschung und Entwicklung% durch, um zu verstehen, was andere Leute noch nicht verstehen."
+      
+        ]
+
     }
 
   }
