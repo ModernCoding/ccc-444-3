@@ -65,6 +65,35 @@ export const member = {
       
         ]
 
+    },
+
+
+    mon: {
+
+      quote: [
+          
+          "Le moi est le maître du moi. Quel autre maître y aurait-il ? Un moi bien dompté est un maître qu’on se procure difficilement.",
+        
+        ],
+
+
+      by: `Dhammapada Chapitre 12 “Le Moi (Attavaggo)”, verset 160`,
+
+
+      text: [
+
+          "Je suis originaire d'un pays qui se trouve dans une situation politique extrême\xa0; j'ai pris la décision %d'agir% plutôt que d'attendre une aide étrangère pour venir nous sauver\xa0!",
+
+          "Je m'étais déjà prise en main dans le but de devenir une %développeuse fullstack confirmée% afin de réaliser des applications de %haute solidité%, de %haute performance% et de bonne expérience utilisateur\xa0; jusqu'à présent, j'ai utilisé .NET, Java, JavaScript, Vue, React & RDBMS.",
+
+          "J'ai également fourni %beaucoup d'efforts% pour faire de ma %passion% du design et de l'animation %en une profession% pour le %design d'icônes personnalisées% pour sites web et la %manufacture d'animations% qui accrochent, captivent et permettent de se passer de mots \xa0!",
+
+          "Grâce à ce bagage technique couplé à ma vision artistique, j'ouvre de nombreuses possibilités unissant avec harmonie %fonctionnalité & esthétique%.",
+
+          "Ce bagage me permettant de %faire le pont% entre l'art et la technologie, j'ai plié bagage, j'ai surmonté les difficultés afin de franchir le pont séparant le Myanmar et le Thaïlande\xa0!"
+      
+        ]
+
     }
 
   }
