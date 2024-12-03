@@ -95,6 +95,35 @@ export const member = {
       
         ]
 
+    },
+
+
+    fah: {
+
+      quote: "Design ist nicht nur, wie es aussieht und wie es sich anfühlt. Design ist, wie gut es funktioniert.",
+
+      by: `Steve Jobs`,
+
+      introduction: "Beim Webseite-Herstellen gilt das Gleiche wie beim Hausbauen: Je mehr Acht man auf Details gibt, desto gemütlicher und lebhafter das Haus wird.",  
+
+      text: [
+
+          `Ich komme aus Trat, Thailand, einer Provinz, die für seine %"Brücke, um deinen Willen zu Prüfen"% berühmt ist.`,
+
+          "Genau aus diesem Grund habe ich immer %den Willen% gehabt, %Technologie und Kreativität zu überbrücken!% Seit meiner Kindheit habe ich es geliebt, neue Dinge zu erfinden, und moderne Gadgets hatten schon immer eine besondere Anziehungskraft auf mich.",
+
+          "Diese Leidenschaft führte mich zum Informatik-Studium, um zu entdecken, wie die Technologie funktioniert.",
+
+          "Nach dem Abschluss hatte ich den %Willen, Kunst und Technologie auch zu überbrücken!%",
+
+          "Mein Wille, %meine technische Hintergründe und meine Leidenschaft für Grafik-Design% zu überbrücken, brachten mich dazu, Webseiten zu entwickeln, die Bedürfnisse des Nutzers zu treffen.",
+
+          "Obwohl Kunst und Technologie wie zwei völlig getrennte Welten erscheinen, vermag ich es, beide zu vereinen, um etwas wirklich Einzigartiges zu kreieren!",
+
+          "Für mich ist das Webseite-Herstellen wie das Hausbauen: Es bedarf gut überlegte Planungen und Design, und auch %eine besondere Acht auf Details%, damit das Haus gemütlich zum Leben bleibt."
+      
+        ]
+
     }
 
   }
