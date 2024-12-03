@@ -9,37 +9,31 @@ export const member = {
 
       text: [
           
-          `This sweet dream, that Friedrich Schiller expressed in his famous ode "An Die Freude", and which Ludwig van Beethoven later set to music in his legendary Ninth Symphony, well: most people are going farther away from it!`,
+          `^"An Die Freude"^ ဆိုသောနာမည်ကျော် ရတု - ၄င်းကို ^Ludwig van Beethoven^ ရဲ့ အပြောင်မြောက်ဆုံးလက်ရာတစ်ခု ဖြစ်တဲ့ ^Ninth Symphony^ မှာ အသုံးပြုခဲ့ပါသည် - တွင် ^Friedrich Schiller^ ရေးသားဖော်ပြခဲ့သည် ချိုမြိန်သောအိပ်မက်ဆိုသည်မှာ ယခုကဲ့သို့ လူအများ ကွဲ ပြားမှုများနှင့် ချစ်ခင်မှုနည်းလာကြချိန် ကျွန်တော့အတွက်တော့ ထိုအိပ်မက်နှင့်  %ပို၍နီးစပ်လာပါပြီ။%`,
 
-          "On the opposite, %I am getting closer!%",
-
-          "In my still ongoing career, for sure I have worked with different programming languages and technologies for different domains; among many: COBOL, C#, Ruby, PHP, DB2, MySQL and now JavaScript with PostgreSQL for the banking and financial industry, welfare, e-commerce, startups, fintech.",
+          "ကျွန်တော့်ဧ။် ဆက်လက်လျှောက်လှမ်းနေဆဲဖြစ်သော အသက်မွေးဝမ်းကြောင်းမှာ ပရိုဂရမ်းမင်းဘာသာရပ်များစွာအသုံးပြုကာ လုပ်ငန်းများစွာတွက်ရေးသားခဲ့ပြီးပါပြီ။ ^COBOL^၊ ^C#^၊ ^Ruby^၊ ^PHP^၊ ^DB2^၊ ^MySQL^ နှင့် ယခုလက်ရှိမှာတော့ ^PostgreSQL^ နှင့် ^JavaScript^ နည်းပညာများကို အသုံးပြုကာ ဘဏ်လုပ်ငန်း၊ စက်ရုံအလုပ်ရုံ၊ လူမှုဖူလုံရေး၊ ရောင်းဝယ်ရေးလုပ်ငန်းများ၊ တည်ထောင်စ လုပ်ငန်းငယ်များ နှင့် ငွေကြေးစီမံခန့်ခွဲရေးဆိုင်ရာလုပ်ငန်းများတွက် ရေးသားပေးခဲ့ပါသည်။",
 
 
-          "%Most important is however:%",
+          "%သို့ပေမဲ့% %ပိုအရေးကြီးတာက%",
 
           `
-            > I have been living and working in several countries
-            > I have been working with people coming from completely different cultural backgrounds, be they colleagues or coworkers
-            > I have learned several languages and become fluent in 5 of them
-          `,
-
-          "This is how I have worked:",
-
-          `
-            > %in% France, Germany, Portugal, Spain, Vietnam, Cambodia and now Thailand
-            > %with% French, Germans, Italians, Portuguese, Spaniards, Vietnamese, Americans, Czechs, Khmers, Thais und Burmese
+            > ကျွန်တော်  နိုင်ငံများစွာတွင် အလုပ်လုပ်နေထိုင်ခဲ့ပါသည်။
+            > ယဥ်ကျေးမှု၊ လူမှုအဖွဲ့စည်းမတူသော သူများနှင့်တွဲဖက်၍ လုပ်ကိုင်ခဲ့ပါသည်။
+            > ဘာသာစကားငါးခုကိုကျွမ်းကျင်စွာပြောနိုင်ပါသည်။
+            > ပြင်သစ်၊ ဂျာမနီ၊ ပေါ်တူဂီ၊ စပိန်၊ ဗီယက်နမ်၊ ကမ္ဘောဒီးယားနိုင်ငံ နှင့် ယခု ထိုင်းနိုင်ငံ %တို့တွင်%
+            > ပြင်သစ်၊ ဂျာမန်၊ အီတလီ၊ ပေါ်တူဂီ၊ စပိန်၊ ဗီယက်နမ်၊ အမေရိကန်၊ ချက်၊ ခမာ၊ ထိုင်း၊ မြန်မာလူမျိုးများ %နှင့်%လည်း အလုပ်အတူတွဲလုပ်ခဲ့ပါသည်။
           `
         
         ],
 
 
-      cambodia: "In Cambodia, I have also...",
+      cambodia: "ကမ္ဘောဒီးယားနိုင်ငံတွင်လည်း",
 
       mentoring:
-        "...instructed & mentored my customers' junior developers & fresh graduates as a %guest tech team leader%.",
+        "ကျွန်တော့် ဖောက်သည်များဧ။် ဘွဲ့ရကာစ ဂျူနီယာ ^developers^ များကိုလည်း %ဧည့်သည်နည်းပညာကျွမ်းကျင်သူ%အနေဖြင့်  ဦးဆောင်သင်ကြား လေ့ကျင့်ပေးခဲ့ပါသည်။",
 
-      vietnam: "In Vietnam, I have also taught at Universities."
+      vietnam:
+        "ဗီယက်နမ်နိုင်ငံရှိ တက္ကသိုလ်များတွင်လည်း စာသင်ကြားရေးလုပ်ခဲ့ပါသည်။"
 
     },
 
@@ -59,7 +53,7 @@ export const member = {
 
           "သိုနှင့်%အရည်သွေးမြင့်% %ပရောဂျက်များ% ဖန်တီးလိုသည့်အတွက် ဝက်ဘ်ဆိုက်ရေးသားဖန်တီးမှု အသက်မွေးဝမ်းကြောင်း စတင်ဖို့  ဆုံးဖြတ်လိုက်သည်။",
 
-          "ယခု @Javascript@ အခြေပြုနည်းပညာများဖြစ်သော @Node.js, React, Nuxt, Sequelize@ နှင့် @PostgreSQL- database@ နည်းပညာအထူးပြု @applications@ များရေးသားဖန်တီးနေပါသည်။",
+          "ယခု ^Javascript^ အခြေပြုနည်းပညာများဖြစ်သော ^Node.js, React, Nuxt, Sequelize^ နှင့် ^PostgreSQL- database^ နည်းပညာအထူးပြု ^applications^ များရေးသားဖန်တီးနေပါသည်။",
 
           "%နည်းပညာဖွံ့ဖြိုးမှုနှင့်% %သုတေသန% လည်းလုပ်ဆောင်နေပြီး နည်းပညာအသစ်များကိုလေ့လာနေပါသည်။"
       

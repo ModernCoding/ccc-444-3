@@ -36,12 +36,20 @@
       <span
         v-for="
             s, i
-              in $t ('pages.team.member.michel.mentoring').split ('%')
+              in $t ('pages.team.member.michel.mentoring').split ('^')
           "
         :key="s"
-        :class="[ '', 'fw-bold o-underline' ] [ +(i % 2 !== 0) ]"
+        :class="[ '', 'o-font-en' ] [ +(i % 2 !== 0) ]"
       >
-        {{ hyphenate (s, locale) }}
+
+        <span
+          v-for="a, j in s.split ('%')"
+          :key="a"
+          :class="[ '', 'fw-bold o-underline' ] [ +(j % 2 !== 0) ]"
+        >
+          {{ hyphenate (a, locale) }}
+        </span>
+
       </span>
 
     </p>
