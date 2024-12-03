@@ -26,7 +26,6 @@
     <section class="o-team-member-in-modal">
 
       <NuxtLink :to="{ name: 'team' }">
-        <ProfileQuote />
         <ProfilePicture />
       </NuxtLink>
 
@@ -35,6 +34,7 @@
         <CountryPicture />
       </div>
 
+      <ProfileQuote />
       <ProfileText />
 
     </section>
