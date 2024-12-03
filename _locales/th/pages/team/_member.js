@@ -1,9 +1,8 @@
 export const member = {
 
-    from: "จาก",
-    france: "ฝรั่งเศส",
-    myanmar: "พม่า",
-    thailand: "ไทย",
+    france: "จากฝรั่งเศส",
+    myanmar: "จากพม่า",
+    thailand: "จากไทย",
 
 
     michel: {
