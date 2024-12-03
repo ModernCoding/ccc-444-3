@@ -47,22 +47,22 @@ export const member = {
 
     babe: {
 
-      quote: "In the moment when I truly %understand% my enemy, understand him well enough to defeat him, then in that very moment I also %love% him.",
+      quote: "ในช่วงเวลาที่ผม%เข้าใจ%ศัตรูของผมอย่างแท้จริง เข้าใจเขามากพอที่จะเอาชนะเขาได้ ในช่วงเวลานั้นเอง ผมก็%รัก%เขาด้วย",
 
       by: `Orson Scott Card, "Ender's Game"`,
 
 
       text: [
 
-          "Road %building% and building %building% had always been a mystery to me, so I had decided to study Civil Engineering at the Kasetsart University, Sriracha Campus, Thailand, in order to %understand% these.",
+          "การสร้าง%ถนน%และการก่อสร้าง%อาคาร%เคยเป็นเรื่องลึกลับ ซับซ้อน สำหรับผมเสมอ ดังนั้นผมจึงตัดสินใจเรียนวิศวกรรมโยธาที่มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา เพื่อทำความ%เข้าใจ%สิ่งเหล่านี้ให้ลึกซึ้ง",
 
-          "During my studies, I got the will to also %understand web development%. As soon as I started understanding it, I also %started loving it!%",
+          "ระหว่างที่เรียน ผมมีความตั้งใจที่จะเข้าใจ%การพัฒนาเว็บไซต์%เพิ่มเติม และเมื่อผมเริ่มเข้าใจมัน ผมก็เริ่มหลง%รัก%มันเช่นกัน",
 
-          "So I decided to embrace a career in web development, %building% projects of %high quality%.",
+          "ดังนั้น ผมจึงตัดสินใจเริ่มต้นอาชีพในสายงานการพัฒนาเว็บไซต์ มุ่งมั่นที่จะ%สร้าง%โปรเจกต์ที่%มีคุณภาพสูง%",
 
-          "Right now, I am specializing in JavaScript technologies: Node.js, React, Nuxt, Sequelize, as well as PostgreSQL for the database.",
+          "ปัจจุบัน ผมเชี่ยวชาญในเทคโนโลยีของ JavaScript เช่น Node.js, React, Nuxt, Sequelize และ PostgreSQL สำหรับการจัดการฐานข้อมูล",
 
-          "I also conduct %research and development% in order to understand what others do not understand yet."
+          "นอกจากนี้ ผมยังทำงานวิ%จัยและพัฒนาเ%พื่อทำความเข้าใจในสิ่งที่คนอื่นอาจยังไม่นึกถึง"
       
         ]
 
