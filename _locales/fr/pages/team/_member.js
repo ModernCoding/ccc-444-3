@@ -10,7 +10,7 @@ export const member = {
 
       text: [
           
-          `Ce doux rêve que Friedrich Schiller exprima dans son poème "An Die Freude" et que Ludwig van Beethoven mit en musique avec brio dans sa légendaire Neuvième Symphonie, on s'en éloigne de plus en plus\xa0!`,
+          `Ce doux rêve que Friedrich Schiller exprima dans sa célèbre ode "An Die Freude" et que Ludwig van Beethoven mit en musique avec brio dans sa légendaire Neuvième Symphonie, on s'en éloigne de plus en plus\xa0!`,
 
           "Moi, en revanche, %je m'en rapproche\xa0!%",
 
