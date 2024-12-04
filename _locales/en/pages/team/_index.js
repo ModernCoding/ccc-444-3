@@ -10,6 +10,10 @@ export const index = {
     animation: "Animation",
     api: "API Specialist",
 
-    backstage: "Part of the  team are our coworkers acting in the backstage with testing, customers and the academic world, contributing to the success of our business:"
+    backstage: "Part of the  team are our coworkers acting in the backstage with testing, customers and the academic world, contributing to the success of our business:",
+
+
+    read: "Read",
+    more: "more"
 
   }

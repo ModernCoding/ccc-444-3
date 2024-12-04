@@ -5,11 +5,15 @@ export const index = {
     fullstack: "Fullstack",
     founder: "Entrepreneur",
     consulting: "Conseil",
-    teamLeading: "Pilotage d'équipes externes",
+    teamLeading: "Pilotage d'Équipes Externes",
     graphicDesign: "Design Graphique",
     animation: "Animation",
     api: "Spécialiste A.P.I.",
 
-    backstage: "Parmi les membres de l'équipe, il y a ces personnes qui contribuent en coulisse au succès de notre société de par leurs tests, la relation avec les clients ainsi que le milieu académique\xa0:"
+    backstage: "Parmi les membres de l'équipe, il y a ces personnes qui contribuent en coulisse au succès de notre société de par leurs tests, la relation avec les clients ainsi que le milieu académique\xa0:",
+
+
+    read: "En savoir",
+    more: "plus"
 
   }
