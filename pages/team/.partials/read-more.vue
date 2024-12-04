@@ -14,9 +14,7 @@
 
   <nav class="o-team-read-more">
 
-    <p class="fw-bold">
-      {{ $t ('pages.ourExpertise.index.expertise.craft.know') }}
-    </p>
+    <p class="fw-bold">{{ $t ('pages.team.index.read') }}</p>
 
 
     <p>
@@ -25,9 +23,7 @@
         <i class="bi bi-hand-index-fill" aria-hidden="true" />
       </span>
 
-      <strong>
-        {{ $t ('pages.ourExpertise.index.expertise.craft.how') }}
-      </strong>
+      <strong>{{ $t ('pages.team.index.more') }}</strong>
 
     </p>
 
