@@ -19,7 +19,7 @@
     </h1>
 
 
-    <NuxtLink :to="{ name: 'our-expertise' }">
+    <NuxtLink :to="{ name: 'our-expertise-guest-tech-team-lead' }">
 
       <button class="o-expertise-know-how">
 
