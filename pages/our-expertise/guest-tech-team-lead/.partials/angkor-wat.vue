@@ -1,9 +1,3 @@
-<script setup>
-  const ladiesStore = defineLadiesStoreFromComposable () ()
-  const { ladies } = storeToRefs (ladiesStore)
-</script>
-
-
 <template>
 
   <figure class="o-expertise-angkor-wat">
