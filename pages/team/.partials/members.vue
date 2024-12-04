@@ -1,5 +1,8 @@
 <script setup>
 
+  import ReadMore from './read-more'
+
+
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
   
@@ -44,9 +47,12 @@
             + {{ $t ('pages.team.index.teamLeading') }}
           </h5>
         
+          <ReadMore />
+
         </figcaption>
 
       </figure>
+
 
     </NuxtLink>
 
@@ -80,6 +86,8 @@
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.graphicDesign') }}</h3>
           <h4>+ {{ $t ('pages.team.index.animation') }}</h4>
+        
+          <ReadMore />
 
         </figcaption>
 
@@ -116,6 +124,8 @@
         
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.graphicDesign') }}</h3>
+        
+          <ReadMore />
         
         </figcaption>
 
@@ -154,6 +164,8 @@
           
           <h2>{{ $t ('pages.team.index.fullstack') }}</h2>
           <h3>+ {{ $t ('pages.team.index.api') }}</h3>
+        
+          <ReadMore />
 
         </figcaption>
 

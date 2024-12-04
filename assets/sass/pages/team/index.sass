@@ -1,5 +1,6 @@
 @use "sass:math"
 
+@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/grid' as grid
@@ -176,3 +177,55 @@
 
       img
         width: calc(100% / constants.$phi / 3 - $_gapThreeParts / 3 * 2)
+
+
+.o-team-read-more
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  text-transform: uppercase
+
+  background-color: transparent
+  color: colors.$light
+
+  border: none
+  padding: 0
+
+  p
+    flex-grow: 1
+
+
+    &:first-child
+      // compensating border-bottom on last-child
+      margin-top: sizes.$twice_54_by_phi_power_7 * -1px
+
+
+    &:last-child
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      border-bottom: sizes.$twice_54_by_phi_power_7 * 1px solid colors.$danger
+
+      border-top-left-radius: sizes.$twice_54_by_phi * 1%
+      border-top-right-radius: sizes.$twice_54_by_phi_power_2 * 1%
+      border-bottom-left-radius: sizes.$twice_54_by_phi * 1%
+      border-bottom-right-radius: sizes.$twice_54 * 1%
+
+
+      span
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        background-color: colors.$danger
+
+        border-top-left-radius: sizes.$twice_54_by_phi * 1%
+        border-bottom-left-radius: sizes.$twice_54 * 1%
+        border-top-right-radius: sizes.$twice_54 * 1%
+        border-bottom-right-radius: sizes.$twice_54_by_phi * 1%
+        
+        height: sizes.$twice_54_by_phi_power_3 * 1px
+        width: sizes.$twice_54_by_phi_power_2 * 1px
