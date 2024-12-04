@@ -12,17 +12,17 @@
   },
   "devDependencies": {
     "@nuxt/image": "^1.8.1",
-    "@nuxtjs/i18n": "^9.0.0",
-    "@pinia/nuxt": "^0.7.0",
-    "nuxt": "^3.14.159",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "@nuxtjs/i18n": "^9.1.0",
+    "@pinia/nuxt": "^0.8.0",
+    "nuxt": "^3.14.1592",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "hyphen": "^1.10.6",
     "sass": "1.77.6",
-    "uikit": "^3.21.13"
+    "uikit": "^3.21.16"
   }
 }

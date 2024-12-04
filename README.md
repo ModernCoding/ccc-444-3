@@ -9,6 +9,11 @@
 - run `pnpm dev`
 
 
+### Important
+
+- because of bootstrap, stick to sass@1.77.6
+
+
 ### Important regarding resizings
 
 - all resizing scripts are centralized in BaseLayout component
