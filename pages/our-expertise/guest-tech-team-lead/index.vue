@@ -1,9 +1,9 @@
 <script setup>
   
   import AngkorWat from './.partials/angkor-wat'
-  import JustFacts from './.partials/just-facts'
   import Lady from './.partials/lady'
   import Menu from './.partials/menu'
+  import WhyGuests from './.partials/why-guests'
 
 
   const ladiesStore = defineLadiesStoreFromComposable () ()
@@ -65,7 +65,7 @@
     >
 
       <article
-        id="ladies-in-it"
+        id="guest-tech-team-lead"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
@@ -79,7 +79,7 @@
 
 
     <template v-slot:footer-right>
-      <JustFacts />
+      <WhyGuests />
     </template>
 
   </BaseLayout>
