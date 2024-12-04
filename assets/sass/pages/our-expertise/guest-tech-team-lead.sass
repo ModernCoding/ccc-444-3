@@ -1,0 +1,65 @@
+@use "sass:math"
+
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/sizes' as sizes
+
+
+#ladies-in-it
+  height: dimensions.$heightSectionTwoParts
+
+  > .o-lady
+    display: flex
+    align-items: center
+
+  &[data-number-of-parts="3"]
+
+    > .o-lady
+      height: dimensions.$heightSectionTwoParts
+
+
+.o-just-facts
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  > *
+    text-wrap: nowrap
+
+
+.o-lady
+  text-align: center
+  text-transform: uppercase
+
+  p
+    line-height: 1
+
+    span.fw-bold
+      text-decoration: underline
+
+
+.o-expertise-angkor-wat
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  img
+    max-height: 100%
+    max-width: 100%
+
+
+.o-lady-menu
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  li
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    > div
+      // text-transform: uppercase
+      text-wrap: nowrap

@@ -22,6 +22,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  src="@/assets/sass/pages/our-expertise/guest-tech-team-lead.sass"
   lang="sass"
 ></style>
