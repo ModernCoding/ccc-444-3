@@ -10,19 +10,23 @@
 
 <template>
 
-  <figure
-    class="o-expertise-angkor-wat"
-    :data-number-of-parts="screenProperties.ratioIndex"
-  >
+  <NuxtLink :to="{ name: 'our-expertise' }">
 
-    <NuxtImg
-      src="/images/countries/angkor-wat.png"
-      alt="Angkor Wat"
-      :modifiers="{ b: '#110d0d', opacity: 1 }"
-      loading="lazy"
-    />
+    <figure
+      class="o-expertise-angkor-wat"
+      :data-number-of-parts="screenProperties.ratioIndex"
+    >
 
-  </figure>
+      <NuxtImg
+        src="/images/countries/angkor-wat.png"
+        alt="Angkor Wat"
+        :modifiers="{ b: '#110d0d', opacity: 1 }"
+        loading="lazy"
+      />
+
+    </figure>
+
+  </NuxtLink>
 
 </template>
 
