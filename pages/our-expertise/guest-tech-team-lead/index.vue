@@ -21,7 +21,10 @@
     isShorter="1"
   >
 
-    <section id="guest-tech-team-lead-in-modal">
+    <section
+      id="guest-tech-team-lead-in-modal"
+      class="o-guest-tech-team-lead"
+    >
       <AngkorWat />
       <Menu />
       <ClassicalMusic />
@@ -47,6 +50,7 @@
 
       <article
         id="guest-tech-team-lead"
+        class="o-guest-tech-team-lead"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 

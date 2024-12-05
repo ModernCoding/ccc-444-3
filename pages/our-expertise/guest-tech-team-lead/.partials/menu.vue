@@ -1,5 +1,8 @@
 <script setup>
 
+  const { locale } = useI18n ()
+
+
   const _handle = id => {
 
     const element = document.querySelector (id)
@@ -25,7 +28,7 @@
 
           })
 
-      }) (document.querySelector ('#guest-tech-team-lead'))
+      }) (document.querySelector ('.o-guest-tech-team-lead'))
   
   }
 
@@ -45,7 +48,7 @@
       <i class="bi bi-link-45deg" aria-hidden="true" />
 
       <div :data-jump="`.o-${ item.split ('|') [ 0 ] }`">
-        {{ item.split ('|') [ 1 ] }}
+        {{ hyphenate (item.split ('|') [ 1 ], locale) }}
       </div>
 
     </li>
