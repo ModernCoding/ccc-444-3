@@ -55,6 +55,14 @@ export default (
         break
 
 
+      case "our-expertise-guest-tech-team-lead":
+
+        ourExpertiseScripts
+          .resizeGuestTechTeamLead (screenPropertiesStore)
+
+        break
+
+
       case "team":
         teamScripts.resize (screenPropertiesStore, logoProperties)
         break

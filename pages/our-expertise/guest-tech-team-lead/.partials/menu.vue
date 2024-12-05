@@ -24,7 +24,7 @@
 
 <template>
 
-  <menu class="o-lady-menu">
+  <menu class="o-guest-tech-team-lead-menu">
 
     <li
       v-for="i in ladies.MAP.keys ()"
@@ -55,6 +55,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/ladies-in-it/index.sass"
+  src="@/assets/sass/pages/our-expertise/guest-tech-team-lead.sass"
   lang="sass"
 ></style>

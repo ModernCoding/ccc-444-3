@@ -5,29 +5,10 @@
   import WhyGuests from './.partials/why-guests'
 
 
-  const ladiesStore = defineLadiesStoreFromComposable () ()
-
   const screenPropertiesStore
     = defineScreenPropertiesStoreFromComposable () ()
 
   const { screenProperties } = storeToRefs (screenPropertiesStore)
-
-
-  watch (ladiesStore, () => {
-
-    const content = document.querySelector (
-        [ '#ladies-in-it', '#modal-layout > *' ] [
-          +(screenProperties.ratioIndex < 2)
-        ]
-      )
-    
-
-    content && content.scrollTo ({ top: 0, behavior: 'smooth' })
-
-  })
-
-
-  onUnmounted (ladiesStore.resetIndex)
 
 </script>
 
@@ -39,7 +20,7 @@
     isShorter="1"
   >
 
-    <section>
+    <section id="guest-tech-team-lead-in-modal">
       <AngkorWat />
       <Menu />
     </section>
