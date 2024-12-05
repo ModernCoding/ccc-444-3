@@ -8,7 +8,6 @@ const ladyScripts = collectLadyScriptsFromComposable ()
 const ourExpertiseScripts = collectOurExpertiseScriptsFromComposable ()
 const startPageScripts = collectStartPageScriptsFromComposable ()
 const teamScripts = collectTeamScriptsFromComposable ()
-const teamMemberScripts = collectTeamMemberScriptsFromComposable ()
 
 
 export default (
@@ -66,7 +65,7 @@ export default (
       case "team-fah":
       case "team-babe":
 
-        teamMemberScripts.resize (screenPropertiesStore)
+        teamScripts.resizeMember (screenPropertiesStore)
         break
 
 

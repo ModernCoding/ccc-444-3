@@ -1,5 +1,5 @@
-import { handleTeamMember } from './_local/handleTeamMember'
-import { handleNames } from './_local/handleNames'
+import { handleTeamMember } from './_localMember/handleTeamMember'
+import { handleNames } from './_localMember/handleNames'
 
 
 export default screenPropertiesStore => {
