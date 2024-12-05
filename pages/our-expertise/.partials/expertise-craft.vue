@@ -14,12 +14,12 @@
 
   <article class="o-expertise-text">
 
-    <h1>
-      {{ $t ('pages.ourExpertise.index.expertise.craft.slogan') }}
-    </h1>
-
-
     <NuxtLink :to="{ name: 'our-expertise' }">
+      
+      <h1>
+        {{ $t ('pages.ourExpertise.index.expertise.craft.slogan') }}
+      </h1>
+
 
       <button class="o-expertise-know-how">
 
