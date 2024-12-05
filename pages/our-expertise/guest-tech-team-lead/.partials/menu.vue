@@ -17,15 +17,7 @@
       @click="_handle (`#${ item.split ('|') [ 0 ] }`)"
     >
 
-      <i
-        :class="`
-            bi
-            bi-hand-index${ ladies?.index ?? 0 === i ?? 1 ? '-fill' : '' }
-          `"
-
-        aria-hidden="true"
-      />
-
+      <i class="bi bi-link-45deg" aria-hidden="true" />
 
       <div :data-jump="`#${ item.split ('|') [ 0 ] }`">
         {{ item.split ('|') [ 1 ] }}
