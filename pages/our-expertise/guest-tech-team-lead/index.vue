@@ -1,7 +1,6 @@
 <script setup>
   
   import AngkorWat from './.partials/angkor-wat'
-  import Lady from './.partials/lady'
   import Menu from './.partials/menu'
   import WhyGuests from './.partials/why-guests'
 
@@ -43,7 +42,6 @@
     <section>
       <AngkorWat />
       <Menu />
-      <Lady />
     </section>
   
   </ModalLayout>
@@ -71,7 +69,6 @@
 
         <AngkorWat />
         <Menu v-if="screenProperties.ratioIndex < 3" />
-        <Lady />
       
       </article>
 
