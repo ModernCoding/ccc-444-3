@@ -1,7 +1,36 @@
 <script setup>
 
   const _handle = id => {
-    console.log (id)
+
+    const element = document.querySelector (id)
+    if (!element) { return }
+
+
+    ;(content => {
+
+        if (!content) { return }
+
+
+        // content.scrollTo ({
+
+        //     top: 0,
+        //     behavior: 'instant'
+
+        //   })
+
+
+        content.scrollTo ({
+
+            top: content.getBoundingClientRect ().height
+                - element.getBoundingClientRect ().height
+                + content.getBoundingClientRect ().top,
+
+            behavior: 'smooth'
+
+          })
+
+      }) (document.querySelector ('#guest-tech-team-lead'))
+  
   }
 
 </script>
@@ -14,12 +43,12 @@
     <li
       v-for="item in $tm ('pages.ourExpertise.guestTechTeamLead.menu')"
       :key="item"
-      @click="_handle (`#${ item.split ('|') [ 0 ] }`)"
+      @click="_handle (`.o-${ item.split ('|') [ 0 ] }`)"
     >
 
       <i class="bi bi-link-45deg" aria-hidden="true" />
 
-      <div :data-jump="`#${ item.split ('|') [ 0 ] }`">
+      <div :data-jump="`.o-${ item.split ('|') [ 0 ] }`">
         {{ item.split ('|') [ 1 ] }}
       </div>
 

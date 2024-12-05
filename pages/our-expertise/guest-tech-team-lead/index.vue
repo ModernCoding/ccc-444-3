@@ -1,6 +1,7 @@
 <script setup>
   
   import AngkorWat from './.partials/angkor-wat'
+  import ClassicalMusic from './.partials/classical-music'
   import Menu from './.partials/menu'
   import WhyGuests from './.partials/why-guests'
 
@@ -23,6 +24,7 @@
     <section id="guest-tech-team-lead-in-modal">
       <AngkorWat />
       <Menu />
+      <ClassicalMusic />
     </section>
   
   </ModalLayout>
@@ -50,6 +52,7 @@
 
         <AngkorWat />
         <Menu v-if="screenProperties.ratioIndex < 3" />
+        <ClassicalMusic />
       
       </article>
 

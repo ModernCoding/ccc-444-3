@@ -27,17 +27,6 @@ export const handleMenu = screenProperties => {
           mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 * factor }px`
         )
 
-
-      screenProperties.ratioIndex < 3 && (
-
-          menu.style.paddingBottom = `${ 
-              TWICE_54_BY_PHI_POWER_4
-                * factor
-                * PHI ** (+(screenProperties.ratioIndex < 2))
-            }px`
-
-        )
-
     }) (
 
       PHI ** (

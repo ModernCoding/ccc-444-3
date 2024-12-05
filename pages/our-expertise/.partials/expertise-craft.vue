@@ -12,7 +12,7 @@
 
 <template>
 
-  <article class="o-expertise-text">
+  <article class="o-expertise-item">
 
     <NuxtLink :to="{ name: 'our-expertise' }">
       

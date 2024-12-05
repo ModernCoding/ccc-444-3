@@ -10,8 +10,8 @@ export const handleExpertise = screenProperties => {
   document
 
     .querySelectorAll ([
-        '.o-expertise-in-modal .o-expertise-text h1',
-        '#our-expertise .o-expertise-text h1',
+        '.o-expertise-in-modal .o-expertise-item h1',
+        '#our-expertise .o-expertise-item h1',
       ] [ +(screenProperties.ratioIndex > 1) ])
 
     .forEach (h1 => {
