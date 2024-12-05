@@ -10,20 +10,16 @@
 
         if (!content) { return }
 
-
-        // content.scrollTo ({
-
-        //     top: 0,
-        //     behavior: 'instant'
-
-        //   })
+        const angkorWat
+          = content.querySelector ('.o-expertise-angkor-wat')
+        
+        if (!angkorWat) { return }
 
 
         content.scrollTo ({
 
-            top: content.getBoundingClientRect ().height
-                - element.getBoundingClientRect ().height
-                + content.getBoundingClientRect ().top,
+            top: element.getBoundingClientRect ().top
+                - angkorWat.getBoundingClientRect ().top,
 
             behavior: 'smooth'
 
