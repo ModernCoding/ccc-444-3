@@ -17,14 +17,14 @@ export const handleMenu = screenProperties => {
 
     (factor => {
 
-      menu.style.gap = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
+      menu.style.gap = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
     
       listItems.forEach (lI =>
-          lI.style.gap = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
+          lI.style.gap = `${ TWICE_54_BY_PHI_POWER_3 * factor }px`
         )
 
       menuItems.forEach (mI =>
-          mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 * factor }px`
+          mI.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 * factor }px`
         )
 
     }) (

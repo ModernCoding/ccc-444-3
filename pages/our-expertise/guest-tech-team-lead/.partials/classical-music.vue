@@ -13,8 +13,8 @@
 <template>
 
   <article
-    :class="
-        `o-expertise-text
+    :class="`
+        o-expertise-text
 
         o-${
           $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 0 ]
@@ -26,7 +26,7 @@
     <h1>
       {{ 
         $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 0 ]
-            .split ('|') [ 1 ] 
+          .split ('|') [ 1 ] 
       }}
     </h1>
 

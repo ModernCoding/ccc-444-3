@@ -13,6 +13,33 @@
 
   height: dimensions.$heightSectionTwoParts
 
+  > *
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
+
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 3))
+
+
+#guest-tech-team-lead-in-modal
+
+  display: flex
+  flex-direction: column
+  gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+
+  > *
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 2))
+
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 3))
+
 
 .o-why-guests
 
