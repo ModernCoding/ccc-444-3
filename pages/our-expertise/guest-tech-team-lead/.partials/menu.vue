@@ -1,22 +1,7 @@
 <script setup>
 
-  const imageScripts = collectImageScriptsFromComposable ()
-  
-  const ladiesStore = defineLadiesStoreFromComposable () ()
-  const loadingStore = defineLoadingStoreFromComposable () ()
-
-  const { ladies } = storeToRefs (ladiesStore)
-
-
-  const _handle = i => {
+  const _handle = item => {
     
-    loadingStore.patchIsVeilMode ()
-
-    setTimeout (() => {
-        ladiesStore.patchIndex (i)
-        imageScripts.checkAllImagesLoaded (loadingStore)
-      }, DELAY_TIMES.ELEMENT)
-
   }
 
 </script>
@@ -27,23 +12,23 @@
   <menu class="o-guest-tech-team-lead-menu">
 
     <li
-      v-for="i in ladies.MAP.keys ()"
-      :key="i"
-      @click="_handle (i)"
+      v-for="item in $tm ('pages.ourExpertise.guestTechTeamLead.menu')"
+      :key="item"
+      @click="_handle (item)"
     >
 
       <i
         :class="`
             bi
-            bi-hand-index${ ladies.index === i ? '-fill' : '' }
+            bi-hand-index${ ladies?.index ?? 0 === i ?? 1 ? '-fill' : '' }
           `"
 
         aria-hidden="true"
       />
 
 
-      <div :class="[ '', 'fw-bold' ] [ +(ladies.index === i) ]">
-        {{ ladies.MAP.get (i).name }}
+      <div :data-jump="`#{ item.split ('|') [ 0 ] }`">
+        {{ item.split ('|') [ 1 ] }}
       </div>
 
     </li>
