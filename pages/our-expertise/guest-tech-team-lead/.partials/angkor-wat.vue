@@ -1,6 +1,19 @@
+<script setup>
+  
+  const screenPropertiesStore
+    = defineScreenPropertiesStoreFromComposable () ()
+
+  const { screenProperties } = storeToRefs (screenPropertiesStore)
+
+</script>
+
+
 <template>
 
-  <figure class="o-expertise-angkor-wat">
+  <figure
+    class="o-expertise-angkor-wat"
+    :data-number-of-parts="screenProperties.ratioIndex"
+  >
 
     <NuxtImg
       src="/images/countries/angkor-wat.png"
