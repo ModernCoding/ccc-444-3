@@ -1,7 +1,7 @@
 <script setup>
 
-  const _handle = item => {
-    
+  const _handle = id => {
+    console.log (id)
   }
 
 </script>
@@ -14,7 +14,7 @@
     <li
       v-for="item in $tm ('pages.ourExpertise.guestTechTeamLead.menu')"
       :key="item"
-      @click="_handle (item)"
+      @click="_handle (`#${ item.split ('|') [ 0 ] }`)"
     >
 
       <i
