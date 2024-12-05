@@ -43,7 +43,7 @@ export default (
         break
 
       case "ladies-in-it":
-        ladyScripts.resize (screenPropertiesStore, logoProperties)
+        ladyScripts.resize (screenPropertiesStore)
         break
 
 

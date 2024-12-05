@@ -4,13 +4,15 @@ import { handleMenu } from './_local/handleMenu'
 import { handlePicture } from './_local/handlePicture'
 
 
-export default (screenPropertiesStore, logoProperties) => {
+export default screenPropertiesStore => {
+  
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
 
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
 
-  handleJustFacts (screenPropertiesStore, logoProperties)
-  handleMenu (screenProperties.value)
-  handleLady (screenProperties.value)
-  handlePicture (screenProperties.value)
+  handleJustFacts (screenProperties)
+  handleMenu (screenProperties)
+  handleLady (screenProperties)
+  handlePicture (screenProperties)
 
 }

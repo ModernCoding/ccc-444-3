@@ -1,12 +1,19 @@
-export const handleJustFacts = screenProperties => {
+export const handleWhy = (
+  screenPropertiesStore,
+  logoProperties
+) => {
 
-  const justFacts = document.querySelector ('.o-just-facts')
-  if (!justFacts) { return }
+  const whyGuests = document.querySelector ('.o-why-guests')
+  if (!whyGuests) { return }
 
-  justFacts.removeAttribute ('style')
+  whyGuests.removeAttribute ('style')
 
-  const h1 = justFacts.querySelector ('h1')
+  const h1 = whyGuests.querySelector ('h1')
   if (!h1) { return }
+  
+
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
 
 
   const _setFontSize = (maxHeight, maxWidth, fontSize) => {
@@ -37,7 +44,7 @@ export const handleJustFacts = screenProperties => {
 
   ;(height => {
 
-    justFacts.style.height = `${ height }px`
+    whyGuests.style.height = `${ height }px`
     
     _setFontSize (
       height,
