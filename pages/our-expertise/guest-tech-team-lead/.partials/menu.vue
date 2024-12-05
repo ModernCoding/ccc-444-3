@@ -27,7 +27,7 @@
       />
 
 
-      <div :data-jump="`#{ item.split ('|') [ 0 ] }`">
+      <div :data-jump="`#${ item.split ('|') [ 0 ] }`">
         {{ item.split ('|') [ 1 ] }}
       </div>
 
