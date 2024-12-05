@@ -108,7 +108,7 @@ export const member = {
 
       text: [
 
-          `Ich komme aus Trat, Thailand, einer Provinz, die für seine %"Brücke, um deinen Willen zu Prüfen"% berühmt ist.`,
+          `Ich komme aus Trat, Thailand, einer Provinz, die für seine %"Brücke, um Deinen Willen zu Prüfen"% berühmt ist.`,
 
           "Genau aus diesem Grund habe ich immer %den Willen% gehabt, %Technologie und Kreativität zu überbrücken!% Seit meiner Kindheit habe ich es geliebt, neue Dinge zu erfinden, und moderne Gadgets hatten schon immer eine besondere Anziehungskraft auf mich.",
 
