@@ -55,7 +55,9 @@ export default (
         break
 
 
+      case "our-expertise-consulting":
       case "our-expertise-guest-tech-team-lead":
+        
         ourExpertiseScripts.resizeSkills (screenPropertiesStore)
         ctaScripts.equalize (screenProperties, logoProperties)
         break

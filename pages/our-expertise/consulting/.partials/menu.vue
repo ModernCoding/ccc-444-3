@@ -2,7 +2,7 @@
 
   const ourExpertiseScripts
     = collectOurExpertiseScriptsFromComposable ()
-  
+
   const { locale } = useI18n ()
 
 </script>

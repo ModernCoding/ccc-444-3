@@ -14,7 +14,7 @@
 
   <article class="o-expertise-item">
 
-    <NuxtLink :to="{ name: 'our-expertise-guest-tech-team-lead' }">
+    <NuxtLink :to="{ name: 'our-expertise-consulting' }">
 
       <h1>
         {{
