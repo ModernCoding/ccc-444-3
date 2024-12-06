@@ -1,6 +1,6 @@
 <template>
 
-  <hgroup class="o-why-guests">
+  <hgroup class="o-expertise-skill-title">
     <h1>{{ $t ('pages.ourExpertise.guestTechTeamLead.why') }}</h1>
   </hgroup>
   
@@ -9,6 +9,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/guest-tech-team-lead.sass"
+  src="@/assets/sass/pages/our-expertise/skills.sass"
   lang="sass"
 ></style>

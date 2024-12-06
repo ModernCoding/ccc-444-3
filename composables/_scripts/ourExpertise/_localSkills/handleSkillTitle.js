@@ -1,6 +1,6 @@
-export const handleWhy = screenProperties => {
+export const handleSkillTitle = screenProperties => {
 
-  const whyGuests = document.querySelector ('.o-why-guests')
+  const whyGuests = document.querySelector ('.o-expertise-skill-title')
   if (!whyGuests) { return }
 
   whyGuests.removeAttribute ('style')

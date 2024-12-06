@@ -60,6 +60,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/guest-tech-team-lead.sass"
+  src="@/assets/sass/pages/our-expertise/skills.sass"
   lang="sass"
 ></style>

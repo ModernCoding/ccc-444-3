@@ -56,12 +56,8 @@ export default (
 
 
       case "our-expertise-guest-tech-team-lead":
-
-        ourExpertiseScripts
-          .resizeGuestTechTeamLead (screenPropertiesStore)
-      
+        ourExpertiseScripts.resizeSkills (screenPropertiesStore)
         ctaScripts.equalize (screenProperties, logoProperties)
-
         break
 
 

@@ -1,8 +1,8 @@
 import resize from './_resize'
-import resizeGuestTechTeamLead from './_resizeGuestTechTeamLead'
+import resizeSkills from './_resizeSkills'
 
 
 export default {
   resize,
-  resizeGuestTechTeamLead
+  resizeSkills
 }
