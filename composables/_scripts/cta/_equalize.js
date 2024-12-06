@@ -26,6 +26,9 @@ export default (screenProperties, logoProperties) => {
 
   ) {
 
+    if (pictures.length < 1) { return }
+
+
     if (i >= pictures.length) {
 
       const mainHeight = (index =>
