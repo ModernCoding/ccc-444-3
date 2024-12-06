@@ -20,7 +20,7 @@ export const guestTechTeamLead = {
 
       "This orchestra has one particularity other orchestras of the same league do not have: %their musicians have been playing without any permanent conductor% since 1993!",
 
-      "They play indeed all of their concerts %exclusively with guest conductors%, who are themselves Chief Conductors of other prestigious orchestras.",
+      "They play indeed all of their concerts under the baton of %exclusively guest conductors%, who are themselves Chief Conductors of other prestigious orchestras.",
 
       "Among many examples, we can think of:",
 
