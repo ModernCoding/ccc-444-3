@@ -100,7 +100,7 @@ export const guestTechTeamLead = {
       `
         >Anders als bei manchen permanenten Teamleitern, die sich auf Lorbeeren setzen und mit dem Haben-wir-immer-so-gemacht-Spruch alle Innovationen bremsen, sind Gast-Teamleiter*innen gezwungen, ständig mit den neuesten Technologien vertraut zu sein, und %immer innovativ zu bleiben%, wenn sie von Kunden immer wieder gerufen wollen! 
         >Während wir auf JavaScript-Technologien spezialisiert sind, sind Ihre Teams mit ganz anderen Tech-Stacks vertraut, und sie müssen schnell umlernen. 
-        >Ihre Teams sind sogar allergisch gegen JavaScript geworden, und eine Versöhnung mit dieser schwer vermeidbaren Technologie ist nötig! 
+        >Ihre Teams sind sogar allergisch auf JavaScript geworden, und %eine Versöhnung mit dieser schwer vermeidbaren Technologie ist nötig!% 
       `,
 
     ]
