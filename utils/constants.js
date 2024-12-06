@@ -53,6 +53,10 @@ export const ROUTES_WITHOUT_LOGO = [
 
     'contact@1',
 
+    'our-expertise-consulting@1',
+    'our-expertise-consulting@2',
+    'our-expertise-consulting@3',
+
     'ladies-in-it@1',
     'ladies-in-it@2',
     'ladies-in-it@3',

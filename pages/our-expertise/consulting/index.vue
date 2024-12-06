@@ -55,6 +55,14 @@
   <BaseLayout>
 
     <template
+      v-if="screenProperties.ratioIndex > 1"
+      v-slot:aside
+    >
+      <Laravel />
+    </template>
+
+
+    <template
       v-if="screenProperties.ratioIndex > 2"
       v-slot:central
     >
@@ -72,7 +80,6 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
-        <Laravel />
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <ClassicalMusic />
         <Cambodia />
