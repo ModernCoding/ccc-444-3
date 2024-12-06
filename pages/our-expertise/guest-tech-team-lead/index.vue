@@ -13,6 +13,16 @@
 
   const { screenProperties } = storeToRefs (screenPropertiesStore)
 
+  const { locale } = useI18n ()
+
+
+  watch (locale, () => {
+
+    const content = document.querySelector ('.o-guest-tech-team-lead')
+    content && content.scrollTo ({ top: 0, behavior: 'smooth' })
+
+  })
+
 </script>
 
 
