@@ -46,6 +46,7 @@ export const guestTechTeamLead = {
 
       "Sie bietet Projektentwicklungsdienstleistungen für ihre internationale Kundschaft zu wettbewerbsfähigen Preisen an.",
 
+      "",
       "Durch meine Erfahrung:",
 
       `
@@ -54,9 +55,11 @@ export const guestTechTeamLead = {
         >als Firmengründer selber, der mein eigenes Team führt,
       `,
 
-      "%zahle ich seit 2021 zu den technischen Gast-TeamleiterInnen meines Kunden für seine Juniorentwickler und frische Absolventen!%",
+      "",
+      "%zähle ich seit 2021 zu den technischen Gast-TeamleiterInnen meines Kunden für seine Juniorentwickler und frische Absolventen!%",
 
-      "Meine Verantwortungen sind immer folgende:",
+      "",
+      "Dabei sind meine Verantwortungen immer folgende:",
 
       `
         >Ansprechpartner für die eigenen Kunden meines Kunden sein!,
@@ -68,6 +71,10 @@ export const guestTechTeamLead = {
         >denen die guten Praxis und das Selbst-Lernen beibringen
       `,
 
+    ],
+
+
+  benefits: [
     ]
 
 }
