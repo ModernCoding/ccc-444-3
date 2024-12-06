@@ -40,11 +40,11 @@ export const guestTechTeamLead = {
 
       "They prefer to have their teams %led by guest tech team leaders%.",
 
-      "This is the case of one of our customes: the company BiKay based in Phnom Penh, Cambodia.",
+      "This is the case of one of our customers: the company BiKay based in Phnom Penh, Cambodia.",
 
-      "This company was founded by a French software engineer, who has a strong background and large experience programming.",
+      "This company was founded by a French software engineer, who has himself a strong background and large experience programming.",
 
-      "They provides project development services for their international customers at very competitive prices.",
+      "They provides project development services for their international customers at competitive prices.",
 
       "",
       "Thanks to my experience:",

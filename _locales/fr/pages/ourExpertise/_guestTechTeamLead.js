@@ -36,39 +36,37 @@ export const guestTechTeamLead = {
 
   cambodia: [
 
-      "The same way the Vienna Philharmonic Orchestra performs without any permanent conductor, some IT companies choose to develop their projects %without permanent senior tech team leaders!%",
+      "De la même manière que l'Orchestre Philharmonique de Vienne joue exclusivement sous la direction de chefs d'orchestre invités, certaines entreprises en informatiques font le choix de réaliser leurs projets %sous la direction de chefs d'équipe invités\xa0!%",
 
-      "They prefer to have their teams %led by guest tech team leaders%.",
+      "C'est le cas de l'un de nos clients\xa0: la société BiKay basée à Phnom Penh au Cambodge.",
 
-      "This is the case of one of our customes: the company BiKay based in Phnom Penh, Cambodia.",
+      "Cette entreprise a été créée par un ingénieur en informatique français, avec lui aussi un solide bagage et une longue expérience dans le développement.", 
 
-      "This company was founded by a French software engineer, who has a strong background and large experience programming.",
-
-      "They provides project development services for their international customers at very competitive prices.",
+      "Ils réalisent des projets pour leurs clients internationaux à des prix compétitifs.",
 
       "",
-      "Thanks to my experience:",
+      "Grâce à mon expérience\xa0:",
 
       `
-        >as a guest professor at Vietnamese and Cambodian Universities,
-        >as a tech team leader at past companies,
-        >as a business owner myself leading my own team,
+        >en tant que professeur-honoraire au sein d'universités vietnamiennes et cambodgiennes,
+        >en tant que développeur lead & chef d'équipe dans le passé,
+        >en tant que chef d'entreprise moi-même et dirigeant ma propre équipe,
       `,
 
       "",
-      "%I have been part of this customer's guest tech team leaders for his junior developers and fresh graduates since 2021!%",
+      "%je suis régulièrement invité depuis 2021 par ce client à prendre la tête de ses développements ainsi que de ses équipes comportant des développeurs juniors et des jeunes diplômés%",
 
       "",
-      "My responsibilities have always been following:",
+      "Mes responsabilités sont toujours les mêmes\xa0:",
 
       `
-        >communication partner of my customer's own customers,
-        >analysis of customer needs,
-        >estimates,
-        >choosing the accurate tech stack,
-        >being responsible for the quality of the project,
-        >transmitting technical skills to the juniors,
-        >teaching them good practices and self-learning
+        >être l'interlocuteur de ses propres clients,
+        >analyser les besoins de ses clients,
+        >chiffrer les réalisations,
+        >choisir la tech stack appropriée,
+        >répondre de la qualité des projets,
+        >transmettre des compétences techniques aux juniors,
+        >leur enseigner les bonnes pratiques ainsi que l'auto-apprentissage
       `,
 
     ],
