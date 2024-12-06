@@ -85,7 +85,7 @@ export const member = {
 
           "Ich stamme aus einem Land, das durch eine extreme politische Lage geht. Ich entschloss, %Initiative zu ergreifen%, statt abzuwarten, dass uns ausländische Hilfe retten!",
 
-          "Ich ergrief schon die Initiativ, eine erfahrene Fullstack-Etnwicklerin zu werden, um %solide% und %leistungsfähige% Anwendungen zu bauen, die auch mit hervorragendem User Experience kommen. Dabei wurden Technologien wie .NET, Java, JavaScript, Vue, React und RDBMS verwendet.",
+          "Ich ergrief schon die Initiativ, eine erfahrene Fullstack-Entwicklerin zu werden, um %solide% und %leistungsfähige% Anwendungen zu bauen, die auch mit hervorragendem User Experience kommen. Dabei wurden Technologien wie .NET, Java, JavaScript, Vue, React und RDBMS verwendet.",
 
           "Ich gab mir auch viel Mühe, um meine %Leidenschaft% für Design und Animation %in einen wirklichen Beruf% umzuwandeln, was mir sowohl das Entwerfen von %personalisierten Icons% für Webseite, wie die Handfertigung von %Visual Storytelling% stärkenden engagierenden Animationen erlaubt.",
 
