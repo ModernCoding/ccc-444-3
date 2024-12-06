@@ -32,7 +32,12 @@
 
 
     <template
-      v-for="p in $tm('pages.team.member.mon.text')"
+      v-for="
+          p in $tm (
+            'pages.ourExpertise.guestTechTeamLead.classicalMusic'
+          )
+        "
+
       :key="p"
     >
 
