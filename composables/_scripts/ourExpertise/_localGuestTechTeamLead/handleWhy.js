@@ -1,7 +1,4 @@
-export const handleWhy = (
-  screenPropertiesStore,
-  logoProperties
-) => {
+export const handleWhy = screenProperties => {
 
   const whyGuests = document.querySelector ('.o-why-guests')
   if (!whyGuests) { return }
@@ -10,10 +7,6 @@ export const handleWhy = (
 
   const h1 = whyGuests.querySelector ('h1')
   if (!h1) { return }
-  
-
-  const { screenProperties: { value: screenProperties } }
-    = storeToRefs (screenPropertiesStore)
 
 
   const _setFontSize = (maxHeight, maxWidth, fontSize) => {

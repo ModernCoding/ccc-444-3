@@ -4,13 +4,15 @@ import { handleText } from './_localGuestTechTeamLead/handleText'
 import { handleWhy } from './_localGuestTechTeamLead/handleWhy'
 
 
-export default (screenPropertiesStore, logoProperties) => {
+export default (screenPropertiesStore) => {
 
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
+  const { screenProperties: { value: screenProperties } }
+    = storeToRefs (screenPropertiesStore)
 
-  handleWhy (screenPropertiesStore, logoProperties)
-  handleMenu (screenProperties.value)
-  handlePicture (screenProperties.value)
-  handleText (screenProperties.value)
+
+  handleWhy (screenProperties)
+  handleMenu (screenProperties)
+  handlePicture (screenProperties)
+  handleText (screenProperties)
 
 }
