@@ -13,22 +13,22 @@
 
         if (!content) { return }
 
-        const angkorWat
-          = content.querySelector ('.o-expertise-angkor-wat')
+        const skillPicture
+          = content.querySelector ('.o-expertise-skill-picture')
         
-        if (!angkorWat) { return }
+        if (!skillPicture) { return }
 
 
         content.scrollTo ({
 
             top: element.getBoundingClientRect ().top
-                - angkorWat.getBoundingClientRect ().top,
+                - skillPicture.getBoundingClientRect ().top,
 
             behavior: 'smooth'
 
           })
 
-      }) (document.querySelector ('.o-guest-tech-team-lead'))
+      }) (document.querySelector ('.o-expertise-skill-text'))
   
   }
 
@@ -37,7 +37,7 @@
 
 <template>
 
-  <menu class="o-guest-tech-team-lead-menu">
+  <menu class="o-expertise-skill-menu">
 
     <li
       v-for="item in $tm ('pages.ourExpertise.guestTechTeamLead.menu')"

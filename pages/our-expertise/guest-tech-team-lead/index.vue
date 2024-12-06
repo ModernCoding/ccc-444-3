@@ -18,7 +18,7 @@
 
   watch (locale, () => {
 
-    const content = document.querySelector ('.o-guest-tech-team-lead')
+    const content = document.querySelector ('.o-expertise-skill-text')
     content && content.scrollTo ({ top: 0, behavior: 'smooth' })
 
   })
@@ -34,8 +34,7 @@
   >
 
     <section
-      id="guest-tech-team-lead-in-modal"
-      class="o-guest-tech-team-lead"
+      class="o-expertise-skill-in-modal o-expertise-skill-text"
     >
     
       <AngkorWat />
@@ -69,8 +68,7 @@
     >
 
       <article
-        id="guest-tech-team-lead"
-        class="o-guest-tech-team-lead"
+        class="o-expertise-skill-in-main o-expertise-skill-text"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 

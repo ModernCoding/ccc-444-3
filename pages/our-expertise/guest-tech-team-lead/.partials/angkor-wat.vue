@@ -13,7 +13,7 @@
   <NuxtLink :to="{ name: 'our-expertise' }">
 
     <figure
-      class="o-expertise-angkor-wat"
+      class="o-expertise-skill-picture"
       :data-number-of-parts="screenProperties.ratioIndex"
     >
 

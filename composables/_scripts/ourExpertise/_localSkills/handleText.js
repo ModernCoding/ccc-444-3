@@ -6,8 +6,8 @@ export const handleText = screenProperties => {
   document
 
     .querySelectorAll ([
-        '#guest-tech-team-lead-in-modal h1',
-        '#guest-tech-team-lead h1',
+        '.o-expertise-skill-in-modal h1',
+        '.o-expertise-skill-in-main h1',
       ] [ +(screenProperties.ratioIndex > 1) ])
 
 
@@ -35,8 +35,8 @@ export const handleText = screenProperties => {
   document
 
     .querySelectorAll ([
-        '#guest-tech-team-lead-in-modal p, #guest-tech-team-lead-in-modal ul',
-        '#guest-tech-team-lead p, #guest-tech-team-lead ul',
+        '.o-expertise-skill-in-modal p, .o-expertise-skill-in-modal ul',
+        '.o-expertise-skill-in-main p, .o-expertise-skill-in-main ul',
       ] [ +(screenProperties.ratioIndex > 1) ])
 
 
