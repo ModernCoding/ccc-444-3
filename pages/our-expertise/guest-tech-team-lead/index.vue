@@ -27,11 +27,17 @@
       id="guest-tech-team-lead-in-modal"
       class="o-guest-tech-team-lead"
     >
+    
       <AngkorWat />
       <Menu />
       <ClassicalMusic />
       <Cambodia />
       <Benefits />
+
+      <nav>
+        <CallToActions />
+      </nav>
+    
     </section>
   
   </ModalLayout>
