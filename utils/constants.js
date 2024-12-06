@@ -43,6 +43,7 @@ export const PHI = 2 * Math.sin (54 * Math.PI / 180)
 
 
 export const ROUTES_WITHOUT_IMAGE_WAITING = [
+    'our-expertise-guest-tech-team-lead',
     'team-michel'
   ]
 
