@@ -25,7 +25,7 @@ export const guestTechTeamLead = {
       "Among many examples, we can think of:",
 
       `
-        >highly famous late conductor of the Berlin Philharmonic Orchestra Herbert von Karajan
+        >highly famous conductor of the Berlin Philharmonic Orchestra Herbert von Karajan
         >his legendary predecessor Wilhelm Furtwängler
         >Maestro Christian Thielemann, who conducted the New Year's Concert 2024
         >Maestro Riccardo Muti, who will conduct the New Year's Concert on this January 1st, 2025!
