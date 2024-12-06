@@ -33,12 +33,12 @@
 
     <template
       v-for="
-          p in $tm (
+          p, i in $tm (
             'pages.ourExpertise.guestTechTeamLead.classicalMusic'
           )
         "
 
-      :key="p"
+      :key="i"
     >
 
       <ul v-if="p.includes ('>')">

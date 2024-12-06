@@ -62,7 +62,7 @@ export const guestTechTeamLead = {
       "Dabei sind meine Verantwortungen immer folgende:",
 
       `
-        >Ansprechpartner für die eigenen Kunden meines Kunden sein!,
+        >Ansprechpartner für die eigenen Kunden meines Kunden sein,
         >die Kundenbedürfnisse analysieren,
         >Zeitaufwandschätzungen liefern,
         >den passenden Tech-Stack wählen,

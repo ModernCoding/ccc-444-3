@@ -32,8 +32,11 @@
 
 
     <template
-      v-for="p in $tm ('pages.ourExpertise.guestTechTeamLead.cambodia')"
-      :key="p"
+      v-for="
+          p, i in $tm ('pages.ourExpertise.guestTechTeamLead.cambodia')
+        "
+        
+      :key="i"
     >
 
       <ul v-if="p.includes ('>')">
