@@ -56,7 +56,7 @@ export const guestTechTeamLead = {
       `,
 
       "",
-      "%zähle ich seit 2021 zu den technischen Gast-Teamleiter*innen meines Kunden für seine Juniorentwickler und frische Absolventen!%",
+      "%Ich zähle seit 2021 zu den technischen Gast-Teamleiter*innen meines Kunden für seine Juniorentwickler und frische Absolventen!%",
 
       "",
       "Dabei sind meine Verantwortungen immer folgende:",
@@ -81,6 +81,7 @@ export const guestTechTeamLead = {
       `
         >Sie müssen nicht, permanente Senior-Teamleiter*innen zu bezahlen, auch wenn Sie sich momentan ohne Kundenprojekte befinden...
         >Permanente Senior-Teamleiter*innen kommen mit Fixkosten und den dazugehörigen Steuern, die Sie auch noch bezahlen sollen! Gast-Teamleiter*innen können Sie ganz im Gegenteil zu den Firmenausgaben einfügen und von Ihren Betriebssteuern absetzen!
+        >Diese Lösung ist %besonders attraktiv für Kleinbetriebe!%
       `,
 
 

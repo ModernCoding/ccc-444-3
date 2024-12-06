@@ -54,7 +54,7 @@ export const guestTechTeamLead = {
       `,
 
       "",
-      "%je suis régulièrement invité depuis 2021 par ce client à prendre la tête de ses développements ainsi que de ses équipes comportant des développeurs juniors et des jeunes diplômés%",
+      "%Je suis régulièrement invité depuis 2021 par ce client à prendre la tête de ses développements ainsi que de ses équipes comportant des développeurs juniors et des jeunes diplômés%",
 
       "",
       "Mes responsabilités sont toujours les mêmes\xa0:",
@@ -74,31 +74,32 @@ export const guestTechTeamLead = {
 
   benefits: [
 
-      "The most obvious advantage to have your teams led by a guest tech team leader is: %saving costs!%",
+      "L'avantage qui vient tout de suite à l'esprit, lorsque vos projets sont dirigés par un chef d'équipe invité, est le suivant\xa0: %vous réduisez vos coûts\xa0!%",
 
       `
-        >You do not need to pay for permanent team leaders, even if you find yourself without any project...
-        >Permanent senior team leaders come with fixed costs and the taxes linked to these, which you also have to pay! On the opposite, guest tech team leaders can be included into your company expenses and deducted from your corporate taxes!
+        >Vous n'avez pas besoin de payer des responsables à plein temps, y compris si vous vous retrouvez sans projet...
+        >Des responsables séniors impliquent aussi bien des coûts fixes que des taxes que vous devrez payer\xa0! Alors qu'en invitant un chef extérieur, vous pouvez inclure le montant des prestations de service dans vos frais d'entreprise et les déduire de vos taxes\xa0!
+        >Cette solution est particulièrement %intéressante pour les sociétés de petite taille\xa0!%
       `,
 
 
       "",
-      "Another benefit lies in the %increased trust%, on which any business relies!",
+      "Toute relation commerciale étant basée sur la confiance, un autre avantage réside dans le fait que vos équipes peuvent se sentir %en plus grande confiance%.",
 
       `
-        >In a domain like IT, it is crucial to %admit, not knowing or mastering something%. It is easier for your team members to confess it to a guest tech team leader rather than to your full-time manager.
-        >If you team members hate their manager, they are more likely to quit, as "employees do not leave bad companies, they are leaving bad managers"! As the company owner, you then have to hire new employees, train them, which leads to increased costs. Or you need to urgently find experienced seniors, which will sell them at high prices!
-        >On the opposite, if your teams do not like the guest tech team leader, you are free to not call him again.
+        >Dans un domaine comme l'informatique, il est crucial de %reconnaître ne pas savoir ou maîtriser un sujet%. Il sera davantage aisé pour vos équipes de le faire face à un chef invité que face à leur manager.
+        >Si vos équipes haïssent leur manager, ils démissionneront\xa0: "Un employé ne quitte jamais une mauvaise entreprise, il quitte toujours un mauvais manager". En tant que patron, il vous faudra ensuite recruter une nouvelle personne et la former, ce qui induit des coûts. Ou bien vous devrez trouver en urgence des personnes expérimentées qui n'hésiteront pas à négocier des salaires élevés\xa0!
+        >À l'opposé, si vos équipes n'aiment pas la personne que vous avez invitée comme chef, vous demeurez libre de ne plus le rappeler.
       `,
 
 
       "",
-      "Other reasons to consider guest tech team leaders:",
+      "D'autres raisons de songer à inviter des chefs extérieurs\xa0:",
 
       `
-        >Contrary to some full-time team leaders who can be buried in their comfort and whose favorite sentence is "We have always done it this way", guest tech team leaders are permanently forced to keep up-to-date with the newest technologies and to %stay innovative%, if they want to remain called by their customers!
-        >While we are specialized in JavaScript technologies, your teams might be experts in completely different tech stacks, and need to quickly learn JavaScript frameworks.
-        >Your teams have even become allergic to JavaScript, so that %a reconciliation with this hardly avoidable technology is necessary!%
+        >Contrairement à certains responsables d'équipe qui seraient tentés de se reposer sur leurs lauriers et qui prononceraient un peu trop souvent la phrase "On a toujours fait comme ça", les consultants chefs d'équipe sont obligés de se maintenir au fait des dernières technologies et de %demeurer innovants% s'ils souhaitent être rappelés par leur clients\xa0!
+        >Tandis que nous sommes spécialisés dans les technologies JavaScript, vos équipes peuvent être experts dans une tech stack complètement différente, et être amenées à assimiler les technologies JavaScript rapidement.
+        >Vos équipes sont devenues allergiques à JavaScript, %tel qu'une réconciliation avec cette technologie difficilement évitable s'impose\xa0!%
       `,
 
     ]

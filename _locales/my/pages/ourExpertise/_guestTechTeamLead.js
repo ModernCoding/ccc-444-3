@@ -81,6 +81,7 @@ export const guestTechTeamLead = {
       `
         >You do not need to pay for permanent team leaders, even if you find yourself without any project...
         >Permanent senior team leaders come with fixed costs and the taxes linked to these, which you also have to pay! On the opposite, guest tech team leaders can be included into your company expenses and deducted from your corporate taxes!
+        >This solution is especially %interesting for small businesses!%
       `,
 
 
@@ -89,7 +90,7 @@ export const guestTechTeamLead = {
 
       `
         >In a domain like IT, it is crucial to %admit, not knowing or mastering something%. It is easier for your team members to confess it to a guest tech team leader rather than to your full-time manager.
-        >If you team members hate their manager, they are more likely to quit, as "employees do not leave bad companies, they are leaving bad managers"! As the company owner, you then have to hire new employees, train them, which leads to increased costs. Or you need to urgently find experienced seniors, which will sell them at high prices!
+        >If you team members hate their manager, they are more likely to quit, as "employees do not leave bad companies, they are leaving bad managers"! As the company owner, you then have to hire new employees, train them, which leads to increased costs. Or you need to urgently find experienced seniors, who will sell themselves at high prices!
         >On the opposite, if your teams do not like the guest tech team leader, you are free to not call him again.
       `,
 
