@@ -1,7 +1,7 @@
 <template>
 
   <hgroup class="o-expertise-skill-title">
-    <h1>{{ $t ('pages.ourExpertise.guestTechTeamLead.why') }}</h1>
+    <h1>{{ $t ('pages.ourExpertise.consulting.title') }}</h1>
   </hgroup>
   
 </template>

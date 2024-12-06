@@ -13,7 +13,7 @@
   <menu class="o-expertise-skill-menu">
 
     <li
-      v-for="item in $tm ('pages.ourExpertise.guestTechTeamLead.menu')"
+      v-for="item in $tm ('pages.ourExpertise.consulting.menu')"
       :key="item"
 
       @click="

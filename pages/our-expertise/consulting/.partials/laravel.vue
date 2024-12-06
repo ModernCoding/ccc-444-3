@@ -1,3 +1,4 @@
+
 <script setup>
   
   const screenPropertiesStore
@@ -18,7 +19,7 @@
     >
 
       <NuxtImg
-        src="/images/countries/angkor-wat.png"
+        src="/images/laravel.png"
         alt="Angkor Wat"
         :modifiers="{ b: '#110d0d', opacity: 1 }"
         loading="lazy"

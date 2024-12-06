@@ -1,11 +1,11 @@
 <script setup>
   
-  import AngkorWat from './.partials/angkor-wat'
   import Benefits from './.partials/benefits'
+  import Consulting from './.partials/consulting'
   import Cambodia from './.partials/cambodia'
   import ClassicalMusic from './.partials/classical-music'
+  import Laravel from './.partials/laravel'
   import Menu from './.partials/menu'
-  import WhyGuests from './.partials/why-guests'
 
 
   const screenPropertiesStore
@@ -36,8 +36,8 @@
     <section
       class="o-expertise-skill-in-modal o-expertise-skill-text"
     >
-    
-      <!-- <AngkorWat /> -->
+
+      <Laravel />
       <Menu />
       <ClassicalMusic />
       <Cambodia />
@@ -72,7 +72,7 @@
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
-        <!-- <AngkorWat /> -->
+        <Laravel />
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <ClassicalMusic />
         <Cambodia />
@@ -89,7 +89,7 @@
 
 
     <template v-slot:footer-right>
-      <WhyGuests />
+      <Consulting />
     </template>
 
   </BaseLayout>
