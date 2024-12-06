@@ -59,6 +59,8 @@ export default (
 
         ourExpertiseScripts
           .resizeGuestTechTeamLead (screenPropertiesStore)
+      
+        // ctaScripts.equalize (screenProperties, logoProperties)
 
         break
 

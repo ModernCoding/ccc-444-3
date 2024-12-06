@@ -76,31 +76,31 @@ export const guestTechTeamLead = {
 
   benefits: [
 
-      "Als selbstverständlichsten Vorteil, Ihre Teams durch Gast-Teamleiter*innen führen zu lassen, nennen wir die %Kosteneinsparungen!%",
+      "The most obvious advantage to have your teams led by a guest tech team leader is: %saving costs!%",
 
       `
-        >Sie müssen nicht, permanente Senior-Teamleiter*innen zu bezahlen, auch wenn Sie sich momentan ohne Kundenprojekte befinden...
-        >Permanente Senior-Teamleiter*innen kommen mit Fixkosten und den dazugehörigen Steuern, die Sie auch noch bezahlen sollen! Gast-Teamleiter*innen können Sie ganz im Gegenteil zu den Firmenausgaben einfügen und von Ihren Betriebssteuern absetzen!
+        >You do not need to pay for permanent team leaders, even if you find yourself without any project...
+        >Permanent senior team leaders come with fixed costs and the taxes linked to these, which you also have to pay! On the opposite, guest tech team leaders can be included into your company expenses and deducted from your corporate taxes!
       `,
 
 
       "",
-      "Ein weiterer Vorteil liegt im %verstärkten Vertrauen%, auf dem jedes Geschäft ruht!",
+      "Another benefit lies in the %increased trust%, on which any business relies!",
 
       `
-        >In einer Branche wie Informatik, ist es höchst wichtig, anzuerkennen, %wenn man etwas nicht weiß oder beherrscht%. Den Team-Mitgliedern ist es deutlich einfacher, es zu gestehen, wenn das Projekt von einem Gast-Teamleiter geführt wird, als wenn ein interner Manager es tut.
-        >Hassen Ihre Teams ihren Manager, verlassen sie meistens Ihre Firma nach dem Motto "Mitarbeiter verlassen sie nicht schlechte Firmen, sondern schlechte Managers"! Als Betriebsleiter müssen Sie dann neue Mitarbeiter anstellen und ausbilden, was zu erhöhten Kosten führt. Oder sie müssen in der Not dringend erfahrene Senioren finden, die sich dann teuer verkaufen!
-        >Wenn Ihre Teams im Gegenteil den Gast-Teamleiter nicht mögen, haben Sie die Freiheit, ihn nicht mehr zu rufen.
+        >In a domain like IT, it is crucial to %admit, not knowing or mastering something%. It is easier for your team members to confess it to a guest tech team leader rather than to your full-time manager.
+        >If you team members hate their manager, they are more likely to quit, as "employees do not leave bad companies, they are leaving bad managers"! As the company owner, you then have to hire new employees, train them, which leads to increased costs. Or you need to urgently find experienced seniors, which will sell them at high prices!
+        >On the opposite, if your teams do not like the guest tech team leader, you are free to not call him again.
       `,
 
 
       "",
-      "Weitere Gründe, warum Sie Gast-Teamleiter*innen in Betracht ziehen könnten:",
+      "Other reasons to consider guest tech team leaders:",
 
       `
-        >Anders als bei manchen permanenten Teamleitern, die sich auf Lorbeeren setzen und mit dem Haben-wir-immer-so-gemacht-Spruch alle Innovationen bremsen, sind Gast-Teamleiter*innen gezwungen, ständig mit den neuesten Technologien vertraut zu sein, und %immer innovativ zu bleiben%, wenn sie von Kunden immer wieder gerufen wollen! 
-        >Während wir auf JavaScript-Technologien spezialisiert sind, sind Ihre Teams mit ganz anderen Tech-Stacks vertraut, und sie müssen schnell umlernen. 
-        >Ihre Teams sind sogar allergisch auf JavaScript geworden, und %eine Versöhnung mit dieser schwer vermeidbaren Technologie ist nötig!% 
+        >Contrary to some full-time team leaders who can be buried in their comfort and whose favorite sentence is "We have always done it this way", guest tech team leaders are permanently forced to keep up-to-date with the newest technologies and to %stay innovative%, if they want to remain called by their customers!
+        >While we are specialized in JavaScript technologies, your teams might be experts in completely different tech stacks, and need to quickly learn JavaScript frameworks.
+        >Your teams have even become allergic to JavaScript, so that %a reconciliation with this hardly avoidable technology is necessary!%
       `,
 
     ]
