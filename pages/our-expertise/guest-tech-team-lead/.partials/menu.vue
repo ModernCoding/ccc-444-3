@@ -15,18 +15,17 @@
 
         const skillPicture
           = content.querySelector ('.o-expertise-skill-picture')
+
+
+        const top = skillPicture
+
+            ? element.getBoundingClientRect ().top
+                - skillPicture.getBoundingClientRect ().top
         
-        if (!skillPicture) { return }
+            : element.getBoundingClientRect ().top
+        
 
-
-        content.scrollTo ({
-
-            top: element.getBoundingClientRect ().top
-                - skillPicture.getBoundingClientRect ().top,
-
-            behavior: 'smooth'
-
-          })
+        content.scrollTo ({ top, behavior: 'smooth' })
 
       }) (document.querySelector ('.o-expertise-skill-text'))
   
