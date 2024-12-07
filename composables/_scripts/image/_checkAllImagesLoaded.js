@@ -4,26 +4,27 @@ export default loadingStore => {
   let loadedImages = 0
 
 
+  const _handle = () => {
+
+    loadingStore.patchIsImageLoadingComplete (
+        ++loadedImages === images.length
+      )
+
+  }
+
+
   images.forEach (img => {
 
     img.complete
 
-      ? loadingStore.patchIsImageLoadingComplete (
-          ++loadedImages === images.length
-        )
+      ? _handle ()
 
 
       : (() => {
 
           // 'load' event for images that are still loading
 
-          img.addEventListener ("load", () => {
-
-            loadingStore.patchIsImageLoadingComplete (
-              ++loadedImages === images.length
-            )
-
-          })
+          img.addEventListener ("load", _handle)
 
 
           // 'error' event if an image fails to load
@@ -31,10 +32,7 @@ export default loadingStore => {
           img.addEventListener ("error", () => {
             
             console.log ("Image failed to load >>>", img.src)
-
-            loadingStore.patchIsImageLoadingComplete (
-              ++loadedImages === images.length
-            )
+            _handle ()
 
           })
 

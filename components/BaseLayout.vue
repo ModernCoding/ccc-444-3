@@ -34,16 +34,16 @@
 
         switch (true) {
 
+          // case  loading.is
+          //       && loading.showLogoInLoader
+          //       && ROUTES_WITHOUT_IMAGE_WAITING.includes (route.name):
+
+          //   return DELAY_TIMES.LOADING
+
+
           case  loading.is
-                && loading.showLogoInLoader
-                && ROUTES_WITHOUT_IMAGE_WAITING.includes (route.name):
-
-            return DELAY_TIMES.LOADING
-
-
-          case  loading.is
-                && loading.showLogoInLoader
-                && loading.isImageLoadingComplete:
+                && loading.showLogoInLoader:
+                // && loading.isImageLoadingComplete:
 
             return DELAY_TIMES.LOADING
 
@@ -53,6 +53,8 @@
 
 
           case  loading.isImageLoadingComplete:
+            return 0
+
           case  !loading.is && loading.isResizingMode:
 
             return 0
