@@ -35,7 +35,7 @@ export const consulting = {
 
       `
         >ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken
-        >zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals langfristig und vor allem hoch flexibel handeln vermag
+        >zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals %langfristig und vor allem hoch flexibel% handeln vermag
       `,
 
 
