@@ -10,8 +10,6 @@
 
   const _handle = i => {
     
-    loadingStore.patchIsVeilMode ()
-
     setTimeout (() => {
         ladiesStore.patchIndex (i)
         imageScripts.checkAllImagesLoaded (loadingStore)

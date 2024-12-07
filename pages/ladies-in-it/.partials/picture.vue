@@ -9,10 +9,13 @@
   <figure class="o-lady-picture">
 
     <NuxtImg
-      :src="`/images/${ ladies.MAP.get (ladies.index).key }.png`"
-      :alt="ladies.MAP.get (ladies.index).name"
+      v-for="i in ladies.MAP.keys ()"
+      :key="i"
+      :src="`/images/${ ladies.MAP.get (i).key }.png`"
+      :alt="ladies.MAP.get (i).name"
       :modifiers="{ b: '#110d0d', opacity: 1 }"
       loading="lazy"
+      :data-is-shown="+(i === ladies.index)"
     />
 
   </figure>

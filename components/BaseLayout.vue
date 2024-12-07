@@ -77,7 +77,7 @@
   })
 
 
-  watch (locale, () => loadingStore.patchIs ())
+  watch (locale, () => loadingStore.patchIsVeilMode ())
 
 
   watch (route, () => {

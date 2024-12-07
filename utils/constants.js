@@ -47,7 +47,11 @@ export const ROUTES_WITHOUT_IMAGE_WAITING = [
     'our-expertise-guest-tech-team-lead',
     'our-expertise-we-are-specialized-in-javascript',
     'our-philosophy',
-    'team-michel'
+    'team',
+    'team-babe',
+    'team-fah',
+    'team-michel',
+    'team-mon'
   ]
 
 

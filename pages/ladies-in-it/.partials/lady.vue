@@ -8,22 +8,30 @@
 
   <h1 class="o-lady">
 
-    <p>
+    <p
+      v-for="j in ladies.MAP.keys ()"
+      :key="j"
+      :data-is-shown="+(j === ladies.index)"
+    >
 
-      <span
-        v-for="
-            sentence, i in $t (
-              `pages.ladiesInIt.index.${
-                ladies.MAP.get (ladies.index).key
-              }`
-            ).split ('%')
-          "
+      <template v-if="j === ladies.index">
 
-        :key="i"
-        :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
-      >
-        {{ sentence }}
-      </span>
+        <span
+          v-for="
+              sentence, i in $t (
+                `pages.ladiesInIt.index.${
+                  ladies.MAP.get (j).key
+                }`
+              ).split ('%')
+            "
+
+          :key="i"
+          :class="[ '', 'fw-bold' ] [ +(i % 2 !== 0) ]"
+        >
+          {{ sentence }}
+        </span>
+        
+      </template>
 
     </p>
   

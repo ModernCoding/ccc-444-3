@@ -30,11 +30,20 @@
 
 
 .o-lady
+
   text-align: center
   text-transform: uppercase
 
   p
     line-height: 1
+    transition: height .5s linear, opacity .5s linear
+
+    &[data-is-shown="0"]
+      height: 0
+      opacity: 0
+
+    &[data-is-shown="1"]
+      opacity: 1
 
     span.fw-bold
       text-decoration: underline
@@ -49,6 +58,14 @@
   img
     max-height: 100%
     max-width: 100%
+    transition: height .5s linear, opacity .5s linear
+
+    &[data-is-shown="0"]
+      height: 0
+      opacity: 0
+
+    &[data-is-shown="1"]
+      opacity: 1
 
 
 .o-lady-menu
