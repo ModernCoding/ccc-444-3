@@ -8,7 +8,7 @@ export const index = {
       "Unsere Firma ist aus allen Chancen entstanden, die ergriffen werden konnten, %und die wir auch ergriffen!%",
 
       `
-        >Zwei von uns sind ursprünglich keine Informatiker, sondern haben Bauingenieurwesen bzw. Chemie studiert, und ergriffen nach dem Studium die Chance umzusteigen.
+        >Zwei von uns waren ursprünglich keine Informatiker, sondern haben Bauingenieurwesen bzw. Chemie studiert, und ergriffen nach dem Studium die Chance umzusteigen.
         >Die beiden anderen Informatikern ergriffen die Chance, ins Grafikdesign einzusteigen.
         >Einer ergriff die Chance, einen Grafikdesign-Kurs bei einer renommierten Grafikdesignerin aus Bangkok zu nehmen.
       `,
@@ -54,6 +54,25 @@ export const index = {
         >Wir haben einigen unserer Mitarbeiter*innen die Chance gegeben, als Grafikdesigner*innen zu arbeiten und ihre Leidenschaft für Kunst beruflich zu verfolgen.
         >Wir haben unserer Mitarbeiterin aus Myanmar die Chance gegeben, der extremen politischen Lage ihres Landes zu entkommen und nach Thailand zu ziehen.
       `
+  
+    ],
+
+
+  weFightForTheChance: [
+
+      "Damit unsere Mitarbeiterin aus Myanmar nach Thailand ziehen konnte, mussten wir einen sechs Monate langen, schwierigen Prozess durchlaufen!",
+
+      "Wir haben nach einer Firma gesucht, die sie anstellen, ihr Visum sponsern und sie als Beraterin zu uns schicken konnte!",
+
+      "Nachdem wir diese Firma gefunden hatten, haben wir gemeinsam die gesamte Akte ausgearbeitet und verschiedene Anträge an die zuständigen Behörden in Thailand geschickt.",
+
+      "Die Anträge wurden mehrmals abgelehnt; bei jeder Ablehnung haben wir trotzdem die Anträge bearbeitet und erneut eingereicht.",
+
+      "Es hat viele Hin und Her gebraucht, bevor die Anträge endlich akzeptiert wurden!",
+
+      "Wir kennen keine andere Kleinfirma wie unsere, die so viel Durchhaltevermögen beweist, %um einen so langen und schwierigen Prozess durchzuziehen%, wenn alle anderen schon aufgegeben hätten!",
+
+      "Diesen Kampf, den wir für unsere Mitarbeiterin geführt haben, führen wir auch für Sie, falls Sie mit einem Projekt kommen, das etwas beinhaltet, was zuvor noch nie gemacht wurde."
   
     ]
 

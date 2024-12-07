@@ -7,14 +7,17 @@
 
   <article
     class="o-philosophy-content"
-    id="we-give-the-chance"
+    id="we-fight-for-the-chance"
   >
 
-    <h1>WE GIVE THE CHANCE!</h1>
+    <h1>WE FIGHT FOR THE CHANCE!</h1>
 
 
     <template
-      v-for="p, i in $tm ('pages.ourPhilosophy.index.weGiveTheChance')"
+      v-for="
+          p, i in $tm ('pages.ourPhilosophy.index.weFightForTheChance')
+        "
+        
       :key="i"
     >
 

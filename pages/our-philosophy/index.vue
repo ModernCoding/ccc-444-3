@@ -3,6 +3,7 @@
   import Beethoven from './.partials/beethoven'
   import Menu from './.partials/menu'
   import Quote from './.partials/quote'
+  import WeFightForTheChance from './.partials/we-fight-for-the-chance'
   import WeGiveTheChance from './.partials/we-give-the-chance'
   import WeTakeTheChance from './.partials/we-take-the-chance'
 
@@ -38,6 +39,7 @@
       <Menu />
       <WeTakeTheChance />
       <WeGiveTheChance />
+      <WeFightForTheChance />
 
       <nav>
         <CallToActions />
@@ -79,6 +81,7 @@
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <WeTakeTheChance />
         <WeGiveTheChance />
+        <WeFightForTheChance />
 
         <nav>
           <CallToActions />
