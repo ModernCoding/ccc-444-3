@@ -32,11 +32,24 @@ export const handleText = screenProperties => {
       })
 
 
+  const fontSize
+    = TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
+
+
   document
 
     .querySelectorAll ([
-        '.o-expertise-skill-in-modal p, .o-expertise-skill-in-modal ul',
-        '.o-expertise-skill-in-main p, .o-expertise-skill-in-main ul',
+
+        `
+          .o-expertise-skill-in-modal p,
+          .o-expertise-skill-in-modal ul
+        `,
+
+        `
+          .o-expertise-skill-in-main p,
+          .o-expertise-skill-in-main ul
+        `
+
       ] [ +(screenProperties.ratioIndex > 1) ])
 
 
@@ -44,14 +57,15 @@ export const handleText = screenProperties => {
       
         p.removeAttribute ('style')
 
-        ;(size =>
-            p
-              .querySelectorAll ('*')
-              .forEach (e => e.style.fontSize = `${ size }px`)
-          ) (
-            TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
-          )
+        p
+          .querySelectorAll ('*')
+          .forEach (e => e.style.fontSize = `${ fontSize }px`)
       
       })
+
+
+  document
+    .querySelectorAll ('.o-external-link')
+    .forEach (a => a.style.gap = `${ fontSize * PHI }px`)
 
 }
