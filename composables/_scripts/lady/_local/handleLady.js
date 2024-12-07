@@ -32,58 +32,58 @@ export const handleLady = screenProperties => {
   lady.removeAttribute ('style')
 
 
-  const p = lady.querySelector ('p')
-  if (!p) { return }
-  
-  p.removeAttribute ('style')
+  lady.querySelectorAll ('p').forEach (p => {
 
-  p.querySelectorAll ('span').forEach (span =>
-      span.removeAttribute ('style')
-    )
-
-
-  if (screenProperties.ratioIndex < 2) {
-    return _handleFontSize (screenProperties, p)
-  }
-
-
-  const ladyHeight = [
-      screenProperties.heights.main / PHI,
-      lady.getBoundingClientRect ().height
-    ] [ +(screenProperties.ratioIndex > 2) ]
-
-
-  const fontSize = [ ladyHeight, TWICE_54_BY_PHI ] [
-      +(ladyHeight > TWICE_54_BY_PHI)
-    ]
-
-
-  ;(function _setFontSize (size = fontSize) {
-
+    p.removeAttribute ('style')
 
     p.querySelectorAll ('span').forEach (span =>
-        span.style.fontSize = `${ size }px`
+        span.removeAttribute ('style')
       )
 
 
-    switch (true) {
-
-      case size <= TWICE_54_BY_PHI_POWER_5:
-
-        return p.querySelectorAll ('span').forEach (span =>
-            span.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 }px`
-          )
-
-
-      case p.getBoundingClientRect ().height < ladyHeight:
-        return 
-
-      default:
-        return _setFontSize (size / PHI)
-
+    if (screenProperties.ratioIndex < 2) {
+      return _handleFontSize (screenProperties, p)
     }
 
-  }) ()
+
+    const ladyHeight = [
+        screenProperties.heights.main / PHI,
+        lady.getBoundingClientRect ().height
+      ] [ +(screenProperties.ratioIndex > 2) ]
+
+
+    const fontSize = [ ladyHeight, TWICE_54_BY_PHI ] [
+        +(ladyHeight > TWICE_54_BY_PHI)
+      ]
+
+
+    ;(function _setFontSize (size = fontSize) {
+
+      p.querySelectorAll ('span').forEach (span =>
+          span.style.fontSize = `${ size }px`
+        )
+
+
+      switch (true) {
+
+        case size <= TWICE_54_BY_PHI_POWER_5:
+
+          return p.querySelectorAll ('span').forEach (span =>
+              span.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 }px`
+            )
+
+
+        case p.getBoundingClientRect ().height < ladyHeight:
+          return 
+
+        default:
+          return _setFontSize (size / PHI)
+
+      }
+
+    }) ()
+
+  })
 
 
   if (screenProperties.ratioIndex > 2) { return }
