@@ -1,6 +1,6 @@
 export const index = {
   
-  quote: "Die Grenzen sind noch nicht gesteckt, die dem Talent und Fleiß entgegenriefen: bis hierher und nicht weiter!",
+  quote: `"Die Grenzen sind noch nicht gesteckt, die dem %Talent% und %Fleiß% entgegenriefen: bis hierher und nicht weiter!"`,
 
 
   menu: [

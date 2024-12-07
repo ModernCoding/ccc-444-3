@@ -1,50 +1,58 @@
 export const handleQuote = screenProperties => {
 
-  const whyGuests = document.querySelector ('.o-philosophy-title')
-  if (!whyGuests) { return }
+  const quote = document.querySelector ('.o-philosophy-quote')
+  if (!quote) { return }
 
-  whyGuests.removeAttribute ('style')
+  quote.removeAttribute ('style')
 
-  const h1 = whyGuests.querySelector ('h1')
+  const h1 = quote.querySelector ('h1')
   if (!h1) { return }
 
 
-  const _setFontSize = (maxHeight, maxWidth, fontSize) => {
+  const fontSize = (fontSize =>
 
-      h1.style.fontSize = `${ fontSize }px`
+      [ TWICE_54_BY_PHI_POWER_5, fontSize ] [
+        +(fontSize > TWICE_54_BY_PHI_POWER_5)
+      ]
 
+    ) (screenProperties.heights.footer / PHI ** 2)
+
+
+  const spans = h1.querySelectorAll ('span')
+  spans.forEach (s => s.style.fontSize = `${ fontSize }px`)
+
+
+  ;(function _set (size = fontSize) {
 
       switch (true) {
         
-        case fontSize <= TWICE_54_BY_PHI_POWER_4:
+        case  size <= TWICE_54_BY_PHI_POWER_5:
 
-          return h1.style.fontSize = `${ TWICE_54_BY_PHI_POWER_4 }px`
+          spans.forEach (s =>
+              s.style.fontSize = `${ TWICE_54_BY_PHI_POWER_5 }px`
+            )
+
+          return
 
 
-        case h1.getBoundingClientRect ().height >= maxHeight:
-        case h1.scrollWidth >= maxWidth:
+        case  quote.getBoundingClientRect ().height
+                < screenProperties.heights.footer:
 
-          return _setFontSize (maxHeight, maxWidth, fontSize / PHI)
+          return
 
 
         default:
-          return
+          spans.forEach (s => s.style.fontSize = `${ size / PHI }px`)
+          return _set (size / PHI)
 
       }
 
-    }
+    }) ()
 
 
-  ;(height => {
-
-    whyGuests.style.height = `${ height }px`
-    
-    _setFontSize (
-      height,
-      screenProperties.widths.main,
-      height / PHI ** 2
-    )
-
-  }) (screenProperties.heights.footer)
+  quote.getBoundingClientRect ().height
+    >= screenProperties.heights.footer && (
+        quote.style.display = 'none'
+      )
 
 }
