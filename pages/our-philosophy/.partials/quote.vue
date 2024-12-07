@@ -1,6 +1,6 @@
 <template>
 
-  <hgroup class="o-expertise-skill-title">
+  <hgroup class="o-philosophy-title">
     <h1>{{ $t ('pages.ourPhilosophy.index.quote') }}</h1>
   </hgroup>
   
@@ -9,6 +9,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>

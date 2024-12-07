@@ -1,6 +1,6 @@
 export const handleQuote = screenProperties => {
 
-  const whyGuests = document.querySelector ('.o-expertise-skill-title')
+  const whyGuests = document.querySelector ('.o-philosophy-title')
   if (!whyGuests) { return }
 
   whyGuests.removeAttribute ('style')

@@ -1,0 +1,109 @@
+@use "sass:math"
+
+@use '@/assets/sass/constants' as constants
+@use '@/assets/sass/dimensions' as dimensions
+@use '@/assets/sass/sizes' as sizes
+
+
+.o-philosophy-in-main
+
+  display: flex
+  flex-direction: column
+  gap: calc(dimensions.$heightHeaderTwoParts / constants.$phi)
+
+  height: dimensions.$heightSectionTwoParts
+
+  > *
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 2))
+
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderTwoParts / math.pow(constants.$phi, 3))
+
+
+.o-philosophy-in-modal
+
+  display: flex
+  flex-direction: column
+  gap: calc(dimensions.$heightHeaderOnePart / constants.$phi)
+
+  > *
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 2))
+
+  ul
+    display: flex
+    flex-direction: column
+    gap: calc(dimensions.$heightHeaderOnePart / math.pow(constants.$phi, 3))
+
+
+.o-philosophy-title
+
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  > *
+    text-transform: uppercase
+
+
+.o-philosophy-picture
+
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  img
+    max-height: 100%
+    max-width: 100%
+
+  &[data-number-of-parts="2"],
+  &[data-number-of-parts="3"]
+
+    img
+      max-height: dimensions.$heightSectionTwoParts
+
+
+.o-philosophy-content
+  display: flex
+  flex-direction: column
+  // gap: sizes.$twice_54_by_phi_power_3 * 1px
+
+  h1, h2
+    text-align: center
+  
+  h1
+    text-transform: uppercase
+
+  p
+    font-size: sizes.$twice_54_by_phi_power_4 * 1px
+    text-align: justify
+
+  li
+    text-align: justify
+    list-style-image: url("/images/sun.png")
+    list-style-position: inside
+
+  .o-underline
+    text-decoration: underline
+
+
+.o-philosophy-menu
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  li
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    > div
+      text-align: justify
+      text-transform: uppercase

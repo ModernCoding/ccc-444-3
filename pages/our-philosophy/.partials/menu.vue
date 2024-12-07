@@ -10,7 +10,7 @@
 
 <template>
 
-  <menu class="o-expertise-skill-menu">
+  <menu class="o-philosophy-menu">
 
     <li
       v-for="item in $tm ('pages.ourExpertise.consulting.menu')"
@@ -37,6 +37,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>

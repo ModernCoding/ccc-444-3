@@ -17,6 +17,6 @@ export default id => {
             - firstElement.getBoundingClientRect ().top
         )
 
-    }) (document.querySelector ('.o-expertise-skill-text'))
+    }) (document.querySelector ('.o-philosophy-text'))
 
 }

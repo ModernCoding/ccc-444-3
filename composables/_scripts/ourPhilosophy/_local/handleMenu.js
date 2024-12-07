@@ -1,6 +1,6 @@
 export const handleMenu = screenProperties => {
 
-  const menu = document.querySelector ('.o-expertise-skill-menu')
+  const menu = document.querySelector ('.o-philosophy-menu')
 
   if (!menu) { return }
   menu.removeAttribute ('style')

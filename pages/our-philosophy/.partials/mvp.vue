@@ -14,7 +14,7 @@
 
   <article
     :class="`
-        o-expertise-text
+        o-philosophy-content
 
         o-${
           $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
@@ -119,6 +119,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>

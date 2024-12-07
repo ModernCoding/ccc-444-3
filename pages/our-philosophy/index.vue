@@ -16,7 +16,7 @@
 
   watch (locale, () => {
 
-    const content = document.querySelector ('.o-expertise-skill-text')
+    const content = document.querySelector ('.o-philosophy-text')
     content && content.scrollTo ({ top: 0, behavior: 'smooth' })
 
   })
@@ -31,9 +31,7 @@
     isShorter="1"
   >
 
-    <section
-      class="o-expertise-skill-in-modal o-expertise-skill-text"
-    >
+    <section class="o-philosophy-in-modal o-philosophy-text">
 
       <Beethoven />
       <Menu />
@@ -72,7 +70,7 @@
     >
 
       <article
-        class="o-expertise-skill-in-main o-expertise-skill-text"
+        class="o-philosophy-in-main o-philosophy-text"
         :data-number-of-parts="screenProperties.ratioIndex"
       >
 
@@ -100,6 +98,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>

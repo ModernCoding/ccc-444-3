@@ -14,7 +14,7 @@
   <NuxtLink :to="{ name: 'index' }">
 
     <figure
-      class="o-expertise-skill-picture"
+      class="o-philosophy-picture"
       :data-number-of-parts="screenProperties.ratioIndex"
     >
 
@@ -34,6 +34,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>
