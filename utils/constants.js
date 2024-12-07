@@ -46,12 +46,12 @@ export const ROUTES_WITHOUT_IMAGE_WAITING = [
     'our-expertise-consulting',
     'our-expertise-guest-tech-team-lead',
     'our-expertise-we-are-specialized-in-javascript',
-    'our-philosophy',
+    // 'our-philosophy',
     'team',
-    'team-babe',
-    'team-fah',
-    'team-michel',
-    'team-mon'
+    // 'team-babe',
+    // 'team-fah',
+    // 'team-michel',
+    // 'team-mon'
   ]
 
 

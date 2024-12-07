@@ -33,7 +33,7 @@ export default loadingStore => {
             console.log ("Image failed to load >>>", img.src)
 
             loadingStore.patchIsImageLoadingComplete (
-              loadedImages === images.length
+              ++loadedImages === images.length
             )
 
           })
