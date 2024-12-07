@@ -11,7 +11,7 @@
 
 <template>
 
-  <NuxtLink :to="{ name: 'our-expertise' }">
+  <NuxtLink :to="{ name: 'index' }">
 
     <figure
       class="o-expertise-skill-picture"
@@ -19,8 +19,8 @@
     >
 
       <NuxtImg
-        src="/images/laravel.png"
-        alt="Angkor Wat"
+        src="/images/beethoven.png"
+        alt="Ludwig van Beethoven"
         :modifiers="{ b: '#110d0d', opacity: 1 }"
         loading="lazy"
       />

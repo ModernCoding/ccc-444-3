@@ -20,7 +20,7 @@
 
       <NuxtImg
         src="/images/laravel.png"
-        alt="Angkor Wat"
+        alt="Laravel"
         :modifiers="{ b: '#110d0d', opacity: 1 }"
         loading="lazy"
       />

@@ -1,9 +1,8 @@
 <script setup>
   
-  import Consulting from './.partials/consulting'
-  import Hotwire from './.partials/hotwire'
-  import Laravel from './.partials/laravel'
+  import Beethoven from './.partials/beethoven'
   import Menu from './.partials/menu'
+  import Quote from './.partials/quote'
   import Mvp from './.partials/mvp'
 
 
@@ -36,10 +35,9 @@
       class="o-expertise-skill-in-modal o-expertise-skill-text"
     >
 
-      <Laravel />
+      <Beethoven />
       <Menu />
       <Mvp />
-      <Hotwire />
 
       <nav>
         <CallToActions />
@@ -56,7 +54,7 @@
       v-if="screenProperties.ratioIndex > 1"
       v-slot:aside
     >
-      <Laravel />
+      <Beethoven />
     </template>
 
 
@@ -80,7 +78,6 @@
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <Mvp />
-        <Hotwire />
 
         <nav>
           <CallToActions />
@@ -93,7 +90,7 @@
 
 
     <template v-slot:footer-right>
-      <Consulting />
+      <Quote />
     </template>
 
   </BaseLayout>

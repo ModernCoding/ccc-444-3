@@ -2,9 +2,16 @@ export default (screenProperties, logoProperties) => {
 
   document.querySelectorAll ('.o-call-to-actions').forEach (cta => {
 
-      screenProperties.value.ratioIndex > 1
-        ? cta.style.height = `${ logoProperties.value.height }px`
-        : cta.removeAttribute ('style')
+      /*
+        on pages without logo, logoProperties.value.height === 0
+      */
+
+      logoProperties.value.height > 0
+        && screenProperties.value.ratioIndex > 1
+
+          ? cta.style.height = `${ logoProperties.value.height }px`
+          : cta.removeAttribute ('style')
+
 
       cta
         .querySelectorAll ('*')
@@ -66,7 +73,10 @@ export default (screenProperties, logoProperties) => {
       ) (
 
         [ mainHeight, logoProperties.value.height ] [
-          +(screenProperties.value.ratioIndex > 1)
+          +(
+            logoProperties.value.height > 0
+              && screenProperties.value.ratioIndex > 1
+          )
         ]
           - heighestFigcaption
           - screenProperties.value.paddingTops.corrected.main
