@@ -50,7 +50,7 @@ export const index = {
       "The same way I was givem my chance to start in the IT, we have also given the chance to other people.",
 
       `
-        >We gave the chance to fresh graduates to start at our company, even if they had a major in a different field. Those who could not take the chance have left our company. 
+        >We gave the chance to fresh graduates to start at our company, including those with a major in a different field. Those who could not take the chance have left our company. 
         >We gave the chance to our coworkers to work as graphic designers and to turn their passion for art into their profession.
         >We gave our Burmese coworker the chance to escape the extreme political situation of her country and to come to Thailand.
       `
