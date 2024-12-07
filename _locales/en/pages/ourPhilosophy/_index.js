@@ -60,19 +60,19 @@ export const index = {
 
   weFightForTheChance: [
 
-      "Damit unsere Mitarbeiterin aus Myanmar nach Thailand ziehen konnte, mussten wir einen sechs Monate langen, schwierigen Prozess durchlaufen!",
+      "In order for our Burmese coworker to be allowed into Thailand, we had to go through a tedious 6-month process!",
 
-      "Wir haben nach einer Firma gesucht, die sie anstellen, ihr Visum sponsern und sie als Beraterin zu uns schicken konnte!",
+      "We had been looking for a company that would hire her, sponsor her visa and send her to our company as a consultant!",
 
-      "Nachdem wir diese Firma gefunden hatten, haben wir gemeinsam die gesamte Akte ausgearbeitet und verschiedene Anträge an die zuständigen Behörden in Thailand geschickt.",
+      "Upon finding this company, we started to work on her act and submitted the demand to the Thai authorities.",
 
-      "Die Anträge wurden mehrmals abgelehnt; bei jeder Ablehnung haben wir trotzdem die Anträge bearbeitet und erneut eingereicht.",
+      "The demand was rejected several times; nevertheless, for each rejection, we worked on the demand and submitted again.",
 
-      "Es hat viele Hin und Her gebraucht, bevor die Anträge endlich akzeptiert wurden!",
+      "Several submissions for the demand were necessaries, before it was granted!",
 
-      "Wir kennen keine andere Kleinfirma wie unsere, die so viel Durchhaltevermögen beweist, %um einen so langen und schwierigen Prozess durchzuziehen%, wenn alle anderen schon aufgegeben hätten!",
+      "%Can you name a small company like ours that has shown such perseverance in completing a long and tedious process when others would have given up?%",
 
-      "Diesen Kampf, den wir für unsere Mitarbeiterin geführt haben, führen wir auch für Sie, falls Sie mit einem Projekt kommen, das etwas beinhaltet, was zuvor noch nie gemacht wurde."
+      "This fight, that we fought for our coworker, we can fight it for you as well if you come with a project that implies things which have never been made before."
   
     ]
 
