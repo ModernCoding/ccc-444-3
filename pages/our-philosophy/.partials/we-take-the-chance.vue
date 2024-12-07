@@ -23,15 +23,17 @@
     </h1>
 
 
-    <h2>
-
+    <h2 v-if="locale === 'fr'">
+      (Dieter Bohlen - Modern Talking, &laquo;&nbsp;We Take The Chance&nbsp;&raquo;)
+    </h2>
+    
+    <h2 v-else>
       (Dieter Bohlen - Modern Talking, "We Take The Chance")
-
     </h2>
 
 
     <template
-      v-for="p, i in $tm ('pages.ourExpertise.consulting.mvp')"
+      v-for="p, i in $tm ('pages.ourPhilosophy.index.weTakeTheChance')"
       :key="i"
     >
 

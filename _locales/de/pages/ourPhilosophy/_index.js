@@ -3,65 +3,36 @@ export const index = {
   quote: `"Die Grenzen sind noch nicht gesteckt, die dem %Talent% und %Fleiß% entgegenriefen: bis hierher und nicht weiter!"`,
 
 
-  mvp: [
+  weTakeTheChance: [
 
-      "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks und passen uns den Kundenwünschen an.",
-
-      "Falls Sie Ihr Projekt selber entwickeln wollen, und es auch mit einem Framework machen, %das nicht auf JavaScript ruht%, wie beispielsweise Ruby on Rails, Django oder Laravel, beraten wir Sie auch gerne.",
-
-      "Das haben wir mit der Firma Huneety gemacht.",
-
-      "~https://www.huneety.com",
-
-      "Huneety ist eine Personalvermittlungsfirma, die von zwei Franzosen in Bangkok, Thailand, gegründet wurde.",
-
-      "Huneety ist gleichzeitig ein Webportal, das speziell auf die Bedürfnisse des thailändischen Arbeitsmarkts eingeht, welche von LinkedIn nicht abgedeckt werden.",
-
-      "Das MVP für das Webportal wurde von einem der Mitgründer entwickelt, %obwohl er ursprünglich kein Informatiker ist!% Tatsächlich kommt er aus dem Handel- und Marketingsbereich.",
-
-      "Er hat dann angefangen, das Programmieren mit PHP selber zu lernen. Für sein MVP hat er sich logischerweise fürs Laravel-Framework entschieden, und angefangen, es selber zu entwickeln.",
-
-      "Später, als er das Gefühl hatte, in eine technische Sackgasse geraten zu sein, fand er unsere Firma und bat nach unserer Hilfe, da ich bereits Erfahrung mit Laravel hatte, die ich während meiner Zeit in Kambodscha gesammelt hatte.",
-
-      "So habe ich ihm geholfen",
+      "Unsere Firma ist aus allen Chancen entstanden, die ergriffen werden konnten, %und die wir auch ergriffen!%",
 
       `
-        >Ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken.
-        >Zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals %langfristig und vor allem hoch flexibel% handeln vermag.
+        >Zwei von uns sind ursprünglich keine Informatiker, sondern haben Bauingenieurwesen bzw. Chemie studiert, und ergriffen nach dem Studium die Chance umzusteigen.
+        >Die beiden anderen Informatikern ergriffen die Chance, ins Grafik-Design einzusteigen.
+        >Einer ergriff die Chance, einen Grafik-Design-Kurs bei einer renommierten Grafik-Designerin aus Bangkok zu nehmen.
       `,
 
+      "~https://www.karmasirikogar.com",
 
-      "Es war eine reine Beratungskooperation, in der wir uns wöchentlich für eine 2-stündige Arbeitssession trafen.",
+      "Und auch noch zuvor:",
 
       `
-        >Wir diskutierten seine Bedürfnisse.
-        >Ich empfiehl ihn, auch über nicht-technische Aspekte: Benutzererfahrung, Ergonomie, Layout, usw...
-        >Wie ein Lehrer, der seinem Schüler Hausaufgaben gibt, listete ich die Aufgaben, die bis zur nächsten Session zu erledigen waren: Migrationsdatei, entsprechende Modelle, Ansichten und Steuerungen.
-        >Zu Beginn der nächsten Session erfolgte die Korrektur.
-      `
+        >Vor 20 Jahren ergriff ich die Chance, als Chemie-Student ein Praktikum bei Bayer, Leverkusen, zu machen, und in Deutschland weiterzustudieren
+        >Nach dem Abschluss und beim Rückkehr in Frankreich ergriff ich die Chance, in die Informatik zu wechseln.
+        >Dabei gab mir eine IT-Firma meine Chance und eine 6wöchige intensive Ausbildung in den Mainframe-Technologien, bevor ich zum Kunden als Berater geschickt wurde!
+        >Nach der Arbeit ergriff ich auch die Chance, an den zahlreichen Abend- und Wochenendkursen teilzunehmen, die die süddeutschen Volkshochschulen anboten, um verschiedene objektorientierte Programmiersprachen zu erlernen.
+        >Während den Ferien ergriff ich die Chance, nach Portugal und Spanien zu reisen, um dort intensive Sprachkurse zu nehmen.
+        >Kurz drauf ergriff ich die Chance, nach Portugal zu ziehen und dort eine Stelle zu finden.
+        >In Lissabon ergriff ich die Chance, an Kursen zur Webprogrammierung teilzunehmen.
+        >Mitten in der südeuropäischen Wirtschaftskrise ergriff ich die Chance, eine Stelle in Spanien zu finden!
+        >Da ich auch Portugiesisch spreche, ergriff ich die Chance, für einen Monat nach Brasilien zu reisen und dort intensive Kurse in fortgeschrittener Web- und Mobile-Entwicklung zu absolvieren.
+        >Kurz nach meiner Rückkehr ergriff ich die Chance, nach Vietnam zu ziehen und, nach sieben Jahren mit Mainframe-Technologien, meine ersten Erfahrungen in der Web-Entwicklung zu sammeln!,
+        >Nach zahlreichen Erfahrungen in Vietnam, Malaysia und Kambodscha landete ich in Thailand, wo ich die Chance ergriff, mich selbstständig zu machen!
+      `,
+
+      "Das Wichtigste ist und bleibt aber: %Ich habe mir unendlich viel Mühe gegeben!%"
 
     ],
-
-
-  hotwire: [
-
-      "Wenn Sie eine Web-App schon haben, die nicht mit JavaScript-Frameworks entwickelt wurde, sondern mit anderen Fullstack-Technologien wie Ruby on Rails, Django oder Laravel, haben Sie bestimmt gemerkt, %wie die App manchmal langsam sein kann!%",
-
-      "Dies ist zur intrisinschen Natur der - voluminösen - Datenaustäusche zwischen HTTP-Anfragen und Antworten zurückzuführen.",
-
-      "%Die Lösung existiert: Hotwire.%",
-      "~https://www.hotwired.dev",
-
-      "Sie wurde von David Heinemeier Hansson, dem Schöpfer von Ruby on Rails, als minimalistiches JavaScript-Framework entwickelt.",
-
-      "Dieses Framework eignet sich besonders gut für die Teams, die das Benutzen von JavaScript auf das strikte Minimum reduzieren möchten!",
-
-      "Auch wenn es sich langfristig empfiehlt, das Frontend vom Backend zu trennen, kann Hotwire zur Beschleunigung Ihrer Web-App als Übergangslösung in das bestehende Projekt integriert werden!",
-
-      "Genau das habe ich für das kambodschanische E-Commerce-Portal Kokopon gemacht:",
-
-      "~https://www.kokopon.com"
-  
-    ]
 
 }
