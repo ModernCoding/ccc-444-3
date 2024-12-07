@@ -29,7 +29,7 @@ export const index = {
       `
         >20 years ago, I took the chance as a chemistry student to do an internship at the HQ of Bayer, Leverkusen, Germany, and to carry on my chemistry studies in Germany as well.
         >Upon graduating and moving back to France, I took the chance to switch to IT.
-        >An French IT company gave me my chance, as well as a 6-week intensive training in the Mainframe technologies, before I was sent to the customer!
+        >A French IT company gave me my chance, as well as a 6-week intensive training in the Mainframe technologies, before I was sent to the customer!
         >After work, I also took the chance of the many night and weekend classes offered by the Volkshochschulen in Southern Germany, where I took the chance to learn several obejct-oriented languages.
         >During holidays, I took the chance to travel to Portugal and Spain in order to take intensive language classes.
         >Short after, I took the chance to move to Portugal and to find a job there.

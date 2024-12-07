@@ -1,46 +1,46 @@
 export const index = {
   
-  quote: `\u00ab\xa0On n'a encore jamais posé de frontières portant la mention \u0027Tu ne vas pas plus loin\xa0!\u0027 pour empêcher le %talent% et le %travail% de passer\xa0!\xa0\u00bb`,
+  quote: `\u00ab\xa0On n'a encore jamais posé de frontières portant la mention \u0027Tu ne vas pas plus loin\xa0!\u0027 et visant à empêcher le %talent% et le %travail% de passer\xa0!\xa0\u00bb`,
 
 
   weTakeTheChance: [
 
-      "Our company is built on the many chances we took %when they were to be taken!%",
+      "Notre société est fondée sur les nombreuses chances que nous avons saisies %lorsqu'elles étaient à saisir\xa0!%",
 
       `
-        >Two of us were originally not developers, but studied civil engineering and chemistry respectively; they just took the chance to start in the IT right after graduation.
-        >Both other developers took the chance to jump into graphic design.
-        >One of them took the chance to take a graphic design course with a reknown graphic designer from Bangkok.
+        >Deux d'entres nous n'étaient pas informaticiens à l'origine, mais respectivement ingénieur civil et chimiste de formation\xa0; ils ont juste saisi la chance qui se présentait de démarrer une carrière dans l'informatique juste après la remise des diplômes\xa0!,
+        >Les deux autres développeurs ont saisi la chance de se lancer dans le design graphique.
+        >L'un d'eux a saisi la chance de prendre des cours de design graphique auprès d'une designeuse réputée de Bangkok.
       `,
 
       "~https://www.karmasirikogar.com",
 
       "",
-      "As a united team:",
+      "En tant qu'équipe unie autour de son chef\xa0:",
 
       `
-        >We took the chance to develop a new layout for websites, that would stretch from small flip-smartphones up to huge 57-inch curved monitors!
-        >We took the chance to work on new graphic design styles!
+        >Nous avons saisi la chance de développer un nouveau layout pour les sites web, apte à s'étendre du smartphone pliable au gigantesque écran de 57 pouces\xa0!
+        >Nous avons saisi la chance de travailler sur de nouveaux styles de design graphique\xa0!
       `,
 
       "",
-      "And also before:",
+      "Et bien avant\xa0:",
 
       `
-        >20 years ago, I took the chance as a chemistry student to do an internship at the HQ of Bayer, Leverkusen, Germany, and to carry on my chemistry studies in Germany as well.
-        >Upon graduating and moving back to France, I took the chance to switch to IT.
-        >An French IT company gave me my chance, as well as a 6-week intensive training in the Mainframe technologies, before I was sent to the customer!
-        >After work, I also took the chance of the many night and weekend classes offered by the Volkshochschulen in Southern Germany, where I took the chance to learn several obejct-oriented languages.
-        >During holidays, I took the chance to travel to Portugal and Spain in order to take intensive language classes.
-        >Short after, I took the chance to move to Portugal and to find a job there.
-        >In Lisbon, I took the chance to take part in web programming classes.
-        >Right in the middle of the economic crisis that was hitting Southern Europe, I took the chance to find a job in Spain!
-        >Since I speak Portuguese, I took the chance to fly to Brazil for one month in order to take intensive classes in advanced web and mobile development.
-        >Short upon returning from Brazil, I took the chance to move to Vietnam and, after 7 years working mit Mainframe technologies, to get my first experience in the web industry!
-        >After numerous experiences in Vietnam, Malaysia and Cambodia, I landed in Thailand, where I took the chance to become independent!
+        >Il y a 20 ans, j'ai saisi la chance qui m'était offerte en tant qu'étudiant en chimie, d'effectuer un stage au siège de Bayer à Leverkusen, en Allemagne, et de terminer mes études en Allemagne également.
+        >À mon retour en France, j'ai saisi la chance qui m'était offerte de démarrer une carrière en informatique.
+        >Une entreprise informatique m'a donné cette chance ainsi qu'une formation intensive de 6 semaines sur les technologies Mainframe, avant de m'envoyer chez le client\xa0!
+        >Après le travail, j'ai saisi la chance qui m'était offerte d'aller en cours du soir et du weekend offerts par les Volkshochschulen du sud de l'Allemagne, où j'ai appris les langages orientés objet.
+        >Pendant les vacances, j'ai saisi la chance qui m'était offerte d'aller au Portugal et en Espagne afin de prendre des cours intensives de langue.
+        >Peu de temps après, j'ai saisi la chance qui m'était offerte de déménager au Portugal et d'y trouver un emploi.
+        >À Lisbonne, j'ai saisi lachance qui m'etait offerte de participer à des cours de programmation web.
+        >En plein milieu de la crise économique qui sévissait dans le sud de l'Europe, j'ai saisi la chance qui m'était offerte de travailler en Espagne\xa0!
+        >Comme je parle portugais, j'ai saisi la chance qui m'était offerte de me rendre pour un mois au Brésil afin de prendre des cours intensifs de programmation avancée web & mobile.
+        >Juste à mon retour, j'ai saisi la chance qui m'était offerte de déménager au Vietnam après 7 années dans le Mainframe, afin d'y acquérir ma première expérience dans le web\xa0!
+        >Suite à de nombreuses expériences au Vietnam, en Malaisie et au Cambodge, j'ai fini par atterrir en Thaïlande, où j'ai saisi la chance qui m'était offerte de devenir indépendant\xa0!
       `,
 
-      "The most important ist: %I put endless efforts!%"
+      "Le principal, c'est ceci\xa0: %j'ai fourni énormément d'efforts\xa0!%"
 
     ],
 
