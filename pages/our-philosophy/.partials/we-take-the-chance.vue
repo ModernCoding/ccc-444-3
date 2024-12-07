@@ -13,22 +13,11 @@
 <template>
 
   <article
-    :class="`
-        o-philosophy-content
-
-        o-${
-          $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
-            .split ('|') [ 0 ]  
-        }
-      `"
+    class="o-philosophy-content"
+    id="we-take-the-chance"
   >
 
-    <h1>
-      {{ 
-        $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
-          .split ('|') [ 1 ] 
-      }}
-    </h1>
+    <h1>WE TAKE THE CHANCE!</h1>
 
 
     <template

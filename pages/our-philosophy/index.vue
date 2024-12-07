@@ -3,7 +3,7 @@
   import Beethoven from './.partials/beethoven'
   import Menu from './.partials/menu'
   import Quote from './.partials/quote'
-  import Mvp from './.partials/mvp'
+  import WeTakeTheChance from './.partials/we-take-the-chance'
 
 
   const screenPropertiesStore
@@ -35,7 +35,7 @@
 
       <Beethoven />
       <Menu />
-      <Mvp />
+      <WeTakeTheChance />
 
       <nav>
         <CallToActions />
@@ -75,7 +75,7 @@
       >
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
-        <Mvp />
+        <WeTakeTheChance />
 
         <nav>
           <CallToActions />
