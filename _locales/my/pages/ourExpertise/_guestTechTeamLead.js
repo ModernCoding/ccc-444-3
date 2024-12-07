@@ -42,6 +42,8 @@ export const guestTechTeamLead = {
 
       "This is the case of one of our customers: the company BiKay based in Phnom Penh, Cambodia.",
 
+      "~https://www.bi-kay.com",
+
       "This company was founded by a French software engineer, who has himself a strong background and large experience programming.",
 
       "They provides project development services for their international customers at competitive prices.",
