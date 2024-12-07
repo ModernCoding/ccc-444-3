@@ -64,12 +64,14 @@ export default (
         
         ourExpertiseScripts.resizeSkills (screenPropertiesStore)
         ctaScripts.equalize (screenProperties, logoProperties)
+        ctaScripts.setFontSize ()
         break
 
 
       case "our-philosophy":
         ourPhilosophyScripts.resize (screenPropertiesStore)
         ctaScripts.equalize (screenProperties, logoProperties)
+        ctaScripts.setFontSize ()
         break
 
 
