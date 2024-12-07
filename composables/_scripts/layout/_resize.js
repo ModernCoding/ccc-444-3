@@ -6,6 +6,10 @@ const contactScripts = collectContactScriptsFromComposable ()
 const ctaScripts = collectCtaScriptsFromComposable ()
 const ladyScripts = collectLadyScriptsFromComposable ()
 const ourExpertiseScripts = collectOurExpertiseScriptsFromComposable ()
+
+const ourPhilosophyScripts
+  = collectOurPhilosophyScriptsFromComposable ()
+
 const startPageScripts = collectStartPageScriptsFromComposable ()
 const teamScripts = collectTeamScriptsFromComposable ()
 
@@ -57,9 +61,14 @@ export default (
 
       case "our-expertise-consulting":
       case "our-expertise-guest-tech-team-lead":
-      case "our-philosophy":
         
         ourExpertiseScripts.resizeSkills (screenPropertiesStore)
+        ctaScripts.equalize (screenProperties, logoProperties)
+        break
+
+
+      case "our-philosophy":
+        ourPhilosophyScripts.resize (screenPropertiesStore)
         ctaScripts.equalize (screenProperties, logoProperties)
         break
 
