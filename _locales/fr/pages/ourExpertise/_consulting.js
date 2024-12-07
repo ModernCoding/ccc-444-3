@@ -36,8 +36,7 @@ export const consulting = {
 
       `
         >En premier lieu, je lui ai conseillé de repartir d'une feuille blanche\xa0! Il m'a été facile de deviner qu'il était parti d'un boilerplate obsolète aux bibliothèques non maintenues...
-        >Ensemble, on a pris le temps et le soin de concevoir la base de données de manière à ce que celle-ci couvre tous les besoins fonctionnels sur le long terme et avec la plus grande flexibilité.
-        Together with him, we took the time to properly design the database, so that it would cover all business needs %on the long term and in a highly flexible way.%
+        >Ensemble, on a pris le temps et le soin de concevoir la base de données de manière à ce que celle-ci couvre tous les besoins fonctionnels %sur le long terme et avec la plus grande flexibilité%.
       `,
 
 
@@ -55,20 +54,20 @@ export const consulting = {
 
   hotwire: [
 
-      "If you already have a web app, that has not been developed with JavaScript frameworks, but with another full stack technology such as Ruby on Rails, Django or Laravel, you might have noticed, %how slow it can be sometimes!%",
+      "Si vous avez déjà une appli web qui a été développée avec des frameworks autre que JavaScript, comme Ruby on Rails, Django ou Laravel, vous avez sûrement remarqué à quel point %l'appli peut être parfois lente\xa0!%",
 
-      "This is due to the intrinsic nature of the - voluminous - data exchange between HTTP requests and responses.",
+      "Cela est dû à la nature intrinsèque des données - volumineuse - échangées lors des requêtes et des réponses.",
 
-      "%The solution exists: Hotwire.%",
+      "%Il existe une solution à ce problème\xa0: Hotwire.%",
       "~https://www.hotwired.dev",
 
-      "It was designed by David Heinemeier Hansson, the creator of Ruby on Rails, as a minimalistic JavaScript framework.",
+      "Ce framework a été conçu par David Heinemeier Hansson, le créateur de Ruby on Rails.",
 
-      "This framework is well suited for teams, who wish to keep the usage of JavaScript at a strict minimum!",
+      "Il se définit comme un framework JavaScript minimaliste particulièrement adapté aux équipes qui souhaitent réduire l'utilisation de JavaScript à son strict minimum\xa0!",
 
-      "Even if it is recommended on the long term to separate the front from the backend, Hotwire can be a good interim solution to be integrated into your existing project in order to increase the performances of your web app!",
+      "Même s'il est recommandé sur le long terme de séparer le front du backend, Hotwire peut-être une solution transitoire idéale à intégrer au sein de votre projet existant, afin d'améliorer les performances de votre appli\xa0!",
 
-      "This is exactly the solution I implemented into Cambodian e-commerce portal Kokopon:",
+      "C'est précisément la solution que j'ai implémentée au sein du portail e-commerce khmer Kokopon\xa0:",
 
       "~https://www.kokopon.com"
   
