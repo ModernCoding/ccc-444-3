@@ -45,6 +45,7 @@ export const PHI = 2 * Math.sin (54 * Math.PI / 180)
 export const ROUTES_WITHOUT_IMAGE_WAITING = [
     'our-expertise-consulting',
     'our-expertise-guest-tech-team-lead',
+    'our-philosophy',
     'team-michel'
   ]
 
@@ -53,13 +54,17 @@ export const ROUTES_WITHOUT_LOGO = [
 
     'contact@1',
 
+    'ladies-in-it@1',
+    'ladies-in-it@2',
+    'ladies-in-it@3',
+
     'our-expertise-consulting@1',
     'our-expertise-consulting@2',
     'our-expertise-consulting@3',
 
-    'ladies-in-it@1',
-    'ladies-in-it@2',
-    'ladies-in-it@3',
+    'our-philosophy@1',
+    'our-philosophy@2',
+    'our-philosophy@3',
 
     'team-babe@1',
     'team-babe@2',
