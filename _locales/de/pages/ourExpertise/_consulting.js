@@ -53,41 +53,23 @@ export const consulting = {
 
   hotwire: [
 
-      "Ähnlich wie die Wiener Philharmoniker ohne permanente Dirigenten musizieren, entscheiden sich manche IT-Firmen, %ohne permanente technische Senior-Teamleiter*innen, Ihre Geschäfte zu führen!%",
+      "Wenn Sie eine Web-App schon haben, die nicht mit JavaScript-Frameworks entwickelt wurde, sondern mit anderen Fullstack-Technologien wie Ruby on Rails, Django oder Laravel, haben Sie bestimmt gemerkt, %wie die App manchmal langsam sein kann!%",
 
-      "Lieber lassen sie %ihre Teams durch technische Gast-Teamleiter*innen% führen.",
+      "Dies ist zur intrisinschen Natur der - voluminösen - Datenaustäusche zwischen HTTP-Anfragen und Antworten zurückzuführen.",
 
-      "Dies ist der Fall von einem unserer Kunden: Die Firma BiKay in Phnom Penh, Kambodscha.",
+      "%Die Lösung existiert: Hotwire.%",
+      "~https://www.hotwired.dev",
 
-      "Diese Firma wurde von einem französischen Softwareingenieur gegründet, der selber über einen starken Hintergrund und umfangreiche Erfahrung im Programmieren verfügt.",
+      "Sie wurde von David Heinemeier Hansson, dem Schöpfer von Ruby on Rails, als minimalistiches JavaScript-Framework entwickelt.",
 
-      "Sie bietet Projektentwicklungsdienstleistungen für ihre internationale Kundschaft zu wettbewerbsfähigen Preisen an.",
+      "Dieses Framework eignet sich besonders gut für die Teams, die das Benutzen von JavaScript auf das strikte Minimum reduzieren möchten!",
 
-      "",
-      "Durch meine Erfahrung:",
+      "Auch wenn es sich langfristig empfiehlt, das Frontend vom Backend zu trennen, kann Hotwire zur Beschleunigung Ihrer Web-App als Übergangslösung in das bestehende Projekt integriert werden!",
 
-      `
-        >als Gastprofessor an vietnamesischen und kambodschanischen Universitäten,
-        >als technischer Teamleiter in vergangen Firmen,
-        >als Firmengründer selber, der mein eigenes Team führt,
-      `,
+      "Genau das habe ich für das kambodschanische E-Commerce-Portal Kokopon gemacht:",
 
-      "",
-      "%Ich zähle seit 2021 zu den technischen Gast-Teamleiter*innen meines Kunden für seine Juniorentwickler und frische Absolventen!%",
-
-      "",
-      "Dabei sind meine Verantwortungen immer folgende:",
-
-      `
-        >Ansprechpartner für die eigenen Kunden meines Kunden sein,
-        >die Kundenbedürfnisse analysieren,
-        >Zeitaufwandschätzungen liefern,
-        >den passenden Tech-Stack wählen,
-        >die Verantwortung für die Qualität des Projekts tragen,
-        >das technische Know-How an die Kundenjunioren übertragen,
-        >denen die guten Praxis und das Selbst-Lernen beibringen
-      `,
-
+      "~https://www.kokopon.com"
+  
     ]
 
 }
