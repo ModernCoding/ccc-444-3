@@ -31,11 +31,11 @@ export const consulting = {
 
       "Später, als er das Gefühl hatte, in eine technische Sackgasse geraten zu sein, fand er unsere Firma und bat nach unserer Hilfe, da ich bereits Erfahrung mit Laravel hatte, die ich während meiner Zeit in Kambodscha gesammelt hatte.",
 
-      "So habe ich ihm geholfen:",
+      "So habe ich ihm geholfen",
 
       `
-        >ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken
-        >zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals %langfristig und vor allem hoch flexibel% handeln vermag
+        >Ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken.
+        >Zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals %langfristig und vor allem hoch flexibel% handeln vermag.
       `,
 
 
@@ -43,7 +43,7 @@ export const consulting = {
 
       `
         >Wir diskutierten seine Bedürfnisse.
-        >Ich empfiehl ihn, und nicht nur in technischen Aspekten: Benutzererfahrung, Ergonomie, Layout, usw...
+        >Ich empfiehl ihn, auch über nicht-technische Aspekte: Benutzererfahrung, Ergonomie, Layout, usw...
         >Wie ein Lehrer, der seinem Schüler Hausaufgaben gibt, listete ich die Aufgaben, die bis zur nächsten Session zu erledigen waren: Migrationsdatei, entsprechende Modelle, Ansichten und Steuerungen.
         >Zu Beginn der nächsten Session erfolgte die Korrektur.
       `

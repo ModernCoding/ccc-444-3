@@ -26,17 +26,17 @@ export const consulting = {
 
       "Huneety is a the same time a web portal, specifically designed for the needs of the Thai job market, that are not covered by LinkedIn.",
 
-      "The web portal MVP has been developed by one of the co-founders, %although he originally has no backgrounf in IT!% His background is sales and marketing.",
+      "The web portal MVP has been developed by one of the co-founders, %although he originally has no background in IT!% His background is sales and marketing.",
 
       "He started learning coding with PHP; for his MVP, he took the logical decision to choose the Laravel framework and began with the development.",
 
       "Later, when he got the feeling to have reached a technical dead-end road, he found our company and asked for our help, since I already had experience with Laravel as I was living in Cambodia.",
 
-      "This is how I helped him:",
+      "Here is how I helped him.",
 
       `
         >I first advised him to start over! It was easy to spot, that he had started from an obsolete boilerplate with outdated libraries
-        >together with him, we took the time to properly design the database, so that it would cover all business needs %on the long term and in a highly felexible way%
+        >Together with him, we took the time to properly design the database, so that it would cover all business needs %on the long term and in a highly flexible way.%
       `,
 
 
@@ -44,7 +44,7 @@ export const consulting = {
 
       `
         >We discussed his needs.
-        >I gave him advice, not only on technical aspects: user experience, ergonomics, layout, etc...
+        >I gave him advice, also on non-technical aspects: user experience, ergonomics, layout, etc...
         >Like a teacher giving homeworks to his student, I listed all tasks he would need to complete until the next work session: migration files, corresponding models, views and controllers.
         >At the beginning on the following session, we fixed together what was needed to be fixed.
       `

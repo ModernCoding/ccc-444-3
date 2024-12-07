@@ -14,39 +14,40 @@ export const consulting = {
 
   mvp: [
 
-      "While we focus on JavaScript technologies, we remain open to alternative tech stacks: the ones our customers prefer to use.",
+      "Même si nous concentrons notre énergie sur les technologies JavaScript, nous demeurons ouverts sur d'autres tech stacks selon les préférences de nos clients.",
 
-      "In case you would like to develop your own project yourself, and in case you favor %a framework not based on JavaScript%, such as Ruby on Rails, Django or Laravel, we are happy to help!",
+      "Si vous souhaitez réaliser vos projets vous-même, et si vous privilégiez %un framework qui n'est pas basé sur JavaScript%, comme Ruby on Rails, Django ou Laravel, nous pouvons également vous aider\xa0!",
 
-      "We have done it with Huneety.",
+      "Nous l'avons fait avec Huneety.",
 
       "~https://www.huneety.com",
 
-      "Huneety is a HR-company founded by two French in Bangkok, Thailand.",
+      "Huneety est une société spécialisée en ressources humaines fondée par deux Français à Bangkok, en Thaïlande.",
 
-      "Huneety is a the same time a web portal, specifically designed for the needs of the Thai job market, that are not covered by LinkedIn.",
+      "Huneety est avant tout une plateforme web, conçue pour les besoins spécifiques du marché du travail thaïlandais et qui ne sont pas couverts par LinkedIn.",
 
-      "The web portal MVP has been developed by one of the co-founders, %although he originally has no backgrounf in IT!% His background is sales and marketing.",
+      "Le M.V.P. pour le portail web a été développé par l'un des deux co-fondateurs, %alors qu'il n'a aucune formation initiale en développement web\xa0!% À l'origine, il vient du monde commercial.",
 
-      "He started learning coding with PHP; for his MVP, he took the logical decision to choose the Laravel framework and began with the development.",
+      "Au départ, il s'est auto-formé en PHP\xa0; c'est donc en toute logique qu'il a opté pour le framework Laravel pour démarrer les développements.",
 
-      "Later, when he got the feeling to have reached a technical dead-end road, he found our company and asked for our help, since I already had experience with Laravel as I was living in Cambodia.",
+      "Par la suite, après avoir eu le sentiment d'être arrivé dans une voie sans issue, il est venu nous trouver et nous demander assistance, au vu de mon expérience passée avec Laravel au Cambodge.",
 
-      "This is how I helped him:",
+      "Mon intervention en tant que consultant s'est déroulée comme suit.",
 
       `
-        >I first advised him to start over! It was easy to spot, that he had started from an obsolete boilerplate with outdated libraries
-        >together with him, we took the time to properly design the database, so that it would cover all business needs %on the long term and in a highly felexible way%
+        >En premier lieu, je lui ai conseillé de repartir d'une feuille blanche\xa0! Il m'a été facile de deviner qu'il était parti d'un boilerplate obsolète aux bibliothèques non maintenues...
+        >Ensemble, on a pris le temps et le soin de concevoir la base de données de manière à ce que celle-ci couvre tous les besoins fonctionnels sur le long terme et avec la plus grande flexibilité.
+        Together with him, we took the time to properly design the database, so that it would cover all business needs %on the long term and in a highly flexible way.%
       `,
 
 
-      "I helped him as a 100% consultant, in which we met weekly for a 2-hour work session.",
+      "En tant que consultant, nous nous rencontrions chaque semaine pour un atelier de 2 heures.",
 
       `
-        >We discussed his needs.
-        >I gave him advice, not only on technical aspects: user experience, ergonomics, layout, etc...
-        >Like a teacher giving homeworks to his student, I listed all tasks he would need to complete until the next work session: migration files, corresponding models, views and controllers.
-        >At the beginning on the following session, we fixed together what was needed to be fixed.
+        >Nous échangions sur ses besoins.
+        >Je le conseillais\xa0 également sur des aspects non techniques\xa0: experience utilisateur, ergonomie, layout, etc...
+        >À l'instar d'un professeur qui donne des devoirs à ses étudiants, je lui listais l'ensemble des tâches à accomplir avant l'atelier suivant\xa0: fichiers de migration, modèles, vues et contrôleurs associés.
+        >À l'atelier suivant, nous apportions les corrections.
       `
 
     ],
