@@ -67,25 +67,48 @@
       </ul>
 
 
-      <p v-else>
+      <template v-else>
 
-        <span
-          v-for="s, i in p.split ('^')"
-          :key="s"
-          :class="[ '', 'o-font-en' ] [ +(i % 2 !== 0) ]"
-        >
+        <p v-if="p.startsWith ('~')">
+
+          <a
+            :href="p.split ('~') [ 1 ]"
+            target="_blank"
+            class="o-external-link"
+          >
+
+            <div>
+              <i class="bi bi-hand-index-fill" aria-hidden="true"></i>
+            </div>
+
+            {{ p.split ('www.') [ 1 ] }}    
+
+          </a>
+
+        </p>
+
+
+        <p v-else>
 
           <span
-            v-for="a, j in s.split ('%')"
-            :key="a"
-            :class="[ '', 'fw-bold o-underline' ] [ +(j % 2 !== 0) ]"
+            v-for="s, i in p.split ('^')"
+            :key="s"
+            :class="[ '', 'o-font-en' ] [ +(i % 2 !== 0) ]"
           >
-            {{ hyphenate (a, locale) }}
-          </span>
 
-        </span>
-      
-      </p>
+            <span
+              v-for="a, j in s.split ('%')"
+              :key="a"
+              :class="[ '', 'fw-bold o-underline' ] [ +(j % 2 !== 0) ]"
+            >
+              {{ hyphenate (a, locale) }}
+            </span>
+
+          </span>
+        
+        </p>
+
+      </template>
 
     </template>
 
