@@ -60,19 +60,19 @@ export const index = {
 
   weFightForTheChance: [
 
-      "In order for our Burmese coworker to be allowed into Thailand, we had to go through a tedious 6-month process!",
+      "Afin que notre ingénieur birmane fût autorisée en Thaïlande, nous dûmes passer par un processus long et fastidieux de 6 mois\xa0!",
 
-      "We had been looking for a company that would hire her, sponsor her visa and send her to our company as a consultant!",
+      "Nous recherchâmes une entreprise qui la recruterait, lui sponsoriserait le visa et l'enverrait chez nous en tant que consultante\xa0!",
 
-      "Upon finding this company, we started to work on her act and submitted the demand to the Thai authorities.",
+      "Après que nous trouvassions cette entreprise, nous initiâmes la préparation du dossier qu'ensuite, nous soumîmes aux différentes autorités thaïlandaises.",
 
-      "The demand was rejected several times; nevertheless, for each rejection, we worked on the demand and submitted again.",
+      "Bien que le dossier fût rejeté à plusieurs reprises, à chaque reprise, nous reprîmes le dossier afin de le retravailler avant de le soumettre à nouveau.",
 
-      "Several submissions for the demand were necessaries, before it was granted!",
+      "Plusieurs soumissions furent nécessaires avant que les autorités locales ne validassent enfin le dossier\xa0!",
 
-      "%Can you name a small company like ours that has shown such perseverance in completing a long and tedious process when others would have given up?%",
+      "Je demeure curieux que vous me nommiez une autre société de petite taille comme la nôtre, %qui aurait fait preuve d'autant de persévérance et de pugnacité%, quand la plupart d'entre elles auraient abandonné à la première difficulté\xa0!",
 
-      "This fight, that we fought for our coworker, we can fight it for you as well if you come with a project that implies things which have never been made before."
+      "Ce combat que nous avons mené pour elle, nous savons le mener pour vous si vous amenez un projet qui consiste à réaliser ce qui n'a encore jamais été réalisé\xa0!" 
   
     ]
 
