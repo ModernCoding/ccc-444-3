@@ -13,13 +13,23 @@ export const consulting = {
 
   mvp: [
 
-      "Zu den prestigeträchtigsten Musikensembles der Welt zählen die Wiener Philharmoniker.",
+      "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks.",
 
-      "Dieses Orchester hat eine Besonderheit, die andere Orchester gleicher Liga nicht haben: %Die Musiker spielen% seit 1933 %ohne permanente Dirigenten!%",
+      "Falls Sie Ihr Projekt selber entwickeln wollen, und es auch mit einem Framework machen, %das nicht auf JavaScript ruht%, wie beispielsweise Ruby on Rails, Django oder Laravel, beraten wir Sie auch gerne.",
 
-      "Tatsächlich spielen sie jedes Konzert %ausschließlich mit Gast-Dirigenten%, die selber Chef-Dirigenten anderer prestigiösen Orchester sind.",
+      "Das haben wir mit der Firma Huneety gemacht.",
 
-      "Man denke beispielsweise, um nur einige unter vielen anderen zu nennen, an:",
+      "~https://www.huneety.com",
+
+      "Huneety ist eine Personalvermittlungsfirma, die von zwei Franzosen in Bangkok, Thailand, gegründet wurde.",
+
+      "Huneety ist gleichzeitig ein Webportal, das speziell auf die Bedürfnisse des thailändischen Arbeitsmarkts eingeht, welche von LinkedIn nicht abgedeckt werden.",
+
+      "Das MVP für das Webportal wurde von einem der Mitgründer entwickelt, %obwohl er ursprünglich kein Informatiker ist!% Tatsächlich kommt er aus dem Handel- und Marketingsbereich.",
+
+      "Er hat dann angefangen, das Programmieren mit PHP selber zu lernen. Für sein MVP hat er sich logischerweise fürs Laravel-Framework entschieden, und angefangen, es selber zu entwickeln.",
+
+      "Später, als er das Gefühl hatte, in eine technische Sackgasse geraten zu sein, fand er unsere Firma und bat nach unserer Hilfe, da ich bereits Erfahrung mit Laravel hatte, die ich während meiner Zeit in Kambodscha gesammelt hatte.",
 
       `
         >den hochberühmten ehemaligen Dirigenten der Berliner Philharmoniker Herbert von Karajan
