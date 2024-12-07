@@ -13,8 +13,6 @@ export const index = {
         >Einer ergriff die Chance, einen Grafikdesign-Kurs bei einer renommierten Grafikdesignerin aus Bangkok zu nehmen.
       `,
 
-      "~https://www.karmasirikogar.com",
-
       "",
       "Als einheitliches Team:",
 
@@ -27,7 +25,7 @@ export const index = {
       "Und auch noch zuvor:",
 
       `
-        >Vor 20 Jahren ergriff ich die Chance, als Chemie-Student ein Praktikum bei Bayer, Leverkusen, zu machen, und in Deutschland weiterzustudieren
+        >Vor 20 Jahren ergriff ich die Chance, als Chemie-Student ein Praktikum bei Bayer, Leverkusen, zu machen, und in Deutschland weiterzustudieren.
         >Nach dem Abschluss und beim Rückkehr in Frankreich ergriff ich die Chance, in die Informatik zu wechseln.
         >Dabei gab mir eine IT-Firma meine Chance und eine 6wöchige intensive Ausbildung in den Mainframe-Technologien, bevor ich zum Kunden als Berater geschickt wurde!
         >Nach der Arbeit ergriff ich auch die Chance, an den zahlreichen Abend- und Wochenendkursen teilzunehmen, die die süddeutschen Volkshochschulen anboten, um verschiedene objektorientierte Programmiersprachen zu erlernen.
@@ -36,7 +34,7 @@ export const index = {
         >In Lissabon ergriff ich die Chance, an Kursen zur Webprogrammierung teilzunehmen.
         >Mitten in der südeuropäischen Wirtschaftskrise ergriff ich die Chance, eine Stelle in Spanien zu finden!
         >Da ich auch Portugiesisch spreche, ergriff ich die Chance, für einen Monat nach Brasilien zu reisen und dort intensive Kurse in fortgeschrittener Web- und Mobile-Entwicklung zu absolvieren.
-        >Kurz nach meiner Rückkehr ergriff ich die Chance, nach Vietnam zu ziehen und, nach sieben Jahren mit Mainframe-Technologien, meine ersten Erfahrungen in der Web-Entwicklung zu sammeln!,
+        >Kurz nach meiner Rückkehr ergriff ich die Chance, nach Vietnam zu ziehen und, nach sieben Jahren mit Mainframe-Technologien, meine ersten Erfahrungen in der Web-Entwicklung zu sammeln!
         >Nach zahlreichen Erfahrungen in Vietnam, Malaysia und Kambodscha landete ich in Thailand, wo ich die Chance ergriff, mich selbstständig zu machen!
       `,
 
