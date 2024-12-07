@@ -13,7 +13,7 @@ export const consulting = {
 
   mvp: [
 
-      "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks.",
+      "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks und passen uns den Kundenwünschen an.",
 
       "Falls Sie Ihr Projekt selber entwickeln wollen, und es auch mit einem Framework machen, %das nicht auf JavaScript ruht%, wie beispielsweise Ruby on Rails, Django oder Laravel, beraten wir Sie auch gerne.",
 
@@ -31,11 +31,21 @@ export const consulting = {
 
       "Später, als er das Gefühl hatte, in eine technische Sackgasse geraten zu sein, fand er unsere Firma und bat nach unserer Hilfe, da ich bereits Erfahrung mit Laravel hatte, die ich während meiner Zeit in Kambodscha gesammelt hatte.",
 
+      "So habe ich ihm geholfen:",
+
       `
-        >den hochberühmten ehemaligen Dirigenten der Berliner Philharmoniker Herbert von Karajan
-        >seinen legendären Vorgänger Wilhelm Furtwängler
-        >Herrn Kapellmeister Christian Thielemann, der das Neujahrskonzert der Wiener Philharmoniker 2024 dirigierte
-        >Maestro Riccardo Muti, der an diesem 1. Jänner 2025 das Neujahrskonzert dirigieren wird!
+        >ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken
+        >zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals langfristig und vor allem hoch flexibel handeln vermag
+      `,
+
+
+      "Es war eine reine Beratungskooperation, in der wir uns wöchentlich für eine 2-stündige Arbeitssession trafen.",
+
+      `
+        >Wir diskutierten seine Bedürfnisse.
+        >Ich empfiehl ihn, und nicht nur in technischen Aspekten: Benutzererfahrung, Ergonomie, Layout, usw...
+        >Wie ein Lehrer, der seinem Schüler Hausaufgaben gibt, listete ich die Aufgaben, die bis zur nächsten Session zu erledigen waren: Migrationsdatei, entsprechende Modelle, Ansichten und Steuerungen.
+        >Zu Beginn der nächsten Session erfolgte die Korrektur.
       `
 
     ],
