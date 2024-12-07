@@ -1,12 +1,5 @@
 <script setup>
-  
-  const screenPropertiesStore
-    = defineScreenPropertiesStoreFromComposable () ()
-
-  const { screenProperties } = storeToRefs (screenPropertiesStore)
-
   const { locale } = useI18n ()
-
 </script>
 
 

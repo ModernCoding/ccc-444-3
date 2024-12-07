@@ -6,7 +6,7 @@ export const index = {
     founder: "Firmenführung",
     consulting: "Beratung",
     teamLeading: "Externe Teamführung",
-    graphicDesign: "Grafik-Design",
+    graphicDesign: "Grafikdesign",
     animation: "Animation",
     api: "API-Spezialist",
 

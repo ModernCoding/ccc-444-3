@@ -9,11 +9,19 @@ export const index = {
 
       `
         >Zwei von uns sind ursprünglich keine Informatiker, sondern haben Bauingenieurwesen bzw. Chemie studiert, und ergriffen nach dem Studium die Chance umzusteigen.
-        >Die beiden anderen Informatikern ergriffen die Chance, ins Grafik-Design einzusteigen.
-        >Einer ergriff die Chance, einen Grafik-Design-Kurs bei einer renommierten Grafik-Designerin aus Bangkok zu nehmen.
+        >Die beiden anderen Informatikern ergriffen die Chance, ins Grafikdesign einzusteigen.
+        >Einer ergriff die Chance, einen Grafikdesign-Kurs bei einer renommierten Grafikdesignerin aus Bangkok zu nehmen.
       `,
 
       "~https://www.karmasirikogar.com",
+
+      "",
+      "Als einheitliches Team:",
+
+      `
+        >Wir haben die Chance ergriffen, ein neues Layout für Webseiten zu entwickeln, das sich von Flip-Smartphones bis hin zu den riesigen 57-Zoll-Bildschirmen erstreckt!
+        >Wir haben die Chance ergriffen, einen neuen Grafikdesign-Stil zu erarbeiten!
+      `,
 
       "Und auch noch zuvor:",
 
@@ -34,5 +42,9 @@ export const index = {
       "Das Wichtigste ist und bleibt aber: %Ich habe mir unendlich viel Mühe gegeben!%"
 
     ],
+
+
+  weGiveTheChance: [
+    ]
 
 }

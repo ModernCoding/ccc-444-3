@@ -1,11 +1,11 @@
 export const handleSkillTitle = screenProperties => {
 
-  const whyGuests = document.querySelector ('.o-expertise-skill-title')
-  if (!whyGuests) { return }
+  const skillTitle = document.querySelector ('.o-expertise-skill-title')
+  if (!skillTitle) { return }
 
-  whyGuests.removeAttribute ('style')
+  skillTitle.removeAttribute ('style')
 
-  const h1 = whyGuests.querySelector ('h1')
+  const h1 = skillTitle.querySelector ('h1')
   if (!h1) { return }
 
 
@@ -37,7 +37,7 @@ export const handleSkillTitle = screenProperties => {
 
   ;(height => {
 
-    whyGuests.style.height = `${ height }px`
+    skillTitle.style.height = `${ height }px`
     
     _setFontSize (
       height,

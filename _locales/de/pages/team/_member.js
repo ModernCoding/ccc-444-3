@@ -116,7 +116,7 @@ export const member = {
 
           "Nach dem Abschluss hatte ich den %Willen, Kunst und Technologie auch zu überbrücken!%",
 
-          "Mein Wille, %meine technische Hintergründe und meine Leidenschaft für Grafik-Design% zu überbrücken, brachten mich dazu, Webseiten zu entwickeln, die Bedürfnisse des Nutzers zu treffen.",
+          "Mein Wille, %meine technische Hintergründe und meine Leidenschaft für Grafikdesign% zu überbrücken, brachten mich dazu, Webseiten zu entwickeln, die Bedürfnisse des Nutzers zu treffen.",
 
           "Obwohl Kunst und Technologie wie zwei völlig getrennte Welten erscheinen, vermag ich es, beide zu vereinen, um etwas wirklich Einzigartiges zu kreieren!",
 

@@ -6,26 +6,15 @@
 <template>
 
   <article
-    :class="`
-        o-expertise-text
-
-        o-${
-          $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
-            .split ('|') [ 0 ]  
-        }
-      `"
+    class="o-philosophy-content"
+    id="we-give-the-chance"
   >
 
-    <h1>
-      {{ 
-        $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
-          .split ('|') [ 1 ] 
-      }}
-    </h1>
+    <h1 class="text-uppercase">WE GIVE THE CHANCE!</h1>
 
 
     <template
-      v-for="p, i in $tm ('pages.ourExpertise.consulting.mvp')"
+      v-for="p, i in $tm ('pages.ourPhilosophy.index.weGiveTheChance')"
       :key="i"
     >
 
@@ -112,6 +101,6 @@
 
 <style
   scoped
-  src="@/assets/sass/pages/our-expertise/skills.sass"
+  src="@/assets/sass/pages/our-philosophy/index.sass"
   lang="sass"
 ></style>
