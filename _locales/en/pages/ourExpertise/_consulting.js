@@ -54,20 +54,20 @@ export const consulting = {
 
   hotwire: [
 
-      "Wenn Sie eine Web-App schon haben, die nicht mit JavaScript-Frameworks entwickelt wurde, sondern mit anderen Fullstack-Technologien wie Ruby on Rails, Django oder Laravel, haben Sie bestimmt gemerkt, %wie die App manchmal langsam sein kann!%",
+      "If you already have a web app, that has not been developed with JavaScript frameworks, but with another full stack technology such as Ruby on Rails, Django or Laravel, you might have noticed, %how slow it can be sometimes!%",
 
-      "Dies ist zur intrisinschen Natur der - voluminösen - Datenaustäusche zwischen HTTP-Anfragen und Antworten zurückzuführen.",
+      "This is due to the intrinsic nature of the - voluminous - data exchange between HTTP requests and responses.",
 
-      "%Die Lösung existiert: Hotwire.%",
+      "%The solution exists: Hotwire.%",
       "~https://www.hotwired.dev",
 
-      "Sie wurde von David Heinemeier Hansson, dem Schöpfer von Ruby on Rails, als minimalistiches JavaScript-Framework entwickelt.",
+      "It was designed by David Heinemeier Hansson, the creator of Ruby on Rails, as a minimalistic JavaScript framework.",
 
-      "Dieses Framework eignet sich besonders gut für die Teams, die das Benutzen von JavaScript auf das strikte Minimum reduzieren möchten!",
+      "This framework is well suited for teams, who wish to keep the usage of JavaScript at a strict minimum!",
 
-      "Auch wenn es sich langfristig empfiehlt, das Frontend vom Backend zu trennen, kann Hotwire zur Beschleunigung Ihrer Web-App als Übergangslösung in das bestehende Projekt integriert werden!",
+      "Even if it is recommended on the long term to separate the front from the backend, Hotwire can be a good interim solution to be integrated into your existing project in order to increase the performances of your web app!",
 
-      "Genau das habe ich für das kambodschanische E-Commerce-Portal Kokopon gemacht:",
+      "This is exactly the solution I implemented into Cambodian e-commerce portal Kokopon:",
 
       "~https://www.kokopon.com"
   
