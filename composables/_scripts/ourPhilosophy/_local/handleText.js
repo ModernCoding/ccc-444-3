@@ -3,6 +3,10 @@ export const handleText = screenProperties => {
   const screen = getWindowWidths (screenProperties.widths.main)
 
 
+  const titleSize = TWICE_54_BY_PHI_POWER_4
+      * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastLgHalf)
+
+
   document
 
     .querySelectorAll ([
@@ -15,24 +19,41 @@ export const handleText = screenProperties => {
       
         h1.removeAttribute ('style')
 
-        const spans = h1.querySelectorAll ('span')
-        spans.forEach (span => span.removeAttribute ('style'))
+        const divs = h1.querySelectorAll ('div')
+        divs.forEach (div => div.removeAttribute ('style'))
 
-
-        ;(size => {
-        
-          h1.style.fontSize = `${ size }px`
-          spans.forEach (span => span.style.fontSize = `${ size }px`)
-
-        }) (
-          TWICE_54_BY_PHI_POWER_4
-            * PHI ** (+screen.isAtLeastSmHalf + +screen.isAtLeastLgHalf)
-        )
+        h1.style.fontSize = `${ titleSize }px`
+        divs.forEach (div => div.style.fontSize = `${ titleSize }px`)
       
       })
 
 
-  const fontSize
+  document
+
+    .querySelectorAll ([
+        '.o-philosophy-in-modal h2',
+        '.o-philosophy-in-main h2',
+      ] [ +(screenProperties.ratioIndex > 1) ])
+
+
+    .forEach (h2 => {
+      
+        h2.removeAttribute ('style')
+
+        const spans = h2.querySelectorAll ('span')
+        spans.forEach (span => span.removeAttribute ('style'))
+
+
+        h2.style.fontSize = `${ titleSize / PHI }px`
+
+        spans.forEach (span =>
+            span.style.fontSize = `${ titleSize / PHI }px`
+          )
+      
+      })
+
+
+  const textSize
     = TWICE_54_BY_PHI_POWER_4 * PHI ** (+screen.isAtLeastMdPlus)
 
 
@@ -59,13 +80,13 @@ export const handleText = screenProperties => {
 
         p
           .querySelectorAll ('*')
-          .forEach (e => e.style.fontSize = `${ fontSize }px`)
+          .forEach (e => e.style.fontSize = `${ textSize }px`)
       
       })
 
 
   document
     .querySelectorAll ('.o-external-link')
-    .forEach (a => a.style.gap = `${ fontSize * PHI }px`)
+    .forEach (a => a.style.gap = `${ textSize * PHI }px`)
 
 }

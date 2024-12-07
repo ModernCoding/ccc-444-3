@@ -17,7 +17,17 @@
     id="we-take-the-chance"
   >
 
-    <h1>WE TAKE THE CHANCE!</h1>
+    <h1>
+      <div class="text-uppercase">WE TAKE THE CHANCE!</div>
+      <div>And we are friends for a game that never ends...</div>
+    </h1>
+
+
+    <h2>
+
+      (Dieter Bohlen - Modern Talking, "We Take The Chance")
+
+    </h2>
 
 
     <template
