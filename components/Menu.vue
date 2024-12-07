@@ -17,6 +17,7 @@
   const MENU = [
       'index',
       'our-expertise',
+      'our-philosophy',
       'team',
       'ladies-in-it',
       'contact',
