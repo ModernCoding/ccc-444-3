@@ -1,13 +1,13 @@
 export const consulting = {
   
-  title: "We are happy to help and give advice!",
+  title: "Nous vous apportons aide & conseil\xa0!",
 
 
   menu: [
 
-      "mvp-with-laravel|In case you want to build your mvp yourself",
+      "mvp-with-laravel|Si vous développez votre M.V.P. vous-même",
 
-      "hotwire-on-laravel|In case you already have an app, that has not been developed with JavaScript"
+      "hotwire-on-laravel|Si vous avez déjà une appli qui n'a pas été développée en JavaScript"
   
     ],
 
