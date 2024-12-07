@@ -47,12 +47,12 @@ export const index = {
 
   weGiveTheChance: [
 
-      "Genau wie mir die Chance gegeben wurde, in die Informatik einzusteigen, haben wir auch Chancen gegeben.",
+      "The same way I was givem my chance to start in the IT, we have also given the chance to other people.",
 
       `
-        >Wir haben frischen Absolventen die Chancen gegeben, in unsere Firma anzufangen, auch wenn sie ein anderes Fach studiert haben. Diejenigen, die die Chance nicht ergreifen konnten, haben die Firma verlassen.
-        >Wir haben einigen unserer Mitarbeiter*innen die Chance gegeben, als Grafikdesigner*innen zu arbeiten und ihre Leidenschaft für Kunst beruflich zu verfolgen.
-        >Wir haben unserer Mitarbeiterin aus Myanmar die Chance gegeben, der extremen politischen Lage ihres Landes zu entkommen und nach Thailand zu ziehen.
+        >We gave the chance to fresh graduates to start at our company, even if they had a major in a different field. Those who could not take the chance have left our company. 
+        >We gave the chance to our coworkers to work as graphic designers and to turn their passion for art into their profession.
+        >We gave our Burmese coworker the chance to escape the extreme political situation of her country and to come to Thailand.
       `
   
     ],
