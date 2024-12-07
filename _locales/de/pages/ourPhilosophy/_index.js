@@ -23,6 +23,7 @@ export const index = {
         >Wir haben die Chance ergriffen, einen neuen Grafikdesign-Stil zu erarbeiten!
       `,
 
+      "",
       "Und auch noch zuvor:",
 
       `
@@ -45,6 +46,15 @@ export const index = {
 
 
   weGiveTheChance: [
+
+      "Genau wie mir die Chance gegeben wurde, in die Informatik einzusteigen, haben wir auch Chancen gegeben.",
+
+      `
+        >Wir haben frischen Absolventen die Chancen gegeben, in unsere Firma anzufangen, auch wenn sie ein anderes Fach studiert haben. Diejenigen, die die Chance nicht ergreifen konnten, haben die Firma verlassen.
+        >Wir haben einigen unserer Mitarbeiter*innen die Chance gegeben, als Grafikdesigner*innen zu arbeiten und ihre Leidenschaft für Kunst beruflich zu verfolgen.
+        >Wir haben unserer Mitarbeiterin aus Myanmar die Chance gegeben, der extremen politischen Lage ihres Landes zu entkommen und nach Thailand zu ziehen.
+      `
+  
     ]
 
 }
