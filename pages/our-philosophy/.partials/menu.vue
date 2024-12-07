@@ -1,9 +1,7 @@
 <script setup>
 
-  const ourExpertiseScripts
-    = collectOurExpertiseScriptsFromComposable ()
-
-  const { locale } = useI18n ()
+  const ourPhilosophyScripts
+    = collectOurPhilosophyScriptsFromComposable ()
 
 </script>
 
@@ -12,22 +10,23 @@
 
   <menu class="o-philosophy-menu">
 
-    <li
-      v-for="item in $tm ('pages.ourExpertise.consulting.menu')"
-      :key="item"
+    <li @click="ourPhilosophyScripts.scrollTo ('#we-take-the-chance')">
+      <i class="bi bi-link-45deg" aria-hidden="true" />
+      <div>WE TAKE THE CHANCE!</div>
+    </li>
 
+    <li @click="ourPhilosophyScripts.scrollTo ('#we-give-the-chance')">
+      <i class="bi bi-link-45deg" aria-hidden="true" />
+      <div>WE GIVE THE CHANCE!</div>
+    </li>
+
+    <li
       @click="
-          ourExpertiseScripts
-            .scrollTo (`.o-${ item.split ('|') [ 0 ] }`)
+          ourPhilosophyScripts.scrollTo ('#we-fight-for-the-chance')
         "
     >
-
       <i class="bi bi-link-45deg" aria-hidden="true" />
-
-      <div :data-jump="`.o-${ item.split ('|') [ 0 ] }`">
-        {{ hyphenate (item.split ('|') [ 1 ], locale) }}
-      </div>
-
+      <div>WE FIGHT FOR THE CHANCE!</div>
     </li>
 
   </menu>

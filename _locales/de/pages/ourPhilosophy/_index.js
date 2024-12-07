@@ -3,14 +3,6 @@ export const index = {
   quote: `"Die Grenzen sind noch nicht gesteckt, die dem %Talent% und %Fleiß% entgegenriefen: bis hierher und nicht weiter!"`,
 
 
-  menu: [
-
-      "mvp-with-laravel|Falls Sie Ihr MVP selber bauen wollen",
-      "hotwire-on-laravel|Falls Sie eine App schon haben, die nicht mit JavaScript hergestellt wurde",
-  
-    ],
-
-
   mvp: [
 
       "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks und passen uns den Kundenwünschen an.",

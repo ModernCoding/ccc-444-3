@@ -23,10 +23,7 @@
     >
 
       <i class="bi bi-link-45deg" aria-hidden="true" />
-
-      <div :data-jump="`.o-${ item.split ('|') [ 0 ] }`">
-        {{ hyphenate (item.split ('|') [ 1 ], locale) }}
-      </div>
+      <div>{{ hyphenate (item.split ('|') [ 1 ], locale) }}</div>
 
     </li>
 
