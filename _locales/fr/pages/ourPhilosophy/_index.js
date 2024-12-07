@@ -1,6 +1,6 @@
 export const index = {
   
-  quote: `\u00ab\xa0On n'a encore jamais posé de frontière avec la mention \u0027Tu ne vas pas plus loin\xa0!\u0027 pour empêcher le %talent% et le %travail% de passer\xa0!\xa0\u00bb`,
+  quote: `\u00ab\xa0On n'a encore jamais posé de frontières portant la mention \u0027Tu ne vas pas plus loin\xa0!\u0027 pour empêcher le %talent% et le %travail% de passer\xa0!\xa0\u00bb`,
 
 
   weTakeTheChance: [
