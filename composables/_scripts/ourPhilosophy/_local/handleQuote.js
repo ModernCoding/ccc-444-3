@@ -1,4 +1,4 @@
-export const handleSkillTitle = screenProperties => {
+export const handleQuote = screenProperties => {
 
   const whyGuests = document.querySelector ('.o-expertise-skill-title')
   if (!whyGuests) { return }

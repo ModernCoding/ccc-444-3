@@ -1,7 +1,7 @@
 import { handleMenu } from './_local/handleMenu'
 import { handlePicture } from './_local/handlePicture'
 import { handleText } from './_local/handleText'
-import { handleSkillTitle } from './_local/handleSkillTitle'
+import { handleQuote } from './_local/handleQuote'
 
 
 export default screenPropertiesStore => {
@@ -10,7 +10,7 @@ export default screenPropertiesStore => {
     = storeToRefs (screenPropertiesStore)
 
 
-  handleSkillTitle (screenProperties)
+  handleQuote (screenProperties)
   handleMenu (screenProperties)
   handlePicture (screenProperties)
   handleText (screenProperties)
