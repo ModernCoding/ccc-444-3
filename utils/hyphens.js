@@ -1,12 +1,12 @@
-import { hyphenateSync as hyphenateDe } from "hyphen/de"
-import { hyphenateSync as hyphenateEn } from "hyphen/en"
-import { hyphenateSync as hyphenateFr } from "hyphen/fr"
+import * as moduleDe from 'hyphen/de'
+import * as moduleEn from 'hyphen/en'
+import * as moduleFr from 'hyphen/fr'
 
 
 export const hyphenate = (sentence, locale) =>
 
   ![ 'de', 'en', 'fr' ].includes (locale) ? sentence : {
-      de: hyphenateDe,
-      en: hyphenateEn,
-      fr: hyphenateFr
+      de: moduleDe.hyphenateSync,
+      en: moduleEn.hyphenateSync,
+      fr: moduleFr.hyphenateSync
     } [ locale ] (sentence)
