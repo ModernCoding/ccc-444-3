@@ -1,11 +1,10 @@
 <script setup>
   
-  import Benefits from './.partials/benefits'
   import Consulting from './.partials/consulting'
-  import Cambodia from './.partials/cambodia'
-  import ClassicalMusic from './.partials/classical-music'
+  import Hotwire from './.partials/hotwire'
   import Laravel from './.partials/laravel'
   import Menu from './.partials/menu'
+  import Mvp from './.partials/mvp'
 
 
   const screenPropertiesStore
@@ -39,9 +38,8 @@
 
       <Laravel />
       <Menu />
-      <ClassicalMusic />
-      <Cambodia />
-      <Benefits />
+      <Mvp />
+      <Hotwire />
 
       <nav>
         <CallToActions />
@@ -81,9 +79,8 @@
       >
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
-        <ClassicalMusic />
-        <Cambodia />
-        <Benefits />
+        <Mvp />
+        <Hotwire />
 
         <nav>
           <CallToActions />

@@ -17,7 +17,7 @@
         o-expertise-text
 
         o-${
-          $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 0 ]
+          $tm ('pages.ourExpertise.consulting.menu') [ 1 ]
             .split ('|') [ 0 ]  
         }
       `"
@@ -25,7 +25,7 @@
 
     <h1>
       {{ 
-        $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 0 ]
+        $tm ('pages.ourExpertise.consulting.menu') [ 1 ]
           .split ('|') [ 1 ] 
       }}
     </h1>
@@ -33,11 +33,9 @@
 
     <template
       v-for="
-          p, i in $tm (
-            'pages.ourExpertise.guestTechTeamLead.classicalMusic'
-          )
+          p, i in $tm ('pages.ourExpertise.consulting.hotwire')
         "
-
+        
       :key="i"
     >
 

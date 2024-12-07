@@ -17,7 +17,7 @@
         o-expertise-text
 
         o-${
-          $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 2 ]
+          $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
             .split ('|') [ 0 ]  
         }
       `"
@@ -25,17 +25,14 @@
 
     <h1>
       {{ 
-        $tm ('pages.ourExpertise.guestTechTeamLead.menu') [ 2 ]
+        $tm ('pages.ourExpertise.consulting.menu') [ 0 ]
           .split ('|') [ 1 ] 
       }}
     </h1>
 
 
     <template
-      v-for="
-          p, i in $tm ('pages.ourExpertise.guestTechTeamLead.benefits')
-        "
-
+      v-for="p, i in $tm ('pages.ourExpertise.consulting.mvp')"
       :key="i"
     >
 
