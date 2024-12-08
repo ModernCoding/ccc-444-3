@@ -78,6 +78,23 @@ export const ourApproach = {
 
 
   innovativeLayout: [
+
+      "Die Geschichte der Web-Entwicklung begann, als die meisten Bildschirme ein Verhältnis von 4:3 hatten bzw. eine Größe von höchstens 15 Zoll.",
+
+      `Nach dem Aufkommen des Smartphones konzentrierte man sich entweder auf die Mobile-Entwicklung oder auf die Web-Entwicklung mit dem 'Mobile-First-Approach'.`,
+      
+      "Es ging vor allem darum, die Webseiten möglichst für die kleinsten Geräte anzuzeigen!",
+
+      "Mittlerweile sind Bildschirme verfügbar, die mit einem Verhältnis von %32:9% kommen, und deren Größe manchmal %57 Zoll% erreichen!",
+
+      "Doch niemand schien sich Gedanken darüber gemacht zu haben, wie man Webseiteninhalte auch für diese riesigen Geräte anzeigen kann: Bereits für 24-Zoll- bzw. 16:10-Bildschirme begrenzen die meisten Web-Entwickler die Breite auf etwa 1200 Pixel.",
+
+      "Wenn Sie eine solche Webseite auf einem 7680-Pixel-breiten Bildschirm besuchen, sehen Sie eine etwa 1200-Pixel breite Säule in der Mitte; der Rest bleibt völlig leer.",
+
+      "%Deshalb haben wir ein neues und innovatives Layout entwickelt%, mit dem Webseiten sowohl auf winzigen Flip-Smartphones als auch auf riesigen 57-Zoll-Gaming-Monitoren sowie auf konventionellen 27-Zoll-Desktop-Bildschirmen angezeigt werden können!",
+
+      "%Genau dieses Layout verwenden wir für die Webseite, die Sie gerade besuchen!%",
+
     ]
 
 }
