@@ -40,7 +40,7 @@ export const consulting = {
       `,
 
 
-      "I helped him as a 100% consultant, in which we met weekly for a 2-hour work session.",
+      "I assisted him exclusively as a consultant, in which we met weekly for a 2-hour work session.",
 
       `
         >We discussed his needs.
