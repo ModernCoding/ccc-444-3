@@ -114,6 +114,10 @@ export const ourApproach = {
 
       "Sie sind nicht gezwungen, spezielle Komponenten und Module %eigens anfertigen zu lassen% oder %dauerhaft an einen Anbieter gebunden zu bleiben%.",
 
+      "Aus diesem Grund verzichten wir bewusst auf die Nutzung von CMS und fertigen Lösungen, die von Drittanbietern abhängig sind und die Verfügbarkeit Ihrer App gefährden könnten.",
+
+      "%Als JavaScript-Spezialisten sorgen wir dafur%, dass die Wartung und Weiterentwicklung der von uns erstellten Apps auch unabhängig von uns möglich ist."
+
     ]
 
 }
