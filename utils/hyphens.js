@@ -3,10 +3,18 @@ import * as moduleEn from 'hyphen/en'
 import * as moduleFr from 'hyphen/fr'
 
 
-export const hyphenate = (sentence, locale) =>
+export const hyphenate = (sentence, locale) => {
 
-  ![ 'de', 'en', 'fr' ].includes (locale) ? sentence : {
+  if (![ 'de', 'en', 'fr' ].includes (locale)) { return sentence }
+
+  const _hyphenate = {
       de: moduleDe.hyphenateSync,
       en: moduleEn.hyphenateSync,
       fr: moduleFr.hyphenateSync
-    } [ locale ] (sentence)
+    } [ locale ]
+
+
+  if (!_hyphenate) { return sentence }
+  return _hyphenate (sentence)
+
+}
