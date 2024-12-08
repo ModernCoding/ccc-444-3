@@ -100,7 +100,7 @@ export const guestTechTeamLead = {
 
       `
         >Contrairement à certains responsables d'équipe qui seraient tentés de se reposer sur leurs lauriers et qui prononceraient un peu trop souvent la phrase "On a toujours fait comme ça", les consultants chefs d'équipe sont obligés de se maintenir au fait des dernières technologies et de %demeurer innovants% s'ils souhaitent être rappelés par leur clients\xa0!
-        >Tandis que nous sommes spécialisés dans les technologies JavaScript, vos équipes peuvent être experts dans une tech stack complètement différente, et être amenées à assimiler les technologies JavaScript rapidement.
+        >Tandis que nous sommes spécialisés dans les technologies JavaScript, vos équipes peuvent être expertes dans une tech stack complètement différente, et être amenées à assimiler les technologies JavaScript rapidement.
         >Vos équipes sont devenues allergiques à JavaScript, %tel qu'une réconciliation avec cette technologie difficilement évitable s'impose\xa0!%
       `,
 

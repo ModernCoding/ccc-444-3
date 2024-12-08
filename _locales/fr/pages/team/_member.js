@@ -46,7 +46,7 @@ export const member = {
 
     babe: {
 
-      quote: "Au moment où je %comprends% véritablement mon ennemi, où je le comprend assez pour le vaincre, alors, à ce moment même, je %l'aime% également.",
+      quote: "Au moment où je %comprends% véritablement mon ennemi, où je le comprends assez pour le vaincre, alors, à ce moment même, je %l'aime% également.",
 
       by: `Orson Scott Card, "La Stratégie Ender"`,
 
@@ -90,7 +90,7 @@ export const member = {
 
           "Grâce à ce bagage technique couplé à ma vision artistique, j'ouvre de nombreuses possibilités unissant avec harmonie %fonctionnalité & esthétique%.",
 
-          "Ce bagage me permettant de %faire le pont% entre l'art et la technologie, j'ai plié bagage, j'ai surmonté les difficultés afin de franchir le pont séparant le Myanmar et le Thaïlande\xa0!"
+          "Ce bagage me permettant de %faire le pont% entre l'art et la technologie, j'ai plié bagage, j'ai surmonté les difficultés afin de franchir le pont séparant le Myanmar et la Thaïlande\xa0!"
       
         ]
 
