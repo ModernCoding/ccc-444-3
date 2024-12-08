@@ -1,10 +1,9 @@
 <script setup>
   
-  import Consulting from './.partials/consulting'
-  import Hotwire from './.partials/hotwire'
   import Machine from './.partials/machine'
   import Menu from './.partials/menu'
   import Mvp from './.partials/mvp'
+  import Title from './.partials/title'
 
 
   const screenPropertiesStore
@@ -39,7 +38,6 @@
       <Machine />
       <Menu />
       <Mvp />
-      <Hotwire />
 
       <nav>
         <CallToActions />
@@ -80,7 +78,6 @@
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <Mvp />
-        <Hotwire />
 
         <nav>
           <CallToActions />
@@ -93,7 +90,7 @@
 
 
     <template v-slot:footer-right>
-      <Consulting />
+      <Title />
     </template>
 
   </BaseLayout>
