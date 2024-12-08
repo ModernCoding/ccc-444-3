@@ -102,7 +102,7 @@ export const ourApproach = {
 
   focusOnJavaScript: [
 
-      "Natürlich kann man eine Webseite auch mit einem Framework erstellen, das nicht auf JavaScript basiert: Das haben wir bei unseren früheren Arbeitgebern mit PHP, Ruby oder Java umgesetzt.",
+      "Natürlich kann man eine Web-App auch mit einem Framework erstellen, das nicht auf JavaScript basiert: Das haben wir bei unseren früheren Arbeitgebern mit PHP, Ruby oder Java umgesetzt.",
 
       "Dass wir uns jetzt auf eine spezifische Programmiersprache konzentrieren, erklären wir folgendermaßen: %Wir vermeiden unnötigen Zeit- und Energieaufwand% für verschiedene Technologien, mit denen letztlich %das Gleiche erstellt werden kann% – nämlich Fullstack-Web-Apps!",
 
