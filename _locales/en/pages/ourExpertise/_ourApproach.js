@@ -79,23 +79,23 @@ export const ourApproach = {
 
   innovativeLayout: [
 
-      "Die Geschichte der Web-Entwicklung begann, als die meisten Bildschirme ein Verhältnis von 4:3 bzw. eine Größe von höchstens 15 Zoll hatten.",
+      "The history of web development started, as most monitors had a ratio of 4:3 or whose size never exceeded 15 inches.",
 
-      `Nach dem Aufkommen des Smartphones konzentrierte man sich entweder auf die Mobile-Entwicklung oder auf die Web-Entwicklung mit dem 'Mobile-First-Approach'.`,
+      `Upon the avent of smartphones, people focused either on mobile development, or on web development with the mobile-first approach.`,
       
-      "Es ging vor allem darum, die Webseiten möglichst für die kleinsten Geräte anzuzeigen!",
+      "It was mostly about displaying websites on the smallest devices!",
 
-      "Mittlerweile sind Bildschirme verfügbar, die mit einem Verhältnis von %32:9% kommen, und deren Größe manchmal %57 Zoll% erreichen!",
+      "In the meantime, we can find monitors with a ratio of %32:9%, and whose size can reach %57\xa0inches!%",
 
-      "Doch niemand schien sich Gedanken darüber gemacht zu haben, wie man Webseiteninhalte auch für diese riesigen Geräte anzeigen kann: Bereits für 24-Zoll- bzw. 16:10-Bildschirme begrenzen die meisten Web-Entwickler die Breite auf etwa 1200 Pixel.",
+      "Nevertheless, it seems that nobody has thought about properly displaying website contents on these huge devices: already on 24-inch or 16:10-screens, most web developers set a width limit of around 1200\xa0pixels.",
 
-      "Wenn Sie eine solche Webseite auf einem 7680-Pixel-breiten Bildschirm besuchen, sehen Sie eine etwa 1200-Pixel breite Säule in der Mitte; der Rest bleibt völlig leer.",
+      "Try to surf any website on a 7680-pixel wide monitor, you will just see an 1200-pixel wide column right in the middle, while the rest of the screen remains fully empty!",
 
-      "%Deshalb haben wir ein neues und innovatives Layout entwickelt%, mit dem Webseiten sowohl auf winzigen Flip-Smartphones als auch auf riesigen 57-Zoll-Gaming-Monitoren sowie auf konventionellen 27-Zoll-Desktop-Bildschirmen angezeigt werden können!",
+      "%This is why we are coming with a new and innovative website layout%, on which websites can be displayed on devices stretching from the tiny flip smartphone to the huge 57-inch gaming monitor, as well as on conventional 27-inch desktop monitors!",
 
-      "%Genau dieses Layout verwenden wir für die Webseite, die Sie gerade besuchen!% Sie können selbst feststellen, wie sich das Design an jede Gerätegröße anpasst!",
+      "%This is precisely the layout we are using for our company website you are currently visiting!% You can see for yourself, how our design fits to all screen sizes!",
 
-      "%Als JavaScript-Spezialisten haben wir auch dafür gesorgt!%"
+      "%As JavaScript specialists, we give care to it!%"
 
     ],
 
