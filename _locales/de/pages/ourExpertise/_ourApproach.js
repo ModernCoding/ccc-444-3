@@ -101,6 +101,19 @@ export const ourApproach = {
 
 
   focusOnJavaScript: [
+
+      "Natürlich kann man eine Webseite auch mit einem Framework erstellen, das nicht auf JavaScript basiert: Das haben wir bei unseren früheren Arbeitgebern mit PHP, Ruby oder Java umgesetzt.",
+
+      "Dass wir uns jetzt auf eine spezifische Programmiersprache konzentrieren, erklären wir folgendermaßen: %Wir vermeiden unnötigen Zeit- und Energieaufwand% für verschiedene Technologien, mit denen letztlich %das Gleiche erstellt werden kann% – nämlich Fullstack-Web-Apps!",
+
+      "JavaScript hat den Vorteil, sowohl im Browser als auch auf dem Server ausgeführt werden zu können.",
+
+      "Mit JavaScript hat man außerdem den Vorteil, mehr als nur Fullstack-Web-Apps erstellen zu können: Es ermöglicht auch die Entwicklung von Mobile-Apps, APIs, Blockchain-Anwendungen, Machine-Learning-Anwendungen und fortschrittlichen 3D-Animationen!",
+
+      "Ein weiterer Vorteil besteht darin, dass %herkömmliches JavaScript mit gängigen Open-Source-Bibliotheken% verwendet werden kann!",
+
+      "Sie sind nicht gezwungen, spezielle Komponenten und Module %eigens anfertigen zu lassen% oder %dauerhaft an einen Anbieter gebunden zu bleiben%.",
+
     ]
 
 }
