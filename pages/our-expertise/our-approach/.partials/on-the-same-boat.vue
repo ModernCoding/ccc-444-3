@@ -27,7 +27,7 @@
     <figure class="o-vietnamese-girl">
 
       <NuxtImg
-        src="/images/vietnamese-girl-110d0d.gif"
+        src="/images/vietnamese-girl.gif"
         alt="Vietnamese girl on a boat"
         :modifiers="{ b: '#110d0d', opacity: 1 }"
         loading="lazy"
