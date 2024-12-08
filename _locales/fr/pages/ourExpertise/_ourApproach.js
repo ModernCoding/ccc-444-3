@@ -1,15 +1,15 @@
 export const ourApproach = {
   
-  title: "Our app development approach",
+  title: "Notre approche pour vos développements",
 
 
   menu: [
 
-      "on-the-same-boat|Designers & Developers on the same boat!",
+      "on-the-same-boat|Designers & Développeurs sur une même barque\xa0!",
 
-      "innovative-layout|We have developed a new & innovative website layout!",
+      "innovative-layout|Nous avons développé un nouveau et innovant layout pour les sites web\xa0!",
 
-      "focus-on-javascript|We are JavaScript specialists & we focus on it!"
+      "focus-on-javascript|Nous sommes spécialisés en JavaScript & nous y concentrons notre énergie\xa0!"
   
     ],
 
