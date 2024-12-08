@@ -79,7 +79,7 @@ export const ourApproach = {
 
   innovativeLayout: [
 
-      "Die Geschichte der Web-Entwicklung begann, als die meisten Bildschirme ein Verhältnis von 4:3 hatten bzw. eine Größe von höchstens 15 Zoll.",
+      "Die Geschichte der Web-Entwicklung begann, als die meisten Bildschirme ein Verhältnis von 4:3 bzw. eine Größe von höchstens 15 Zoll hatten.",
 
       `Nach dem Aufkommen des Smartphones konzentrierte man sich entweder auf die Mobile-Entwicklung oder auf die Web-Entwicklung mit dem 'Mobile-First-Approach'.`,
       
@@ -93,7 +93,7 @@ export const ourApproach = {
 
       "%Deshalb haben wir ein neues und innovatives Layout entwickelt%, mit dem Webseiten sowohl auf winzigen Flip-Smartphones als auch auf riesigen 57-Zoll-Gaming-Monitoren sowie auf konventionellen 27-Zoll-Desktop-Bildschirmen angezeigt werden können!",
 
-      "%Genau dieses Layout verwenden wir für die Webseite, die Sie gerade besuchen!%",
+      "%Genau dieses Layout verwenden wir für die Webseite, die Sie gerade besuchen!% Sie können selbst feststellen, wie sich das Design an jede Gerätegröße anpasst!",
 
     ]
 
