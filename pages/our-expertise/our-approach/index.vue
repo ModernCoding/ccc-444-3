@@ -1,5 +1,6 @@
 <script setup>
   
+  import InnovativeLayout from './.partials/innovative-layout'
   import Machine from './.partials/machine'
   import Menu from './.partials/menu'
   import OnTheSameBoat from './.partials/on-the-same-boat'
@@ -38,6 +39,7 @@
       <Machine />
       <Menu />
       <OnTheSameBoat />
+      <InnovativeLayout />
 
       <nav>
         <CallToActions />
@@ -78,6 +80,7 @@
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <OnTheSameBoat />
+        <InnovativeLayout />
 
         <nav>
           <CallToActions />
