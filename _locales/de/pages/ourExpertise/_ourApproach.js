@@ -5,8 +5,11 @@ export const ourApproach = {
 
   menu: [
 
-      "mvp-with-laravel|Falls Sie Ihr MVP selber bauen wollen",
-      "hotwire-on-laravel|Falls Sie eine App schon haben, die nicht mit JavaScript hergestellt wurde",
+      "all-in-the-same-house|Designer u. Entwickler im gleichen Haus!",
+
+      "innovative-layout|Wir haben ein neues und innovatives Layout für Webseiten entwickelt!",
+
+      "focus-on-javascript|Wir sind vor allem JavaScript-Spezialisten und konzentrieren uns drauf!",
   
     ],
 
@@ -49,5 +52,5 @@ export const ourApproach = {
       `
 
     ]
-    
+
 }
