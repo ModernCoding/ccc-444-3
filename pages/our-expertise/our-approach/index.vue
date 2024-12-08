@@ -1,8 +1,8 @@
 <script setup>
   
+  import InTheSameHouse from './.partials/in-the-same-house'
   import Machine from './.partials/machine'
   import Menu from './.partials/menu'
-  import Mvp from './.partials/mvp'
   import Title from './.partials/title'
 
 
@@ -37,7 +37,7 @@
 
       <Machine />
       <Menu />
-      <Mvp />
+      <InTheSameHouse />
 
       <nav>
         <CallToActions />
@@ -77,7 +77,7 @@
       >
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
-        <Mvp />
+        <InTheSameHouse />
 
         <nav>
           <CallToActions />

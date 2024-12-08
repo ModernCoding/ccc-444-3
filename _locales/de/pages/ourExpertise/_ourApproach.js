@@ -14,41 +14,34 @@ export const ourApproach = {
     ],
 
 
-  mvp: [
+  inTheSameHouse: [
 
-      "Wir konzentrieren uns zwar auf JavaScript-Technologien, sind jedoch auch offen für andere Tech-Stacks und passen uns den Kundenwünschen an.",
-
-      "Falls Sie Ihr Projekt selber entwickeln wollen, und es auch mit einem Framework machen, %das nicht auf JavaScript ruht%, wie beispielsweise Ruby on Rails, Django oder Laravel, beraten wir Sie auch gerne.",
-
-      "Das haben wir mit der Firma Huneety gemacht.",
-
-      "~https://www.huneety.com",
-
-      "Huneety ist eine Personalvermittlungsfirma, die von zwei Franzosen in Bangkok, Thailand, gegründet wurde.",
-
-      "Huneety ist gleichzeitig ein Webportal, das speziell auf die Bedürfnisse des thailändischen Arbeitsmarkts eingeht, welche von LinkedIn nicht abgedeckt werden.",
-
-      "Das MVP für das Webportal wurde von einem der Mitgründer entwickelt, %obwohl er ursprünglich kein Informatiker ist!% Tatsächlich kommt er aus dem Handel- und Marketingsbereich.",
-
-      "Er hat dann angefangen, das Programmieren mit PHP selber zu lernen. Für sein MVP hat er sich logischerweise fürs Laravel-Framework entschieden, und angefangen, es selber zu entwickeln.",
-
-      "Später, als er das Gefühl hatte, in eine technische Sackgasse geraten zu sein, fand er unsere Firma und bat nach unserer Hilfe, da ich bereits Erfahrung mit Laravel hatte, die ich während meiner Zeit in Kambodscha gesammelt hatte.",
-
-      "So habe ich ihm geholfen",
+      "Wenn Sie sich als Kunden eine Web- oder eine Mobile-App wünschen, werden Sie meistens wie folgt vorgehen.",
 
       `
-        >Ich habe ihn empfohlen, nochmal vom Start anzufangen! Es war einfach, festzustellen, dass er vom einem veralteten Boilerplate gestartet hatte, mit nicht mehr aktuellen Bibliotheken.
-        >Zusammen mit ihm, haben wir die Datenbank mit großer Acht durchdacht, so dass sie die geschäftlichen Bedürfnisse des Webportals %langfristig und vor allem hoch flexibel% handeln vermag.
+        >Sie oder die von Ihnen beauftragten Entwickler fragen Grafikdesigner nach dem Design Ihrer App.
+        >Die Grafikdesigner entwerfen ein ansprechendes Design, wobei sie mit Farben, Schriftarten, Verläufen, Linienbreiten und insbesondere mit Transparenz und Opazität spielen.
+        >Nach zahlreichen Mag-ich-mag-ich-nicht-Gesprächen und möglicherweise einer von Ihnen bereits gezahlten Summe einigen Sie sich schließlich auf das entgültige Design, das entwickelt werden soll!
+        >Die Entwicklungsteams erhalten das Design, auf dessen Grundlage sie Kosteneinschätzungen vornehmen. Nach Ihrer Zustimmung beginnen sie mit der Entwicklungsarbeit.
+      `,
+
+      "",
+      "Die Entwickler stellen dann fest, dass sich das Design doch nicht genau so umsetzen lässt, wie es die Grafikdesigner ursprünglich entworfen haben!",
+
+      `
+        >Die leicht durchsichtigen Bilder erzeugen aufgrund des farbigen Hintergrunds nicht den gewünschten Effekt und können auch nicht mittels CSS korrigiert werden.
+        >Die Designer haben bestimmte Bildschirmgrößen übersehen, sodass einige Designelemente einfach nicht hineinpassen!
+        >Die Designer haben das Design mit englischen Texten erstellt. Doch die Titel der deutschen Version Ihrer mehrsprachigen App benötigen deutlich mehr Platz, der im entworfenen Design nicht vorgesehen ist!
+        >Usw...
       `,
 
 
-      "Es war eine reine Beratungskooperation, in der wir uns wöchentlich für eine 2-stündige Arbeitssession trafen.",
+      "",
+      "Ab diesem Punkt haben Sie nur noch zwei Möglichkeiten.",
 
       `
-        >Wir diskutierten seine Bedürfnisse.
-        >Ich empfiehl ihn, auch über nicht-technische Aspekte: Benutzererfahrung, Ergonomie, Layout, usw...
-        >Wie ein Lehrer, der seinem Schüler Hausaufgaben gibt, listete ich die Aufgaben, die bis zur nächsten Session zu erledigen waren: Migrationsdatei, entsprechende Modelle, Ansichten und Steuerungen.
-        >Zu Beginn der nächsten Session erfolgte die Korrektur.
+        >Sie bitten die Designfirma um Änderungen, was zu Mehrkosten führt.
+        >Sie lassen die Entwickler Notlösungen implementieren: Farbige Vierecke hinter den Bildern einfügen, die möglicherweise das Farbschema stören, auf einige Designelemente verzichten, Textgrößen oder -längen reduzieren, auch wenn dadurch die Bedeutung leidet...
       `
 
     ]
