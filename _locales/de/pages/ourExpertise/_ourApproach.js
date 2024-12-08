@@ -67,6 +67,14 @@ export const ourApproach = {
       "",
       "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler im gleichen Haus zu haben!%",
 
+      `
+        >%Erstens sind unsere beiden Designer auch Entwickler%, weshalb sie sich als Künstler der technischen Herausforderungen bewusst sind, wenn sie ein Design entwerfen.
+        >Sobald sie ein Design entwerfen, stellen wir als Entwickler sofort sicher, dass es sich gut implementieren lässt!
+        >Bei notwendigen Designkorrekturen können wir %deutlich schneller und ohne Mehrkosten% reagieren.
+        >Als mehrsprachige Entwickler stellen wir auch sicher, dass die verschiedenen Texte in den verschiedenen Sprachen in ihre Elemente passen!
+        >%Als JavaScript-Spezialisten sorgen wir auch dafür!%
+      `,
+
 
     ],
 
