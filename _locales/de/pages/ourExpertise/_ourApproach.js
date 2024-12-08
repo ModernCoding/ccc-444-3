@@ -95,6 +95,8 @@ export const ourApproach = {
 
       "%Genau dieses Layout verwenden wir für die Webseite, die Sie gerade besuchen!% Sie können selbst feststellen, wie sich das Design an jede Gerätegröße anpasst!",
 
+      "%Als JavaScript-Spezialisten haben wir auch dafür gesorgt!%"
+
     ]
 
 }
