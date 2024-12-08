@@ -1,5 +1,6 @@
 <script setup>
   
+  import ConventionalApproach from './.partials/conventional-approach'
   import InTheSameHouse from './.partials/in-the-same-house'
   import Machine from './.partials/machine'
   import Menu from './.partials/menu'
@@ -37,6 +38,7 @@
 
       <Machine />
       <Menu />
+      <ConventionalApproach />
       <InTheSameHouse />
 
       <nav>
@@ -77,6 +79,7 @@
       >
 
         <Menu v-if="screenProperties.ratioIndex < 3" />
+        <ConventionalApproach />
         <InTheSameHouse />
 
         <nav>

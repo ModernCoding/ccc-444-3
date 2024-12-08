@@ -14,7 +14,7 @@ export const ourApproach = {
     ],
 
 
-  inTheSameHouse: [
+  conventionalApproach: [
 
       "Wenn Sie sich als Kunde eine Web- oder Mobile-App wünschen, gehen Sie meistens nach Plan A vor.",
 
@@ -61,10 +61,13 @@ export const ourApproach = {
       "",
       "Ob Plan A oder Plan B, das gleiche Problem tritt auf: %Designer sind keine Entwickler%, und %Entwickler sind auch keine Entwickler!%",
 
-      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!",
+      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!"
+
+    ],
 
 
-      "",
+  inTheSameHouse: [
+
       "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler im gleichen Haus zu haben!%",
 
       `
@@ -75,7 +78,7 @@ export const ourApproach = {
         >%Als JavaScript-Spezialisten sorgen wir auch dafür!%
       `,
 
-
     ],
+
 
 }

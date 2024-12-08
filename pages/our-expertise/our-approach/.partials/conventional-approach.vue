@@ -5,11 +5,28 @@
 
 <template>
 
-  <article class="o-expertise-text">
+  <article
+    :class="`
+        o-expertise-text
+
+        o-${
+          $tm ('pages.ourExpertise.ourApproach.menu') [ 0 ]
+            .split ('|') [ 0 ]  
+        }
+      `"
+  >
+
+    <h1>
+      {{ 
+        $tm ('pages.ourExpertise.ourApproach.menu') [ 0 ]
+          .split ('|') [ 1 ] 
+      }}
+    </h1>
+
 
     <template
       v-for="
-          p, i in $tm ('pages.ourExpertise.ourApproach.inTheSameHouse')
+          p, i in $tm ('pages.ourExpertise.ourApproach.conventionalApproach')
         "
 
       :key="i"
