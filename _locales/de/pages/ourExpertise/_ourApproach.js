@@ -16,7 +16,7 @@ export const ourApproach = {
 
   inTheSameHouse: [
 
-      "Wenn Sie sich als Kunden eine Web- oder eine Mobile-App wünschen, werden Sie meistens wie folgt vorgehen.",
+      "Wenn Sie sich als Kunde eine Web- oder Mobile-App wünschen, gehen Sie meistens nach Plan A vor.",
 
       `
         >Sie oder die von Ihnen beauftragten Entwickler fragen Grafikdesigner nach dem Design Ihrer App.
@@ -42,8 +42,26 @@ export const ourApproach = {
       `
         >Sie bitten die Designfirma um Änderungen, was zu Mehrkosten führt.
         >Sie lassen die Entwickler Notlösungen implementieren: Farbige Vierecke hinter den Bildern einfügen, die möglicherweise das Farbschema stören, auf einige Designelemente verzichten, Textgrößen oder -längen reduzieren, auch wenn dadurch die Bedeutung leidet...
-      `
+      `,
 
-    ]
+
+      "",
+      "Im Endeffekt erhalten Sie ein Ergebnis, dass Sie sich nicht wünschten...",
+
+      "Andere Auftraggeber verfahren daher nach Plan B.",
+
+      `
+        >Sie beauftragen eine IT-Firma, eine App ohne vorheriges Design zu entwickeln.
+        >Nach dem vollendeten Entwicklungsprozess wird eine Designfirma beauftragt, die App zu bekleiden.
+        >Die IT-Firma wird dann die notwendigen Anpassungen vornehmen, was zu Mehrkosten führt.
+        >Vielleicht werden die Entwickler auf die gleichen Herausforderungen wie beim Plan A stoßen!
+      `,
+
+
+      "Ob Plan A oder Plan B, das gleiche Problem tritt auf: %Designer sind keine Entwickler, und Entwickler sind auch keine Entwickler!%",
+
+      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!"
+
+    ],
 
 }
