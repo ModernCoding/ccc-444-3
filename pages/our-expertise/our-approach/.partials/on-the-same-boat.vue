@@ -24,9 +24,21 @@
     </h1>
 
 
+    <figure class="o-vietnamese-girl">
+
+      <NuxtImg
+        src="/images/vietnamese-girl-110d0d.gif"
+        alt="Vietnamese girl on a boat"
+        :modifiers="{ b: '#110d0d', opacity: 1 }"
+        loading="lazy"
+      />
+
+    </figure>
+
+
     <template
       v-for="
-          p, i in $tm ('pages.ourExpertise.ourApproach.conventionalApproach')
+          p, i in $tm ('pages.ourExpertise.ourApproach.onTheSameBoat')
         "
 
       :key="i"

@@ -5,7 +5,7 @@ export const ourApproach = {
 
   menu: [
 
-      "all-in-the-same-house|Designer u. Entwickler im gleichen Haus!",
+      "on-the-same-boat|Designer u. Entwickler auf dem gleichen Schiff!",
 
       "innovative-layout|Wir haben ein neues und innovatives Layout für Webseiten entwickelt!",
 
@@ -14,7 +14,7 @@ export const ourApproach = {
     ],
 
 
-  conventionalApproach: [
+  onTheSameBoat: [
 
       "Wenn Sie sich als Kunde eine Web- oder Mobile-App wünschen, gehen Sie meistens nach Plan A vor.",
 
@@ -61,14 +61,10 @@ export const ourApproach = {
       "",
       "Ob Plan A oder Plan B, das gleiche Problem tritt auf: %Designer sind keine Entwickler%, und %Entwickler sind auch keine Entwickler!%",
 
-      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!"
+      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!",
 
-    ],
-
-
-  inTheSameHouse: [
-
-      "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler im gleichen Haus zu haben!%",
+      "",
+      "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler auf dem gleichen Schiff%, oder im gleichen Haus %zu haben!%",
 
       `
         >%Erstens sind unsere beiden Designer auch Entwickler%, weshalb sie sich als Künstler der technischen Herausforderungen bewusst sind, wenn sie ein Design entwerfen.
@@ -79,6 +75,5 @@ export const ourApproach = {
       `,
 
     ],
-
 
 }
