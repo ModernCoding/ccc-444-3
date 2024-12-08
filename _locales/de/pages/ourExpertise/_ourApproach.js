@@ -61,7 +61,12 @@ export const ourApproach = {
       "",
       "Ob Plan A oder Plan B, das gleiche Problem tritt auf: %Designer sind keine Entwickler%, und %Entwickler sind auch keine Entwickler!%",
 
-      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!"
+      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!",
+
+
+      "",
+      "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler im gleichen Haus zu haben!%",
+
 
     ],
 

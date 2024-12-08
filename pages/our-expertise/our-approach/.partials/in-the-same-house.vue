@@ -28,7 +28,7 @@
       v-for="
           p, i in $tm ('pages.ourExpertise.ourApproach.inTheSameHouse')
         "
-        
+
       :key="i"
     >
 
@@ -93,11 +93,21 @@
           >
 
             <span
-              v-for="a, j in s.split ('%')"
-              :key="a"
-              :class="[ '', 'fw-bold o-underline' ] [ +(j % 2 !== 0) ]"
+              v-for="c, j in s.split ('¶')"
+              :key="c"
+              :class="[ '', 'fw-bold o-ccc o-font-en' ] [ +(j % 2 !== 0) ]"
             >
-              {{ hyphenate (a, locale) }}
+
+              <span
+                v-for="a, k in c.split ('%')"
+                :key="a"
+                :class="
+                    [ '', 'fw-bold o-underline' ] [ +(k % 2 !== 0) ]
+                  "
+              >
+                {{ hyphenate (a, locale) }}
+              </span>
+
             </span>
 
           </span>

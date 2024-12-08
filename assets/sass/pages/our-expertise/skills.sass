@@ -1,8 +1,18 @@
 @use "sass:math"
 
+@use '@/assets/sass/colors' as colors
 @use '@/assets/sass/constants' as constants
 @use '@/assets/sass/dimensions' as dimensions
 @use '@/assets/sass/sizes' as sizes
+
+
+.o-ccc
+  color: colors.$danger
+
+  text-shadow: #{ constants.$phi }px #{ calc(1 / constants.$phi) }px colors.$light
+
+  *
+    font-weight: sizes.$twice_54_by_phi_power_minus_4 !important
 
 
 .o-expertise-skill-in-main
