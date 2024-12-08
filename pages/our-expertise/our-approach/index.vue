@@ -1,5 +1,6 @@
 <script setup>
   
+  import FocusOnJavaScript from './.partials/focus-on-javascript'
   import InnovativeLayout from './.partials/innovative-layout'
   import Machine from './.partials/machine'
   import Menu from './.partials/menu'
@@ -40,6 +41,7 @@
       <Menu />
       <OnTheSameBoat />
       <InnovativeLayout />
+      <FocusOnJavaScript />
 
       <nav>
         <CallToActions />
@@ -81,6 +83,7 @@
         <Menu v-if="screenProperties.ratioIndex < 3" />
         <OnTheSameBoat />
         <InnovativeLayout />
+        <FocusOnJavaScript />
 
         <nav>
           <CallToActions />

@@ -9,7 +9,7 @@ export const ourApproach = {
 
       "innovative-layout|Wir haben ein neues und innovatives Layout für Webseiten entwickelt!",
 
-      "focus-on-javascript|Wir sind vor allem JavaScript-Spezialisten und konzentrieren uns drauf!",
+      "focus-on-javascript|Wir sind vor allem JavaScript-Spezialisten und konzentrieren uns darauf!",
   
     ],
 
@@ -97,6 +97,10 @@ export const ourApproach = {
 
       "%Als JavaScript-Spezialisten haben wir auch dafür gesorgt!%"
 
+    ],
+
+
+  focusOnJavaScript: [
     ]
 
 }
