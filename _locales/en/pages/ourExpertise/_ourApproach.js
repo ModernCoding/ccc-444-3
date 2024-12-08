@@ -31,47 +31,47 @@ export const ourApproach = {
       `
         >The slightly transparent image do not give the exact desired effect due to background colors, and cannot be fixed with CSS either...
         >The designers had overlooked some screen dimensions, so that some design elements can never fit in!
-        >The designers had designed with English text in mind, but the Spanish titles of your multilingual app need much more space to be displayed properly, which the designer had not planned! 
+        >The designers had designed with English text in mind, but the Spanish titles of your multilingual app need much more space to be displayed properly, which the designer had not thought about! 
         >Etc...
       `,
 
 
       "",
-      "Ab diesem Punkt haben Sie nur noch zwei Möglichkeiten.",
+      "From this point, you only have two possibilities.",
 
       `
-        >Sie bitten die Designfirma um Änderungen, was zu Mehrkosten führt.
-        >Sie lassen die Entwickler Notlösungen implementieren: Farbige Vierecke hinter den Bildern einfügen, die möglicherweise das Farbschema stören, auf einige Designelemente verzichten, Textgrößen oder -längen reduzieren, auch wenn dadurch die Bedeutung leidet...
+        >You beg the graphic design agency to modify the design, which leads to increased costs.
+        >You let the developers work around these issues: inserting colored rectangles behind pictures possibly disturbing the color scheme, renouncing some design elements, reducing the text size and length, even if its meaning is altered...
       `,
 
 
       "",
-      "Im Endeffekt erhalten Sie ein Ergebnis, dass Sie sich nicht wünschten...",
+      "At the end, you get a result you had not wished...",
 
-      "Andere Auftraggeber verfahren daher nach Plan B.",
+      "Other customers follow plan B.",
 
       `
-        >Sie beauftragen eine IT-Firma, eine App ohne vorheriges Design zu entwickeln.
-        >Nach dem vollendeten Entwicklungsprozess wird eine Designfirma beauftragt, die App zu bekleiden.
-        >Die IT-Firma wird dann die notwendigen Anpassungen vornehmen, was zu Mehrkosten führt.
-        >Vielleicht werden die Entwickler auf die gleichen Herausforderungen wie beim Plan A stoßen!
+        >They mandate an IT company to develop the app without any design.
+        >Once the development process is complete, they ask a graphic design agency to create the design around it.
+        >Afterwards, the IT company brings the necessary modifications in order to adapt the app to the design, which leads to increased costs.
+        >The developers might nevertheless face the same challenges as for plan A.
       `,
 
 
       "",
-      "Ob Plan A oder Plan B, das gleiche Problem tritt auf: %Designer sind keine Entwickler%, und %Entwickler sind auch keine Entwickler!%",
+      "Either plan A or plan B, the issue remains the same: %designers are not developers%, and %developer are not designers either!%",
 
-      "Als Kunde können Sie weder von einem %Künstler% verlangen, dass er %die technischen Herausforderungen% vorhersieht, noch von einem %Techniker% erwarten, dass er %künstlerische Korrekturen% vornimmt!",
+      "As a customer, you can hardly await from an %artist% to foresee the %technical challenges%, and you can hardly await from a %technician% to undertake %artistic modifications% to fix the design!",
 
       "",
-      "Deshalb kommen wir mit unserem Plan ¶CCC¶: %Designer u. Entwickler auf dem gleichen Schiff%, oder im gleichen Haus %zu haben!%",
+      "This is precisely why we are coming with plan ¶CCC¶: %designers & developers united on the same boat%, or in the same house!",
 
       `
-        >%Erstens sind unsere beiden Designer auch Entwickler%, weshalb sie sich als Künstler der technischen Herausforderungen bewusst sind, wenn sie ein Design entwerfen.
-        >Sobald sie ein Design entwerfen, stellen wir als Entwickler sofort sicher, dass es sich gut implementieren lässt!
-        >Bei notwendigen Designkorrekturen können wir %deutlich schneller und ohne Mehrkosten% reagieren.
-        >Als mehrsprachige Entwickler stellen wir auch sicher, dass die verschiedenen Texte in den verschiedenen Sprachen in ihre Elemente passen!
-        >%Als JavaScript-Spezialisten sorgen wir auch dafür!%
+        >First, %all our graphic designers are developers as well%; therefore, as artists, they are fully aware of the technical challenges, when they draft a design.
+        >As soon as they draft a design, we make sure right away as developers, the design can be implemented!
+        >For necessary design fixes, we have the ability to %react quickly and without increased costs!%,
+        >As multilingual developers, we make also sure, the different texts in different languages fit into their elements!
+        >%As JavaScript specialists, we give care to all this!%
       `,
 
     ],
