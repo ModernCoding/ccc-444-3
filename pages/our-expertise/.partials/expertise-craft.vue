@@ -14,11 +14,7 @@
 
   <article class="o-expertise-item">
 
-    <NuxtLink
-      :to="
-          { name: 'our-expertise-we-are-specialized-in-javascript' }
-        "
-    >
+    <NuxtLink :to="{ name: 'our-expertise-our-approach' }">
       
       <h1>
         {{ $t ('pages.ourExpertise.index.expertise.craft.slogan') }}
