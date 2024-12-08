@@ -16,23 +16,23 @@ export const ourApproach = {
 
   onTheSameBoat: [
 
-      "Wenn Sie sich als Kunde eine Web- oder Mobile-App wünschen, gehen Sie meistens nach Plan A vor.",
+      "When you want to have a web or mobile app, you mostly follow plan A.",
 
       `
-        >Sie oder die von Ihnen beauftragten Entwickler fragen Grafikdesigner nach dem Design Ihrer App.
-        >Die Grafikdesigner entwerfen ein ansprechendes Design, wobei sie mit Farben, Schriftarten, Verläufen, Linienbreiten und insbesondere mit Transparenz und Opazität spielen.
-        >Nach zahlreichen Mag-ich-mag-ich-nicht-Gesprächen und möglicherweise einer von Ihnen bereits gezahlten Summe einigen Sie sich schließlich auf das entgültige Design, das entwickelt werden soll!
-        >Die Entwicklungsteams erhalten das Design, auf dessen Grundlage sie Kosteneinschätzungen vornehmen. Nach Ihrer Zustimmung beginnen sie mit der Entwicklungsarbeit.
+        >You or the developers you contacted mandate graphic designers for the design of your app.
+        >The graphic designers draft a beautiful design in which they are playing with colors, fonts, gradients, stroke widths and most important: transparency and opacity.
+        >After several talks pointing out your likes and dislikes and possibly a sum you already paid, you agree on the final design that is to be developed!
+        >The developer teams receive the design, on which base they do their estimates and start working upon your approval.
       `,
 
       "",
-      "Die Entwickler stellen dann fest, dass sich das Design doch nicht genau so umsetzen lässt, wie es die Grafikdesigner ursprünglich entworfen haben!",
+      "The developers then notice, that the design cannot be implemented the way the designers had thought!",
 
       `
-        >Die leicht durchsichtigen Bilder erzeugen aufgrund des farbigen Hintergrunds nicht den gewünschten Effekt und können auch nicht mittels CSS korrigiert werden.
-        >Die Designer haben bestimmte Bildschirmgrößen übersehen, sodass einige Designelemente einfach nicht hineinpassen!
-        >Die Designer haben das Design mit englischen Texten erstellt. Doch die Titel der deutschen Version Ihrer mehrsprachigen App benötigen deutlich mehr Platz, der im entworfenen Design nicht vorgesehen ist!
-        >Usw...
+        >The slightly transparent image do not give the exact desired effect due to background colors, and cannot be fixed with CSS either...
+        >The designers had overlooked some screen dimensions, so that some design elements can never fit in!
+        >The designers had designed with English text in mind, but the Spanish titles of your multilingual app need much more space to be displayed properly, which the designer had not planned! 
+        >Etc...
       `,
 
 
